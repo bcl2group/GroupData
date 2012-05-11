@@ -1,0 +1,22 @@
+#ifndef INFERENCE_H
+#define INFERENCE_H
+
+#include <string>
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+class Inference 
+{
+public:
+
+	Inference(Network network);
+	MCMC_ask(int X, vector<string> e, int N);
+
+private:
+	Network bn;
+	
+};
+
+#endif

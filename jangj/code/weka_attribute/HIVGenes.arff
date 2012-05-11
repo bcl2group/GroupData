@@ -1,0 +1,111 @@
+@relation whatever
+
+@attribute HIV/physiology {0,1,2}
+@attribute MMP16 {0,1,2}
+@attribute ITPR2 {0,1,2}
+@attribute TLL2 {0,1,2}
+@attribute SNHG3 {0,1,2}
+@attribute AVPR1B {0,1,2}
+@attribute MFN1 {0,1,2}
+@attribute TAF15 {0,1,2}
+@attribute LPAL2 {0,1,2}
+@attribute AKAP8 {0,1,2}
+@attribute UBA7 {0,1,2}
+@attribute OSGEP {0,1,2}
+@attribute ANKRD26 {0,1,2}
+@attribute WSB2 {0,1,2}
+@attribute GSTTP1 {0,1,2}
+@attribute FABP7 {0,1,2}
+@attribute SEC23IP {0,1,2}
+@attribute FOLH1 {0,1,2}
+@attribute HNF4A {0,1,2}
+@attribute NRP2 {0,1,2}
+@attribute STAB1 {0,1,2}
+@attribute PGCP {0,1,2}
+@attribute IKZF1 {0,1,2}
+@attribute TGFB3 {0,1,2}
+@attribute ADH6 {0,1,2}
+@attribute FZD9 {0,1,2}
+@attribute PSMD11 {0,1,2}
+@attribute RBPMS {0,1,2}
+@attribute DAP3 {0,1,2}
+@attribute CSHL1 {0,1,2}
+@attribute IL13 {0,1,2}
+@attribute PON1 {0,1,2}
+@attribute CDC25C {0,1,2}
+@attribute SGCE {0,1,2}
+@attribute C16orf7 {0,1,2}
+@attribute GLDC {0,1,2}
+@attribute SNTB1 {0,1,2}
+@attribute ACTL6B {0,1,2}
+@attribute XRCC4 {0,1,2}
+@attribute AXL {0,1,2}
+@attribute MSR1 {0,1,2}
+@attribute ELOVL6 {0,1,2}
+@attribute CYB5A {0,1,2}
+@attribute SYP {0,1,2}
+@attribute SEC63 {0,1,2}
+@attribute FOSL1 {0,1,2}
+@attribute RIMS2 {0,1,2}
+@attribute MAT2A {0,1,2}
+@attribute MAPK11 {0,1,2}
+@attribute TAF1 {0,1,2}
+@attribute MDM1 {0,1,2}
+@attribute FLNB {0,1,2}
+@attribute IL4R {0,1,2}
+@attribute PAK2 {0,1,2}
+@attribute CRYZ {0,1,2}
+@attribute SYT2 {0,1,2}
+@attribute EIF1 {0,1,2}
+@attribute GALK1 {0,1,2}
+@attribute AZIN1 {0,1,2}
+@attribute IFI16 {0,1,2}
+@attribute AQP7 {0,1,2}
+@attribute CLGN {0,1,2}
+@attribute SILV {0,1,2}
+@attribute SCAND2 {0,1,2}
+@attribute PTGER3 {0,1,2}
+@attribute MYH3 {0,1,2}
+@attribute P2RY2 {0,1,2}
+@attribute AEBP1 {0,1,2}
+@attribute ALOX5 {0,1,2}
+@attribute PBXIP1 {0,1,2}
+@attribute ADAM10 {0,1,2}
+@attribute ICOSLG {0,1,2}
+@attribute SEC22B {0,1,2}
+@attribute ACOT7 {0,1,2}
+@attribute SH3GLB1 {0,1,2}
+@attribute ITGB5 {0,1,2}
+@attribute TNFSF8 {0,1,2}
+@attribute WDR61 {0,1,2}
+@attribute APC2 {0,1,2}
+@attribute PPIG {0,1,2}
+@attribute CFLAR {0,1,2}
+@attribute PIN4 {0,1,2}
+@attribute TBCD {0,1,2}
+@attribute AVL9 {0,1,2}
+@attribute WHSC2 {0,1,2}
+@attribute PCSK2 {0,1,2}
+@attribute CA2 {0,1,2}
+@attribute MXI1 {0,1,2}
+@attribute SLC4A7 {0,1,2}
+@attribute ICT1 {0,1,2}
+@attribute CHD3 {0,1,2}
+@attribute MICB {0,1,2}
+@attribute MXD4 {0,1,2}
+@attribute SETD1A {0,1,2}
+@attribute XCL1 {0,1,2}
+@attribute TNFRSF9 {0,1,2}
+@attribute NR4A2 {0,1,2}
+@attribute NR4A3 {0,1,2}
+@attribute TNFAIP6 {0,1,2}
+@attribute TNF {0,1,2}
+@attribute RHEB {0,1,2}
+
+
+@data
+1 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 
+1 , 1 , 1 , 1 , 1 , 1 , 1 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 2 , 2 , 2 , 2 , 2 , 2 , 2 
+1 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 1 , 1 , 1 , 1 , 1 , 1 , 2 
+1 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 1 
+

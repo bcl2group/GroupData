@@ -1,0 +1,2 @@
+Score of network: 49.25
+Time Taken: 3.62

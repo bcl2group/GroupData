@@ -1,0 +1,69 @@
+#include "Node.cpp"
+using namespace std;
+
+K2::K2()
+{
+	vector<Node> nodes;
+	int maxParents;
+}
+
+float scoringFunction(Node node, vector<Node> parents)
+{
+	return 0f;
+}
+
+void findParents() 
+{
+	for (int i = 0; i < n; i++)
+	{
+		vector<Node> parents;
+		Node currentNode = nodes[i];
+		float score = scoringFunction(currentNode, parents);
+		bool OK = true;
+		
+		while (OK and parents.size() < maxParents)
+		{
+			vector<Nodes> predecessors(nodes.begin(), nodes.begin() + i - 1)
+			
+			std::pair<Node, float> pair = findMaxNode(currentNode, predecessors, parents);
+			Node newNode = pair.first;
+			Node newScore = pair.second;
+			
+			if (newScore > score)
+			{
+				vector<Node> newParents = parents;
+				newParents.push_back(newNode);
+				score = newScore;
+				parents = newParents;
+			}
+			else
+			{
+				OK = false;
+			}
+		}
+	}
+}
+
+std::pair<Node, float> findMaxNode(Node node, vector<Node> predecessors, vector<Node> parents)
+{
+   	float maxScore = -1;
+   	Node maxNode = NULL;
+	
+	for (int j = 0; j < parents.size(); j++)
+	{
+		Node newNode = parents[j];
+		vector<Node> newParents = parents
+		newParents.push_back(newNode); 
+				
+		float newScore = scoringFunction(newNode, newParents);
+		
+		if (newScore > maxScore)
+		{
+			maxScore = newScore;
+			maxNode = newNode;
+		}
+	}
+	
+	return std::make_pair(newNode, maxScore);
+}
+

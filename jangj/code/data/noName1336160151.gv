@@ -1,0 +1,14 @@
+digraph graphname {
+1 [label="X_0"];
+2 [label="X_1"];
+3 [label="X_2"];
+4 [label="X_3"];
+5 [label="X_4"];
+6 [label="X_5"];
+7 [label="X_6"];
+8 [label="X_7"];
+9 [label="X_8"];
+10 [label="X_9"];
+1 -> 2
+2 -> 3
+}

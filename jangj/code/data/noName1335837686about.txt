@@ -1,0 +1,2 @@
+Score of network: 0.00702742
+Time Taken: 0

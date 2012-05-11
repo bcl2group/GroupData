@@ -1,0 +1,23 @@
+@relation Asthma
+
+@attribute Asthma {0,1}
+@attribute Serpinb9g {0,1,2}
+@attribute Ptpn2 {0,1,2}
+@attribute Enam {0,1,2}
+@attribute Hexim1 {0,1,2}
+@attribute Prom1 {0,1,2}
+@attribute Ptov1 {0,1,2}
+@attribute Cox4i2 {0,1,2}
+@attribute Ndufb11 {0,1,2}
+@attribute Itgax {0,1,2}
+@attribute Mrpl20 {0,1,2}
+@attribute Anapc11 {0,1,2}
+@attribute Adra1b {0,1,2}
+@attribute H28 {0,1,2}
+@attribute Tshr {0,1,2}
+
+
+@data
+1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 0 , 2 , 2 , 2 , 2 
+1 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 0 , 0 , 0 , 0 
+

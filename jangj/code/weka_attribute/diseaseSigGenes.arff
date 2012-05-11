@@ -1,0 +1,59 @@
+@relation whatever
+
+@attribute cancer {0,1}
+@attribute RPL17 {0,1,2}
+@attribute RPL10A {0,1,2}
+@attribute RPL34 {0,1,2}
+@attribute RPL6 {0,1,2}
+@attribute RPS11 {0,1,2}
+@attribute SRP14 {0,1,2}
+@attribute FAU {0,1,2}
+@attribute SLC25A3 {0,1,2}
+@attribute RPS5 {0,1,2}
+@attribute RPL18 {0,1,2}
+@attribute CANX {0,1,2}
+@attribute HINT1 {0,1,2}
+@attribute HNRNPA1 {0,1,2}
+@attribute EIF3F {0,1,2}
+@attribute EEF2 {0,1,2}
+@attribute RPL19 {0,1,2}
+@attribute TMED2 {0,1,2}
+@attribute TPM3 {0,1,2}
+@attribute ATP6V0E1 {0,1,2}
+@attribute NARS {0,1,2}
+@attribute DNAJC1 {0,1,2}
+@attribute RPS3A {0,1,2}
+@attribute STARD7 {0,1,2}
+@attribute ERH {0,1,2}
+@attribute HNRNPK {0,1,2}
+@attribute PSMB2 {0,1,2}
+@attribute HSP90AB1 {0,1,2}
+@attribute RPL24 {0,1,2}
+@attribute RPL11 {0,1,2}
+@attribute KHDRBS1 {0,1,2}
+@attribute ANAPC5 {0,1,2}
+@attribute FNTA {0,1,2}
+@attribute ARF3 {0,1,2}
+@attribute C11orf58 {0,1,2}
+@attribute HNRNPC {0,1,2}
+@attribute HNRNPM {0,1,2}
+@attribute RPS25 {0,1,2}
+@attribute HNRNPD {0,1,2}
+@attribute SNX3 {0,1,2}
+@attribute SPAG7 {0,1,2}
+@attribute ROD1 {0,1,2}
+@attribute LPP {0,1,2}
+@attribute DULLARD {0,1,2}
+@attribute PARK7 {0,1,2}
+@attribute C22orf28 {0,1,2}
+@attribute NME7 {0,1,2}
+@attribute SNX6 {0,1,2}
+@attribute CFL1 {0,1,2}
+@attribute SPIN1 {0,1,2}
+@attribute RNPS1 {0,1,2}
+
+
+@data
+1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 
+1 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 
+
