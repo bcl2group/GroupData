@@ -1,0 +1,32 @@
+Concept	AUROC	#SNPs	Genes	SNPs	#Significant runs	Significance values
+Purine Metabolism	0.98045977	0	"POLR1B,ATIC,ENPP1,POLR3A,DCK,PRIM2,AMPD3"		1	0.028636364
+Glutathione Metabolism	0.996551724	0	"GSR,GSTA4,MGST2,GSTO1"		1	0.025454545
+Long Term Depression	0.806321839	0	"LYN,PPP2R1A"		1	0.028636364
+Fc Gamma R Mediated Phagocytosis	1	0	"PRKCD,ARPC4,LYN,PPAP2B,FCGR2B"		1	0.025454545
+Tight Junction	0.84137931	0	"PRKCD,PPP2R1A,MYH2"		1	0.028636364
+Glycolysis Gluconeogenesis	0.956896552	0	"PGK1,ENO1"		1	0.02
+Pyrimidine Metabolism	0.921264368	0	"DUT,DPYD,POLR1B,POLR3A,DCK,PRIM2"		1	0.035
+Arginine And Proline Metabolism	0.743678161	0	"MAOA,GATM"		1	0.039666667
+Metabolism Of Xenobiotics By Cytochrome P450	1	0	"GSTA4,MGST2,GSTO1"		1	0.025454545
+Glycine Serine And Threonine Metabolism	0.903448276	0	"GATM,ALAS2,PHGDH,MAOA,AGXT"		1	0.028636364
+Glycerolipid Metabolism	0.728735632	0	"AKR1B1,PPAP2B"		1	0.040645161
+Alanine Aspartate And Glutamate Metabolism	0.758045977	0	"ASNS,AGXT"		1	0.036296296
+Pathogenic Escherichia Coli Infection	0.991954023	0	"ARPC4,TUBA1B"		1	0.02
+Cytosolic Dna Sensing Pathway	0.844252874	0	"IL33,IL18,POLR3A,IL6"		1	0.036296296
+Sphingolipid Metabolism	0.790804598	0	"B4GALT6,PPAP2B"		1	0.028636364
+Adipocytokine Signaling Pathway	0.795402299	0	"PRKAG1,ACSL6"		1	0.028636364
+Spliceosome	1	0	"BAT1,DDX42"		1	0.02
+Tgf Beta Signaling Pathway	0.801149425	0	"PPP2R1A,AMHR2"		1	0.028636364
+Renal Cell Carcinoma	0.824137931	0	"GRB2,CUL2"		1	0.028636364
+Rna Polymerase	0.751149425	0	"POLR3A,POLR1B"		1	0.039666667
+Ribosome	0.85	0	"RPL10A,RPL6"		1	0.02
+Insulin Signaling Pathway	0.860344828	0	"PRKAG1,GRB2,PHKG1,SHC3"		1	0.028636364
+Pathways In Cancer	0.859195402	0	"FN1,IL6,CDKN1A,CUL2,GRB2"		1	0.035
+Drug Metabolism Cytochrome P450	1	0	"GSTA4,MGST2,MAOA,GSTO1"		1	0.025454545
+Regulation Of Actin Cytoskeleton	0.997701149	0	"ARPC4,FN1"		1	0.02
+Hypertrophic Cardiomyopathy Hcm	0.754597701	0	"PRKAG1,IL6"		1	0.039666667
+Pyruvate Metabolism	0.856896552	0	"MDH1,ACAT1,AKR1B1"		1	0.028636364
+Complement And Coagulation Cascades	0.801724138	0	"F3,C3"		1	0.028636364
+Porphyrin And Chlorophyll Metabolism	0.963218391	0	"FTH1,ALAS2"		1	0.02
+Nitrogen Metabolism	0.758045977	0	"ASNS,HAL"		1	0.036296296
+Gap Junction	0.846551724	0	"GRB2,TUBA1B"		1	0.02

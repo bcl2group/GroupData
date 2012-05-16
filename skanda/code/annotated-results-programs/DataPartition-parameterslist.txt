@@ -1,0 +1,6 @@
+final String INPUTPATH = args[0];
+final int NUM_SNPS_PER_FILE = Integer.parseInt(args[1]);
+final String DIRECTORY_OF_DISTRFILES  = args[2]+"/";
+---> last one is directory that will be created
+
+example: java -jar DataPartition.jar coga-sync-complete-clinicaldata.csv 100000 C:/home/skanda/PRIMES/data/coga-sync-data/distrofiles
