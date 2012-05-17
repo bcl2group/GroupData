@@ -1,0 +1,48 @@
+Investigation Title	Transcription profiling of human and chimp brain tissues	
+Comment[Submitted Name]	Khaitovich: Gene Expression in Various Brain Regions of Humans and Chimpanzees	
+Experimental Design	species_design	organism_part_comparison_design	transcription profiling by array	
+Experimental Design Term Source REF	mo	mo	EFO	
+Comment[ArrayExpressReleaseDate]	2010-02-12	
+Comment[AEMIAMESCORE]	4	
+Comment[ArrayExpressAccession]	E-AFMX-2	
+Comment[MAGETAB TimeStamp_Version]	2010-11-18 17:51:35 Last Changed Rev: 14857	
+Experimental Factor Name	Organism	individual	OrganismPart	
+Experimental Factor Type	organism	individual	organism_part	
+Experimental Factor Term Source REF	
+Person Last Name	Khaitovich	
+Person First Name	Philipp	
+Person Mid Initials	
+Person Email	khaitovich@eva.mpg.de	
+Person Phone	 49 341 3550 520	
+Person Fax	 49 341 3550 555	
+Person Address	Deutscher Platz 6	
+Person Affiliation	Evolutionary Genetics	
+Person Roles	submitter	
+Person Roles Term Source REF	mo	
+Quality Control Type	
+Quality Control Term Source REF	
+Replicate Type	
+Replicate Term Source REF	
+Normalization Type	
+Normalization Term Source REF	
+Date of Experiment	
+Public Release Date	2010-02-12	
+PubMed ID	15289471	
+Publication DOI	15289471	
+Publication Author List	Philipp Khaitovich, Bjoern Muetzel, Xinwei She, Michael Lachmann, Ines Hellmann, Janko Dietzsch, Stephan Steigele, Hong-Hai Do, Gunter Weiss, Wolfgang Enard, Florian Heissig, Thomas Arendt, Kay Nieselt-Struwe, Evan E. Eichler, and Svante Pääbo	
+Publication Title	Regional Pattern of Gene Expression in Human and Chimpanzee Brains	
+Publication Status	journal_article	
+Publication Status Term Source REF	mo	
+Experiment Description	We have analyzed gene expression in various brain regions of humans and chimpanzees. Within both human and chimpanzee individuals, the transcriptomes of the cerebral cortex are very similar to each other and differ more between individuals than among regions within an individual. In contrast, the transcriptomes of the cerebral cortex, the caudate nucleus, and the cerebellum differ substantially from each other. Between humans and chimpanzees, 10% of genes differ in their expression in at least one region of the brain. The majority of these expression differences are shared among all brain regions. Whereas genes encoding proteins involved in signal transduction and cell differentiation differ significantly between brain regions within individuals, no such pattern is seen between the species. However, a subset of genes that show expression differences between humans and chimpanzees are distributed nonrandomly across the genome. Furthermore, genes that show an elevated expression level in humans are statistically significantly enriched in regions that are recently duplicated in humans	
+Protocol Name	P-AFMX-1	P-AFMX-2	P-AFFY-2	Affymetrix:Protocol:Hybridization-EukGE-WS2v3	Affymetrix:Protocol:Percentile	
+Protocol Type			labeling	hybridization	feature_extraction	
+Protocol Description	Collections:<br> Two or three tissue collections for each genotype, replicate and tissue type were made, but only one was used for RNA isolation. Others were kept for the backup purposes, eg RNA isolation failed, or quality was not satisfactory.<br> <br> Growth cabinets:<br> Five Snijders cabinets and 2 Sanyo Phytotron cabinets were used for the experiment. Each cabinet accomodated 40 (13x13 cm) pots. Temperature was monitored on a two week basis (80 time points). Humidity was set to 70%.  <br> <br> Light conditions:<br> 16 hours light at 17C and 8 hours dark 12C. The cycle started at 10 am with lights on. Ligth was measured at the beginning of the experiment, 11 cm from the light source - 333 - 377 umol in different cabinets. Measurement was done using Sky Quantium light sensor at 15oC.<br> Plants were placed 55 cm from the light source (from the bulb to the surface of the compost). After 5-6 weeks plants were lowered 30 cm and after another 5 weeks 20 cm more.<br> <br> Soil type: <br> Tissue types 1,2 and 3 were obtained by germinating seeds on petri plates. Tissue types 3,4 and 5 were grown in the vermiculate with no compost. Seeds for the tissue types 5 - 10 were sterilized and sown about 3 cm deep in a soil mix consisting of 400 l peat, 20 l sand, 30 l perlite, 830 g dolomite lime, 830 g ground lime, 500 g leleote. <br> <br> Watering regime: once every two days. 100 ml/per pot - up to 3 weeks, 200 ml - from 4 - 8 weeks, from 8 weeks up 400 ml per pot. The watering regime was changed depending how fast plants were developing and the water dried out. Dumping off or drying out was avoided.<br> <br> Fertilizer: <br> once weekly with 19-19-19 Vitafeed 111 (Vitafax Growers)- 0.35 g per pot, total 1 kg needed. 144 g of the salt dissolved in 4 liters water and used about 10 mls per pot.<br> <br> Statistical design:<br> Plants were selected for the tissue collection randomly. Randomization was done using Range Randomize Utilities, Power Utility Pak v 3.0b (JWalk and Associates)<br> <br> Seed sterilization.<br> Seeds before germination and planting were sterilized by soaking for 15 min in the 1% bleach solution (containing non-ionic surfactants) with 3 consecutive rinsings 5 min each  in the distilled water. <br> <br> Tissue storage:<br> Plant tissue was flash frozen in liquid nitrogen and stored in 15 ml polypropylene tubes in -80 freezer. Sets of tubes representing (2 genotypes, 3 replicates, 2 tissue types) were made ready for the RNA isolation (12 preps at a time). <br>	total RNA Amplification: <br> RNA extraction Protocol for Seed Tissue (and leaf tissue, however the pre-extraction with the buffer solution prior to Trizol is not necessary for leaves. If you go right to Trizol with seed tissue, your RNA pellet will be almost entirely starch. Note: Of course gloves should be worn throughout this procedure. Also, samples should be on ice and all solutions used should be relatively sterile.)<br> <br>  1. Grind sample in liquid Nitrogen. Keep powder frozen. If your sample is not ground to the consistency of flour, your yields will likely be lowered.<br> 2. Add enough powder to a 2 ml tube to equal roughly 0.2 to 0.5 cc of volume.<br> (Note: if you use much more powder than this, you will not recover all of the RNA, nor will your RNA be very intact or clean.)<br> 3.Add 0.5 ml Extraction Buffer and vortex. (Note: you will need to let your frozen samples warm up slightly before adding this buffer. Of course, if your samples freeze into a cube, they should be thawed and then vortexed again till homogeneous.)<br> 4.Add 0.5 ml Phenol/Chloroform/Isoamyl alcohol (49:49:2) and vortex till thoroughly suspended.<br> 5.Spin 5 minutes at 14,000 RPM in large Sorvall centrifuge at 4 C.<br> 6.Remove 0.5 ml of upper aqueous phase to a fresh 2 ml tube being careful to avoid the interphase material.<br> 7.Add 1.0 ml Trizol reagent and vortex (your sample at this point will be completely incorporated into the Trizol solution and should be invisible).<br> 8.Add 0.2 ml Chloroform and vortex and the phases will separate just like magic.<br> 9.Spin 14,000 for five minutes at 4 C.<br> 10.Remove 0.75 ml of upper aqueous to a fresh 2 ml tube. (This is not all of the upper phase. However, if you contaminate your sample with the interphase material your RNA will be of lower quality and hard to accurately quantify.)<br> 11.Add 0.5 ml Chloroform and vortex.<br> 12.Spin 14,000 for five minutes at 4 C.<br> 13.Remove 0.6 ml of upper aqueous to a fresh 2 ml tube.<br> 14.Add 1.2 ml of 100% ethanol and 60 ul of 3 M Sodium Acetate.<br> 15.Vortex and incubate at -80 C for > 1 hr.<br> 16.Spin 14,000 for 20 minutes at 4 C.<br> 17.Decant supernatants, and wash pellets with 70% ethanol, and briefly respin. Decant or aspirate most of remaining ethanol. Do not completely dry your RNA as it will then be quite difficult to resuspend in TE.<br> 18.Resuspend RNA pellets in 50 ul of sterile TE by vortexing. Expected yield is 25 to 100 ug.<br> 19. Assay 2 ul in 200 ul TE on the spectrophotometer. This should give readings in the 0.1-0.3 range. To examine degree of intactness of your RNA, load 1 ug of each sample on a standard agarose gel and photograph. You should see the two Ribosomal bands and very little if any smearing forward of the ribosomal bands which would indicate degradation. Note: your A260/A280 ratios should be greater than 1.8 with this procedure. They will likely be 2.0 +/- 0.1.<br> <br> Extraction Buffer (make up fresh day of use.) 20 mls.<br> 50 mM Tris pH 9.0 1 ml 1 M Tris pH 9.0<br> 200 mM NaCl 2 ml 2 M NaCl<br> 1% Sarcosyl 2 ml 10% Sarcosyl<br> 20mM EDTA 0.8 ml 0.5 M EDTA<br> 5 mM DTT 0.1 ml 1M DTT (freezer aliquots.)<br> H2O 14.1 <br>  <br> Remarks: The protocol comes from Mike Giroux, mgiroux@montana.edu<br>  <br> 				
+Protocol Parameters	
+Protocol Hardware	
+Protocol Software				MicroArraySuite 5.0	MicroArraySuite 5.0	
+Protocol Contact	
+Protocol Term Source REF				mo	
+SDRF File	E-AFMX-2.sdrf.txt	
+Term Source Name	mo		FMA	ArrayExpress	mo	EFO	
+Term Source File	http://mged.sourceforge.net/ontologies/MGEDontology.php		http://bioportal.bioontology.org/ontologies/39966	http://www.ebi.ac.uk/arrayexpress	http://mged.sourceforge.net/ontologies/MGEDontology.php	http://www.ebi.ac.uk/efo/	
+Term Source Version			3				
