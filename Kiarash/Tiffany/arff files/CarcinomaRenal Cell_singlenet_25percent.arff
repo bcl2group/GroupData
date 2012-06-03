@@ -1,0 +1,9 @@
+% Title: HIV, All Species Singlenet
+% Creator: Neena Parikh
+%
+@RELATION infection
+
+@ATTRIBUTE class {Control,Infected}
+@ATTRIBUTE NA NUMERIC
+
+@DATA

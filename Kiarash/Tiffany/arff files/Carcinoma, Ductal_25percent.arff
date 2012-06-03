@@ -1,0 +1,9 @@
+% Title: HIV, All Species
+% Creator: Neena Parikh
+%
+@RELATION infection
+
+@ATTRIBUTE class {Control}
+@ATTRIBUTE NA NUMERIC
+
+@DATA
