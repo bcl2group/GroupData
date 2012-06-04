@@ -1,3 +1,18 @@
+I just noticed a small error, if you plan on using this a guide for
+later projects...
+
+-------------------------------------------------------------
+In some of the directories I mentioned I wrote:
+C:\home\skanda\PRIMES\GroupData\....
+
+If you download the GitHub files locally, the directory of the
+referenced code would be:
+/a directory on your computer/.../GroupData/...
+--------------------------------------------------------------
+
+
+
+
 Brief documentation on the code and data on GitHub that I worked on, organized by directory. If there are any problems encountered or if some portion of text is ambiguous, please feel free to ask for support of clarification (skoppula@andover.edu).
 
 ON THE PROGRAMS (under GroupData/Skanda/code):
