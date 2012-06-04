@@ -1,7 +1,7 @@
 
 notes: 
 
-- We want to begin with two inputs: GEO data and dbGaP. Tiffany and Neena has used GEO but Aoron has used dbGaP. There is also GSE to use...
+- We want to begin with two inputs: GEO data and dbGaP. Tiffany and Neena has used GEO but Aaron has used dbGaP. There is also GSE to use...
 
 - datasets should be matched to diseases...     
 
@@ -13,7 +13,7 @@ notes:
 
 -Neena's pipeline is explained in GEO_TBIpaper8_V2.pdf.
 
--Aaron's pipeline makes an automatic report at the end of the pipeline, which is good to have in our version of the pipeline.
+-Aaron's pipeline makes an automatic report at the end of the pipeline, which is good to have in our version of the pipeline. Aaron's pipeline is not on Git... it is on Dropbox...
 
 -we want to make the final output in the form of a document. We can use yEd API in that part. Yed is free- the viewer.
 Yfiles HTML 3 API is free as eval version.
