@@ -19,7 +19,7 @@ notes:
 Yfiles HTML 3 API is free as eval version.
  
 
-- it is probably a good idea to explore "knime". one can make a workflow there and we can use add Java code in the desing. there are Weka and R and yEd plug-ins. more information about knime is in "knime info.txt"
+- it is probably a good idea to explore "knime". one can make a workflow there and we can add Java code in the desing too. there are Weka and R and yEd plug-ins. more information about knime is in "knime info.txt"
 
 --------
 
