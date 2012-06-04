@@ -15,7 +15,8 @@ notes:
 
 -Aaron's pipeline makes an automatic report at the end of the pipeline, which is good to have in our version of the pipeline.
 
--we want to make the final output in the form of a document. We can use yEd API in that part. http://www.yworks.com/en/products_yed_about.html
+-we want to make the final output in the form of a document. We can use yEd API in that part. Yed is free- the viewer.
+Yfiles HTML 3 API is free as eval version.
  
 
 - it is probably a good idea to explore "knime". one can make a workflow there and we can use add Java code in the desing. there are Weka and R and yEd plug-ins. more information about knime is in "knime info.txt"
