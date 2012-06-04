@@ -1,0 +1,15 @@
+.toc dt {
+  background: url(nav-tree-leaf.gif) left 1px no-repeat;
+  padding-left: 15px;
+}
+.toc .opened {
+  background: url(nav-tree-minus.gif) left 1px no-repeat;
+  padding-left: 15px;
+}
+.toc .closed {
+  background: url(nav-tree-plus.gif) left 1px no-repeat;
+  padding-left: 15px;
+}
+.toc-hidden {
+  display: none;
+}

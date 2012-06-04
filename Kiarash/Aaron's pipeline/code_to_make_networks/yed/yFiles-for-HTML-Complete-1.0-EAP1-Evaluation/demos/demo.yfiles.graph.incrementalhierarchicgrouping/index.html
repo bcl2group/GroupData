@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<!-- ////////////////////////////////////////////////////////////////////////
+     //
+     // This file is part of yFiles for HTML 1.0-EAP1.
+     // 
+     // yWorks proprietary/confidential. Use is subject to license terms.
+     //
+     // Redistribution of this file or of an unauthorized byte-code version
+     // of this file is strictly forbidden.
+     //
+     // Copyright (c) 2012 by yWorks GmbH, Vor dem Kreuzberg 28, 
+     // 72070 Tuebingen, Germany. All rights reserved.
+     // 
+     ////////////////////////////////////////////////////////////////////////-->
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+
+<link rel="stylesheet" href="../resources/style/graphclient.css"/>
+<link rel="stylesheet" href="../resources/style/yfiles-app-framework.css"/>
+
+</head>
+<body>
+<div id="app" data-type="application">
+  <div data-type="BorderLayout" class="container" data-layout-arrangement="headline">
+    <div data-type="Panel" data-layout-region="top" id="top" data-splitter="false">
+      <div data-type="ToolBar" data-name="toolbar">
+
+        <button data-command="ZoomIn" title="Zoom In" data-icon="yIconZoomIn"></button>
+        <button data-command="ZoomOriginal" title="Zoom to original size" data-icon="yIconZoomOriginal"></button>
+        <button data-command="ZoomOut" title="Zoom Out" data-icon="yIconZoomOut"></button>
+        <button data-command="FitContent" title="Fit Content" data-icon="yIconZoomFit"></button>
+
+      </div>
+    </div>
+
+    <!--
+    The sidebar for the overview, properties and settings
+    -->
+    <aside data-type="Panel" class="sidebar left" data-layout-region="left">
+      <div data-type="CollapsiblePane" data-header="Overview" data-collapse="top">
+        <div data-type="GraphOverviewControl" data-name="overviewControl" id="overviewControl"></div>
+      </div>
+
+      <div data-type="CollapsiblePane" data-header="Description" data-collapse="top">
+
+          <p>
+            The <em>IncrementalHierarchicGroup Demo</em> demonstrates how to expand and collapse sub graphs organized in
+            groups and folders.
+          </p>
+
+          <p>
+            This demo shows how to keep complex hierarchically organized diagrams clear and straightforward by showing
+            only parts of the entire structure.
+          </p>
+
+          <p>The incremental layout approach ensures that the arrangement of the already visible parts of the graph is
+            kept as consistent as possible
+            after expanding or collapsing a group.
+          </p>
+
+          <h2>Things to try:</h2>
+
+          <ul>
+            <li>Click on the +/- button of a group node to expand or collapse it.</li>
+          </ul>
+
+        </div>
+    </aside>
+
+    <!--
+    The GraphControl
+    -->
+    <div data-type="Panel" data-layout-region="center" id="center">
+      <div data-type="GraphControl" data-name="graphControl" id="graphControl"></div>
+    </div>
+
+  </div>
+</div>
+
+
+<script src="../../lib/yfiles/es5-shim.js"></script>
+<script src="../../lib/yfiles/lang.js"></script>
+<script src="demo/yfiles/graph/incrementalhierarchicgrouping/IncrementalHierarchicGroupingDemo.js"></script>
+<script src="demo/yfiles/graph/incrementalhierarchicgrouping/LabelInsetsProvider.js"></script>
+<script src="demo/yfiles/graph/incrementalhierarchicgrouping/LabelSizeConstraintProvider.js"></script>
+
+<script src="../resources/license.js"></script>
+<script>
+  var yfiles = yfiles ? yfiles : {};
+  yfiles.baseUrl = "../../lib/";
+</script>
+<!--<script src="../demo.yfiles.framework/yfiles-demo-framework.js" ></script>-->
+<script src="../../lib/yfiles/complete.js"></script>
+<script src="../demo.yfiles.framework/yfiles.demo.js" ></script>
+<script>
+
+	yfiles.ready([], function() {
+  		yfiles.demo.Application.start(
+      		new demo.yfiles.graph.incrementalhierarchicgrouping.IncrementalHierarchicGroupingDemo(),
+      		"app",
+      		{ backend: 'yfiles' });
+	});
+</script>
+</body>
+</html>

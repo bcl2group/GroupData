@@ -1,0 +1,172 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   
+      <title>Chapter&nbsp;4.&nbsp;Graph Analysis</title>
+      <link rel="stylesheet" href="ystyle.css" type="text/css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.65.1">
+      <link rel="home" href="index.html" title="yFiles for HTML Developer's Guide: Analysis and Layout">
+      <link rel="up" href="index.html" title="yFiles for HTML Developer's Guide: Analysis and Layout">
+      <link rel="previous" href="morphing.html" title="Layout Morphing">
+      <link rel="next" href="analysis_overview.html" title="Analysis Algorithms">
+      <link rel="stylesheet" href="jsdt/toc.css" type="text/css"><script type="text/javascript" src="jsdt/jquery.min.js"></script><script type="text/javascript" src="jsdt/toc.js"></script><link type="text/css" rel="stylesheet" href="jssh/SyntaxHighlighter.css"><script type="text/javascript" src="jssh/shCore.js"></script><script type="text/javascript" src="jssh/shBrushJScript.js"></script><script type="text/javascript" src="jssh/shBrushCSharp.js"></script><script type="text/javascript" src="jssh/shBrushXml.js"></script><script type="text/javascript" src="jssh/shBrushCss.js"></script><script type="text/javascript">
+  function sh() {
+
+    dp.SyntaxHighlighter.HighlightAll('programlisting', false, false, false, null, false);
+  }
+  </script></head>
+   <body onload="sh()" bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <div class="navheader">
+         <table width="100%" summary="Navigation header">
+            <tr>
+               <th colspan="3" align="center">Chapter&nbsp;4.&nbsp;Graph Analysis</th>
+            </tr>
+            <tr>
+               <td width="20%" align="left"><a accesskey="p" href="morphing.html">Prev</a>&nbsp;
+               </td>
+               <th width="60%" align="center">&nbsp;</th>
+               <td width="20%" align="right">&nbsp;<a accesskey="n" href="analysis_overview.html">Next</a></td>
+            </tr>
+         </table>
+         <div class="navline"></div>
+         <div style="display:none"><img src="figures/navbg.jpg" alt=""><img src="figures/navline.jpg" alt=""></div>
+      </div>
+      <div class="chapter" lang="en">
+         <div class="titlepage">
+            <div>
+               <div>
+                  <h2 class="title"><a name="analysis"></a>Chapter&nbsp;4.&nbsp;Graph Analysis
+                  </h2>
+               </div>
+            </div>
+            <div></div>
+         </div>
+         <div class="toc">
+            <p><b>Table of Contents</b></p>
+            <dl>
+               <dt><span class="section"><a href="analysis.html#analysis_invocation">Using yFiles Graph Analysis Functionality</a></span></dt>
+               <dt><span class="section"><a href="analysis_overview.html">Analysis Algorithms</a></span></dt>
+               <dd>
+                  <dl>
+                     <dt><span class="section"><a href="analysis_overview.html#Quickly Checking for Graph Characteristics">Quickly Checking for Graph Characteristics</a></span></dt>
+                     <dt><span class="section"><a href="analysis_overview.html#analysis_custom_data">Binding Data to Graph Elements</a></span></dt>
+                     <dt><span class="section"><a href="analysis_overview.html#BFS">Breadth-First Search</a></span></dt>
+                     <dt><span class="section"><a href="analysis_overview.html#DFS">Depth-First Search</a></span></dt>
+                     <dt><span class="section"><a href="analysis_overview.html#Graph Connectivity">Graph Connectivity</a></span></dt>
+                     <dt><span class="section"><a href="analysis_overview.html#shortest_paths">Shortest Paths</a></span></dt>
+                     <dt><span class="section"><a href="analysis_overview.html#Centrality">Centrality Measures</a></span></dt>
+                     <dt><span class="section"><a href="analysis_overview.html#spanning_trees">Spanning Trees</a></span></dt>
+                     <dt><span class="section"><a href="analysis_overview.html#Transitivity">Transitivity</a></span></dt>
+                     <dt><span class="section"><a href="analysis_overview.html#Trees">Trees</a></span></dt>
+                  </dl>
+               </dd>
+            </dl>
+         </div>
+         <p>
+            This chapter presents the graph analysis algorithms provided by the yFiles for HTML
+            library and explains how to use them.
+            
+         </p>
+         <div class="section" lang="en">
+            <div class="titlepage">
+               <div>
+                  <div>
+                     <h2 class="title" style="clear: both"><a name="analysis_invocation"></a>Using yFiles Graph Analysis Functionality
+                     </h2>
+                  </div>
+               </div>
+               <div></div>
+            </div>
+            <p>
+               Internally, the analysis algorithms in the yFiles Basic library component are tailored
+               to the basic algorithms graph structure.
+               By means of the adapter mechanisms presented in <a href="layout_adapter.html" title="Chapter&nbsp;3.&nbsp;Using yFiles for HTML Algorithms Functionality">Chapter&nbsp;3, <i>Using yFiles for HTML Algorithms Functionality</i></a>,
+               however, the analysis algorithms can be used with an IGraph-based graph structure
+               as well.
+               
+            </p>
+            <p>
+               Adapter class <a href="../../html/T_yworks_yfiles_ui_model_YGraphAdapter.htm" title="Link to API documentation">YGraphAdapter<sup xmlns="http://www.w3.org/1999/xhtml" xmlns:fo="http://www.w3.org/1999/XSL/Format"><img src="figures/icon_api.gif" align="bottom" border="0"></img></sup></a> provides
+               services for necessary conversions prior and subsequent to running an analysis algorithm.
+               Most notably, it creates a copy of an IGraph that can be used with such algorithms:
+               
+            </p>
+            <div class="example"><a name="d0e1063"></a><p class="title"><b>Example&nbsp;4.1.&nbsp;Basic preparation for calling an analysis algorithm</b></p><pre class="programlisting csharp">
+// 'graph' is of type yWorks.yFiles.UI.Model.IGraph.
+
+// Create the graph model adapter to get a proper analysis graph structure.
+var /*yworks.yfiles.ui.model.YGraphAdapter*/ graphAdapter = new yworks.yfiles.ui.model.YGraphAdapter(this.$graph$0);
+
+// The YGraph property returns the yWorks.yFiles.Algorithms.Graph instance that
+// corresponds to the given IGraph above.
+var /*boolean*/ isConnected = yworks.yfiles.algorithms.GraphChecker.isConnected(graphAdapter.yGraph);
+</pre></div>
+            <p>
+               The following detailed example shows the invocation of an analysis algorithm with
+               additional intermittent conversions and updates to the original IGraph.
+               
+            </p>
+            <div class="example"><a name="d0e1073"></a><p class="title"><b>Example&nbsp;4.2.&nbsp;Graph analysis with an IGraph-based graph using adapter mechanisms</b></p><pre class="programlisting csharp">
+// 'graph' is of type yWorks.yFiles.UI.Model.IGraph.
+
+// Create the graph model adapter to get a proper analysis graph structure.
+var /*yworks.yfiles.ui.model.YGraphAdapter*/ graphAdapter = new yworks.yfiles.ui.model.YGraphAdapter(this.$graph$0);
+
+// Test if the graph is a tree.
+if (yworks.yfiles.algorithms.Trees.isTree(graphAdapter.yGraph)) {
+  // Explicitly set the first node from the node set as the root node of the
+  // tree.
+  // Direct the tree; i.e., revert those edges that point towards the root
+  // node.
+  var /*yworks.yfiles.algorithms.EdgeList*/ el = yworks.yfiles.algorithms.Trees.directTreeWithRoot(graphAdapter.yGraph, graphAdapter.getCopiedNode(yfiles.system.collections.EnumerableExtensions./*&lt;yworks.yfiles.ui.model.INode&gt;*/first(this.$graph$0.nodes)));
+  // Transfer back the result.
+  var /*yfiles.system.collections.generic.IEnumerable`1&lt;yworks.yfiles.ui.model.IEdge&gt;*/ el_igraph = graphAdapter.createEdgeEnumerable(el);
+  var /*yfiles.util.IEnumerator*/ tmpEnumerator = el_igraph.getEnumerator();
+  while (tmpEnumerator.moveNext()) {
+    var /*yworks.yfiles.ui.model.IEdge*/ e = tmpEnumerator.current;
+    {
+      // Reverse the corresponding edges in the original IGraph.
+      yworks.yfiles.ui.model.GraphExtensions.reverse(this.$graph$0, e);
+    }
+  }
+
+  // Get the leaf nodes of the tree.
+  var /*yworks.yfiles.algorithms.NodeList*/ nl = yworks.yfiles.algorithms.Trees.getLeafNodes(graphAdapter.yGraph, true);
+  var /*yfiles.system.collections.generic.IEnumerable`1&lt;yworks.yfiles.ui.model.INode&gt;*/ nl_igraph = graphAdapter.createNodeEnumerable(nl);
+}
+</pre></div>
+            <p>
+               Tutorial demo application <a href="../../../../demos/demo.yfiles.algorithms.shortestpath/index.html" title="Link to demo code">demo.yfiles.algorithms.shortestpath</a>
+               also presents using the graph adapter mechanism.
+               
+            </p>
+         </div>
+      </div>
+      <table class="copyright" border="0" cellpadding="0" cellspacing="0" width="100%">
+         <tbody>
+            <tr>
+               <td align="right">
+                  <p class="copyright">Copyright &copy;2004-2012, yWorks GmbH. All rights reserved.</p>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <div class="navfooter">
+         <div class="navline2"></div>
+         <div style="display:none"><img src="figures/navline2.jpg" alt=""><img src="figures/navbg2.jpg" alt=""></div>
+         <table width="100%" summary="Navigation footer">
+            <tr>
+               <td width="40%" align="left"><a accesskey="p" href="morphing.html">Prev</a>&nbsp;
+               </td>
+               <td width="20%" align="center"><a accesskey="u" href="index.html">Up</a></td>
+               <td width="40%" align="right">&nbsp;<a accesskey="n" href="analysis_overview.html">Next</a></td>
+            </tr>
+            <tr>
+               <td width="40%" align="left" valign="top">Layout Morphing&nbsp;</td>
+               <td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td>
+               <td width="40%" align="right" valign="top">&nbsp;Analysis Algorithms</td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

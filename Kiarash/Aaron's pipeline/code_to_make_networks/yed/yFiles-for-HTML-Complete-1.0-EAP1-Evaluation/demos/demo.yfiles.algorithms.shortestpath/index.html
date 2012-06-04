@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<!-- ////////////////////////////////////////////////////////////////////////
+     //
+     // This file is part of yFiles for HTML 1.0-EAP1.
+     // 
+     // yWorks proprietary/confidential. Use is subject to license terms.
+     //
+     // Redistribution of this file or of an unauthorized byte-code version
+     // of this file is strictly forbidden.
+     //
+     // Copyright (c) 2012 by yWorks GmbH, Vor dem Kreuzberg 28, 
+     // 72070 Tuebingen, Germany. All rights reserved.
+     // 
+     ////////////////////////////////////////////////////////////////////////-->
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+  <link rel="stylesheet" href="../resources/style/graphclient.css"/>
+  <link rel="stylesheet" href="../resources/style/yfiles-app-framework.css"/>
+
+</head>
+<body>
+  <div id="loader">
+    <div id="circularG">
+      <div id="circularG_1" class="circularG"></div>
+      <div id="circularG_2" class="circularG"></div>
+      <div id="circularG_3" class="circularG"></div>
+      <div id="circularG_4" class="circularG"></div>
+      <div id="circularG_5" class="circularG"></div>
+      <div id="circularG_6" class="circularG"></div>
+      <div id="circularG_7" class="circularG"></div>
+      <div id="circularG_8" class="circularG"></div>
+    </div>
+    <p>Loading... please wait.</p>
+  </div>
+  <div id="app" data-type="application">
+    <div data-type="BorderLayout" class="container" data-layout-arrangement="headline">
+      <div data-type="Panel" data-layout-region="top" id="top" data-splitter="false">
+        <div data-type="ToolBar" data-name="toolbar">
+          <button data-command="NewGraph" data-icon="yIconNew" title="New"></button>
+
+          <span data-type="Separator"></span>
+
+          <button data-command="ZoomIn" data-icon="yIconZoomIn" title="Zoom In"></button>
+          <!--     <button data-command="ZoomOriginal" data-icon="yIconZoomOriginal" title="Zoom to original size"></button> -->
+          <button data-command="ZoomOut" data-icon="yIconZoomOut" title="Zoom Out"></button>
+          <button data-command="FitContent" data-icon="yIconZoomFit" title="Fit Content"></button>
+
+          <span data-type="Separator"></span>
+
+          <!-- combobox for layouter -->
+          <form>
+            <select data-type="ComboBox" data-name="layoutComboBox" data-command="SetLayout"
+                title="Select a layout algorithm"></select>
+          </form>
+          <button data-command="LayoutCommand" title="Layout" data-icon="yIconLayout">Layout</button>
+
+          <span data-type="Separator"></span>
+
+          <button data-command="MarkSource" title="Mark as Source">Mark as Source</button>
+          <button data-command="MarkTarget" title="Mark as Target">Mark as Target</button>
+          <!-- combobox for directed -->
+          <form>
+            <select data-type="ComboBox" data-name="directionComboBox" data-command="SetDirection"></select>
+          </form>
+
+          <span data-type="Separator"></span>
+
+          <button data-command="SetUniformLabelValue" data-icon="yIconProperites"
+              title="Set uniform label values">Uniform Label Values</button>
+          <button data-command="DeleteAllLabels" data-icon="yIconDelete"
+              title="Delete all labels">Delete All Labels</button>
+        </div>
+      </div>
+
+      <!--
+        The sidebar for the description
+      -->
+      <aside data-type="Panel" class="sidebar left" data-collapse="none" data-layout-region="left">
+        <div data-type="CollapsiblePane" data-header="Description" data-collapse="top">
+          <p>
+            Shows how to use graph analysis algorithms in yFiles for HTML, specifically, shortest path search, together
+            with the <i>YGraphAdapter</i> analysis adapter class.
+          </p>
+
+          <h2>Things to Try</h2>
+          <ul>
+            <li>
+              Mark source and target nodes by selecting a node, then clicking on the "Mark as Source" or "Mark as
+              Target" button. <br/> Select multiple nodes by a marquee selection with the mouse, or use the Ctrl key
+              when clicking on a node to add it to an existing selection.
+              <ul>
+                <li>The shortest path is calculated and marked in red as soon as at least one source and one target are
+                  selected.
+                </li>
+                <li>The shortest path is the one with the smallest cost, where cost is the sum of the visible lengths of
+                  the edges.
+                </li>
+              </ul>
+            </li>
+            <li>
+              Use "Uniform Edge Labels" to give each edge equal weight. The shortest path becomes the one where the sum
+              of the edge weights is the smallest, i.e. the one with the fewest edges.
+            </li>
+            <li>
+              Press F2 to open the label editor for a selected edge and change the weight to see how the shortest paths
+              are affected.
+            </li>
+            <li>
+              Toggle between "Directed" and "Undirected" edges to either taking edge direction into account or ignoring
+              it when performing a shortest path search.
+            </li>
+            <li>
+              Edit the graph by creating, deleting, or moving nodes, edges, and bends. Observe how paths are affected.
+              Edits immediately trigger a new shortest path search.
+            </li>
+            <li>
+              Select different automatic layout styles from the dropdown in the toolbar and observe how the changed edge
+              lengths affect the shortest path search.
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <!--
+      The GraphControl
+      -->
+      <div data-type="Panel" data-layout-region="center" id="center">
+        <div data-type="GraphControl" data-name="graphControl" id="graphControl"></div>
+      </div>
+    </div>
+  </div>
+  <!-- Library imports -->
+  <script src="../../lib/yfiles/es5-shim.js"></script>
+  <script src="../../lib/yfiles/lang.js"></script>
+
+  <script src="demo/yfiles/algorithms/shortestpath/ShortestPathDemo.js" ></script>
+  <script src="demo/base/randomgraphgenerator/RandomGraphGenerator.js" ></script>
+  <script src="demo/base/randomgraphgenerator/RandomSupport.js" ></script>
+  <script src="../resources/license.js"></script>
+  <script>
+    var yfiles = yfiles ? yfiles : {};
+    yfiles.baseUrl = "../../lib/";
+  </script>
+<!--<script src="../demo.yfiles.framework/yfiles-demo-framework.js" ></script>-->
+<script src="../../lib/yfiles/complete.js"></script>
+<script src="../demo.yfiles.framework/yfiles.demo.js" ></script>
+  <script>
+
+  yfiles.ready([], function() {
+    yfiles.demo.Application.start(new demo.yfiles.algorithms.shortestpath.ShortestPathDemo(), 'app', { backend: 'yfiles', loaderId: 'loader' });
+  });
+  </script>
+</body>
+</html>

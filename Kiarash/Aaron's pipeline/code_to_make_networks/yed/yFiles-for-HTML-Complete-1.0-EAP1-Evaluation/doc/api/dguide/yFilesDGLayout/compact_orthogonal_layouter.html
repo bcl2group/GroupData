@@ -1,0 +1,228 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   
+      <title>Compact Orthogonal Layout</title>
+      <link rel="stylesheet" href="ystyle.css" type="text/css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.65.1">
+      <link rel="home" href="index.html" title="yFiles for HTML Developer's Guide: Analysis and Layout">
+      <link rel="up" href="layout.html" title="Chapter&nbsp;5.&nbsp;Automatic Graph Layout">
+      <link rel="previous" href="directed_orthogonal_layouter.html" title="Directed Orthogonal Layout">
+      <link rel="next" href="tree_layouter.html" title="Tree Layout">
+      <link rel="stylesheet" href="jsdt/toc.css" type="text/css"><script type="text/javascript" src="jsdt/jquery.min.js"></script><script type="text/javascript" src="jsdt/toc.js"></script><link type="text/css" rel="stylesheet" href="jssh/SyntaxHighlighter.css"><script type="text/javascript" src="jssh/shCore.js"></script><script type="text/javascript" src="jssh/shBrushJScript.js"></script><script type="text/javascript" src="jssh/shBrushCSharp.js"></script><script type="text/javascript" src="jssh/shBrushXml.js"></script><script type="text/javascript" src="jssh/shBrushCss.js"></script><script type="text/javascript">
+  function sh() {
+
+    dp.SyntaxHighlighter.HighlightAll('programlisting', false, false, false, null, false);
+  }
+  </script></head>
+   <body onload="sh()" bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <div class="navheader">
+         <table width="100%" summary="Navigation header">
+            <tr>
+               <th colspan="3" align="center">Compact Orthogonal Layout</th>
+            </tr>
+            <tr>
+               <td width="20%" align="left"><a accesskey="p" href="directed_orthogonal_layouter.html">Prev</a>&nbsp;
+               </td>
+               <th width="60%" align="center">Chapter&nbsp;5.&nbsp;Automatic Graph Layout</th>
+               <td width="20%" align="right">&nbsp;<a accesskey="n" href="tree_layouter.html">Next</a></td>
+            </tr>
+         </table>
+         <div class="navline"></div>
+         <div style="display:none"><img src="figures/navbg.jpg" alt=""><img src="figures/navline.jpg" alt=""></div>
+      </div>
+      <div class="section" lang="en">
+         <div class="titlepage">
+            <div>
+               <div>
+                  <h2 class="title" style="clear: both"><a name="compact_orthogonal_layouter"></a>Compact Orthogonal Layout
+                  </h2>
+               </div>
+            </div>
+            <div></div>
+         </div>
+         <p>
+            Class 
+            <a href="../../html/T_yworks_yfiles_layout_orthogonal_CompactOrthogonalLayouter.htm" title="Link to API documentation">CompactOrthogonalLayouter<sup xmlns="http://www.w3.org/1999/xhtml" xmlns:fo="http://www.w3.org/1999/XSL/Format"><img src="figures/icon_api.gif" align="bottom" border="0"></img></sup></a> is 
+            a specialized variant of the 
+            <a href="orthogonal_layouter.html" title="Orthogonal Layout">orthogonal layout algorithm</a>. 
+            It uses a divide-and-conquer approach to achieve compact orthogonal layouts 
+            that fit into, respectively are near, a desired aspect ratio.
+            
+         </p>
+         <p>
+            In contrast to the majority of yFiles layout algorithms, class 
+            CompactOrthogonalLayouter does not inherit from CanonicMultiStageLayouter, but 
+            is instead an extension of abstract class 
+            <a href="../../html/T_yworks_yfiles_layout_AbstractLayoutStage.htm" title="Link to API documentation">AbstractLayoutStage<sup xmlns="http://www.w3.org/1999/xhtml" xmlns:fo="http://www.w3.org/1999/XSL/Format"><img src="figures/icon_api.gif" align="bottom" border="0"></img></sup></a>. 
+            
+         </p>
+         <p>
+            CompactOrthogonalLayouter combines different phases that: 
+            
+         </p>
+         <div class="orderedlist">
+            <ol type="1">
+               <li>
+                  find partitions in the node set of the graph
+                  
+               </li>
+               <li>
+                  calculate the orthogonal layout for the partitions
+                  
+               </li>
+               <li>
+                  arrange the partitions in a compact manner
+                  
+               </li>
+               <li>
+                  route the connecting edges between partitions
+                  
+               </li>
+            </ol>
+         </div>
+         <p>
+            
+            
+         </p>
+         <div class="figure"><a name="d0e10328"></a><p class="title"><b>Figure&nbsp;5.58.&nbsp;Sample layout produced by class CompactOrthogonalLayouter</b></p>
+            <div class="informaltable">
+               <center>
+                  <table border="0">
+                     <colgroup>
+                        <col width="100%">
+                     </colgroup>
+                     <tbody>
+                        <tr>
+                           <td>
+                              <div class="mediaobject" align="center"><img src="figures/compact_orthogonal.jpg" align="middle" alt="Sample layout produced by class CompactOrthogonalLayouter"></div>
+                           </td>
+                        </tr>
+                        <tr align="center">
+                           <td align="center">
+                                A compact orthogonal diagram with an aspect ratio of 1.0 
+                              
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </center>
+            </div>
+         </div>
+         <div class="section" lang="en">
+            <div class="titlepage">
+               <div>
+                  <div>
+                     <h3 class="title"><a name="compact_orthogonal_options"></a>Layout Options
+                     </h3>
+                  </div>
+               </div>
+               <div></div>
+            </div>
+            <p>
+               This specialized layout algorithm provides only few options by itself. 
+               However, the respective classes that are used for the different layout phases 
+               can be customized individually. 
+               In particular, this also includes the 
+               <a href="orthogonal_layouter.html" title="Orthogonal Layout">orthogonal layout algorithm</a> which is 
+               used as the core layouter.
+               
+            </p>
+            <div class="techn_templ">
+               <center>
+                  <table width="100%" border="1">
+                     <colgroup>
+                        <col width="16%" align="left">
+                        <col width="84%" align="left">
+                     </colgroup>
+                     <tbody valign="top">
+                        <tr>
+                           <td colspan="2" align="left"><span class="bold"><b>Grid Spacing</b></span></td>
+                        </tr>
+                        <tr class="techn_api">
+                           <td align="left">API</td>
+                           <td align="left"><pre class="programlisting ignore"><a href="../../html/P_yworks_yfiles_layout_orthogonal_CompactOrthogonalLayouter_gridSpacing.htm" title="Link to API documentation">int GridSpacing { get; set; }<sup xmlns="http://www.w3.org/1999/xhtml" xmlns:fo="http://www.w3.org/1999/XSL/Format"><img src="figures/icon_api.gif" align="bottom" border="0"></img></sup></a>
+</pre></td>
+                        </tr>
+                        <tr class="spacing">
+                           <td align="left">Description</td>
+                           <td align="left">
+                              <p>
+                                 Defines the virtual grid spacing used by the layouter.
+                                 Each node is placed in such a way that its center point lies on a grid point.
+                                 
+                              </p>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="2" align="left"><span class="bold"><b>Aspect Ratio</b></span></td>
+                        </tr>
+                        <tr class="techn_api">
+                           <td align="left">API</td>
+                           <td align="left"><pre class="programlisting ignore"><a href="../../html/P_yworks_yfiles_layout_orthogonal_CompactOrthogonalLayouter_aspectRatio.htm" title="Link to API documentation">double AspectRatio { get; set; }<sup xmlns="http://www.w3.org/1999/xhtml" xmlns:fo="http://www.w3.org/1999/XSL/Format"><img src="figures/icon_api.gif" align="bottom" border="0"></img></sup></a>
+</pre></td>
+                        </tr>
+                        <tr class="spacing">
+                           <td align="left">Description</td>
+                           <td align="left">
+                              <p>
+                                 Specifies the desired aspect ratio that the resulting diagram should fit into.
+                                 The algorithm tries to reach this value, depending on the actual graph
+                                 structure, however, this may not always be feasible.
+                                 
+                              </p>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </center>
+            </div>
+         </div>
+         <div class="section" lang="en">
+            <div class="titlepage">
+               <div>
+                  <div>
+                     <h3 class="title"><a name="col_tutorial"></a>Tutorial Demo Code
+                     </h3>
+                  </div>
+               </div>
+               <div></div>
+            </div>
+            <p>
+               The layout module class <tt class="code">CompactOrthogonalLayoutModule.cs</tt> from the 
+               
+               <a href="../../../../demos/CompleteDemos/Demo.yFiles.Layout.Modules/LayoutModulesWindow.xaml.cs/index.html" title="Link to demo code">LayoutModulesWindow.xaml.cs</a>
+               demo application presents the setup of class CompactOrthogonalLayouter in an 
+               application context.
+               
+            </p>
+         </div>
+      </div>
+      <table class="copyright" border="0" cellpadding="0" cellspacing="0" width="100%">
+         <tbody>
+            <tr>
+               <td align="right">
+                  <p class="copyright">Copyright &copy;2004-2012, yWorks GmbH. All rights reserved.</p>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <div class="navfooter">
+         <div class="navline2"></div>
+         <div style="display:none"><img src="figures/navline2.jpg" alt=""><img src="figures/navbg2.jpg" alt=""></div>
+         <table width="100%" summary="Navigation footer">
+            <tr>
+               <td width="40%" align="left"><a accesskey="p" href="directed_orthogonal_layouter.html">Prev</a>&nbsp;
+               </td>
+               <td width="20%" align="center"><a accesskey="u" href="layout.html">Up</a></td>
+               <td width="40%" align="right">&nbsp;<a accesskey="n" href="tree_layouter.html">Next</a></td>
+            </tr>
+            <tr>
+               <td width="40%" align="left" valign="top">Directed Orthogonal Layout&nbsp;</td>
+               <td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td>
+               <td width="40%" align="right" valign="top">&nbsp;Tree Layout</td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

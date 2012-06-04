@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<!-- ////////////////////////////////////////////////////////////////////////
+     //
+     // This file is part of yFiles for HTML 1.0-EAP1.
+     // 
+     // yWorks proprietary/confidential. Use is subject to license terms.
+     //
+     // Redistribution of this file or of an unauthorized byte-code version
+     // of this file is strictly forbidden.
+     //
+     // Copyright (c) 2012 by yWorks GmbH, Vor dem Kreuzberg 28, 
+     // 72070 Tuebingen, Germany. All rights reserved.
+     // 
+     ////////////////////////////////////////////////////////////////////////-->
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="../resources/style/graphclient.css"/>
+	<link rel="stylesheet" href="../resources/style/yfiles-app-framework.css"/>
+  <style>
+
+    #stylePanelContainer {
+      width: 150px;
+      background-color: #ffffee;
+      border-right:  1px solid #9f9f9f;
+    }
+
+    #stylePanel {
+      width: 100%;
+      height: 100%;
+      padding-top:  15px;
+    }
+
+    .stylePanelItem {
+      margin: 20px auto;
+    }
+
+
+    .y-cursor-dragdrop-copy { cursor: copy; }
+    .y-cursor-dragdrop-move { cursor: move; }
+    .y-cursor-dragdrop-link { cursor: alias; }
+    .y-cursor-dragdrop-scroll { cursor: move; }
+    .y-cursor-dragdrop-all { cursor: copy; }
+    .y-cursor-dragdrop-no-drop { cursor: no-drop; }
+
+  </style>
+
+
+
+</head>
+<body>
+	<div id="loader">
+		<div id="circularG">
+			<div id="circularG_1" class="circularG"></div>
+			<div id="circularG_2" class="circularG"></div>
+			<div id="circularG_3" class="circularG"></div>
+			<div id="circularG_4" class="circularG"></div>
+			<div id="circularG_5" class="circularG"></div>
+			<div id="circularG_6" class="circularG"></div>
+			<div id="circularG_7" class="circularG"></div>
+			<div id="circularG_8" class="circularG"></div>
+		</div>
+		<p>Loading... please wait.</p>
+	</div>
+  <div id="app" data-type="application">
+    <div data-type="BorderLayout" class="container" data-layout-arrangement="headline">
+
+
+      <!--
+        The sidebar for the description
+      -->
+      <aside data-type="Panel" class="sidebar left" data-collapse="none" data-layout-region="left">
+        <div data-type="CollapsiblePane" data-header="Description" data-collapse="top">
+          <p>This demo shows how to use the <i>NodeDropInputMode"</i>
+            class for drag and drop. In contrast to
+            <i>DropInputMode</i>, <i>NodeDropInputMode</i> shows a preview of the node while dragging and uses snapping.
+          </p>
+
+          <h2>Things to Try</h2>
+          <ul>
+            <li>To create a node, drag the desired node style from the left panel onto the canvas.</li>
+            <li>Drag the node around on the canvas to see grid snapping.</li>
+            <li>Drag a node around near another node to see node to node snapping.</li>
+            <li>Drag a node over a group node to see group node highlighting.</li>
+            <li>Drop a node over a group node to place it inside the group.</li>
+            <li>Switch off snapping or snapping and preview using the combo box above the canvas.</li>
+          </ul>
+        </div>
+      </aside>
+
+      <div data-type="BorderLayout" class="container" data-layout-arrangement="headline" data-layout-region="center">
+
+        <div data-type="Panel" data-layout-region="top" id="top" data-splitter="false">
+          <div data-type="ToolBar" data-name="toolbar">
+            <button data-command="ZoomIn" title="Zoom In" data-icon="yIconZoomIn"></button>
+            <button data-command="ZoomOriginal" title="Zoom to original size" data-icon="yIconZoomOriginal"></button>
+            <button data-command="ZoomOut" title="Zoom Out" data-icon="yIconZoomOut"></button>
+            <button data-command="FitContent" title="Fit Content" data-icon="yIconZoomFit"></button>
+            Enable Functions:
+            <form>
+              <select data-type="ComboBox" data-command="FunctionsChanged" data-name="functionsBox"
+                      title="Select functions">
+                <option>Snapping &amp; Preview</option>
+                <option>Preview</option>
+                <option>None</option>
+              </select>
+            </form>
+          </div>
+        </div>
+
+        <div data-type="Panel" data-layout-region="left" id="stylePanelContainer" data-splitter="false">
+          <div data-type="Control" data-layout-region="left" id="stylePanel" data-control-type="demo.yfiles.graph.input.draganddrop.StylePanel"></div>
+        </div>
+        <!--
+        The GraphControl
+        -->
+        <div data-type="Panel" data-layout-region="center" id="center">
+          <div data-type="GraphControl" data-name="graphControl" id="graphControl"></div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+  <script src="../../lib/yfiles/es5-shim.js"></script>
+  <script src="../../lib/yfiles/lang.js"></script>
+
+  <script src="demo/yfiles/graph/input/draganddrop/DragAndDropApplication.js"></script>
+  <script src="demo/yfiles/graph/input/draganddrop/StylePanel.js"></script>
+  <script src="demo/yfiles/graph/input/draganddrop/NodeDragControl.js"></script>
+
+  <script src="../resources/license.js"></script>
+  <script>
+    var yfiles = yfiles ? yfiles : {};
+    yfiles.baseUrl = "../../lib/";
+  </script>
+<!--<script src="../demo.yfiles.framework/yfiles-demo-framework.js" ></script>-->
+<script src="../../lib/yfiles/complete.js"></script>
+<script src="../demo.yfiles.framework/yfiles.demo.js" ></script>
+  <script>
+    yfiles.ready([], function() {
+      yfiles.demo.Application.start(new demo.yfiles.graph.input.draganddrop.DragAndDropApplication(), 'app', { backend: 'yfiles', loaderId: 'loader' });
+    });
+  </script>
+</body>
+</html>

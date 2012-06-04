@@ -1,0 +1,162 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   
+      <title>Enums</title>
+      <link rel="stylesheet" href="ystyle.css" type="text/css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.65.1">
+      <link rel="home" href="index.html" title="yFiles for HTML Developer's Guide: UI Components">
+      <link rel="up" href="class_framework.html" title="Chapter&nbsp;3.&nbsp;The yFiles Class Framework">
+      <link rel="previous" href="framework_structs.html" title="Structs">
+      <link rel="next" href="framework_attributes.html" title="Attributes">
+      <link rel="stylesheet" href="jsdt/toc.css" type="text/css"><script type="text/javascript" src="jsdt/jquery.min.js"></script><script type="text/javascript" src="jsdt/toc.js"></script><link type="text/css" rel="stylesheet" href="jssh/SyntaxHighlighter.css"><script type="text/javascript" src="jssh/shCore.js"></script><script type="text/javascript" src="jssh/shBrushJScript.js"></script><script type="text/javascript" src="jssh/shBrushCSharp.js"></script><script type="text/javascript" src="jssh/shBrushXml.js"></script><script type="text/javascript" src="jssh/shBrushCss.js"></script><script type="text/javascript">
+  function sh() {
+
+    dp.SyntaxHighlighter.HighlightAll('programlisting', false, false, false, null, false);
+  }
+  </script></head>
+   <body onload="sh()" bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <div class="navheader">
+         <table width="100%" summary="Navigation header">
+            <tr>
+               <th colspan="3" align="center">Enums</th>
+            </tr>
+            <tr>
+               <td width="20%" align="left"><a accesskey="p" href="framework_structs.html">Prev</a>&nbsp;
+               </td>
+               <th width="60%" align="center">Chapter&nbsp;3.&nbsp;The yFiles Class Framework</th>
+               <td width="20%" align="right">&nbsp;<a accesskey="n" href="framework_attributes.html">Next</a></td>
+            </tr>
+         </table>
+         <div class="navline"></div>
+         <div style="display:none"><img src="figures/navbg.jpg" alt=""><img src="figures/navline.jpg" alt=""></div>
+      </div>
+      <div class="section" lang="en">
+         <div class="titlepage">
+            <div>
+               <div>
+                  <h2 class="title" style="clear: both"><a name="framework_enums"></a>Enums
+                  </h2>
+               </div>
+            </div>
+            <div></div>
+         </div>
+         <div class="section" lang="en">
+            <div class="titlepage">
+               <div>
+                  <div>
+                     <h3 class="title"><a name="d0e5089"></a>Defining an Enum
+                     </h3>
+                  </div>
+               </div>
+               <div></div>
+            </div>
+            <p>
+               Enums are enumerations of flags. They are easier to use than prefixed integer fields and the
+                           yFiles Class Framework supports a simple syntax to define such an enum type. Their usage makes
+                             code more readable and makes it easier to catch typos and invalid values.
+               
+            </p>
+            <div class="example"><a name="ex_enum_basic_definition"></a><p class="title"><b>Example&nbsp;3.18.&nbsp;Basic enum definition</b></p><pre class="programlisting js">var Priority = yfiles.lang.Enum('Priority', {
+  LOW: 0, MEDIUM_LOW: 1, MEDIUM: 2, MEDIUM_HIGH: 3, HIGH: 4, VERY_HIGH: 5
+});
+switch(bug.priority) {
+  case Priority.LOW: // ...
+      break;
+  case Priority.MEDIUM_LOW: // ...
+      break;
+  // ...
+}</pre></div>
+            <p>
+               All members of an enum are automatically static.
+               
+            </p>
+            <div class="example"><a name="ex_enum_automatic_values"></a><p class="title"><b>Example&nbsp;3.19.&nbsp;Automatically generate enum values</b></p><pre class="programlisting js">var _; // "defines" another name for undefined
+var Priority = yfiles.lang.Enum('Priority', {
+  LOW: _, MEDIUM_LOW: _, MEDIUM: _, MEDIUM_HIGH: _, HIGH: _, VERY_HIGH: _
+});</pre></div>
+            <p>
+               In this example, we have defined a shorter name for the <tt class="code">undefined</tt> value in Javascript:
+                             <tt class="code">_</tt>. When the value of an enum member is undefined, it will be set to the next logical
+                             value. This will only work for integer fields and should not be mixed.
+               
+            </p>
+            <p>
+               Since most of the time an enum value is only a integer value, you can use "bitwise or" and "bitwise and"
+                         to create flagged enums. In this case, you must define the value of the fields yourself.
+               
+            </p>
+            <p>
+               The enum type also offers a few useful methods that can be used to convert values to strings and strings
+                             to values.
+               
+            </p>
+            <div class="example"><a name="ex_enum_usage"></a><p class="title"><b>Example&nbsp;3.20.&nbsp;Using an enum</b></p><pre class="programlisting js">var priority = yfiles.lang.Enum.parse(Priority.$class, 'LOW');
+if(priority === Priority.LOW) { // will be true
+  console.log('ok'); // will be printed
+}
+console.log(yfiles.lang.Enum.getName(Priority.$class, priority)); // -&gt; "LOW"</pre></div>
+            <p>
+               The <tt class="code">yfiles.lang.Enum.parse</tt> method takes parameters for the enum and value, with
+                              an optional third parameter: <tt class="code">ignoreCase</tt>.
+                             If this parameter is set to <tt class="code">true</tt>, then the strings 'LOW', 'Low', 'low', etc. will all
+                             provide the same value.
+               
+            </p>
+            <p>
+               The <tt class="code">yfiles.lang.Enum.getName</tt> method returns the string matching the specified value.
+               
+            </p>
+         </div>
+         <div class="section" lang="en">
+            <div class="titlepage">
+               <div>
+                  <div>
+                     <h3 class="title"><a name="d0e5139"></a>Lazy Enums
+                     </h3>
+                  </div>
+               </div>
+               <div></div>
+            </div>
+            <p>
+               Lazy enums function similarly to lazy instantiation of other types.  They must be namespaced to a module,
+                         and provide benefits at startup time and in preventing circular references.
+               
+            </p>
+            <div class="example"><a name="ex_enum_lazy_definition"></a><p class="title"><b>Example&nbsp;3.21.&nbsp;Lazy enum definition</b></p><pre class="programlisting js">yfiles.lang.module('myapp.model', function(exports) {
+  exports.Priority = new yfiles.EnumDefinition(function() {
+      return {
+          LOW: 0, MEDIUM_LOW: 1, MEDIUM: 2, MEDIUM_HIGH: 3, HIGH: 4, VERY_HIGH: 5
+      };
+  });
+});</pre></div>
+         </div>
+      </div>
+      <table class="copyright" border="0" cellpadding="0" cellspacing="0" width="100%">
+         <tbody>
+            <tr>
+               <td align="right">
+                  <p class="copyright">Copyright &copy;2012, yWorks GmbH. All rights reserved.</p>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <div class="navfooter">
+         <div class="navline2"></div>
+         <div style="display:none"><img src="figures/navline2.jpg" alt=""><img src="figures/navbg2.jpg" alt=""></div>
+         <table width="100%" summary="Navigation footer">
+            <tr>
+               <td width="40%" align="left"><a accesskey="p" href="framework_structs.html">Prev</a>&nbsp;
+               </td>
+               <td width="20%" align="center"><a accesskey="u" href="class_framework.html">Up</a></td>
+               <td width="40%" align="right">&nbsp;<a accesskey="n" href="framework_attributes.html">Next</a></td>
+            </tr>
+            <tr>
+               <td width="40%" align="left" valign="top">Structs&nbsp;</td>
+               <td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td>
+               <td width="40%" align="right" valign="top">&nbsp;Attributes</td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

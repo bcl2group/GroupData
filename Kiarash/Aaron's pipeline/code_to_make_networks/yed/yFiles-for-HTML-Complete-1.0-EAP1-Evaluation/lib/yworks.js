@@ -1,0 +1,14 @@
+/****************************************************************************
+ **
+ ** This file is part of yFiles for HTML 1.0-EAP1.
+ ** 
+ ** yWorks proprietary/confidential. Use is subject to license terms.
+ **
+ ** Redistribution of this file or of an unauthorized byte-code version
+ ** of this file is strictly forbidden.
+ **
+ ** Copyright (c) 2012 by yWorks GmbH, Vor dem Kreuzberg 28, 
+ ** 72070 Tuebingen, Germany. All rights reserved.
+ **
+ ***************************************************************************/
+(typeof define=='function'?define:(function(dependencies, fn){fn();}))(['yfiles/lang'],function(){yfiles.module("yworks",function(exports){exports.$meta = function(){return [Root.SGB(Root.USB.YFILES_FOR_HTML_WPF_BRIDGE_NS,"yworks.support.windows"),Root.SGB(Root.USB.YFILES_FOR_HTML_XAML_NS,"yworks.canvas"),Root.SGB(Root.USB.YFILES_FOR_HTML_XAML_NS,"yworks.canvas.drawing"),Root.SGB(Root.USB.YFILES_FOR_HTML_XAML_NS,"yworks.canvas.drawing.markup"),Root.SGB(Root.USB.YFILES_COMMON_NS,"yworks.canvas.geometry.structs"),Root.SGB(Root.USB.YFILES_FOR_HTML_XAML_NS,"yworks.canvas.input"),Root.SGB(Root.USB.YFILES_FOR_HTML_XAML_NS,"yworks.canvas.model")];};});yfiles.module("yworks",function(exports){exports.$meta = function(){return [Root.TGB(Root.USB.YFILES_FOR_HTML_XAML_NS,Root.USB.YFILES_FOR_HTML_XAML_PREFIX),Root.TGB(Root.USB.YFILES_COMMON_NS,Root.USB.YFILES_COMMON_PREFIX),Root.TGB(Root.USB.YFILES_COMMON_MARKUP_NS,Root.USB.YFILES_COMMON_MARKUP_PREFIX),Root.TGB(Root.USB.YFILES_FOR_HTML_WPF_BRIDGE_NS,Root.USB.YFILES_FOR_HTML_WPF_BRIDGE_PREFIX)];};});yfiles.module("yworks",function(exports){exports.$meta = function(){return [Root.SGB(Root.USB.YFILES_FOR_HTML_XAML_NS,"yworks.yfiles.ui"),Root.SGB(Root.USB.YFILES_FOR_HTML_XAML_NS,"yworks.yfiles.ui.databinding"),Root.SGB(Root.USB.YFILES_FOR_HTML_XAML_NS,"yworks.yfiles.ui.drawing"),Root.SGB(Root.USB.YFILES_FOR_HTML_XAML_NS,"yworks.yfiles.ui.input"),Root.SGB(Root.USB.YFILES_FOR_HTML_XAML_NS,"yworks.yfiles.ui.markup"),Root.SGB(Root.USB.YFILES_FOR_HTML_XAML_NS,"yworks.yfiles.ui.labelmodels"),Root.SGB(Root.USB.YFILES_FOR_HTML_XAML_NS,"yworks.yfiles.ui.portlocationmodels"),Root.SGB(Root.USB.YFILES_COMMON_NS,"yworks.yfiles.graphml"),Root.SGB(Root.USB.YFILES_COMMON_MARKUP_NS,"yworks.yfiles.graphml.markup"),Root.SGB(Root.USB.YFILES_COMMON_NS,"yworks.yfiles.graphml.references"),Root.SGB(Root.USB.YFILES_COMMON_NS,"yworks.yfiles.graphml.folding"),Root.SGB(Root.USB.YFILES_COMMON_NS,"yworks.yfiles.ui.markup.common"),Root.SGB(Root.USB.YFILES_COMMON_NS,"yworks.yfiles.ui.model"),Root.SGB(Root.USB.YFILES_COMMON_NS,"yworks.yfiles.ui.drawing.common"),Root.TGB(Root.USB.YFILES_COMMON_NS,Root.USB.YFILES_COMMON_PREFIX),Root.TGB(Root.USB.YFILES_COMMON_MARKUP_NS,Root.USB.YFILES_COMMON_MARKUP_PREFIX)];};});});

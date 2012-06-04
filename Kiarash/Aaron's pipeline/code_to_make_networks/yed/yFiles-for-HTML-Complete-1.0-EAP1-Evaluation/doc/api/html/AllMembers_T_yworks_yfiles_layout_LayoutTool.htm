@@ -1,0 +1,780 @@
+﻿<html xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8" />
+    <META NAME="save" CONTENT="history" />
+    <title>LayoutTool Members</title>
+    <meta name="Language" content="en-us" />
+    <meta name="System.Keywords" content="LayoutTool class" />
+    <meta name="System.Keywords" content="LayoutTool class, all members" />
+    <meta name="System.Keywords" content="yworks.yfiles.layout.LayoutTool class" />
+    <meta name="Microsoft.Help.Id" content="AllMembers.T:yworks.yfiles.layout.LayoutTool" />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <link rel="stylesheet" type="text/css" href="../styles/Presentation.css" />
+    <link rel="stylesheet" type="text/css" href="ms-help://Hx/HxRuntime/HxLink.css" />
+    <script type="text/javascript" src="../scripts/EventUtilities.js"> </script>
+    <script type="text/javascript" src="../scripts/SplitScreen.js"> </script>
+    <script type="text/javascript" src="../scripts/Dropdown.js"> </script>
+    <script type="text/javascript" src="../scripts/script_manifold.js"> </script>
+    <script type="text/javascript" src="../scripts/script_feedBack.js"> </script>
+    <script type="text/javascript" src="../scripts/CheckboxMenu.js"> </script>
+    <script type="text/javascript" src="../scripts/CommonUtilities.js"> </script>
+    <meta name="container" content="yworks.yfiles.layout" />
+    <meta name="file" content="AllMembers_T_yworks_yfiles_layout_LayoutTool" />
+    <meta name="guid" content="AllMembers_T_yworks_yfiles_layout_LayoutTool" />
+    <xml>
+      <MSHelp:Attr Name="AssetID" Value="AllMembers.T:yworks.yfiles.layout.LayoutTool" />
+      <MSHelp:TOCTitle Title="LayoutTool Members" />
+      <MSHelp:RLTitle Title="LayoutTool Members (yworks.yfiles.layout)" />
+      <MSHelp:Keyword Index="A" Term="AllMembers.T:yworks.yfiles.layout.LayoutTool" />
+      <MSHelp:Keyword Index="A" Term="frlrfyworksyfileslayoutLayoutToolMembersTopic" />
+      <MSHelp:Keyword Index="K" Term="LayoutTool class" />
+      <MSHelp:Keyword Index="K" Term="LayoutTool class, all members" />
+      <MSHelp:Keyword Index="K" Term="yworks.yfiles.layout.LayoutTool class" />
+      <MSHelp:Attr Name="HelpPriority" Value="1" />
+      <MSHelp:Attr Name="Locale" Value="en-us" />
+      <MSHelp:Attr Name="TopicType" Value="kbSyntax" />
+      <MSHelp:Attr Name="TopicType" Value="apiref" />
+      <MSHelp:Attr Name="AssemblyVersion" Value="1.0.0.0" />
+    </xml>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" alt="Collapse image" title="Collapse image" />
+    <img id="expandImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" alt="Expand Image" title="Expand Image" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" src="../icons/dropdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" src="../icons/dropdownHover.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" src="../icons/copycode.gif" alt="Copy image" title="Copy image" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" src="../icons/copycodeHighlight.gif" alt="CopyHover image" title="CopyHover image" />
+    <div id="header">
+      <table id="topTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" style="cursor:default;" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage, event)" tabindex="0">
+              <img ID="toggleAllImage" class="toggleAll" src="../icons/collapse_all.gif" /> <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label><label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span>    </span>
+            <span id="memberOptionsDropdown" class="filter" tabindex="0">
+              <img id="memberOptionsDropdownImage" src="../icons/dropdown.gif" /> <label id="memberOptionsMenuAllLabel" for="memberOptionsDropdownImage" style="display: none;"><nobr>Members: Show All </nobr></label><label id="memberOptionsMenuMultipleLabel" for="memberOptionsDropdownImage" style="display: none;"><nobr>Members: Filtered </nobr></label><label id="memberOptionsMenuProtectedLabel" for="memberOptionsDropdownImage" style="display: none;"><nobr>Members: Filtered </nobr></label><label id="memberOptionsMenuInheritedLabel" for="memberOptionsDropdownImage" style="display: none;"><nobr>Members: Filtered </nobr></label></span>
+          </td>
+        </tr>
+      </table>
+      <div id="devlangsMenu">
+        <input id="yFilesJavaScriptCheckbox" type="checkbox" data="yFilesJavaScript,cs,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="yFilesJavaScriptCheckbox">JavaScript</label>
+        <br />
+      </div>
+      <div id="memberOptionsMenu">
+        <input id="ProtectedCheckbox" type="checkbox" data="Protected" value="on" onClick="SetMemberOptions(this, 'vis')" />
+        <label class="checkboxLabel" for="ProtectedCheckbox">Include Protected Members</label>
+        <br />
+        <input id="InheritedCheckbox" type="checkbox" data="Inherited" value="on" onClick="SetMemberOptions(this, 'decl')" />
+        <label class="checkboxLabel" for="InheritedCheckbox">Include Inherited Members</label>
+        <br />
+      </div>
+      <table id="bottomTable" cellpadding="0" cellspacing="0">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">yFiles for HTML Complete Class Reference</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">LayoutTool Members</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td align="left">
+            <a href="T_yworks_yfiles_layout_LayoutTool.htm">LayoutTool Class</a> <a href="#methodTableToggle" onclick="OpenSection(methodTableToggle)">Methods</a> <a href="#seeAlsoToggle" onclick="OpenSection(seeAlsoToggle)">See Also</a> <span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback('yfileshtml@yworks.com','yFiles for HTML Complete Class Reference','','','','%0\dYour%20feedback%20is%20used%20to%20improve%20the%20documentation%20and%20the%20product.%20Your%20e-mail%20address%20will%20not%20be%20used%20for%20any%20other%20purpose%20and%20is%20disposed%20of%20after%20the%20issue%20you%20report%20is%20resolved.%20%20While%20working%20to%20resolve%20the%20issue%20that%20you%20report,%20you%20may%20be%20contacted%20via%20e-mail%20to%20get%20further%20details%20or%20clarification%20on%20the%20feedback%20you%20sent.%20After%20the%20issue%20you%20report%20has%20been%20addressed,%20you%20may%20receive%20an%20e-mail%20to%20let%20you%20know%20that%20your%20feedback%20has%20been%20addressed.%0\A%0\d','Customer%20Feedback');">Send Feedback</a></span></td>
+        </tr>
+      </table>
+      <table id="gradientTable">
+        <tr>
+          <td class="nsrBottom" background="../icons/gradient.gif" />
+        </tr>
+      </table>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <span style="color: DarkGray"></span>
+        <p />
+        <p>The <a href="T_yworks_yfiles_layout_LayoutTool.htm">LayoutTool</a> type exposes the following members.</p>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(methodTableToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(methodTableToggle, event)" tabindex="0">
+            <img id="methodTableToggle" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Methods</span>
+        </h1>
+        <div id="methodTableSection" class="section" name="collapseableSection" style="">
+          <table id="memberList" class="members" frame="lhs" cellpadding="2">
+            <col width="10%" />
+            <tr>
+              <th class="iconColumn">
+               
+            </th>
+              <th class="nameColumn">Name</th>
+              <th class="descriptionColumn">Description</th>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_layout_LayoutTool_alignNodeLayouts.htm">alignNodeLayouts</a>
+              </td>
+              <td />
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_layout_LayoutTool_applyGraphLayout.htm">applyGraphLayout</a>
+              </td>
+              <td>
+                <div class="summary">Applies a GraphLayout to a LayoutGraph.</div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_layout_LayoutTool_arrangeRectangleGrid.htm">arrangeRectangleGrid</a>
+              </td>
+              <td>
+                <div class="summary">
+Reassigns the bounds of the rectangles in <span class="code">rects</span> to fit into a
+large rectangle, whose bounds will be stored in <span class="code">finalRect</span>.
+</div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_layout_LayoutTool_arrangeRectangleRows.htm">arrangeRectangleRows</a>
+              </td>
+              <td>
+                <div class="summary">
+Reassigns the bounds of the rectangles in <span class="code">rects</span> to fit in a
+large rectangle, whose bounds will be stored in <span class="code">finalRect</span>.
+</div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_layout_LayoutTool_arrangeRectangleRowsWithAlignment.htm">arrangeRectangleRowsWithAlignment</a>
+              </td>
+              <td>
+                <div class="summary">
+Reassigns the bounds of the rectangles in <span class="code">rects</span> to fit into a
+large rectangle, whose bounds will be stored in <span class="code">finalRect</span>.
+</div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_layout_LayoutTool_assignReverseLayout.htm">assignReverseLayout</a>
+              </td>
+              <td>
+                <div class="summary">Set the layout of two parallel edges with different direction identical.</div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_layout_LayoutTool_clipEdgeOnBB.htm">clipEdgeOnBB</a>
+              </td>
+              <td>
+                <div class="summary">
+This helper method clips the path of the edge on the bounding box
+of the start and end points.
+</div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_layout_LayoutTool_clipEdgesOnBB.htm">clipEdgesOnBB</a>
+              </td>
+              <td>
+                <div class="summary">
+This helper method clips the path of the edge on the bounding box
+of the start and end points.
+</div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_layout_LayoutTool_determineEdgeFlowDirection.htm">determineEdgeFlowDirection</a>
+              </td>
+              <td>
+                <div class="summary">Determines the main direction of the edge flow by analyzing the current layout of the graph.</div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_layout_LayoutTool_edgeLayoutString.htm">edgeLayoutString</a>
+              </td>
+              <td>
+                <div class="summary">Returns the path of the layout of a specific edge as a String.</div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_layout_LayoutTool_getBoundingBox.htm">getBoundingBox</a>
+              </td>
+              <td>
+                <div class="summary">Returns the bounding box of the nodes and edges accessible through the given cursors.</div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_layout_LayoutTool_getBoundingBoxForEdges.htm">getBoundingBoxForEdges</a>
+              </td>
+              <td>
+                <div class="summary">Returns the bounding box of the edges accessible through the given edge cursor.</div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_layout_LayoutTool_getBoundingBoxForNodes.htm">getBoundingBoxForNodes</a>
+              </td>
+              <td>
+                <div class="summary">Returns the bounding box of the nodes accessible through the given node cursor.</div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_layout_LayoutTool_getBoundingBoxWithLabels.htm">getBoundingBoxWithLabels</a>
+              </td>
+              <td>
+                <div class="summary">Returns the bounding box of the nodes and edges accessible through the given cursors.</div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_layout_LayoutTool_getEdgeClippedOnBB.htm">getEdgeClippedOnBB</a>
+              </td>
+              <td>
+                <div class="summary">
+This helper method clips the path of an edge on the bounding box
+of the start and end vertices.
+</div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_layout_LayoutTool_getEdgeClippedOnBBWithSourceAndTargetNode.htm">getEdgeClippedOnBBWithSourceAndTargetNode</a>
+              </td>
+              <td>
+                <div class="summary">
+This helper method clips the path of an edge on the bounding box
+of the start and end vertices.
+</div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_layout_LayoutTool_getEdgeClippedOnBBWithSourceAndTargetNodeAndInset.htm">getEdgeClippedOnBBWithSourceAndTargetNodeAndInset</a>
+              </td>
+              <td>
+                <div class="summary">
+This helper method clips the path of an edge on the bounding box
+of the start and end vertices.
+</div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_layout_LayoutTool_getEdgeLabelPlacement.htm">getEdgeLabelPlacement</a>
+              </td>
+              <td>
+                <div class="summary">
+Returns the upper left corner of the given label's paraxial bounding box
+as encoded by the specified model parameter.
+</div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_layout_LayoutTool_getNodeDistance.htm">getNodeDistance</a>
+              </td>
+              <td>
+                <div class="summary">Returns the distance between the centers of two nodes</div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_layout_LayoutTool_getNodeLabelPlacement.htm">getNodeLabelPlacement</a>
+              </td>
+              <td>
+                <div class="summary">
+Returns the upper left corner of the given label's paraxial bounding box
+as encoded by the specified model parameter.
+</div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_layout_LayoutTool_getNodePositions.htm">getNodePositions</a>
+              </td>
+              <td>
+                <div class="summary">Returns the positions of the nodes of a graph's diagram.</div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_layout_LayoutTool_getPathLength.htm">getPathLength</a>
+              </td>
+              <td>
+                <div class="summary">Returns the length of path of a given edge.</div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_layout_LayoutTool_initDiagram.htm">initDiagram</a>
+              </td>
+              <td>
+                <div class="summary">
+This method assigns the position (0,0) to all nodes in the graph,
+and sets the edges to straight lines with ports in the center
+of the adjacent node.
+</div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_layout_LayoutTool_isEdgeOutsideNodes.htm">isEdgeOutsideNodes</a>
+              </td>
+              <td>
+                <div class="summary">
+This helper method tests if the path of an edge is outside
+the bounding box of the start and end vertices.
+</div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_layout_LayoutTool_isEdgeOutsideSourceAndTargetNode.htm">isEdgeOutsideSourceAndTargetNode</a>
+              </td>
+              <td>
+                <div class="summary">
+This helper method tests if the path of an edge is outside
+the bounding box of the start and end vertices.
+</div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_layout_LayoutTool_isUsingOrthogonalEdgeRoutes.htm">isUsingOrthogonalEdgeRoutes</a>
+              </td>
+              <td>
+                <div class="summary">Returns true if most of the edges of the graph are routed orthogonal.</div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_layout_LayoutTool_moveEdge.htm">moveEdge</a>
+              </td>
+              <td>
+                <div class="summary">Moves the edge points of the given edge by the vector <span class="code">(dx,dy)</span>.</div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_layout_LayoutTool_moveEdges.htm">moveEdges</a>
+              </td>
+              <td>
+                <div class="summary">Moves all edges accessible through the given edge cursor by the vector <span class="code">(dx,dy)</span>.</div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_layout_LayoutTool_moveNode.htm">moveNode</a>
+              </td>
+              <td>
+                <div class="summary">Moves the given node by the vector <span class="code">(dx,dy)</span>.</div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_layout_LayoutTool_moveNodes.htm">moveNodes</a>
+              </td>
+              <td>
+                <div class="summary">Moves all nodes accessible through the given node cursor by the vector <span class="code">(dx,dy)</span>.</div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_layout_LayoutTool_moveSubgraph.htm">moveSubgraph</a>
+              </td>
+              <td>
+                <div class="summary">
+Moves the subgraph induced by nodes accessible through the given node cursor
+by the vector <span class="code">(dx,dy)</span>.
+</div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_layout_LayoutTool_moveSubgraphAtEdges.htm">moveSubgraphAtEdges</a>
+              </td>
+              <td>
+                <div class="summary">
+Moves the subgraph induced by edges accessible through the given edge cursor
+by the vector <span class="code">(dx,dy)</span>.
+</div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_layout_LayoutTool_pathIntersectsRect.htm">pathIntersectsRect</a>
+              </td>
+              <td>
+                <div class="summary">
+Checks whether or not the path of an edge intersects the interior of
+a given rectangular area.
+</div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_layout_LayoutTool_removeDuplicateBends.htm">removeDuplicateBends</a>
+              </td>
+              <td>
+                <div class="summary">This helper method removes duplicate bends from all edges in the graph</div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_layout_LayoutTool_removeDuplicateBendsForEdge.htm">removeDuplicateBendsForEdge</a>
+              </td>
+              <td>
+                <div class="summary">This helper method removes duplicate bends from the given edge in the graph</div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_layout_LayoutTool_resetPath.htm">resetPath</a>
+              </td>
+              <td>
+                <div class="summary">
+This helper method assign an trivial path to an edges which has no
+control points and the ports are in the center of the nodes.
+</div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_layout_LayoutTool_resetPaths.htm">resetPaths</a>
+              </td>
+              <td>
+                <div class="summary">
+This helper method assign an trivial path to all edges which has no
+control points and the ports are in the center of the nodes.
+</div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_layout_LayoutTool_resetPathsAndPorts.htm">resetPathsAndPorts</a>
+              </td>
+              <td>
+                <div class="summary">
+This helper method assign an trivial path to all edges which has no
+control points
+</div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_layout_LayoutTool_resetPorts.htm">resetPorts</a>
+              </td>
+              <td>
+                <div class="summary">Sets the ports to the center of the nodes.</div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_layout_LayoutTool_reverseEdgeLayout.htm">reverseEdgeLayout</a>
+              </td>
+              <td>
+                <div class="summary">Reverses the layout of an edge.</div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_layout_LayoutTool_roundEdgeLayout.htm">roundEdgeLayout</a>
+              </td>
+              <td>
+                <div class="summary">Round the values of the control points and ports of an edge.</div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_layout_LayoutTool_roundLayout.htm">roundLayout</a>
+              </td>
+              <td>
+                <div class="summary">Round the values of the layout of an entire layout.</div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_layout_LayoutTool_roundNodeLayout.htm">roundNodeLayout</a>
+              </td>
+              <td>
+                <div class="summary">Round the values of the layout of a node.</div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_layout_LayoutTool_routeEdgesParallel.htm">routeEdgesParallel</a>
+              </td>
+              <td>
+                <div class="summary">Routes a list of edges with are incident to the same nodes, in parallel.</div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_layout_LayoutTool_routeEdgesParallelJoinEnds.htm">routeEdgesParallelJoinEnds</a>
+              </td>
+              <td>
+                <div class="summary">Routes a list of edges which are incident to the same nodes, in parallel.</div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_layout_LayoutTool_routeSelfLoop.htm">routeSelfLoop</a>
+              </td>
+              <td>
+                <div class="summary">Routes a self-loop.</div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_layout_LayoutTool_routeTwoEdgesParallel.htm">routeTwoEdgesParallel</a>
+              </td>
+              <td>
+                <div class="summary">Routes two edges which are incident to the same nodes, in parallel.</div>
+              </td>
+            </tr>
+            <tr data="public;static;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                <img src="../icons/static.gif" alt="Static member" title="Static member" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_layout_LayoutTool_routeTwoEdgesParallelJoinEnds.htm">routeTwoEdgesParallelJoinEnds</a>
+              </td>
+              <td>
+                <div class="summary">Routes two edges which are incident to the same nodes, in parallel.</div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(seeAlsoToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(seeAlsoToggle, event)" tabindex="0">
+            <img id="seeAlsoToggle" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />See Also</span>
+        </h1>
+        <div id="seeAlsoSection" class="section" name="collapseableSection" style="">
+          <div class="seeAlsoStyle">
+            <a href="T_yworks_yfiles_layout_LayoutTool.htm">LayoutTool Class</a>
+          </div>
+          <div class="seeAlsoStyle">
+            <a href="N_yworks_yfiles_layout.htm">yworks.yfiles.layout Namespace</a>
+          </div>
+        </div>
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img width="100%" height="3px" src="../icons/footer.gif" alt="Footer image" title="Footer image" />
+        </div>
+        <A NAME="feedback"></A>
+        <span id="fb" class="feedbackcss"></span>
+        <p />Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:yfileshtml%40yworks.com?Subject=yFiles for HTML Complete Class Reference">yfileshtml@yworks.com</a><script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        var HT_mailLinkText = HT_mailLink.innerHTML;
+        HT_mailLink.href += ": " + document.title;
+        HT_mailLink.innerHTML = HT_mailLinkText;
+        </script><p /><a href="http://www.yworks.com" target="_blank">http://www.yworks.com</a></div>
+    </div>
+  </body>
+</html>

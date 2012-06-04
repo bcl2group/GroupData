@@ -1,0 +1,1222 @@
+﻿<html xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8" />
+    <META NAME="save" CONTENT="history" />
+    <title>NavigationInputMode Members</title>
+    <meta name="Language" content="en-us" />
+    <meta name="System.Keywords" content="NavigationInputMode class" />
+    <meta name="System.Keywords" content="NavigationInputMode class, all members" />
+    <meta name="System.Keywords" content="yworks.yfiles.ui.input.NavigationInputMode class" />
+    <meta name="Microsoft.Help.Id" content="AllMembers.T:yworks.yfiles.ui.input.NavigationInputMode" />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <link rel="stylesheet" type="text/css" href="../styles/Presentation.css" />
+    <link rel="stylesheet" type="text/css" href="ms-help://Hx/HxRuntime/HxLink.css" />
+    <script type="text/javascript" src="../scripts/EventUtilities.js"> </script>
+    <script type="text/javascript" src="../scripts/SplitScreen.js"> </script>
+    <script type="text/javascript" src="../scripts/Dropdown.js"> </script>
+    <script type="text/javascript" src="../scripts/script_manifold.js"> </script>
+    <script type="text/javascript" src="../scripts/script_feedBack.js"> </script>
+    <script type="text/javascript" src="../scripts/CheckboxMenu.js"> </script>
+    <script type="text/javascript" src="../scripts/CommonUtilities.js"> </script>
+    <meta name="container" content="yworks.yfiles.ui.input" />
+    <meta name="file" content="AllMembers_T_yworks_yfiles_ui_input_NavigationInputMode" />
+    <meta name="guid" content="AllMembers_T_yworks_yfiles_ui_input_NavigationInputMode" />
+    <xml>
+      <MSHelp:Attr Name="AssetID" Value="AllMembers.T:yworks.yfiles.ui.input.NavigationInputMode" />
+      <MSHelp:TOCTitle Title="NavigationInputMode Members" />
+      <MSHelp:RLTitle Title="NavigationInputMode Members (yworks.yfiles.ui.input)" />
+      <MSHelp:Keyword Index="A" Term="AllMembers.T:yworks.yfiles.ui.input.NavigationInputMode" />
+      <MSHelp:Keyword Index="A" Term="frlrfyworksyfilesuiinputNavigationInputModeMembersTopic" />
+      <MSHelp:Keyword Index="K" Term="NavigationInputMode class" />
+      <MSHelp:Keyword Index="K" Term="NavigationInputMode class, all members" />
+      <MSHelp:Keyword Index="K" Term="yworks.yfiles.ui.input.NavigationInputMode class" />
+      <MSHelp:Attr Name="HelpPriority" Value="1" />
+      <MSHelp:Attr Name="Locale" Value="en-us" />
+      <MSHelp:Attr Name="TopicType" Value="kbSyntax" />
+      <MSHelp:Attr Name="TopicType" Value="apiref" />
+      <MSHelp:Attr Name="AssemblyVersion" Value="1.0.0.0" />
+    </xml>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" alt="Collapse image" title="Collapse image" />
+    <img id="expandImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" alt="Expand Image" title="Expand Image" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" src="../icons/dropdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" src="../icons/dropdownHover.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" src="../icons/copycode.gif" alt="Copy image" title="Copy image" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" src="../icons/copycodeHighlight.gif" alt="CopyHover image" title="CopyHover image" />
+    <div id="header">
+      <table id="topTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" style="cursor:default;" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage, event)" tabindex="0">
+              <img ID="toggleAllImage" class="toggleAll" src="../icons/collapse_all.gif" /> <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label><label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span>    </span>
+            <span id="memberOptionsDropdown" class="filter" tabindex="0">
+              <img id="memberOptionsDropdownImage" src="../icons/dropdown.gif" /> <label id="memberOptionsMenuAllLabel" for="memberOptionsDropdownImage" style="display: none;"><nobr>Members: Show All </nobr></label><label id="memberOptionsMenuMultipleLabel" for="memberOptionsDropdownImage" style="display: none;"><nobr>Members: Filtered </nobr></label><label id="memberOptionsMenuProtectedLabel" for="memberOptionsDropdownImage" style="display: none;"><nobr>Members: Filtered </nobr></label><label id="memberOptionsMenuInheritedLabel" for="memberOptionsDropdownImage" style="display: none;"><nobr>Members: Filtered </nobr></label></span>
+          </td>
+        </tr>
+      </table>
+      <div id="devlangsMenu">
+        <input id="yFilesJavaScriptCheckbox" type="checkbox" data="yFilesJavaScript,cs,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="yFilesJavaScriptCheckbox">JavaScript</label>
+        <br />
+      </div>
+      <div id="memberOptionsMenu">
+        <input id="ProtectedCheckbox" type="checkbox" data="Protected" value="on" onClick="SetMemberOptions(this, 'vis')" />
+        <label class="checkboxLabel" for="ProtectedCheckbox">Include Protected Members</label>
+        <br />
+        <input id="InheritedCheckbox" type="checkbox" data="Inherited" value="on" onClick="SetMemberOptions(this, 'decl')" />
+        <label class="checkboxLabel" for="InheritedCheckbox">Include Inherited Members</label>
+        <br />
+      </div>
+      <table id="bottomTable" cellpadding="0" cellspacing="0">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">yFiles for HTML Complete Class Reference</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">NavigationInputMode Members</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td align="left">
+            <a href="T_yworks_yfiles_ui_input_NavigationInputMode.htm">NavigationInputMode Class</a> <a href="#constructorTableToggle" onclick="OpenSection(constructorTableToggle)">Constructors</a> <a href="#methodTableToggle" onclick="OpenSection(methodTableToggle)">Methods</a> <a href="#propertyTableToggle" onclick="OpenSection(propertyTableToggle)">Properties</a> <a href="#seeAlsoToggle" onclick="OpenSection(seeAlsoToggle)">See Also</a> <span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback('yfileshtml@yworks.com','yFiles for HTML Complete Class Reference','','','','%0\dYour%20feedback%20is%20used%20to%20improve%20the%20documentation%20and%20the%20product.%20Your%20e-mail%20address%20will%20not%20be%20used%20for%20any%20other%20purpose%20and%20is%20disposed%20of%20after%20the%20issue%20you%20report%20is%20resolved.%20%20While%20working%20to%20resolve%20the%20issue%20that%20you%20report,%20you%20may%20be%20contacted%20via%20e-mail%20to%20get%20further%20details%20or%20clarification%20on%20the%20feedback%20you%20sent.%20After%20the%20issue%20you%20report%20has%20been%20addressed,%20you%20may%20receive%20an%20e-mail%20to%20let%20you%20know%20that%20your%20feedback%20has%20been%20addressed.%0\A%0\d','Customer%20Feedback');">Send Feedback</a></span></td>
+        </tr>
+      </table>
+      <table id="gradientTable">
+        <tr>
+          <td class="nsrBottom" background="../icons/gradient.gif" />
+        </tr>
+      </table>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <span style="color: DarkGray"></span>
+        <p />
+        <p>The <a href="T_yworks_yfiles_ui_input_NavigationInputMode.htm">NavigationInputMode</a> type exposes the following members.</p>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(constructorTableToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(constructorTableToggle, event)" tabindex="0">
+            <img id="constructorTableToggle" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Constructors</span>
+        </h1>
+        <div id="constructorTableSection" class="section" name="collapseableSection" style="">
+          <table id="memberList" class="members" frame="lhs" cellpadding="2">
+            <col width="10%" />
+            <tr>
+              <th class="iconColumn">
+               
+            </th>
+              <th class="nameColumn">Name</th>
+              <th class="descriptionColumn">Description</th>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_input_NavigationInputMode_NavigationInputMode.htm">NavigationInputMode</a>
+              </td>
+              <td>
+                <div class="summary">
+Initializes a new instance of the <a href="T_yworks_yfiles_ui_input_NavigationInputMode.htm">NavigationInputMode</a> class.
+</div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(methodTableToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(methodTableToggle, event)" tabindex="0">
+            <img id="methodTableToggle" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Methods</span>
+        </h1>
+        <div id="methodTableSection" class="section" name="collapseableSection" style="">
+          <table id="memberList" class="members" frame="lhs" cellpadding="2">
+            <col width="10%" />
+            <tr>
+              <th class="iconColumn">
+               
+            </th>
+              <th class="nameColumn">Name</th>
+              <th class="descriptionColumn">Description</th>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_input_NavigationInputMode_addGroupCollapsedListener.htm">addGroupCollapsedListener</a>
+              </td>
+              <td>
+                <div class="summary">
+Event that will be triggered whenever a group has been <a href="M_yworks_yfiles_ui_input_NavigationInputMode_collapseGroup.htm">Collapsed</a>.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_input_NavigationInputMode_addGroupEnteredListener.htm">addGroupEnteredListener</a>
+              </td>
+              <td>
+                <div class="summary">
+Event that will be triggered whenever a group has been <a href="M_yworks_yfiles_ui_input_NavigationInputMode_enterGroup.htm">Entered</a>.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_input_NavigationInputMode_addGroupExitedListener.htm">addGroupExitedListener</a>
+              </td>
+              <td>
+                <div class="summary">
+Event that will be triggered whenever a group has been <a href="M_yworks_yfiles_ui_input_NavigationInputMode_exitGroup.htm">Exited</a>.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_input_NavigationInputMode_addGroupExpandedListener.htm">addGroupExpandedListener</a>
+              </td>
+              <td>
+                <div class="summary">
+Event that will be triggered whenever a group has been <a href="M_yworks_yfiles_ui_input_NavigationInputMode_expandGroup.htm">Expanded</a>.
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_input_NavigationInputMode_adjustContentRect.htm">adjustContentRect</a>
+              </td>
+              <td>
+                <div class="summary">
+Callback that adjusts the <a href="P_yworks_canvas_CanvasControl_contentRect.htm">contentRect</a> to encompass
+all elements.
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_input_NavigationInputMode_adjustGroupNodeLocation.htm">adjustGroupNodeLocation</a>
+              </td>
+              <td>
+                <div class="summary">
+Adjust the group node location according to the value of <a href="P_yworks_yfiles_ui_input_NavigationInputMode_autoGroupNodeAlignmentPolicy.htm">autoGroupNodeAlignmentPolicy</a>.
+</div>
+              </td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_canvas_input_AbstractConcurrentInputMode_cancel.htm">cancel</a>
+              </td>
+              <td>
+                <div class="summary">
+Overridden to <a href="M_yworks_canvas_input_AbstractConcurrentInputMode_releaseMutex.htm">release</a> the mutex if it is currently owned
+by this instance.
+</div> (Inherited from <a href="T_yworks_canvas_input_AbstractConcurrentInputMode.htm">AbstractConcurrentInputMode</a>.)</td>
+            </tr>
+            <tr data="protected;inherited;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_canvas_input_AbstractConcurrentInputMode_canRequestMutex.htm">canRequestMutex</a>
+              </td>
+              <td>
+                <div class="summary">
+Determines whether this instance can request the <a href="T_yworks_canvas_input_InputMutex.htm">InputMutex</a>.
+</div> (Inherited from <a href="T_yworks_canvas_input_AbstractConcurrentInputMode.htm">AbstractConcurrentInputMode</a>.)</td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_input_NavigationInputMode_clearSelection.htm">clearSelection</a>
+              </td>
+              <td>
+                <div class="summary">
+Clears the selection in the graph control.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_input_NavigationInputMode_collapseGroup.htm">collapseGroup</a>
+              </td>
+              <td>
+                <div class="summary">
+                  <a href="M_yworks_yfiles_ui_model_IFoldedGraph_collapse.htm">Collapses</a> the given group node
+to hide the contents of the group node from this <a href="T_yworks_yfiles_ui_model_IFoldedGraph.htm">IFoldedGraph</a>.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_input_NavigationInputMode_collapseSelection.htm">collapseSelection</a>
+              </td>
+              <td>
+                <div class="summary">
+Performs <a href="M_yworks_yfiles_ui_input_NavigationInputMode_collapseGroup.htm">collapseGroup(INode)</a> for all <a href="P_yworks_yfiles_ui_model_IGraphSelection_selectedNodes.htm">selectedNodes</a>.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_input_NavigationInputMode_enterGroup.htm">enterGroup</a>
+              </td>
+              <td>
+                <div class="summary">
+This method allows for entering a group node so that the currently
+displayed <a href="T_yworks_yfiles_ui_model_IFoldedGraph.htm">IFoldedGraph</a>'s <a href="P_yworks_yfiles_ui_model_IFoldedGraph_localRoot.htm">localRoot</a>
+will be reset to the provided node.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_input_NavigationInputMode_enterSelectedGroup.htm">enterSelectedGroup</a>
+              </td>
+              <td>
+                <div class="summary">
+Performs <a href="M_yworks_yfiles_ui_input_NavigationInputMode_enterGroup.htm">enterGroup(INode)</a> for the first valid <a href="P_yworks_yfiles_ui_model_IGraphSelection_selectedNodes.htm">selectedNodes</a>.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_input_NavigationInputMode_exitGroup.htm">exitGroup</a>
+              </td>
+              <td>
+                <div class="summary">
+Exits the current <a href="P_yworks_yfiles_ui_model_IFoldedGraph_localRoot.htm">localRoot</a> of the currently displayed
+<a href="T_yworks_yfiles_ui_model_IFoldedGraph.htm">IFoldedGraph</a> view and shows the contents of the parent container.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_input_NavigationInputMode_expandGroup.htm">expandGroup</a>
+              </td>
+              <td>
+                <div class="summary">
+                  <a href="M_yworks_yfiles_ui_model_IFoldedGraph_expand.htm">Expands</a> the given group node
+to show the contents of the collapsed group node in this <a href="T_yworks_yfiles_ui_model_IFoldedGraph.htm">IFoldedGraph</a>.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_input_NavigationInputMode_expandSelection.htm">expandSelection</a>
+              </td>
+              <td>
+                <div class="summary">
+Performs <a href="M_yworks_yfiles_ui_input_NavigationInputMode_expandGroup.htm">expandGroup(INode)</a> for all <a href="P_yworks_yfiles_ui_model_IGraphSelection_selectedNodes.htm">selectedNodes</a>.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_input_NavigationInputMode_extendSelectionTo.htm">extendSelectionTo</a>
+              </td>
+              <td>
+                <div class="summary">
+Moves the focus into the given direction, extending the selection
+to the new element.
+</div>
+              </td>
+            </tr>
+            <tr data="protected;inherited;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_canvas_input_AbstractConcurrentInputMode_hasMutex.htm">hasMutex</a>
+              </td>
+              <td>
+                <div class="summary">
+Determines whether this instance owns the input mutex.
+</div> (Inherited from <a href="T_yworks_canvas_input_AbstractConcurrentInputMode.htm">AbstractConcurrentInputMode</a>.)</td>
+            </tr>
+            <tr data="protected;inherited;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_canvas_input_AbstractInputMode_initialize.htm">initialize</a>
+              </td>
+              <td>
+                <div class="summary">
+Performs one-time initialization of this instance. This method should not
+be invoked by subclasses. This will be done automatically upon first
+<a href="M_yworks_canvas_input_AbstractInputMode_install.htm">installation</a> of this mode.
+</div> (Inherited from <a href="T_yworks_canvas_input_AbstractInputMode.htm">AbstractInputMode</a>.)</td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_input_NavigationInputMode_install.htm">install</a>
+              </td>
+              <td>
+                <div class="summary">
+Installs this mode into a <a href="T_yworks_canvas_CanvasControl.htm">CanvasControl</a> using the provided <a href="T_yworks_canvas_input_IInputModeContext.htm">IInputModeContext</a>.
+</div> (Overrides <a href="M_yworks_canvas_input_AbstractInputMode_install.htm">AbstractInputMode<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>install(IInputModeContext)</a>.)</td>
+            </tr>
+            <tr data="protected;inherited;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_canvas_input_AbstractInputMode_invalidate.htm">invalidate</a>
+              </td>
+              <td>
+                <div class="summary">
+Convenience method for subclass implementations that invalidates
+the canvas this mode is currently installed in.
+</div> (Inherited from <a href="T_yworks_canvas_input_AbstractInputMode.htm">AbstractInputMode</a>.)</td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_input_NavigationInputMode_moveFocusTo.htm">moveFocusTo</a>
+              </td>
+              <td>
+                <div class="summary">
+Moves the focus into the given direction, not changing the current selection.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_input_NavigationInputMode_moveTo.htm">moveTo</a>
+              </td>
+              <td>
+                <div class="summary">
+Moves the focus into the given direction, setting the selection
+to the new element.
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_input_NavigationInputMode_onDisabled.htm">onDisabled</a>
+              </td>
+              <td>
+                <div class="summary">
+Called when the <a href="P_yworks_canvas_input_AbstractConcurrentInputMode_enabled.htm">enabled</a> property changes to <span class="code">false</span>.
+</div> (Overrides <a href="M_yworks_canvas_input_AbstractConcurrentInputMode_onDisabled.htm">AbstractConcurrentInputMode<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>onDisabled<span class="languageSpecificText"><span class="cs">()</span><span class="cpp">()</span><span class="nu">()</span><span class="fs">()</span></span></a>.)</td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_input_NavigationInputMode_onEnabled.htm">onEnabled</a>
+              </td>
+              <td>
+                <div class="summary">
+Called when the <a href="P_yworks_canvas_input_AbstractConcurrentInputMode_enabled.htm">enabled</a> property changes to <span class="code">true</span>.
+</div> (Overrides <a href="M_yworks_canvas_input_AbstractConcurrentInputMode_onEnabled.htm">AbstractConcurrentInputMode<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>onEnabled<span class="languageSpecificText"><span class="cs">()</span><span class="cpp">()</span><span class="nu">()</span><span class="fs">()</span></span></a>.)</td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_input_NavigationInputMode_onGroupCollapsed.htm">onGroupCollapsed</a>
+              </td>
+              <td>
+                <div class="summary">
+Raises the <a href="M_yworks_yfiles_ui_input_NavigationInputMode_addGroupCollapsedListener.htm">GroupCollapsed</a> event.
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_input_NavigationInputMode_onGroupEntered.htm">onGroupEntered</a>
+              </td>
+              <td>
+                <div class="summary">
+Raises the <a href="M_yworks_yfiles_ui_input_NavigationInputMode_addGroupEnteredListener.htm">GroupEntered</a> event.
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_input_NavigationInputMode_onGroupExited.htm">onGroupExited</a>
+              </td>
+              <td>
+                <div class="summary">
+Raises the <a href="M_yworks_yfiles_ui_input_NavigationInputMode_addGroupExitedListener.htm">GroupExited</a> event.
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_input_NavigationInputMode_onGroupExpanded.htm">onGroupExpanded</a>
+              </td>
+              <td>
+                <div class="summary">
+Raises the <a href="M_yworks_yfiles_ui_input_NavigationInputMode_addGroupExpandedListener.htm">GroupExpanded</a> event.
+</div>
+              </td>
+            </tr>
+            <tr data="protected;inherited;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_canvas_input_AbstractInputMode_onInitialized.htm">onInitialized</a>
+              </td>
+              <td>
+                <div class="summary">
+Event dispatch method that will dispatch the <a href="M_yworks_canvas_input_AbstractInputMode_addInitializedListener.htm">Initialized</a> event.
+</div> (Inherited from <a href="T_yworks_canvas_input_AbstractInputMode.htm">AbstractInputMode</a>.)</td>
+            </tr>
+            <tr data="protected;inherited;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_canvas_input_AbstractInputMode_onInitializing.htm">onInitializing</a>
+              </td>
+              <td>
+                <div class="summary">
+Event dispatch method that will dispatch the <a href="M_yworks_canvas_input_AbstractInputMode_addInitializingListener.htm">Initializing</a> event.
+</div> (Inherited from <a href="T_yworks_canvas_input_AbstractInputMode.htm">AbstractInputMode</a>.)</td>
+            </tr>
+            <tr data="protected;inherited;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_canvas_input_AbstractConcurrentInputMode_onMutexObtained.htm">onMutexObtained</a>
+              </td>
+              <td>
+                <div class="summary">
+Called when this instance obtains the <a href="T_yworks_canvas_input_InputMutex.htm">InputMutex</a>.
+</div> (Inherited from <a href="T_yworks_canvas_input_AbstractConcurrentInputMode.htm">AbstractConcurrentInputMode</a>.)</td>
+            </tr>
+            <tr data="protected;inherited;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_canvas_input_AbstractConcurrentInputMode_onMutexReleased.htm">onMutexReleased</a>
+              </td>
+              <td>
+                <div class="summary">
+Called when this instance released the <a href="T_yworks_canvas_input_InputMutex.htm">InputMutex</a>.
+</div> (Inherited from <a href="T_yworks_canvas_input_AbstractConcurrentInputMode.htm">AbstractConcurrentInputMode</a>.)</td>
+            </tr>
+            <tr data="protected;inherited;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_canvas_input_AbstractConcurrentInputMode_onPreferredCursorChanged.htm">onPreferredCursorChanged</a>
+              </td>
+              <td>
+                <div class="summary">
+Called when the <a href="P_yworks_canvas_input_AbstractConcurrentInputMode_preferredCursor.htm">preferredCursor</a> property changes.
+</div> (Inherited from <a href="T_yworks_canvas_input_AbstractConcurrentInputMode.htm">AbstractConcurrentInputMode</a>.)</td>
+            </tr>
+            <tr data="protected;inherited;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_canvas_input_AbstractInputMode_releaseKeyboard.htm">releaseKeyboard</a>
+              </td>
+              <td>
+                <div class="summary">
+Releases previously captured keyboard input.
+</div> (Inherited from <a href="T_yworks_canvas_input_AbstractInputMode.htm">AbstractInputMode</a>.)</td>
+            </tr>
+            <tr data="protected;inherited;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_canvas_input_AbstractInputMode_releaseMouse.htm">releaseMouse</a>
+              </td>
+              <td>
+                <div class="summary">
+Releases previously captured mouse input.
+</div> (Inherited from <a href="T_yworks_canvas_input_AbstractInputMode.htm">AbstractInputMode</a>.)</td>
+            </tr>
+            <tr data="protected;inherited;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_canvas_input_AbstractConcurrentInputMode_releaseMutex.htm">releaseMutex</a>
+              </td>
+              <td>
+                <div class="summary">
+Releases the mutex that is currently owned by this instance.
+</div> (Inherited from <a href="T_yworks_canvas_input_AbstractConcurrentInputMode.htm">AbstractConcurrentInputMode</a>.)</td>
+            </tr>
+            <tr data="protected;inherited;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_canvas_input_AbstractInputMode_releaseTouch.htm">releaseTouch</a>
+              </td>
+              <td>
+                <div class="summary">
+Releases previously captured touch input.
+</div> (Inherited from <a href="T_yworks_canvas_input_AbstractInputMode.htm">AbstractInputMode</a>.)</td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_input_NavigationInputMode_removeGroupCollapsedListener.htm">removeGroupCollapsedListener</a>
+              </td>
+              <td>
+                <div class="summary">
+Event that will be triggered whenever a group has been <a href="M_yworks_yfiles_ui_input_NavigationInputMode_collapseGroup.htm">Collapsed</a>.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_input_NavigationInputMode_removeGroupEnteredListener.htm">removeGroupEnteredListener</a>
+              </td>
+              <td>
+                <div class="summary">
+Event that will be triggered whenever a group has been <a href="M_yworks_yfiles_ui_input_NavigationInputMode_enterGroup.htm">Entered</a>.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_input_NavigationInputMode_removeGroupExitedListener.htm">removeGroupExitedListener</a>
+              </td>
+              <td>
+                <div class="summary">
+Event that will be triggered whenever a group has been <a href="M_yworks_yfiles_ui_input_NavigationInputMode_exitGroup.htm">Exited</a>.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_input_NavigationInputMode_removeGroupExpandedListener.htm">removeGroupExpandedListener</a>
+              </td>
+              <td>
+                <div class="summary">
+Event that will be triggered whenever a group has been <a href="M_yworks_yfiles_ui_input_NavigationInputMode_expandGroup.htm">Expanded</a>.
+</div>
+              </td>
+            </tr>
+            <tr data="protected;inherited;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_canvas_input_AbstractInputMode_requestKeyboard.htm">requestKeyboard</a>
+              </td>
+              <td>
+                <div class="summary">
+Requests capturing of all keyboard input that happens in the <a href="T_yworks_canvas_CanvasControl.htm">CanvasControl</a>.
+</div> (Inherited from <a href="T_yworks_canvas_input_AbstractInputMode.htm">AbstractInputMode</a>.)</td>
+            </tr>
+            <tr data="protected;inherited;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_canvas_input_AbstractInputMode_requestMouse.htm">requestMouse</a>
+              </td>
+              <td>
+                <div class="summary">
+Requests capturing of all mouse input that happens in the <a href="T_yworks_canvas_CanvasControl.htm">CanvasControl</a>.
+</div> (Inherited from <a href="T_yworks_canvas_input_AbstractInputMode.htm">AbstractInputMode</a>.)</td>
+            </tr>
+            <tr data="protected;inherited;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_canvas_input_AbstractConcurrentInputMode_requestMutex.htm">requestMutex</a>
+              </td>
+              <td>
+                <div class="summary">
+Requests the <a href="T_yworks_canvas_input_InputMutex.htm">InputMutex</a> from the current <a href="P_yworks_canvas_input_AbstractConcurrentInputMode_controller.htm">controller</a>.
+</div> (Inherited from <a href="T_yworks_canvas_input_AbstractConcurrentInputMode.htm">AbstractConcurrentInputMode</a>.)</td>
+            </tr>
+            <tr data="protected;inherited;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_canvas_input_AbstractInputMode_requestTouch.htm">requestTouch</a>
+              </td>
+              <td>
+                <div class="summary">
+Requests capturing of all touch input that happens in the <a href="T_yworks_canvas_CanvasControl.htm">CanvasControl</a>.
+</div> (Inherited from <a href="T_yworks_canvas_input_AbstractInputMode.htm">AbstractInputMode</a>.)</td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_input_NavigationInputMode_selectCurrentItem.htm">selectCurrentItem</a>
+              </td>
+              <td>
+                <div class="summary">
+Selects the <a href="P_yworks_yfiles_ui_GraphControl_currentItem.htm">currentItem</a> current item.
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_input_NavigationInputMode_selectItem.htm">selectItem</a>
+              </td>
+              <td>
+                <div class="summary">
+Callback that selects the given item.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_input_NavigationInputMode_setCurrentItem.htm">setCurrentItem</a>
+              </td>
+              <td>
+                <div class="summary">
+Sets the "current" item to the given one.
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_input_NavigationInputMode_setCurrentItemForGraphControl.htm">setCurrentItemForGraphControl</a>
+              </td>
+              <td>
+                <div class="summary">
+Callback that actually sets the current item property.
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_input_NavigationInputMode_setGraphControlCore.htm">setGraphControlCore</a>
+              </td>
+              <td>
+                <div class="summary">
+Sets the graph control to use for the various actions.
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_input_NavigationInputMode_shouldBeNavigatedTo.htm">shouldBeNavigatedTo</a>
+              </td>
+              <td>
+                <div class="summary">
+Callback predicate method that determines whether a given model item should be navigated to.
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_input_NavigationInputMode_shouldBeSelected.htm">shouldBeSelected</a>
+              </td>
+              <td>
+                <div class="summary">
+Callback predicate method that determines whether a given model item should be selected.
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_input_NavigationInputMode_shouldCollapseGroup.htm">shouldCollapseGroup</a>
+              </td>
+              <td>
+                <div class="summary">
+Predicate method that decides whether it is allowed to <a href="M_yworks_yfiles_ui_input_NavigationInputMode_collapseGroup.htm">collapse</a> the given 
+group node.
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_input_NavigationInputMode_shouldEnterGroup.htm">shouldEnterGroup</a>
+              </td>
+              <td>
+                <div class="summary">
+Predicate method that decides whether it is allowed to <a href="M_yworks_yfiles_ui_input_NavigationInputMode_enterGroup.htm">enter</a> the specific
+group node.
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_input_NavigationInputMode_shouldExitGroup.htm">shouldExitGroup</a>
+              </td>
+              <td>
+                <div class="summary">
+Predicate method that decides whether it is allowed to <a href="M_yworks_yfiles_ui_input_NavigationInputMode_exitGroup.htm">exit</a> the current 
+group node.
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_input_NavigationInputMode_shouldExpandGroup.htm">shouldExpandGroup</a>
+              </td>
+              <td>
+                <div class="summary">
+Predicate method that decides whether it is allowed to <a href="M_yworks_yfiles_ui_input_NavigationInputMode_expandGroup.htm">expand</a> the given
+group node.
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_input_NavigationInputMode_shouldToggleGroupState.htm">shouldToggleGroupState</a>
+              </td>
+              <td>
+                <div class="summary">
+Predicate method that decides whether it is allowed to <a href="M_yworks_yfiles_ui_input_NavigationInputMode_toggleGroupNodeState.htm">toggle</a> the collapsed
+state of the given group node.
+</div>
+              </td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_canvas_input_AbstractConcurrentInputMode_stop.htm">stop</a>
+              </td>
+              <td>
+                <div class="summary">
+Overridden to only return <span class="keyword"><span class="languageSpecificText"><span class="cs">true</span><span class="vb">True</span><span class="cpp">true</span></span></span><span class="nu">true</span> if this instance does not currently
+<a href="M_yworks_canvas_input_AbstractConcurrentInputMode_hasMutex.htm">have the input mutex</a>.
+</div> (Inherited from <a href="T_yworks_canvas_input_AbstractConcurrentInputMode.htm">AbstractConcurrentInputMode</a>.)</td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_input_NavigationInputMode_toggleGroupNodeState.htm">toggleGroupNodeState</a>
+              </td>
+              <td>
+                <div class="summary">
+Toggles the <a href="M_yworks_yfiles_ui_model_IFoldedGraph_isExpanded.htm">expanded/collapsed</a> state
+for the given group node in the <a href="T_yworks_yfiles_ui_model_IFoldedGraph.htm">IFoldedGraph</a>.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_input_NavigationInputMode_uninstall.htm">uninstall</a>
+              </td>
+              <td>
+                <div class="summary">
+Uninstalls this mode from the canvas.
+</div> (Overrides <a href="M_yworks_canvas_input_AbstractInputMode_uninstall.htm">AbstractInputMode<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>uninstall(IInputModeContext)</a>.)</td>
+            </tr>
+          </table>
+        </div>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(propertyTableToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(propertyTableToggle, event)" tabindex="0">
+            <img id="propertyTableToggle" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Properties</span>
+        </h1>
+        <div id="propertyTableSection" class="section" name="collapseableSection" style="">
+          <table id="memberList" class="members" frame="lhs" cellpadding="2">
+            <col width="10%" />
+            <tr>
+              <th class="iconColumn">
+               
+            </th>
+              <th class="nameColumn">Name</th>
+              <th class="descriptionColumn">Description</th>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="P_yworks_yfiles_ui_input_NavigationInputMode_autoGroupNodeAlignmentPolicy.htm">autoGroupNodeAlignmentPolicy</a>
+              </td>
+              <td>
+                <div class="summary">
+Gets or sets the the location that should be kept fixed if toggling a group node state.
+</div>
+              </td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="P_yworks_canvas_input_AbstractInputMode_canvas.htm">canvas</a>
+              </td>
+              <td>
+                <div class="summary">
+Returns the canvas instance this mode is currently installed in or 
+<span class="keyword"><span class="languageSpecificText"><span class="cs">null</span><span class="vb">Nothing</span><span class="cpp">nullptr</span></span></span><span class="nu">null</span>.
+</div> (Inherited from <a href="T_yworks_canvas_input_AbstractInputMode.htm">AbstractInputMode</a>.)</td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="P_yworks_yfiles_ui_input_NavigationInputMode_collapsingGroupsAllowed.htm">collapsingGroupsAllowed</a>
+              </td>
+              <td>
+                <div class="summary">
+Gets or sets a value that determines whether it is allowed to <a href="M_yworks_yfiles_ui_input_NavigationInputMode_collapseGroup.htm">collapse group nodes</a>
+via the <a href="F_yworks_yfiles_ui_input_GraphCommands_COLLAPSE_GROUP_COMMAND.htm">COLLAPSE_GROUP_COMMAND</a>.
+</div>
+              </td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="P_yworks_canvas_input_AbstractConcurrentInputMode_controller.htm">controller</a>
+              </td>
+              <td>
+                <div class="summary">
+Gets or injects the <a href="T_yworks_canvas_input_ConcurrencyController.htm">ConcurrencyController</a> for this instance.
+</div> (Inherited from <a href="T_yworks_canvas_input_AbstractConcurrentInputMode.htm">AbstractConcurrentInputMode</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="P_yworks_canvas_input_AbstractConcurrentInputMode_enabled.htm">enabled</a>
+              </td>
+              <td>
+                <div class="summary">
+Gets or sets the enabled state of this input mode.
+</div> (Inherited from <a href="T_yworks_canvas_input_AbstractConcurrentInputMode.htm">AbstractConcurrentInputMode</a>.)</td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="P_yworks_yfiles_ui_input_NavigationInputMode_enteringGroupsAllowed.htm">enteringGroupsAllowed</a>
+              </td>
+              <td>
+                <div class="summary">
+Gets or sets a value that determines whether it is allowed to <a href="M_yworks_yfiles_ui_input_NavigationInputMode_enterGroup.htm">enter group nodes</a>
+via the <a href="F_yworks_yfiles_ui_input_GraphCommands_ENTER_GROUP_COMMAND.htm">ENTER_GROUP_COMMAND</a>.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="P_yworks_yfiles_ui_input_NavigationInputMode_exitingGroupAllowed.htm">exitingGroupAllowed</a>
+              </td>
+              <td>
+                <div class="summary">
+Gets or sets a value that determines whether it is allowed to <a href="M_yworks_yfiles_ui_input_NavigationInputMode_exitGroup.htm">exit the current group node</a>
+via the <a href="F_yworks_yfiles_ui_input_GraphCommands_EXIT_GROUP_COMMAND.htm">EXIT_GROUP_COMMAND</a>.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="P_yworks_yfiles_ui_input_NavigationInputMode_expandingGroupsAllowed.htm">expandingGroupsAllowed</a>
+              </td>
+              <td>
+                <div class="summary">
+Gets or sets a value that determines whether it is allowed to <a href="M_yworks_yfiles_ui_input_NavigationInputMode_expandGroup.htm">expand group nodes</a>
+via the <a href="F_yworks_yfiles_ui_input_GraphCommands_EXPAND_GROUP_COMMAND.htm">EXPAND_GROUP_COMMAND</a>.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="P_yworks_yfiles_ui_input_NavigationInputMode_fitContentAfterGroupActions.htm">fitContentAfterGroupActions</a>
+              </td>
+              <td>
+                <div class="summary">
+Gets or sets a value that determines whether <a href="M_yworks_canvas_CanvasControl_fitContent.htm">fitContent<span class="languageSpecificText"><span class="cs">()</span><span class="cpp">()</span><span class="nu">()</span><span class="fs">()</span></span></a> or the <a href="F_yworks_canvas_CanvasControl_FIT_CONTENT_COMMAND.htm">FIT_CONTENT_COMMAND</a> should
+be triggered after a group navigation action.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="P_yworks_yfiles_ui_input_NavigationInputMode_graph.htm">graph</a>
+              </td>
+              <td>
+                <div class="summary">
+Gets or sets the graph this mode operates on.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="P_yworks_yfiles_ui_input_NavigationInputMode_graphControl.htm">graphControl</a>
+              </td>
+              <td>
+                <div class="summary">
+Gets or sets the graph control this mode acts on.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="P_yworks_yfiles_ui_input_NavigationInputMode_graphSelection.htm">graphSelection</a>
+              </td>
+              <td>
+                <div class="summary">
+Gets or sets the <a href="T_yworks_yfiles_ui_model_IGraphSelection.htm">IGraphSelection</a> this mode operates on.
+</div>
+              </td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="P_yworks_canvas_input_AbstractInputMode_inputModeContext.htm">inputModeContext</a>
+              </td>
+              <td>
+                <div class="summary">
+Returns the context instance this mode is currently installed in or 
+<span class="code">null</span> if this instance is not installed.
+</div> (Inherited from <a href="T_yworks_canvas_input_AbstractInputMode.htm">AbstractInputMode</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="P_yworks_canvas_input_AbstractInputMode_installed.htm">installed</a>
+              </td>
+              <td>
+                <div class="summary">
+Returns whether this mode is currently installed, i.e.
+if a call to <a href="P_yworks_canvas_input_AbstractInputMode_canvas.htm">canvas</a> will yield a non-<span class="code">null</span>
+result.
+</div> (Inherited from <a href="T_yworks_canvas_input_AbstractInputMode.htm">AbstractInputMode</a>.)</td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="P_yworks_yfiles_ui_input_NavigationInputMode_navigableItems.htm">navigableItems</a>
+              </td>
+              <td>
+                <div class="summary">
+Gets or sets the item types that can be navigated to by this mode.
+</div>
+              </td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="P_yworks_canvas_input_AbstractConcurrentInputMode_preferredCursor.htm">preferredCursor</a>
+              </td>
+              <td>
+                <div class="summary">
+Gets the cursor this mode would like to have displayed in the
+<a href="T_yworks_canvas_CanvasControl.htm">CanvasControl</a>.
+</div> (Inherited from <a href="T_yworks_canvas_input_AbstractConcurrentInputMode.htm">AbstractConcurrentInputMode</a>.)</td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="P_yworks_yfiles_ui_input_NavigationInputMode_selectableItems.htm">selectableItems</a>
+              </td>
+              <td>
+                <div class="summary">
+Gets the types of the items that should be selectable by this instance.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="P_yworks_yfiles_ui_input_NavigationInputMode_useCurrentItemForCommands.htm">useCurrentItemForCommands</a>
+              </td>
+              <td>
+                <div class="summary">
+Gets or sets a value indicating whether to use the <a href="P_yworks_yfiles_ui_GraphControl_currentItem.htm">currentItem</a>
+as a fallback for the commands if no item is provided in the parameter and the current selection
+is empty.
+</div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(seeAlsoToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(seeAlsoToggle, event)" tabindex="0">
+            <img id="seeAlsoToggle" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />See Also</span>
+        </h1>
+        <div id="seeAlsoSection" class="section" name="collapseableSection" style="">
+          <div class="seeAlsoStyle">
+            <a href="T_yworks_yfiles_ui_input_NavigationInputMode.htm">NavigationInputMode Class</a>
+          </div>
+          <div class="seeAlsoStyle">
+            <a href="N_yworks_yfiles_ui_input.htm">yworks.yfiles.ui.input Namespace</a>
+          </div>
+        </div>
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img width="100%" height="3px" src="../icons/footer.gif" alt="Footer image" title="Footer image" />
+        </div>
+        <A NAME="feedback"></A>
+        <span id="fb" class="feedbackcss"></span>
+        <p />Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:yfileshtml%40yworks.com?Subject=yFiles for HTML Complete Class Reference">yfileshtml@yworks.com</a><script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        var HT_mailLinkText = HT_mailLink.innerHTML;
+        HT_mailLink.href += ": " + document.title;
+        HT_mailLink.innerHTML = HT_mailLinkText;
+        </script><p /><a href="http://www.yworks.com" target="_blank">http://www.yworks.com</a></div>
+    </div>
+  </body>
+</html>

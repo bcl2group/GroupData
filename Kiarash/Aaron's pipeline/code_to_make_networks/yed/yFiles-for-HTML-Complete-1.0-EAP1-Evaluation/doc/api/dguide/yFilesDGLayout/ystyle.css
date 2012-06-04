@@ -1,0 +1,395 @@
+/* 
+ * CSS1 stylesheet for DocBook-generated yFiles Developer's Guide. 
+ */
+
+a {
+  color: #AA5522;
+  font-weight: bold;
+}
+a:link, 
+a:visited {
+  text-decoration: none;
+}
+a:active, 
+a:focus, 
+a:hover {
+  text-decoration: underline;
+}
+
+.toc dl {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.toc p {
+  margin-bottom: 12px;
+}
+
+.toc dd {
+  margin-left: 24px;
+}
+
+.toc dt span.glossary, 
+.toc dt span.appendix, 
+.toc dt span.chapter {
+  display: block;
+  margin-top: 10px;
+}
+
+pre.programlisting, 
+pre.screen {
+  background: #E8E8E8;
+  border: 2px solid #C8C8C8;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-size: 12px;
+  margin-top: 2px;
+}
+div.migration pre.programlisting {
+  background-color: #f3f7fe;
+  border: none;
+  padding-left: 3px;
+  padding-top: 3px;
+  font-size: 12px;
+}
+
+pre.programlisting.ignore {
+/*  background: #e9d6ba; / * AA5522, e4ab61, ffcb9d */
+  background: #f8f8f8;
+  border: none;
+  font-family: "Consolas", "Courier New", Courier, mono, serif;
+  font-size: 12px;
+  margin: 3px 0 3px 0;
+  padding: 1px 3px 1px 10px;
+}
+
+.techn_api a {
+  font-family: "Consolas", "Courier New", Courier, mono, serif;
+  font-size: 12px;
+}
+.techn_api pre.programlisting.ignore {
+  background-color: #f3f7fe;
+  border: none;
+  font-family: "Consolas", "Courier New", Courier, mono, serif;
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
+}
+
+tt.code {
+  color: #0000C0;
+  font-family: "Courier New", Courier, monospace;
+}
+
+tt.classname {
+  color: #B000B0;
+  font-weight: bold;
+}
+
+body.book {
+}
+
+h1, 
+h4, 
+h5, 
+h6 {
+  font-family: sans-serif;
+}
+
+p {
+  padding-bottom: 0px;
+  padding-top: 0px;
+  margin-top: 8px;
+  margin-bottom: 0px;
+}
+
+h2 {
+  font-size: 120%;
+  color: #4079EA;
+  margin-top: 8px;
+  margin-bottom: 0px;
+}
+
+h3.title {
+  font-size: 110%;
+  margin-top: 8px;
+  margin-bottom: 0px;
+  border-bottom: 1px solid #BBB;
+}
+
+div.important {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+div.important h3.title, 
+div.note h3.title, 
+div.tip h3.title {
+  margin-top: 8px;
+  border-bottom: none;
+}
+
+.igraph_api {
+  background: #FAF8F0;
+  border-top: 1px solid #C8C8C8;
+  border-bottom: 1px solid #C8C8C8;
+  padding: 4px 20px 8px 20px;
+  margin: 20px;
+}
+
+h4 {
+  font-size: 110%;
+  margin-top: 8px;
+  margin-bottom: 0px;
+}
+
+h5.title {
+  font-size: 90%;
+  margin-top: 8px;
+  margin-bottom: 0px;
+}
+
+body {
+  font-family: Verdana, sans-serif;
+  font-size: 12px;
+  background-color: #FFFFFF;
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  color: #000000;
+  text-align: justify;
+}
+
+div.navheader {
+  background-image: url(figures/navbg.jpg);
+  background-repeat: repeat-x;
+  background-color: #e1eafc;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: -12px;
+  margin-right: -12px;
+  margin-top: -12px;
+}
+div.navline {
+  background-image: url(figures/navline.jpg);
+  background-repeat: repeat-x;
+  height: 7px;
+  margin-left: -10px;
+  margin-right: -10px;
+  font-size: 7px;
+}
+div.navline2 {
+  background-image: url(figures/navline2.jpg);
+  background-repeat: repeat-x;
+  height: 7px;
+  margin-left: -10px;
+  margin-right: -10px;
+  font-size: 7px;
+}
+
+div.navheader hr {
+  color: #A4B9EA;
+  border: none;
+  height: 0px;
+}
+div.navfooter {
+  background-image: url(figures/navbg2.jpg);
+  background-repeat: repeat-x;
+  background-color: #bdd0f8;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: -12px;
+  margin-right: -12px;
+  margin-bottom: -12px;
+}
+div.navfooter hr {
+  color: #A4B9EA;
+  border: none;
+  height: 0px;
+}
+
+div.section h4, 
+div.section h5 {
+  margin-top: 18px;
+}
+
+div.bibliography,
+div.colophon, 
+div.glossary,
+div.index, 
+div.part,
+div.preface,
+div.refentry,
+div.reference {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+div.index div.index {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+div.appendix,
+div.book, 
+div.chapter, 
+div.legalnotice {
+}
+
+div.highlights {
+  background: #F8F8F8;
+  border: 2px solid #C8C8C8;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+div.techn_templ {
+  padding-top: 4px;
+  padding-bottom: 0px;
+}
+/*
+div.informaltable {
+  padding-top: 4px;
+  padding-bottom: 0px;
+}
+div.informaltable table {*/
+div.techn_templ table {
+  border-collapse: collapse;
+  border: 1px solid white;
+  vertical-align: baseline;
+  font-size: 100%;
+  margin-top: 1px;
+}
+/*div.informaltable table thead th {
+  background-color: #A4B9EA;
+  border: 1px solid white;
+  color: #000000;
+}
+div.informaltable table tbody td {*/
+div.techn_templ table tbody td {
+  background-color: #f3f7fe;
+  vertical-align: baseline;
+  color: #000000;
+  border: 1px solid white;
+}
+/*div.techn_templ p.title {
+  font-size: 90%;
+}*/
+tr.spacing {
+  border-bottom: 6px solid white;
+}
+
+
+div.apiexcerpt, 
+div.example,
+div.figure, 
+div.striped, 
+div.table {
+  padding-top: 4px;
+  padding-bottom: 0px;
+}
+
+div.apiexcerpt p.title, 
+div.figure p.title, 
+div.example p.title, 
+div.table p.title {
+  /**/font-size: 90%;
+}
+
+div.migration table, 
+div.striped table, 
+div.table table {
+  border-collapse: collapse;
+  border: 1px solid white;
+  vertical-align: baseline;
+  font-size: 100%;
+  margin-top: 1px;
+}
+div.striped table thead th, 
+div.table table thead th {
+  background-color: #A4B9EA;
+  border: 1px solid white;
+  color: #000000;
+}
+/*
+div.striped table tbody tr.evenrow, div.table table tbody td {
+*/
+div.striped table tbody tr.evenrow td {
+  vertical-align: baseline;
+  border: 1px solid white;
+}
+div.migration table tbody td, 
+div.striped table tbody tr.evenrow td, 
+div.table table tbody td {
+/*
+  background-color: #D3DAEA;
+*/
+  background-color: #f3f7fe; /* #E3EEFE; */
+  vertical-align: baseline;
+  color: #000000;
+  border: 1px solid white;
+}
+
+td div.mediaobject {
+  background-color: #FFFFFF;
+}
+
+div.figure div.informaltable td {
+  font-size: 10px;
+  padding-left: 1px;
+  padding-right: 1px;
+  text-align: center;
+}
+
+div.example div.informaltable td {
+  font-size: 10px;
+  padding-left: 1px;
+  padding-right: 1px;
+  text-align: left;
+}
+
+div.example div.informaltable div.migration td.version {
+  font-size: 12px;
+  background-color: #A4B9EA;
+  font-weight: bold;
+  text-align: center;
+}
+
+div.example div.informaltable th {
+  font-size: 10px;
+  padding-left: 1px;
+  padding-right: 1px;
+  padding-top: 10px;
+  text-align: left;
+}
+
+table.copyright {
+  font-size: 90%;
+  font-style: italic;
+  text-align: right;
+  margin-top: 20px;
+}
+
+span.java_lineComment {
+  color: #005000;
+}
+span.java_blockComment {
+  color: #005000;
+}
+span.java_stringLiteral {
+  color: #99006B;
+}
+span.java_numericLiteral {
+  color: #780000;
+}
+span.java_keyword {
+  color: #000099;
+  font-weight: bold;
+}
+span.java_methodCall {
+  color: black;
+  font-weight: bold;
+}

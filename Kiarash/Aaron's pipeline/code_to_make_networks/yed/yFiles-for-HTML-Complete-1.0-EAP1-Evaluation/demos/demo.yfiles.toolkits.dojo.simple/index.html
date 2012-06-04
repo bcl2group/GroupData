@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<!-- ////////////////////////////////////////////////////////////////////////
+     //
+     // This file is part of yFiles for HTML 1.0-EAP1.
+     // 
+     // yWorks proprietary/confidential. Use is subject to license terms.
+     //
+     // Redistribution of this file or of an unauthorized byte-code version
+     // of this file is strictly forbidden.
+     //
+     // Copyright (c) 2012 by yWorks GmbH, Vor dem Kreuzberg 28, 
+     // 72070 Tuebingen, Germany. All rights reserved.
+     // 
+     ////////////////////////////////////////////////////////////////////////-->
+
+	<head>
+		<title>Simple dojo integration demo</title>
+
+    <link rel="stylesheet" href="../resources/style/graphclient.css"/>
+		<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/dojo/1.7.2/dijit/themes/soria/soria.css">
+		<style>
+			html, body {
+			    height: 100%;
+			    margin: 0;
+			    overflow: hidden;
+			    padding: 0;
+			    font-size: 10pt;
+			}
+			#appLayout {
+				height: 100%;
+			}
+
+      .yIcon {
+        background-repeat: no-repeat;
+        border: 1px solid #b1badf;
+        background-color: #f3f6ff;
+        width: 30px;
+        height: 22px;
+        text-align: center;
+        background-position: center;
+      }
+
+      .yIconZoomIn {
+        background-image: url('../resources/16x16/zoom_in.png');
+      }
+
+      .yIconZoomOut {
+        background-image: url('../resources/16x16/zoom_out.png');
+      }
+
+      .yIconZoomFit {
+        background-image: url('../resources/16x16/zoom_fit.png');
+      }
+
+      .yIconZoomOriginal {
+        background-image: url('../resources/16x16/zoom_original.png');
+      }
+
+		</style>
+
+		<script src="../../lib/yfiles/es5-shim.js"></script>
+		<script src="../../lib/yfiles/yfiles-complete.js"></script>
+		<script data-dojo-config="
+		    async:true,
+		    parseOnLoad:true,
+		    dojoBlankHtmlUrl: location.pathname.replace(/\/[^/]+$/, '') + '/resources/blank.html',
+        packages: [ {
+        	name: 'demos',
+        	location: location.pathname.replace(/\/[^/]+$/, '') + '/dojo-widgets'
+        }, {
+            name: 'yfiles',
+            location: location.pathname.replace(/\/[^/]+$/, '') + '../../../lib/yfiles'
+        } ]"
+    	src="http://ajax.googleapis.com/ajax/libs/dojo/1.7.2/dojo/dojo.js"></script>
+    	<script>
+
+        yFilesCompleteImports = yfiles.imports.map(function(item) {
+          return '../../lib/'+item+'.js';
+        });
+
+        // dojo + custom widgets
+        var dojoImports = [
+          // load dojo base
+          'dijit/registry', 'dojo/on', 'dojo/dom', 'dojo/ready', 'dojo/parser',
+          // load dojo widgets
+          'dijit/layout/BorderContainer', 'dijit/layout/ContentPane', 'dijit/TitlePane',
+          'dijit/Toolbar', 'dijit/form/Button',
+          // load custom widget
+          'demos/GraphView'
+        ];
+
+        var allImports = dojoImports.concat(yFilesCompleteImports);
+
+        // import the license first
+        allImports.unshift('../resources/license.js');
+        require(
+          ['../../lib/yfiles/mappings.js'],
+              function(mappings) {
+                require(allImports, function(license,registry, on, dom, ready) {
+                    ready(function() {
+                        initGraphControl(registry, dom);
+                        initButtons(registry, on);
+                    });
+                });
+			});
+
+			function initGraphControl(registry, dom) {
+				// get the graph control
+    			var graphControl = registry.byId('graphView').get('graphControl');
+
+    			// set the input mode
+    			var mode = new yworks.yfiles.ui.input.GraphEditorInputMode();
+		        var orthogonalEdgeEditingContext = new yworks.yfiles.ui.input.OrthogonalEdgeEditingContext();
+		        orthogonalEdgeEditingContext.orthogonalEdgeEditing = true;
+		        mode.orthogonalEdgeEditingContext = orthogonalEdgeEditingContext;
+		        mode.createEdgeInputMode.orthogonalEdgeCreation = true;
+
+		        // make bend creation more important than moving of selected edges
+		        // this has the effect that dragging a selected edge (not its bends)
+		        // will create a new bend instead of moving all bends
+		        // This is especially nicer in conjunction with orthogonal
+		        // edge editing because this creates additional bends every time
+		        // the edge is moved otherwise
+		        mode.createBendModePriority = mode.moveModePriority - 1;
+
+		        graphControl.inputMode = mode;
+
+		        // set default node style
+		        var nodeStyle = new yworks.yfiles.ui.drawing.ShinyPlateNodeStyle.WithColor(yworks.support.windows.Colors.orange);
+		        nodeStyle.drawShadow = true;
+		        graphControl.graph.nodeDefaults.style = nodeStyle;
+
+		        graphControl.inputMode.addItemClickedListener(function(sender, evt) {
+		        	var item = evt.item;
+		        	if(yworks.yfiles.ui.model.ILabel.isInstance(item)) {
+		        		dom.byId('label').innerHTML = item.text;
+		        	} else if(yworks.yfiles.ui.model.ILabeledItem.isInstance(item)) {
+		        		var labels = yfiles.system.collections.EnumerableExtensions.toArray(item.labels);
+		        		dom.byId('label').innerHTML = labels.reduce(function(prevValue, current) {
+		        			return (prevValue && (prevValue + ", ") || "") + current.text;
+		        		}, "") || "(item has no label)";
+		        	}
+		        });
+			}
+
+			function initButtons(registry, on) {
+				// get the graph control
+    			var graphControl = registry.byId('graphView').get('graphControl');
+
+    			// connect buttons to events
+				on(registry.byId('toolbar.zoomIn'), 'click', function() {
+					graphControl.zoom = graphControl.zoom * 1.2;
+				});
+				on(registry.byId('toolbar.zoomOut'), 'click', function() {
+					graphControl.zoom = graphControl.zoom / 1.2;
+				});
+				on(registry.byId('toolbar.zoomFit'), 'click', function() {
+					graphControl.fitContent();
+				});
+				on(registry.byId('toolbar.zoomOriginal'), 'click', function() {
+					graphControl.zoom = 1;
+				});
+			}
+    	</script>
+	</head>
+	<body class="soria yfiles">
+		<div id="appLayout" data-dojo-type="dijit.layout.BorderContainer" data-dojo-props="liveSplitters:true,design:'sidebar',gutters:true">
+			<div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region: 'top'">
+				<div id="toolbar"
+			         data-dojo-type="dijit.Toolbar" style="height:28px;">
+			      <button data-dojo-type="dijit.form.Button"
+			           data-dojo-props="iconClass:'yIcon yIconZoomIn',showLabel:false"
+			           id="toolbar.zoomIn">
+			        Zoom In
+			      </button>
+			      <button data-dojo-type="dijit.form.Button" id="toolbar.zoomOut"
+			           data-dojo-props="iconClass:'yIcon yIconZoomOut',showLabel:false">
+			        Zoom Out
+			      </button>
+			      <button data-dojo-type="dijit.form.Button" id="toolbar.zoomFit"
+			           data-dojo-props="iconClass:'yIcon yIconZoomFit',showLabel:false">
+			        Zoom to Fit
+			      </button>
+			      <button data-dojo-type="dijit.form.Button" id="toolbar.zoomOriginal"
+			           data-dojo-props="iconClass:'yIcon yIconZoomOriginal',showLabel:false">
+			        Zoom to Original Size
+			      </button>
+			    </div>
+		    </div>
+		    <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region: 'left', splitter: true" style="width: 250px">
+				<div data-dojo-type="dijit.TitlePane" title="Documentation"
+	       			 data-dojo-props="toggleable:false">
+					This demo shows how you can integrate <em>yFiles for Html</em> with <em>Dojo 1.7</em> and later.
+					<h2>Custom widget</h2>
+					<p>In order to use the <em>yFiles for Html</em> <strong>GraphControl</strong> component with dojos declarative markup,
+						it needs to be bundled in a custom <a href="dojo-widgets/GraphView.js">Widget</a>.</p>
+					<p>When only dojo but none of its widgets are used, this step is unnecessary and you can just as easily use <strong>dojo/dom</strong> to
+						append the <strong>GraphControl</strong>'s element (accessible through its <strong>div</strong> property) to the DOM.</p>
+					<h2>Events</h2>
+					<p>The demo shows how to modify the properties of the <strong>GraphControl</strong> upon dojo events, as well as how to listen to
+						<strong>GraphControl</strong> events and modify a dojo widget in turn.</p>
+				</div>
+
+				<div data-dojo-type="dijit.TitlePane" title="Graph info"
+					 data-dojo-props="toggleable: false">
+					 Current node label: <span id="label">(nothing selected)</span>
+				</div>
+			</div>
+			<div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region: 'center'">
+				<div data-dojo-type="demo.yfiles.dojo.GraphView" id="graphView"></div>
+			</div>
+		</div>
+	</body>
+</html>

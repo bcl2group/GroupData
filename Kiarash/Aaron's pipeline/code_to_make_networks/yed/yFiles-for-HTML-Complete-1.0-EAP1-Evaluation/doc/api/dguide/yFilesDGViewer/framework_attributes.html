@@ -1,0 +1,152 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   
+      <title>Attributes</title>
+      <link rel="stylesheet" href="ystyle.css" type="text/css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.65.1">
+      <link rel="home" href="index.html" title="yFiles for HTML Developer's Guide: UI Components">
+      <link rel="up" href="class_framework.html" title="Chapter&nbsp;3.&nbsp;The yFiles Class Framework">
+      <link rel="previous" href="framework_enums.html" title="Enums">
+      <link rel="next" href="view.html" title="Chapter&nbsp;4.&nbsp;Displaying and Editing Graphs">
+      <link rel="stylesheet" href="jsdt/toc.css" type="text/css"><script type="text/javascript" src="jsdt/jquery.min.js"></script><script type="text/javascript" src="jsdt/toc.js"></script><link type="text/css" rel="stylesheet" href="jssh/SyntaxHighlighter.css"><script type="text/javascript" src="jssh/shCore.js"></script><script type="text/javascript" src="jssh/shBrushJScript.js"></script><script type="text/javascript" src="jssh/shBrushCSharp.js"></script><script type="text/javascript" src="jssh/shBrushXml.js"></script><script type="text/javascript" src="jssh/shBrushCss.js"></script><script type="text/javascript">
+  function sh() {
+
+    dp.SyntaxHighlighter.HighlightAll('programlisting', false, false, false, null, false);
+  }
+  </script></head>
+   <body onload="sh()" bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <div class="navheader">
+         <table width="100%" summary="Navigation header">
+            <tr>
+               <th colspan="3" align="center">Attributes</th>
+            </tr>
+            <tr>
+               <td width="20%" align="left"><a accesskey="p" href="framework_enums.html">Prev</a>&nbsp;
+               </td>
+               <th width="60%" align="center">Chapter&nbsp;3.&nbsp;The yFiles Class Framework</th>
+               <td width="20%" align="right">&nbsp;<a accesskey="n" href="view.html">Next</a></td>
+            </tr>
+         </table>
+         <div class="navline"></div>
+         <div style="display:none"><img src="figures/navbg.jpg" alt=""><img src="figures/navline.jpg" alt=""></div>
+      </div>
+      <div class="section" lang="en">
+         <div class="titlepage">
+            <div>
+               <div>
+                  <h2 class="title" style="clear: both"><a name="framework_attributes"></a>Attributes
+                  </h2>
+               </div>
+            </div>
+            <div></div>
+         </div>
+         <div class="section" lang="en">
+            <div class="titlepage">
+               <div>
+                  <div>
+                     <h3 class="title"><a name="d0e5152"></a>Defining an Attribute
+                     </h3>
+                  </div>
+               </div>
+               <div></div>
+            </div>
+            <p>
+               Attributes contain meta information about namespaces, types, and type members. yFiles for HTML uses
+                         meta information primarily for reading and writing GraphML files, but other use cases exist.
+               
+            </p>
+            <p>
+               yFiles Class Framework attributes are closer to C# attributes than to Java annotations.
+                         The major difference between both concepts is that attributes are actual classes which can extend other attributes,
+                         implement interfaces and have methods and properties.
+               
+            </p>
+            <div class="example"><a name="ex_attribute_basic_definition"></a><p class="title"><b>Example&nbsp;3.22.&nbsp;Defining a basic attribute</b></p><pre class="programlisting js">var FormTypeAttribute = yfiles.lang.Attribute('FormTypeAttribute', {
+  type: "",
+  defaultValue: "",
+  constructor: function(type) {
+      this.type = type;
+  }
+});</pre></div>
+            <p>
+               This attribute could be used to annotate a data model so that you could generate a form for the model
+                             automatically.
+               
+            </p><pre class="programlisting js">var LoginFormModel = yfiles.lang.Class('LoginFormModel', {
+  firstName: { // uses object with $meta instead of field
+      $meta: [FormTypeAttribute('text')], // applies attribute
+      value: "" // follows PropertyDescriptor semantics
+  },
+  lastName: {
+      $meta: [FormTypeAttribute('text')],
+      value: ""
+  },
+  stayLoggedIn: {
+      $meta: [FormTypeAttribute('checkbox').init({defaultValue: true})], // defines arbitrary additional members
+      value: true
+  }
+});</pre><p>
+               Even though attributes are class types, they are used like functions, i.e. without the <tt class="code">new</tt>
+                             keyword. This helps to differentiate them from a normal class constructor, since they behave differently.
+               
+            </p>
+            <p>
+               While it may look like the previous sample created three instances of our <tt class="code">FormTypeAttribute</tt>,
+                             it didn't create any instances.  Attribute constructors are only invoked when attributes are read using reflection.
+               
+            </p>
+         </div>
+         <div class="section" lang="en">
+            <div class="titlepage">
+               <div>
+                  <div>
+                     <h3 class="title"><a name="attributes_lazy"></a>Lazy Attributes
+                     </h3>
+                  </div>
+               </div>
+               <div></div>
+            </div>
+            <div class="example"><a name="ex_attribute_lazy_definition"></a><p class="title"><b>Example&nbsp;3.23.&nbsp;Defining a lazy attribute</b></p><pre class="programlisting js">yfiles.module('myapp.attributes', function(exports) {
+  exports.CanBeNullAttribute = new yfiles.AttributeDefinition(function() {
+      return {
+          constructor: function() {}
+      };
+  });
+});
+</pre></div>
+            <p>
+               As with other types, lazy attributes must be namespaced to a module.
+                             This attribute will only be constructed when it is first used.
+               
+            </p>
+         </div>
+      </div>
+      <table class="copyright" border="0" cellpadding="0" cellspacing="0" width="100%">
+         <tbody>
+            <tr>
+               <td align="right">
+                  <p class="copyright">Copyright &copy;2012, yWorks GmbH. All rights reserved.</p>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <div class="navfooter">
+         <div class="navline2"></div>
+         <div style="display:none"><img src="figures/navline2.jpg" alt=""><img src="figures/navbg2.jpg" alt=""></div>
+         <table width="100%" summary="Navigation footer">
+            <tr>
+               <td width="40%" align="left"><a accesskey="p" href="framework_enums.html">Prev</a>&nbsp;
+               </td>
+               <td width="20%" align="center"><a accesskey="u" href="class_framework.html">Up</a></td>
+               <td width="40%" align="right">&nbsp;<a accesskey="n" href="view.html">Next</a></td>
+            </tr>
+            <tr>
+               <td width="40%" align="left" valign="top">Enums&nbsp;</td>
+               <td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td>
+               <td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;4.&nbsp;Displaying and Editing Graphs</td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

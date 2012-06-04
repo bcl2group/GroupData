@@ -1,0 +1,2543 @@
+﻿<html xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+  <head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8" />
+    <META NAME="save" CONTENT="history" />
+    <title>AbstractGraphWrapper Members</title>
+    <meta name="Language" content="en-us" />
+    <meta name="System.Keywords" content="AbstractGraphWrapper class" />
+    <meta name="System.Keywords" content="AbstractGraphWrapper class, all members" />
+    <meta name="System.Keywords" content="yworks.yfiles.ui.model.AbstractGraphWrapper class" />
+    <meta name="Microsoft.Help.Id" content="AllMembers.T:yworks.yfiles.ui.model.AbstractGraphWrapper" />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <link rel="stylesheet" type="text/css" href="../styles/Presentation.css" />
+    <link rel="stylesheet" type="text/css" href="ms-help://Hx/HxRuntime/HxLink.css" />
+    <script type="text/javascript" src="../scripts/EventUtilities.js"> </script>
+    <script type="text/javascript" src="../scripts/SplitScreen.js"> </script>
+    <script type="text/javascript" src="../scripts/Dropdown.js"> </script>
+    <script type="text/javascript" src="../scripts/script_manifold.js"> </script>
+    <script type="text/javascript" src="../scripts/script_feedBack.js"> </script>
+    <script type="text/javascript" src="../scripts/CheckboxMenu.js"> </script>
+    <script type="text/javascript" src="../scripts/CommonUtilities.js"> </script>
+    <meta name="container" content="yworks.yfiles.ui.model" />
+    <meta name="file" content="AllMembers_T_yworks_yfiles_ui_model_AbstractGraphWrapper" />
+    <meta name="guid" content="AllMembers_T_yworks_yfiles_ui_model_AbstractGraphWrapper" />
+    <xml>
+      <MSHelp:Attr Name="AssetID" Value="AllMembers.T:yworks.yfiles.ui.model.AbstractGraphWrapper" />
+      <MSHelp:TOCTitle Title="AbstractGraphWrapper Members" />
+      <MSHelp:RLTitle Title="AbstractGraphWrapper Members (yworks.yfiles.ui.model)" />
+      <MSHelp:Keyword Index="A" Term="AllMembers.T:yworks.yfiles.ui.model.AbstractGraphWrapper" />
+      <MSHelp:Keyword Index="A" Term="frlrfyworksyfilesuimodelAbstractGraphWrapperMembersTopic" />
+      <MSHelp:Keyword Index="K" Term="AbstractGraphWrapper class" />
+      <MSHelp:Keyword Index="K" Term="AbstractGraphWrapper class, all members" />
+      <MSHelp:Keyword Index="K" Term="yworks.yfiles.ui.model.AbstractGraphWrapper class" />
+      <MSHelp:Attr Name="HelpPriority" Value="1" />
+      <MSHelp:Attr Name="Locale" Value="en-us" />
+      <MSHelp:Attr Name="TopicType" Value="kbSyntax" />
+      <MSHelp:Attr Name="TopicType" Value="apiref" />
+      <MSHelp:Attr Name="AssemblyVersion" Value="1.0.0.0" />
+    </xml>
+  </head>
+  <body>
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <input type="hidden" id="hiddenScrollOffset" />
+    <img id="collapseImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" alt="Collapse image" title="Collapse image" />
+    <img id="expandImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" alt="Expand Image" title="Expand Image" />
+    <img id="collapseAllImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" />
+    <img id="expandAllImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" />
+    <img id="dropDownImage" style="display:none; height:0; width:0;" src="../icons/dropdown.gif" />
+    <img id="dropDownHoverImage" style="display:none; height:0; width:0;" src="../icons/dropdownHover.gif" />
+    <img id="copyImage" style="display:none; height:0; width:0;" src="../icons/copycode.gif" alt="Copy image" title="Copy image" />
+    <img id="copyHoverImage" style="display:none; height:0; width:0;" src="../icons/copycodeHighlight.gif" alt="CopyHover image" title="CopyHover image" />
+    <div id="header">
+      <table id="topTable" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <span onclick="ExpandCollapseAll(toggleAllImage)" style="cursor:default;" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage, event)" tabindex="0">
+              <img ID="toggleAllImage" class="toggleAll" src="../icons/collapse_all.gif" /> <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label><label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span>
+            <span>    </span>
+            <span id="memberOptionsDropdown" class="filter" tabindex="0">
+              <img id="memberOptionsDropdownImage" src="../icons/dropdown.gif" /> <label id="memberOptionsMenuAllLabel" for="memberOptionsDropdownImage" style="display: none;"><nobr>Members: Show All </nobr></label><label id="memberOptionsMenuMultipleLabel" for="memberOptionsDropdownImage" style="display: none;"><nobr>Members: Filtered </nobr></label><label id="memberOptionsMenuProtectedLabel" for="memberOptionsDropdownImage" style="display: none;"><nobr>Members: Filtered </nobr></label><label id="memberOptionsMenuInheritedLabel" for="memberOptionsDropdownImage" style="display: none;"><nobr>Members: Filtered </nobr></label></span>
+          </td>
+        </tr>
+      </table>
+      <div id="devlangsMenu">
+        <input id="yFilesJavaScriptCheckbox" type="checkbox" data="yFilesJavaScript,cs,'persist'" value="on" onClick="SetLanguage(this)" />
+        <label class="checkboxLabel" for="yFilesJavaScriptCheckbox">JavaScript</label>
+        <br />
+      </div>
+      <div id="memberOptionsMenu">
+        <input id="ProtectedCheckbox" type="checkbox" data="Protected" value="on" onClick="SetMemberOptions(this, 'vis')" />
+        <label class="checkboxLabel" for="ProtectedCheckbox">Include Protected Members</label>
+        <br />
+        <input id="InheritedCheckbox" type="checkbox" data="Inherited" value="on" onClick="SetMemberOptions(this, 'decl')" />
+        <label class="checkboxLabel" for="InheritedCheckbox">Include Inherited Members</label>
+        <br />
+      </div>
+      <table id="bottomTable" cellpadding="0" cellspacing="0">
+        <tr id="headerTableRow1">
+          <td align="left">
+            <span id="runningHeaderText">yFiles for HTML Complete Class Reference</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow2">
+          <td align="left">
+            <span id="nsrTitle">AbstractGraphWrapper Members</span>
+          </td>
+        </tr>
+        <tr id="headerTableRow3">
+          <td align="left">
+            <a href="T_yworks_yfiles_ui_model_AbstractGraphWrapper.htm">AbstractGraphWrapper Class</a> <a href="#constructorTableToggle" onclick="OpenSection(constructorTableToggle)">Constructors</a> <a href="#methodTableToggle" onclick="OpenSection(methodTableToggle)">Methods</a> <a href="#fieldTableToggle" onclick="OpenSection(fieldTableToggle)">Fields</a> <a href="#propertyTableToggle" onclick="OpenSection(propertyTableToggle)">Properties</a> <a href="#seeAlsoToggle" onclick="OpenSection(seeAlsoToggle)">See Also</a> <span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback('yfileshtml@yworks.com','yFiles for HTML Complete Class Reference','','','','%0\dYour%20feedback%20is%20used%20to%20improve%20the%20documentation%20and%20the%20product.%20Your%20e-mail%20address%20will%20not%20be%20used%20for%20any%20other%20purpose%20and%20is%20disposed%20of%20after%20the%20issue%20you%20report%20is%20resolved.%20%20While%20working%20to%20resolve%20the%20issue%20that%20you%20report,%20you%20may%20be%20contacted%20via%20e-mail%20to%20get%20further%20details%20or%20clarification%20on%20the%20feedback%20you%20sent.%20After%20the%20issue%20you%20report%20has%20been%20addressed,%20you%20may%20receive%20an%20e-mail%20to%20let%20you%20know%20that%20your%20feedback%20has%20been%20addressed.%0\A%0\d','Customer%20Feedback');">Send Feedback</a></span></td>
+        </tr>
+      </table>
+      <table id="gradientTable">
+        <tr>
+          <td class="nsrBottom" background="../icons/gradient.gif" />
+        </tr>
+      </table>
+    </div>
+    <div id="mainSection">
+      <div id="mainBody">
+        <div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" />
+        <span style="color: DarkGray"></span>
+        <p />
+        <p>The <a href="T_yworks_yfiles_ui_model_AbstractGraphWrapper.htm">AbstractGraphWrapper</a> type exposes the following members.</p>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(constructorTableToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(constructorTableToggle, event)" tabindex="0">
+            <img id="constructorTableToggle" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Constructors</span>
+        </h1>
+        <div id="constructorTableSection" class="section" name="collapseableSection" style="">
+          <table id="memberList" class="members" frame="lhs" cellpadding="2">
+            <col width="10%" />
+            <tr>
+              <th class="iconColumn">
+               
+            </th>
+              <th class="nameColumn">Name</th>
+              <th class="descriptionColumn">Description</th>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_AbstractGraphWrapper.htm">AbstractGraphWrapper</a>
+              </td>
+              <td>
+                <div class="summary">
+Creates a new instance that wraps a given <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.
+</div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(methodTableToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(methodTableToggle, event)" tabindex="0">
+            <img id="methodTableToggle" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Methods</span>
+        </h1>
+        <div id="methodTableSection" class="section" name="collapseableSection" style="">
+          <table id="memberList" class="members" frame="lhs" cellpadding="2">
+            <col width="10%" />
+            <tr>
+              <th class="iconColumn">
+               
+            </th>
+              <th class="nameColumn">Name</th>
+              <th class="descriptionColumn">Description</th>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_addBend.htm">addBend</a>
+              </td>
+              <td>
+                <div class="summary">
+Adds a bend at the given index to the given edge using the coordinates provided.
+The added instance will be returned.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_addBendAddedListener.htm">addBendAddedListener</a>
+              </td>
+              <td>
+                <div class="summary">
+Event that is triggered if a bend has been added to an edge in this graph.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_addBendChangedListener.htm">addBendChangedListener</a>
+              </td>
+              <td>
+                <div class="summary">
+Event that is triggered if a bend has been changed.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_addBendRemovedListener.htm">addBendRemovedListener</a>
+              </td>
+              <td>
+                <div class="summary">
+Event that is triggered if a bend has been removed from an edge in this graph.
+This event will be triggered, too, if an edge has been removed from the graph, for each
+of the bends that belonged to the edge.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_addDisplaysInvalidatedListener.htm">addDisplaysInvalidatedListener</a>
+              </td>
+              <td>
+                <div class="summary">
+Event that is triggered if the graph has changed visually and the display should
+be updated to reflect the changes.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_addEdgeChangedListener.htm">addEdgeChangedListener</a>
+              </td>
+              <td>
+                <div class="summary">
+Event that is triggered if an edge has been changed, e.g. if its style 
+has been replaced.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_addEdgeCreatedListener.htm">addEdgeCreatedListener</a>
+              </td>
+              <td>
+                <div class="summary">
+Event that is triggered if an edge has been created.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_addEdgeRemovedListener.htm">addEdgeRemovedListener</a>
+              </td>
+              <td>
+                <div class="summary">
+Event that is triggered if an edge has been removed.
+This event will be triggered, too, prior to a node removal. 
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_addEventHandlers.htm">addEventHandlers</a>
+              </td>
+              <td>
+                <div class="summary">
+Adds event handlers that propagate graph events from <span class="parameter">graph</span>
+to listeners on this instance. 
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_addLabelAddedListener.htm">addLabelAddedListener</a>
+              </td>
+              <td>
+                <div class="summary">
+Event that is triggered if a label has been added to this graph instance. 
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_addLabelChangedListener.htm">addLabelChangedListener</a>
+              </td>
+              <td>
+                <div class="summary">
+Event that is triggered if a label has been changed, e.g. if its style 
+has been replaced.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_addLabelRemovedListener.htm">addLabelRemovedListener</a>
+              </td>
+              <td>
+                <div class="summary">
+Event that is triggered if a label has been removed from this graph instance. 
+This event will also be triggered, prior to the removal of the <a href="P_yworks_yfiles_ui_model_ILabel_owner.htm">owner</a>
+of the label.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_addLabelWithParameterStylePreferredSizeAndTag.htm">addLabelWithParameterStylePreferredSizeAndTag</a>
+              </td>
+              <td>
+                <div class="summary">
+Add a label to the given item using the text as the initial label text and label model parameter and style.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_addNodeChangedListener.htm">addNodeChangedListener</a>
+              </td>
+              <td>
+                <div class="summary">
+Event that is triggered if a node has been changed, e.g. if its style 
+has been replaced.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_addNodeCreatedListener.htm">addNodeCreatedListener</a>
+              </td>
+              <td>
+                <div class="summary">
+Event that is triggered if a node has been created.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_addNodeRemovedListener.htm">addNodeRemovedListener</a>
+              </td>
+              <td>
+                <div class="summary">
+Event that is triggered if a node has been removed.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_addPortAddedListener.htm">addPortAddedListener</a>
+              </td>
+              <td>
+                <div class="summary">
+Event that is triggered if a port has been added to this graph instance. 
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_addPortChangedListener.htm">addPortChangedListener</a>
+              </td>
+              <td>
+                <div class="summary">
+Event that is triggered if a port has been changed, e.g. if its style 
+has been replaced.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_addPortRemovedListener.htm">addPortRemovedListener</a>
+              </td>
+              <td>
+                <div class="summary">
+Event that is triggered if a port has been removed from its <a href="P_yworks_yfiles_ui_model_IPort_owner.htm">owner</a>.
+This event will also be triggered prior to the removal of the corresponding owner
+of the port.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_addPortWithParameterStyleAndTag.htm">addPortWithParameterStyleAndTag</a>
+              </td>
+              <td>
+                <div class="summary">
+Add a port to the given port owner using the location model parameter to determine the location of the port.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_contains.htm">contains</a>
+              </td>
+              <td>
+                <div class="summary">
+Determines whether this graph contains the specified item.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_createEdgeWithNodesStyleAndTag.htm">createEdgeWithNodesStyleAndTag</a>
+              </td>
+              <td>
+                <div class="summary">
+Convenience method that creates and returns an edge that connects to the given node instances using the
+given style instance. 
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_createEdgeWithPortsStyleAndTag.htm">createEdgeWithPortsStyleAndTag</a>
+              </td>
+              <td>
+                <div class="summary">
+Creates and returns an edge that connects to the given port instances. 
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_createNodeWithBoundsStyleAndTag.htm">createNodeWithBoundsStyleAndTag</a>
+              </td>
+              <td>
+                <div class="summary">
+Creates and returns a node using default values for the style and the specified initial geometry.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_dispose.htm">dispose</a>
+              </td>
+              <td>
+                <div class="summary">
+Causes the implementor to free all resources.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_getLookup.htm">getLookup</a>
+              </td>
+              <td>
+                <div class="summary">
+Gets the lookup instance to use in <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_lookup.htm">lookup(Class)</a></div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_graph_BendAdded.htm">graph_BendAdded</a>
+              </td>
+              <td>
+                <div class="summary">
+Event propagator for <a href="M_yworks_yfiles_ui_model_IGraph_addBendAddedListener.htm">BendAdded</a> events from the wrapped graph.
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_graph_BendChanged.htm">graph_BendChanged</a>
+              </td>
+              <td>
+                <div class="summary">
+Event propagator for <a href="M_yworks_yfiles_ui_model_IGraph_addBendChangedListener.htm">BendChanged</a> events from the wrapped graph.
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_graph_BendRemoved.htm">graph_BendRemoved</a>
+              </td>
+              <td>
+                <div class="summary">
+Event propagator for <a href="M_yworks_yfiles_ui_model_IGraph_addBendRemovedListener.htm">BendRemoved</a> events from the wrapped graph.
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_graph_DisplaysInvalidated.htm">graph_DisplaysInvalidated</a>
+              </td>
+              <td>
+                <div class="summary">
+Event propagator for <a href="M_yworks_yfiles_ui_model_IGraph_addDisplaysInvalidatedListener.htm">DisplaysInvalidated</a> events from the wrapped graph.
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_graph_EdgeChanged.htm">graph_EdgeChanged</a>
+              </td>
+              <td>
+                <div class="summary">
+Event propagator for <a href="M_yworks_yfiles_ui_model_IGraph_addEdgeChangedListener.htm">EdgeChanged</a> events from the wrapped graph.
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_graph_EdgeCreated.htm">graph_EdgeCreated</a>
+              </td>
+              <td>
+                <div class="summary">
+Event propagator for <a href="M_yworks_yfiles_ui_model_IGraph_addEdgeCreatedListener.htm">EdgeCreated</a> events from the wrapped graph.
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_graph_EdgeRemoved.htm">graph_EdgeRemoved</a>
+              </td>
+              <td>
+                <div class="summary">
+Event propagator for <a href="M_yworks_yfiles_ui_model_IGraph_addEdgeRemovedListener.htm">EdgeRemoved</a> events from the wrapped graph.
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_graph_LabelAdded.htm">graph_LabelAdded</a>
+              </td>
+              <td>
+                <div class="summary">
+Event propagator for <a href="M_yworks_yfiles_ui_model_IGraph_addLabelAddedListener.htm">LabelAdded</a> events from the wrapped graph.
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_graph_LabelChanged.htm">graph_LabelChanged</a>
+              </td>
+              <td>
+                <div class="summary">
+Event propagator for <a href="M_yworks_yfiles_ui_model_IGraph_addLabelChangedListener.htm">LabelChanged</a> events from the wrapped graph.
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_graph_LabelRemoved.htm">graph_LabelRemoved</a>
+              </td>
+              <td>
+                <div class="summary">
+Event propagator for <a href="M_yworks_yfiles_ui_model_IGraph_addLabelRemovedListener.htm">LabelRemoved</a> events from the wrapped graph.
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_graph_NodeChanged.htm">graph_NodeChanged</a>
+              </td>
+              <td>
+                <div class="summary">
+Event propagator for <a href="M_yworks_yfiles_ui_model_IGraph_addNodeChangedListener.htm">NodeChanged</a> events from the wrapped graph.
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_graph_NodeCreated.htm">graph_NodeCreated</a>
+              </td>
+              <td>
+                <div class="summary">
+Event propagator for <a href="M_yworks_yfiles_ui_model_IGraph_addNodeCreatedListener.htm">NodeCreated</a> events from the wrapped graph.
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_graph_NodeRemoved.htm">graph_NodeRemoved</a>
+              </td>
+              <td>
+                <div class="summary">
+Event propagator for <a href="M_yworks_yfiles_ui_model_IGraph_addNodeRemovedListener.htm">NodeRemoved</a> events from the wrapped graph.
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_graph_PortAdded.htm">graph_PortAdded</a>
+              </td>
+              <td>
+                <div class="summary">
+Event propagator for <a href="M_yworks_yfiles_ui_model_IGraph_addPortAddedListener.htm">PortAdded</a> events from the wrapped graph.
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_graph_PortChanged.htm">graph_PortChanged</a>
+              </td>
+              <td>
+                <div class="summary">
+Event propagator for <a href="M_yworks_yfiles_ui_model_IGraph_addPortChangedListener.htm">PortChanged</a> events from the wrapped graph.
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_graph_PortRemoved.htm">graph_PortRemoved</a>
+              </td>
+              <td>
+                <div class="summary">
+Event propagator for <a href="M_yworks_yfiles_ui_model_IGraph_addPortRemovedListener.htm">PortRemoved</a> events from the wrapped graph.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_invalidateDisplays.htm">invalidateDisplays</a>
+              </td>
+              <td>
+                <div class="summary">
+Causes the <a href="M_yworks_yfiles_ui_model_IGraph_addDisplaysInvalidatedListener.htm">DisplaysInvalidated</a> event to be triggered.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_lookup.htm">lookup</a>
+              </td>
+              <td>
+                <div class="summary">
+Returns an instance that implements the given type or <span class="code">null</span>.
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_onBendAdded.htm">onBendAdded</a>
+              </td>
+              <td>
+                <div class="summary">
+Raises the <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_addBendAddedListener.htm">BendAdded</a> event
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_onBendChanged.htm">onBendChanged</a>
+              </td>
+              <td>
+                <div class="summary">
+Raises the <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_addBendChangedListener.htm">BendChanged</a> event
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_onBendRemoved.htm">onBendRemoved</a>
+              </td>
+              <td>
+                <div class="summary">
+Raises the <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_addBendRemovedListener.htm">BendRemoved</a> event
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_onEdgeChanged.htm">onEdgeChanged</a>
+              </td>
+              <td>
+                <div class="summary">
+Raises the <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_addEdgeChangedListener.htm">EdgeChanged</a> event
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_onEdgeCreated.htm">onEdgeCreated</a>
+              </td>
+              <td>
+                <div class="summary">
+Raises the <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_addEdgeCreatedListener.htm">EdgeCreated</a> event
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_onEdgeRemoved.htm">onEdgeRemoved</a>
+              </td>
+              <td>
+                <div class="summary">
+Raises the <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_addEdgeRemovedListener.htm">EdgeRemoved</a> event
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_onInvalidateDisplays.htm">onInvalidateDisplays</a>
+              </td>
+              <td>
+                <div class="summary">
+Raises the <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_addDisplaysInvalidatedListener.htm">DisplaysInvalidated</a> event
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_onLabelAdded.htm">onLabelAdded</a>
+              </td>
+              <td>
+                <div class="summary">
+Raises the <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_addLabelAddedListener.htm">LabelAdded</a> event
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_onLabelChanged.htm">onLabelChanged</a>
+              </td>
+              <td>
+                <div class="summary">
+Raises the <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_addLabelChangedListener.htm">LabelChanged</a> event
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_onLabelRemoved.htm">onLabelRemoved</a>
+              </td>
+              <td>
+                <div class="summary">
+Raises the <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_addLabelRemovedListener.htm">LabelRemoved</a> event
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_onNodeChanged.htm">onNodeChanged</a>
+              </td>
+              <td>
+                <div class="summary">
+Raises the <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_addNodeChangedListener.htm">NodeChanged</a> event
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_onNodeCreated.htm">onNodeCreated</a>
+              </td>
+              <td>
+                <div class="summary">
+Raises the <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_addNodeCreatedListener.htm">NodeCreated</a> event
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_onNodeRemoved.htm">onNodeRemoved</a>
+              </td>
+              <td>
+                <div class="summary">
+Raises the <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_addNodeRemovedListener.htm">NodeRemoved</a> event
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_onPortAdded.htm">onPortAdded</a>
+              </td>
+              <td>
+                <div class="summary">
+Raises the <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_addPortAddedListener.htm">PortAdded</a> event
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_onPortChanged.htm">onPortChanged</a>
+              </td>
+              <td>
+                <div class="summary">
+Raises the <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_addPortChangedListener.htm">PortChanged</a> event
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_onPortRemoved.htm">onPortRemoved</a>
+              </td>
+              <td>
+                <div class="summary">
+Raises the <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_addPortRemovedListener.htm">PortRemoved</a> event
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_removeBend.htm">removeBend</a>
+              </td>
+              <td>
+                <div class="summary">
+Removes the given bend instance from its edge. 
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_removeBendAddedListener.htm">removeBendAddedListener</a>
+              </td>
+              <td>
+                <div class="summary">
+Event that is triggered if a bend has been added to an edge in this graph.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_removeBendChangedListener.htm">removeBendChangedListener</a>
+              </td>
+              <td>
+                <div class="summary">
+Event that is triggered if a bend has been changed.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_removeBendRemovedListener.htm">removeBendRemovedListener</a>
+              </td>
+              <td>
+                <div class="summary">
+Event that is triggered if a bend has been removed from an edge in this graph.
+This event will be triggered, too, if an edge has been removed from the graph, for each
+of the bends that belonged to the edge.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_removeDisplaysInvalidatedListener.htm">removeDisplaysInvalidatedListener</a>
+              </td>
+              <td>
+                <div class="summary">
+Event that is triggered if the graph has changed visually and the display should
+be updated to reflect the changes.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_removeEdge.htm">removeEdge</a>
+              </td>
+              <td>
+                <div class="summary">
+Removes the given edge instance from this graph. 
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_removeEdgeChangedListener.htm">removeEdgeChangedListener</a>
+              </td>
+              <td>
+                <div class="summary">
+Event that is triggered if an edge has been changed, e.g. if its style 
+has been replaced.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_removeEdgeCreatedListener.htm">removeEdgeCreatedListener</a>
+              </td>
+              <td>
+                <div class="summary">
+Event that is triggered if an edge has been created.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_removeEdgeRemovedListener.htm">removeEdgeRemovedListener</a>
+              </td>
+              <td>
+                <div class="summary">
+Event that is triggered if an edge has been removed.
+This event will be triggered, too, prior to a node removal. 
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_removeEventHandlers.htm">removeEventHandlers</a>
+              </td>
+              <td>
+                <div class="summary">
+Removes event handlers for <span class="parameter">graph</span> 
+that have been added with <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_addEventHandlers.htm">addEventHandlers(IGraph)</a>.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_removeLabel.htm">removeLabel</a>
+              </td>
+              <td>
+                <div class="summary">
+Removes the given label from its owner. 
+This will trigger the corresponding event.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_removeLabelAddedListener.htm">removeLabelAddedListener</a>
+              </td>
+              <td>
+                <div class="summary">
+Event that is triggered if a label has been added to this graph instance. 
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_removeLabelChangedListener.htm">removeLabelChangedListener</a>
+              </td>
+              <td>
+                <div class="summary">
+Event that is triggered if a label has been changed, e.g. if its style 
+has been replaced.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_removeLabelRemovedListener.htm">removeLabelRemovedListener</a>
+              </td>
+              <td>
+                <div class="summary">
+Event that is triggered if a label has been removed from this graph instance. 
+This event will also be triggered, prior to the removal of the <a href="P_yworks_yfiles_ui_model_ILabel_owner.htm">owner</a>
+of the label.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_removeNode.htm">removeNode</a>
+              </td>
+              <td>
+                <div class="summary">
+Removes the given node instance from this graph. 
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_removeNodeChangedListener.htm">removeNodeChangedListener</a>
+              </td>
+              <td>
+                <div class="summary">
+Event that is triggered if a node has been changed, e.g. if its style 
+has been replaced.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_removeNodeCreatedListener.htm">removeNodeCreatedListener</a>
+              </td>
+              <td>
+                <div class="summary">
+Event that is triggered if a node has been created.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_removeNodeRemovedListener.htm">removeNodeRemovedListener</a>
+              </td>
+              <td>
+                <div class="summary">
+Event that is triggered if a node has been removed.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_removePort.htm">removePort</a>
+              </td>
+              <td>
+                <div class="summary">
+Removes a port from its owner. 
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_removePortAddedListener.htm">removePortAddedListener</a>
+              </td>
+              <td>
+                <div class="summary">
+Event that is triggered if a port has been added to this graph instance. 
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_removePortChangedListener.htm">removePortChangedListener</a>
+              </td>
+              <td>
+                <div class="summary">
+Event that is triggered if a port has been changed, e.g. if its style 
+has been replaced.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_removePortRemovedListener.htm">removePortRemovedListener</a>
+              </td>
+              <td>
+                <div class="summary">
+Event that is triggered if a port has been removed from its <a href="P_yworks_yfiles_ui_model_IPort_owner.htm">owner</a>.
+This event will also be triggered prior to the removal of the corresponding owner
+of the port.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_setBendLocation.htm">setBendLocation</a>
+              </td>
+              <td>
+                <div class="summary">
+Modifies the location of the given bend.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_setBounds.htm">setBounds</a>
+              </td>
+              <td>
+                <div class="summary">
+Sets the bounds of the given node to the new values.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_setEdgeStyle.htm">setEdgeStyle</a>
+              </td>
+              <td>
+                <div class="summary">
+Assigns the given style instance by reference to the edge.
+Style instances can be shared.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_setLabelModelParameter.htm">setLabelModelParameter</a>
+              </td>
+              <td>
+                <div class="summary">
+Sets the label model parameter for the given label.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_setLabelStyle.htm">setLabelStyle</a>
+              </td>
+              <td>
+                <div class="summary">
+Assigns the given style instance by reference to the label.
+Style instances can be shared.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_setLabelText.htm">setLabelText</a>
+              </td>
+              <td>
+                <div class="summary">
+Sets the label text of the given label.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_setLocationModelParameter.htm">setLocationModelParameter</a>
+              </td>
+              <td>
+                <div class="summary">
+Sets a new <a href="T_yworks_yfiles_ui_model_IPortLocationModelParameter.htm">IPortLocationModelParameter</a> for the given port.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_setLookup.htm">setLookup</a>
+              </td>
+              <td>
+                <div class="summary">
+Sets the lookup instance to use in <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_lookup.htm">lookup(Class)</a></div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_setNodeStyle.htm">setNodeStyle</a>
+              </td>
+              <td>
+                <div class="summary">
+Assigns the given style instance by reference to the node.
+Style instances can be shared.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_setPorts.htm">setPorts</a>
+              </td>
+              <td>
+                <div class="summary">
+Sets the ports of the given edge to the new values.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_setPortStyle.htm">setPortStyle</a>
+              </td>
+              <td>
+                <div class="summary">
+Assigns the given style instance by reference to the port.
+Style instances can be shared. The style instance may be <span class="code">null</span> in 
+which case the port will not be rendered.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_setPreferredSize.htm">setPreferredSize</a>
+              </td>
+              <td>
+                <div class="summary">
+Sets the preferred size of the label.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_typedEdgesAtOwner.htm">typedEdgesAtOwner</a>
+              </td>
+              <td>
+                <div class="summary">
+Returns an <a href="T_yworks_canvas_model_IListEnumerable_1.htm">IListEnumerable<span class="languageSpecificText"><span class="cs">&lt;</span><span class="vb">(Of </span><span class="cpp">&lt;</span><span class="nu">(</span><span class="fs">&lt;'</span></span>T<span class="languageSpecificText"><span class="cs">&gt;</span><span class="vb">)</span><span class="cpp">&gt;</span><span class="nu">)</span><span class="fs">&gt;</span></span></a> for all edges that have the given port owner as their 
+<a href="P_yworks_yfiles_ui_model_IEdge_targetPort.htm">target port's</a> or <a href="P_yworks_yfiles_ui_model_IEdge_sourcePort.htm">source port's</a>&amp;#32;<a href="P_yworks_yfiles_ui_model_IPort_owner.htm">owner</a>
+depending on the <a href="T_yworks_yfiles_ui_model_AdjacencyTypes.htm">AdjacencyTypes</a></div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_AbstractGraphWrapper_typedEdgesAtPort.htm">typedEdgesAtPort</a>
+              </td>
+              <td>
+                <div class="summary">
+Returns an <a href="T_yfiles_system_collections_generic_IEnumerable_1.htm">IEnumerable<span class="languageSpecificText"><span class="cs">&lt;</span><span class="vb">(Of </span><span class="cpp">&lt;</span><span class="nu">(</span><span class="fs">&lt;'</span></span>T<span class="languageSpecificText"><span class="cs">&gt;</span><span class="vb">)</span><span class="cpp">&gt;</span><span class="nu">)</span><span class="fs">&gt;</span></span></a> for all edges that are adjacent to the given 
+port as a <a href="P_yworks_yfiles_ui_model_IEdge_sourcePort.htm">sourcePort</a> or <a href="P_yworks_yfiles_ui_model_IEdge_targetPort.htm">targetPort</a>.
+</div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(extensionMethodTableToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(extensionMethodTableToggle, event)" tabindex="0">
+            <img id="extensionMethodTableToggle" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Extension Methods</span>
+        </h1>
+        <div id="extensionMethodTableSection" class="section" name="collapseableSection" style="">
+          <table id="memberList" class="members" frame="lhs" cellpadding="2">
+            <col width="10%" />
+            <tr>
+              <th class="iconColumn">
+               
+            </th>
+              <th class="nameColumn">Name</th>
+              <th class="descriptionColumn">Description</th>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_addLabel.htm">addLabel</a>
+              </td>
+              <td>
+                <div class="summary">
+Add a label to the given item using the text as the initial label text.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_addLabelWithParameter.htm">addLabelWithParameter</a>
+              </td>
+              <td>
+                <div class="summary">
+Add a label to the given item using the text as the initial label text as well as  label model parameter.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_addLabelWithParameterAndStyle.htm">addLabelWithParameterAndStyle</a>
+              </td>
+              <td>
+                <div class="summary">
+Add a label to the given item using the text as the initial label text as well as  label model parameter and style.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_addLabelWithParameterStyleAndPreferredSize.htm">addLabelWithParameterStyleAndPreferredSize</a>
+              </td>
+              <td>
+                <div class="summary">
+Add a label to the given item using the text as the initial label text as well as label model parameter, preferred size, and style.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_addLabelWithParameterStyleAndTag.htm">addLabelWithParameterStyleAndTag</a>
+              </td>
+              <td>
+                <div class="summary">
+Add a label to the given item using the text as the initial label text as well as label model parameter and style.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_addLabelWithTag.htm">addLabelWithTag</a>
+              </td>
+              <td>
+                <div class="summary">
+Add a label to the given item using the text as the initial label text and a given tag.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_addPort.htm">addPort</a>
+              </td>
+              <td>
+                <div class="summary">
+Adds a new port to the graph at the port using the default location model parameter
+for the <span class="parameter">owner</span>.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_addPortAtLocation.htm">addPortAtLocation</a>
+              </td>
+              <td>
+                <div class="summary">
+Adds a new port to the graph at the port using the given location.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_addPortAtLocationWithStyle.htm">addPortAtLocationWithStyle</a>
+              </td>
+              <td>
+                <div class="summary">
+Add a port to the given port owner using the absolute coordinates as the new initial position of
+the port anchor.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_addPortWithParameter.htm">addPortWithParameter</a>
+              </td>
+              <td>
+                <div class="summary">
+Adds a new port to the graph at the port owner using the given location parameter.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_addPortWithParameterAndStyle.htm">addPortWithParameterAndStyle</a>
+              </td>
+              <td>
+                <div class="summary">
+Adds a new port to the graph using a <span class="keyword"><span class="languageSpecificText"><span class="cs">null</span><span class="vb">Nothing</span><span class="cpp">nullptr</span></span></span><span class="nu">null</span><a href="P_yworks_support_ITagOwner_tag.htm">tag</a></div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_addRelativePort.htm">addRelativePort</a>
+              </td>
+              <td>
+                <div class="summary">
+Adds a new port to the graph at the node using a location that is relative to the center of the node.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_addUndoUnit.htm">addUndoUnit</a>
+              </td>
+              <td>
+                <div class="summary">
+Convenience method that uses the <a href="T_yworks_support_IUndoSupport.htm">IUndoSupport</a> from the <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>'s <a href="T_yworks_support_ILookup.htm">ILookup</a>
+to <a href="M_yworks_support_IUndoSupport_addUnit.htm">add a unit</a>.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_adjustPreferredSize.htm">adjustPreferredSize</a>
+              </td>
+              <td>
+                <div class="summary">
+Adjusts the <a href="P_yworks_yfiles_ui_model_ILabel_preferredSize.htm">preferredSize</a> property of a label to
+fit the suggested size of its <a href="T_yworks_yfiles_ui_drawing_ILabelStyleRenderer.htm">ILabelStyleRenderer</a>.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_appendBend.htm">appendBend</a>
+              </td>
+              <td>
+                <div class="summary">
+Appends a new bend to the list of bends at the given edge.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_appendBends.htm">appendBends</a>
+              </td>
+              <td>
+                <div class="summary">
+Appends bends to the given edge using the provided locations.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_applyLayout.htm">applyLayout</a>
+              </td>
+              <td>
+                <div class="summary">
+Convenience method that runs a layouter on a graph using
+<a href="M_yworks_yfiles_ui_model_CopiedLayoutIGraph_applyLayout.htm">applyLayout(IGraph, ILayouter)</a>.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_applyLayoutWithControl.htm">applyLayoutWithControl</a>
+              </td>
+              <td>
+                <div class="summary">
+Convenience method that runs a layouter on a graph and animates the transition
+to the new layout in a graph control that displays the graph.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_applyLayoutWithControlAndCallback.htm">applyLayoutWithControlAndCallback</a>
+              </td>
+              <td>
+                <div class="summary">
+Convenience method that runs a layouter on a graph and animates the transition
+to the new layout in a graph control that displays the graph. An event is called
+once the animation has finished.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_beginEdit.htm">beginEdit</a>
+              </td>
+              <td>
+                <div class="summary">
+Convenience method that uses the <a href="T_yworks_support_IUndoSupport.htm">IUndoSupport</a> from the <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>'s <a href="T_yworks_support_ILookup.htm">ILookup</a>
+to <a href="M_yworks_support_IUndoSupport_beginEdit.htm">begin an edit</a>.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_calculatePreferredSize.htm">calculatePreferredSize</a>
+              </td>
+              <td>
+                <div class="summary">
+Calculates the preferred size of a label with the given properties.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_calculatePreferredSizeWithStyleAndParameter.htm">calculatePreferredSizeWithStyleAndParameter</a>
+              </td>
+              <td>
+                <div class="summary">
+Calculates the preferred size of a label with the given properties.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_calculatePreferredSizeWithStyleParameterAndTag.htm">calculatePreferredSizeWithStyleParameterAndTag</a>
+              </td>
+              <td>
+                <div class="summary">
+Calculates the preferred size of a label with the given properties.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_clear.htm">clear</a>
+              </td>
+              <td>
+                <div class="summary">
+Clears the graph instance, removing all entities in proper order.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_clearBends.htm">clearBends</a>
+              </td>
+              <td>
+                <div class="summary">
+Removes all bends from the given edge. 
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_createEdge.htm">createEdge</a>
+              </td>
+              <td>
+                <div class="summary">
+Convenience method that creates and returns an edge that connects to the given node instances.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_createEdgeAtPorts.htm">createEdgeAtPorts</a>
+              </td>
+              <td>
+                <div class="summary">
+Creates and returns an edge that connects to the given port instances. 
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_createEdgeStyle.htm">createEdgeStyle</a>
+              </td>
+              <td>
+                <div class="summary">
+Convenience method that delegates to the <a href="M_yworks_yfiles_ui_model_IEdgeDefaults_getStyleInstance.htm">getStyleInstance<span class="languageSpecificText"><span class="cs">()</span><span class="cpp">()</span><span class="nu">()</span><span class="fs">()</span></span></a>
+method of the <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>'s <a href="P_yworks_yfiles_ui_model_IGraph_edgeDefaults.htm">edgeDefaults</a>.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_createEdgeWithNodesAndStyle.htm">createEdgeWithNodesAndStyle</a>
+              </td>
+              <td>
+                <div class="summary">
+Convenience method that creates and returns an edge that connects to the given node instances.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_createEdgeWithPortsAndStyle.htm">createEdgeWithPortsAndStyle</a>
+              </td>
+              <td>
+                <div class="summary">
+Creates and returns an edge that connects to the given port instances. 
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_createIncrementalLayerConstraintFactory.htm">createIncrementalLayerConstraintFactory</a>
+              </td>
+              <td>
+                <div class="summary">
+Creates and registers an incremental layerer constraint factory for a graph.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_createLabelModelParameter.htm">createLabelModelParameter</a>
+              </td>
+              <td>
+                <div class="summary">
+Creates the label model parameter for a given <a href="T_yworks_yfiles_ui_model_ILabeledItem.htm">ILabeledItem</a>.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_createLabelStyle.htm">createLabelStyle</a>
+              </td>
+              <td>
+                <div class="summary">
+Convenience method that delegates to the <a href="M_yworks_yfiles_ui_model_IEdgeDefaults_getStyleInstance.htm">getStyleInstance<span class="languageSpecificText"><span class="cs">()</span><span class="cpp">()</span><span class="nu">()</span><span class="fs">()</span></span></a>
+method of the <a href="M_yworks_yfiles_ui_model_GraphExtensions_getLabelDefaults.htm">getLabelDefaults(IGraph, ILabeledItem)</a> for the given <a href="T_yworks_yfiles_ui_model_ILabeledItem.htm">labeled item</a>.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_createLayerConstraintFactory.htm">createLayerConstraintFactory</a>
+              </td>
+              <td>
+                <div class="summary">
+Creates and registers a layerer constraint factory for a graph.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_createLocationModelParameter.htm">createLocationModelParameter</a>
+              </td>
+              <td>
+                <div class="summary">
+Uses the <a href="M_yworks_yfiles_ui_model_GraphExtensions_getPortDefaults.htm">port defaults</a> for the <span class="parameter">owner</span>
+to obtain the <a href="M_yworks_yfiles_ui_model_IPortDefaults_getLocationModelParameterInstance.htm">location model parameter</a>.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_createLocationModelParameterForLocation.htm">createLocationModelParameterForLocation</a>
+              </td>
+              <td>
+                <div class="summary">
+Creates a location model parameter for a newly created <a href="T_yworks_yfiles_ui_model_IPort.htm">IPort</a> at the <span class="parameter">owner</span> that matches the 
+<span class="parameter">location</span>.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_createNode.htm">createNode</a>
+              </td>
+              <td>
+                <div class="summary">
+Creates and returns a node using default values for the geometry and style.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_createNodeAtLocation.htm">createNodeAtLocation</a>
+              </td>
+              <td>
+                <div class="summary">
+Creates and returns a node using default values for the style and the specified initial center location.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_createNodeAtLocationAndTag.htm">createNodeAtLocationAndTag</a>
+              </td>
+              <td>
+                <div class="summary">
+Creates and returns a node using default values for the style and the specified initial center location, as well as the tag.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_createNodeStyle.htm">createNodeStyle</a>
+              </td>
+              <td>
+                <div class="summary">
+Convenience method that delegates to the <a href="M_yworks_yfiles_ui_model_INodeDefaults_getStyleInstance.htm">getStyleInstance<span class="languageSpecificText"><span class="cs">()</span><span class="cpp">()</span><span class="nu">()</span><span class="fs">()</span></span></a>
+method of the <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>'s <a href="P_yworks_yfiles_ui_model_IGraph_nodeDefaults.htm">nodeDefaults</a>.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_createNodeWithBounds.htm">createNodeWithBounds</a>
+              </td>
+              <td>
+                <div class="summary">
+Creates and returns a node using default values for the style and the specified initial geometry.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_createNodeWithBoundsAndStyle.htm">createNodeWithBoundsAndStyle</a>
+              </td>
+              <td>
+                <div class="summary">
+Creates and returns a node using default values for the style and the specified initial geometry.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_createNodeWithBoundsAndTag.htm">createNodeWithBoundsAndTag</a>
+              </td>
+              <td>
+                <div class="summary">
+Creates and returns a node using default values for the style and the specified initial geometry, as well as the provided
+tag.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_createPortStyle.htm">createPortStyle</a>
+              </td>
+              <td>
+                <div class="summary">
+Convenience method that delegates to the <a href="M_yworks_yfiles_ui_model_IPortDefaults_getStyleInstance.htm">getStyleInstance(IPortOwner)</a>
+method of the <a href="M_yworks_yfiles_ui_model_GraphExtensions_getPortDefaults.htm">getPortDefaults(IGraph, IPortOwner)</a> for the given <span class="parameter">owner</span>.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_createSequenceConstraintFactory.htm">createSequenceConstraintFactory</a>
+              </td>
+              <td>
+                <div class="summary">
+Creates and registers a sequencer constraint factory for a graph.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_edgesAtOwner.htm">edgesAtOwner</a>
+              </td>
+              <td>
+                <div class="summary">
+Convenience method that yields all adjacent edges at the given owner.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_edgesAtPort.htm">edgesAtPort</a>
+              </td>
+              <td>
+                <div class="summary">
+Convenience method that yields all adjacent edges at the given owner.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_getDecorator.htm">getDecorator</a>
+              </td>
+              <td>
+                <div class="summary">
+Gets a <a href="T_yworks_yfiles_ui_model_GraphDecorator.htm">GraphDecorator</a> instance for use with the given graph.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_getDefaultNodeBounds.htm">getDefaultNodeBounds</a>
+              </td>
+              <td>
+                <div class="summary">
+Gets the default node bounds for newly created nodes in the graph.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_getEdgeAtOwners.htm">getEdgeAtOwners</a>
+              </td>
+              <td>
+                <div class="summary">
+Finds an edge that connects <span class="parameter">from</span> and <span class="parameter">to</span> in the given graph.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_getEdgeAtPorts.htm">getEdgeAtPorts</a>
+              </td>
+              <td>
+                <div class="summary">
+Finds an edge that connects <span class="parameter">from</span> and <span class="parameter">to</span> in the given graph.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_getFoldedGraph.htm">getFoldedGraph</a>
+              </td>
+              <td>
+                <div class="summary">
+Gets the <a href="T_yworks_yfiles_ui_model_IFoldedGraph.htm">folded graph</a> instance associated with this
+<a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a> or <span class="keyword"><span class="languageSpecificText"><span class="cs">null</span><span class="vb">Nothing</span><span class="cpp">nullptr</span></span></span><span class="nu">null</span> if none is associated with it.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_getGroupedGraph.htm">getGroupedGraph</a>
+              </td>
+              <td>
+                <div class="summary">
+Gets the <a href="T_yworks_yfiles_ui_model_IGroupedGraph.htm">grouped graph</a> instance associated with this
+<a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a> or <span class="keyword"><span class="languageSpecificText"><span class="cs">null</span><span class="vb">Nothing</span><span class="cpp">nullptr</span></span></span><span class="nu">null</span> if none is associated with it.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_getLabelDefaults.htm">getLabelDefaults</a>
+              </td>
+              <td>
+                <div class="summary">
+Gets the <a href="T_yworks_yfiles_ui_model_ILabelDefaults.htm">label defaults</a> for a given <a href="T_yworks_yfiles_ui_model_ILabeledItem.htm">ILabeledItem</a>
+in the context of the <span class="parameter">graph</span>.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_getPortDefaults.htm">getPortDefaults</a>
+              </td>
+              <td>
+                <div class="summary">
+Gets the <a href="T_yworks_yfiles_ui_model_IPortDefaults.htm">port defaults</a> for a given <a href="T_yworks_yfiles_ui_model_IPortOwner.htm">IPortOwner</a>
+in the context of the <span class="parameter">graph</span>.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_inDegree.htm">inDegree</a>
+              </td>
+              <td>
+                <div class="summary">
+Calculates the number of incoming edges at the given <a href="T_yworks_yfiles_ui_model_IPortOwner.htm">IPortOwner</a>
+for this graph.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_inEdgesAt.htm">inEdgesAt</a>
+              </td>
+              <td>
+                <div class="summary">
+Convenience method that yields the incoming edges at the given owner.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_outDegree.htm">outDegree</a>
+              </td>
+              <td>
+                <div class="summary">
+Calculates the number of outgoing edges at the given <a href="T_yworks_yfiles_ui_model_IPortOwner.htm">IPortOwner</a>
+for this graph.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_outEdgesAt.htm">outEdgesAt</a>
+              </td>
+              <td>
+                <div class="summary">
+Convenience method that yields the outgoing edges at the given owner.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_portDegree.htm">portDegree</a>
+              </td>
+              <td>
+                <div class="summary">
+Calculates the number of edges at the given <a href="T_yworks_yfiles_ui_model_IPort.htm">IPort</a>
+for this graph.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_portInDegree.htm">portInDegree</a>
+              </td>
+              <td>
+                <div class="summary">
+Calculates the number of incoming edges at the given <a href="T_yworks_yfiles_ui_model_IPort.htm">IPort</a>
+for this graph.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_portInEdgesAt.htm">portInEdgesAt</a>
+              </td>
+              <td>
+                <div class="summary">
+Convenience method that yields the incoming edges at the given owner.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_portOutDegree.htm">portOutDegree</a>
+              </td>
+              <td>
+                <div class="summary">
+Calculates the number of outgoing edges at the given <a href="T_yworks_yfiles_ui_model_IPort.htm">IPort</a>
+for this graph.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_portOutEdgesAt.htm">portOutEdgesAt</a>
+              </td>
+              <td>
+                <div class="summary">
+Convenience method that yields the outgoing edges at the given owner.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_portOwnerDegree.htm">portOwnerDegree</a>
+              </td>
+              <td>
+                <div class="summary">
+Calculates the number of edges at the given <a href="T_yworks_yfiles_ui_model_IPortOwner.htm">IPortOwner</a>
+for this graph.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_removeLabeledItem.htm">removeLabeledItem</a>
+              </td>
+              <td>
+                <div class="summary">
+Convenience method that removes a <a href="T_yworks_yfiles_ui_model_ILabeledItem.htm">ILabeledItem</a> from the graph.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_removePortOwner.htm">removePortOwner</a>
+              </td>
+              <td>
+                <div class="summary">
+Convenience method that removes a <a href="T_yworks_yfiles_ui_model_IPortOwner.htm">IPortOwner</a> from the graph.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_reverse.htm">reverse</a>
+              </td>
+              <td>
+                <div class="summary">
+ Reverses an edge by <a href="M_yworks_yfiles_ui_model_IGraph_setPorts.htm">setting source and target port</a>
+ to <a href="P_yworks_yfiles_ui_model_IEdge_targetPort.htm">targetPort</a> and <a href="P_yworks_yfiles_ui_model_IEdge_sourcePort.htm">sourcePort</a>.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_setCenter.htm">setCenter</a>
+              </td>
+              <td>
+                <div class="summary">
+Sets the center of a node to the given world coordinates.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_setPortLocation.htm">setPortLocation</a>
+              </td>
+              <td>
+                <div class="summary">
+Convenience method that tries to set the absolute coordinates of the given port to the given values.
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+            <tr data="public;inherited;notNetfw;">
+              <td>
+                <img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" />
+              </td>
+              <td>
+                <a href="M_yworks_yfiles_ui_model_IGraph_setRelativeLocation.htm">setRelativeLocation</a>
+              </td>
+              <td>
+                <div class="summary">
+Tries to set the location of the port relative to its <a href="P_yworks_yfiles_ui_model_IPort_owner.htm">owner</a> if
+the owner is a <a href="T_yworks_yfiles_ui_model_INode.htm">node</a>. 
+</div> (Inherited from <a href="T_yworks_yfiles_ui_model_IGraph.htm">IGraph</a>.)</td>
+            </tr>
+          </table>
+        </div>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(fieldTableToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(fieldTableToggle, event)" tabindex="0">
+            <img id="fieldTableToggle" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Fields</span>
+        </h1>
+        <div id="fieldTableSection" class="section" name="collapseableSection" style="">
+          <table id="memberList" class="members" frame="lhs" cellpadding="2">
+            <col width="10%" />
+            <tr>
+              <th class="iconColumn">
+               
+            </th>
+              <th class="nameColumn">Name</th>
+              <th class="descriptionColumn">Description</th>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protfield.gif" alt="Protected field" title="Protected field" />
+              </td>
+              <td>
+                <a href="F_yworks_yfiles_ui_model_AbstractGraphWrapper_graph.htm">graph</a>
+              </td>
+              <td>
+                <div class="summary">
+The wrapped graph instance.
+</div>
+              </td>
+            </tr>
+            <tr data="protected;declared;notNetfw;">
+              <td>
+                <img src="../icons/protfield.gif" alt="Protected field" title="Protected field" />
+              </td>
+              <td>
+                <a href="F_yworks_yfiles_ui_model_AbstractGraphWrapper_lookupInstance.htm">lookupInstance</a>
+              </td>
+              <td>
+                <div class="summary">
+The lookup instance.
+</div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(propertyTableToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(propertyTableToggle, event)" tabindex="0">
+            <img id="propertyTableToggle" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Properties</span>
+        </h1>
+        <div id="propertyTableSection" class="section" name="collapseableSection" style="">
+          <table id="memberList" class="members" frame="lhs" cellpadding="2">
+            <col width="10%" />
+            <tr>
+              <th class="iconColumn">
+               
+            </th>
+              <th class="nameColumn">Name</th>
+              <th class="descriptionColumn">Description</th>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="P_yworks_yfiles_ui_model_AbstractGraphWrapper_bends.htm">bends</a>
+              </td>
+              <td>
+                <div class="summary">
+A collection view over the bends of the edges contained in this graph.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="P_yworks_yfiles_ui_model_AbstractGraphWrapper_collectionModel.htm">collectionModel</a>
+              </td>
+              <td>
+                <div class="summary">
+Offers a view over all elements that make up the graph. This is a combined view
+of all nodes, edges, labels, ports, and bends.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="P_yworks_yfiles_ui_model_AbstractGraphWrapper_edgeDefaults.htm">edgeDefaults</a>
+              </td>
+              <td>
+                <div class="summary">
+Gets or sets the defaults for normal edges.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="P_yworks_yfiles_ui_model_AbstractGraphWrapper_edgeLabels.htm">edgeLabels</a>
+              </td>
+              <td>
+                <div class="summary">
+A collection view over the labels attached to edges contained in this graph.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="P_yworks_yfiles_ui_model_AbstractGraphWrapper_edges.htm">edges</a>
+              </td>
+              <td>
+                <div class="summary">
+A collection view over the edges contained in this graph.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="P_yworks_yfiles_ui_model_AbstractGraphWrapper_mapperRegistry.htm">mapperRegistry</a>
+              </td>
+              <td>
+                <div class="summary">
+Gets the mapper registry that is associated with this graph instance.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="P_yworks_yfiles_ui_model_AbstractGraphWrapper_nodeDefaults.htm">nodeDefaults</a>
+              </td>
+              <td>
+                <div class="summary">
+Gets or sets the defaults for normal nodes.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="P_yworks_yfiles_ui_model_AbstractGraphWrapper_nodeLabels.htm">nodeLabels</a>
+              </td>
+              <td>
+                <div class="summary">
+A collection view over the labels attached to nodes contained in this graph.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="P_yworks_yfiles_ui_model_AbstractGraphWrapper_nodes.htm">nodes</a>
+              </td>
+              <td>
+                <div class="summary">
+A collection view over the nodes contained in this graph.
+</div>
+              </td>
+            </tr>
+            <tr data="public;declared;notNetfw;">
+              <td>
+                <img src="../icons/pubproperty.gif" alt="Public property" title="Public property" />
+              </td>
+              <td>
+                <a href="P_yworks_yfiles_ui_model_AbstractGraphWrapper_ports.htm">ports</a>
+              </td>
+              <td>
+                <div class="summary">
+A collection view over the ports contained in this graph.
+</div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <h1 class="heading">
+          <span onclick="ExpandCollapse(seeAlsoToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(seeAlsoToggle, event)" tabindex="0">
+            <img id="seeAlsoToggle" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />See Also</span>
+        </h1>
+        <div id="seeAlsoSection" class="section" name="collapseableSection" style="">
+          <div class="seeAlsoStyle">
+            <a href="T_yworks_yfiles_ui_model_AbstractGraphWrapper.htm">AbstractGraphWrapper Class</a>
+          </div>
+          <div class="seeAlsoStyle">
+            <a href="N_yworks_yfiles_ui_model.htm">yworks.yfiles.ui.model Namespace</a>
+          </div>
+        </div>
+      </div>
+      <div id="footer">
+        <div class="footerLine">
+          <img width="100%" height="3px" src="../icons/footer.gif" alt="Footer image" title="Footer image" />
+        </div>
+        <A NAME="feedback"></A>
+        <span id="fb" class="feedbackcss"></span>
+        <p />Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:yfileshtml%40yworks.com?Subject=yFiles for HTML Complete Class Reference">yfileshtml@yworks.com</a><script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        var HT_mailLinkText = HT_mailLink.innerHTML;
+        HT_mailLink.href += ": " + document.title;
+        HT_mailLink.innerHTML = HT_mailLinkText;
+        </script><p /><a href="http://www.yworks.com" target="_blank">http://www.yworks.com</a></div>
+    </div>
+  </body>
+</html>

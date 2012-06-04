@@ -1,0 +1,191 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   
+      <title>Binding Data to Graph Elements</title>
+      <link rel="stylesheet" href="ystyle.css" type="text/css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.65.1">
+      <link rel="home" href="index.html" title="yFiles for HTML Developer's Guide: Analysis and Layout">
+      <link rel="up" href="concepts.html" title="Chapter&nbsp;6.&nbsp;Underlying Graph Model of the yFiles Graph Analysis Algorithms">
+      <link rel="previous" href="concepts.html" title="Chapter&nbsp;6.&nbsp;Underlying Graph Model of the yFiles Graph Analysis Algorithms">
+      <link rel="next" href="base.html" title="Chapter&nbsp;7.&nbsp;Working with the Algorithms Graph Structure">
+      <link rel="stylesheet" href="jsdt/toc.css" type="text/css"><script type="text/javascript" src="jsdt/jquery.min.js"></script><script type="text/javascript" src="jsdt/toc.js"></script><link type="text/css" rel="stylesheet" href="jssh/SyntaxHighlighter.css"><script type="text/javascript" src="jssh/shCore.js"></script><script type="text/javascript" src="jssh/shBrushJScript.js"></script><script type="text/javascript" src="jssh/shBrushCSharp.js"></script><script type="text/javascript" src="jssh/shBrushXml.js"></script><script type="text/javascript" src="jssh/shBrushCss.js"></script><script type="text/javascript">
+  function sh() {
+
+    dp.SyntaxHighlighter.HighlightAll('programlisting', false, false, false, null, false);
+  }
+  </script></head>
+   <body onload="sh()" bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <div class="navheader">
+         <table width="100%" summary="Navigation header">
+            <tr>
+               <th colspan="3" align="center">Binding Data to Graph Elements</th>
+            </tr>
+            <tr>
+               <td width="20%" align="left"><a accesskey="p" href="concepts.html">Prev</a>&nbsp;
+               </td>
+               <th width="60%" align="center">Chapter&nbsp;6.&nbsp;Underlying Graph Model of the yFiles Graph Analysis Algorithms</th>
+               <td width="20%" align="right">&nbsp;<a accesskey="n" href="base.html">Next</a></td>
+            </tr>
+         </table>
+         <div class="navline"></div>
+         <div style="display:none"><img src="figures/navbg.jpg" alt=""><img src="figures/navline.jpg" alt=""></div>
+      </div>
+      <div class="section" lang="en">
+         <div class="titlepage">
+            <div>
+               <div>
+                  <h2 class="title" style="clear: both"><a name="custom_data"></a>Binding Data to Graph Elements
+                  </h2>
+               </div>
+            </div>
+            <div></div>
+         </div>
+         <p>
+            Most notably graph algorithms expect certain information asscociated with the 
+            graph elements they process. 
+            For example, a Shortest Path algorithm from the yWorks.yFiles.Algorithms 
+            namespace needs cost data associated with the edges of a graph.
+            
+         </p>
+         <p>
+            The yFiles library uses the concept of data accessors to bind this information 
+            to graph elements. 
+            The general term "data accessor" comprises both storing data and retrieving 
+            data, i.e., setter methods (write behavior) and getter methods (read behavior). 
+            
+            The actual implementations of these two aspects are interfaces 
+            <a href="../../html/T_yworks_yfiles_algorithms_IDataProvider.htm" title="Link to API documentation">IDataProvider<sup xmlns="http://www.w3.org/1999/xhtml" xmlns:fo="http://www.w3.org/1999/XSL/Format"><img src="figures/icon_api.gif" align="bottom" border="0"></img></sup></a> and 
+            <a href="../../html/T_yworks_yfiles_algorithms_IDataAcceptor.htm" title="Link to API documentation">IDataAcceptor<sup xmlns="http://www.w3.org/1999/xhtml" xmlns:fo="http://www.w3.org/1999/XSL/Format"><img src="figures/icon_api.gif" align="bottom" border="0"></img></sup></a>. 
+            IDataProvider defines read-only behavior on the contained data, its 
+            counterpart IDataAcceptor defines write-only behavior.
+            
+         </p><a class="indexterm" name="d0e15450"></a><a class="indexterm" name="d0e15455"></a><p>
+            The most frequently used data accessors, for example, interfaces 
+            <a href="../../html/T_yworks_yfiles_algorithms_INodeMap.htm" title="Link to API documentation">INodeMap<sup xmlns="http://www.w3.org/1999/xhtml" xmlns:fo="http://www.w3.org/1999/XSL/Format"><img src="figures/icon_api.gif" align="bottom" border="0"></img></sup></a> and 
+            <a href="../../html/T_yworks_yfiles_algorithms_IEdgeMap.htm" title="Link to API documentation">IEdgeMap<sup xmlns="http://www.w3.org/1999/xhtml" xmlns:fo="http://www.w3.org/1999/XSL/Format"><img src="figures/icon_api.gif" align="bottom" border="0"></img></sup></a>, have 
+            read/write behavior, i.e., they inherit from both IDataProvider and 
+            IDataAcceptor. 
+            
+            However, there are many cases where read-only behavior is sufficient. 
+            This is especially true for situations where the supplemental data is 
+            given as a parameter to a method, for example.
+            
+         </p>
+         <p>
+            In general, using data accessors presents a flexible approach, since the 
+            realization of the actual data store is not constrained to given 
+            implementations but can be extended in any imaginable way. 
+            Also, there is no restriction on the number or the implementation of each type 
+            of custom data associated with a graph element. 
+            
+         </p>
+         <div class="section" lang="en">
+            <div class="titlepage">
+               <div>
+                  <div>
+                     <h3 class="title"><a name="A Word on..."></a>A Word on Subclassing Graph Elements
+                     </h3>
+                  </div>
+               </div>
+               <div></div>
+            </div>
+            <p>
+               Normally, i.e., in popular object-oriented belief, customizing existent 
+               functionality means using inheritance. 
+               The yFiles graph implementation, however, disfavors this approach for the sake 
+               of the same technique used to provide supplemental data to graph elements. 
+               
+               Instead of extending any of class Node or class Edge, arbitrary custom data can 
+               be bound to any instance of these classes by using data accessors. 
+               
+            </p><a class="indexterm" name="d0e15473"></a></div>
+         <div class="highlights">
+            <p>
+               The following topics have been discussed in this chapter: 
+               
+            </p>
+            <div class="itemizedlist">
+               <ul type="disc">
+                  <li>
+                     The yFiles algorithms graph structure implementation basically consists of 
+                     classes Graph, Node, and Edge.
+                     
+                  </li>
+                  <li>
+                     The graph structure is directed, but also allows for undirected interpretation. 
+                     
+                  </li>
+                  <li>
+                     It knows about self-loops and parallel edges. 
+                     
+                  </li>
+                  <li>
+                     There is a clear hierarchy of responsibilities; especially, class Graph is the 
+                     single authority for all structural changes. 
+                     
+                  </li>
+                  <li>
+                     To iterate over graph elements, class Graph returns enumerators. 
+                     Also, there are interfaces INodeCursor and IEdgeCursor; these are typed 
+                     variants of interface ICursor which defines a bidirectional cursor.
+                     
+                  </li>
+                  <li>
+                     To store graph elements, there are classes NodeList and EdgeList; these are 
+                     typed variants of class YList which defines a doubly linked list. 
+                     
+                  </li>
+                  <li>
+                     To bind arbitrary data to graph elements the yFiles library uses data 
+                     accessors; data accessors can have read-only, write-only, or read/write 
+                     behavior; interface IDataProvider offers read-only behavior, while interface 
+                     IDataAcceptor offers write-only behavior.
+                     
+                  </li>
+                  <li>
+                     The most frequently used data accessors are interfaces INodeMap and IEdgeMap; 
+                     both have read/write behavior.
+                     
+                  </li>
+                  <li>
+                     Instead of extending graph element classes to get customized functionality, 
+                     yFiles favors the use of data accessors to bind arbitrary data to the instances 
+                     of graph elements. 
+                     
+                  </li>
+               </ul>
+            </div>
+            <p>
+               
+            </p>
+         </div>
+      </div>
+      <table class="copyright" border="0" cellpadding="0" cellspacing="0" width="100%">
+         <tbody>
+            <tr>
+               <td align="right">
+                  <p class="copyright">Copyright &copy;2004-2012, yWorks GmbH. All rights reserved.</p>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <div class="navfooter">
+         <div class="navline2"></div>
+         <div style="display:none"><img src="figures/navline2.jpg" alt=""><img src="figures/navbg2.jpg" alt=""></div>
+         <table width="100%" summary="Navigation footer">
+            <tr>
+               <td width="40%" align="left"><a accesskey="p" href="concepts.html">Prev</a>&nbsp;
+               </td>
+               <td width="20%" align="center"><a accesskey="u" href="concepts.html">Up</a></td>
+               <td width="40%" align="right">&nbsp;<a accesskey="n" href="base.html">Next</a></td>
+            </tr>
+            <tr>
+               <td width="40%" align="left" valign="top">Chapter&nbsp;6.&nbsp;Underlying Graph Model of the yFiles Graph Analysis Algorithms&nbsp;</td>
+               <td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td>
+               <td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;7.&nbsp;Working with the Algorithms Graph Structure</td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

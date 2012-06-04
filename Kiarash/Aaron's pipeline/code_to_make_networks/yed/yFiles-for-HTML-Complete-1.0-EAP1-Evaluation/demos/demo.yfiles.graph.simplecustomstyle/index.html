@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<!-- ////////////////////////////////////////////////////////////////////////
+     //
+     // This file is part of yFiles for HTML 1.0-EAP1.
+     // 
+     // yWorks proprietary/confidential. Use is subject to license terms.
+     //
+     // Redistribution of this file or of an unauthorized byte-code version
+     // of this file is strictly forbidden.
+     //
+     // Copyright (c) 2012 by yWorks GmbH, Vor dem Kreuzberg 28, 
+     // 72070 Tuebingen, Germany. All rights reserved.
+     // 
+     ////////////////////////////////////////////////////////////////////////-->
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="../resources/style/graphclient.css"/>
+	<link rel="stylesheet" href="../resources/style/yfiles-app-framework.css"/>
+
+</head>
+<body>
+	<div id="loader">
+		<div id="circularG">
+			<div id="circularG_1" class="circularG"></div>
+			<div id="circularG_2" class="circularG"></div>
+			<div id="circularG_3" class="circularG"></div>
+			<div id="circularG_4" class="circularG"></div>
+			<div id="circularG_5" class="circularG"></div>
+			<div id="circularG_6" class="circularG"></div>
+			<div id="circularG_7" class="circularG"></div>
+			<div id="circularG_8" class="circularG"></div>
+		</div>
+		<p>Loading... please wait.</p>
+	</div>
+  <div id="app" data-type="application">
+    <div data-type="BorderLayout" class="container" data-layout-arrangement="headline">
+      <div data-type="Panel" data-layout-region="top" id="top" data-splitter="false">
+        <div data-type="ToolBar" data-name="toolbar">
+          <button data-command="ZoomIn" title="Zoom In" data-icon="yIconZoomIn"></button>
+          <button data-command="ZoomOriginal" title="Zoom to original size" data-icon="yIconZoomOriginal"></button>
+          <button data-command="ZoomOut" title="Zoom Out" data-icon="yIconZoomOut"></button>
+          <button data-command="FitContent" title="Fit Content" data-icon="yIconZoomFit"></button>
+		  <button data-command="ModifyColors" title="Modify Colors">Modify Colors</button>
+
+        </div>
+      </div>
+
+      <!--
+        The sidebar for the description
+      -->
+      <aside data-type="Panel" class="sidebar left" data-collapse="none" data-layout-region="left">
+        <div data-type="CollapsiblePane" data-header="Description" data-collapse="top">
+          <p>This demo shows how to create custom styles for nodes, edges, labels, ports, and edge arrows from scratch and how to use them.</p>
+
+          <h2>Things to Try</h2>
+
+          <ul>
+            <li>
+				Create new nodes in the canvas and inspect their styles in code.
+            </li>
+            <li>
+				Create edges between nodes and inspect the custom style of the edge and the arrows in code.
+            </li>
+            <li>
+				Click "Modify Selected Nodes" to change the color of the nodes instance and indirectly the color of the outgoing edges.
+            </li>
+			<li>
+				Note that the labels look like nodes connected via an edge, however they are ordinary labels that reuse the edge style for drawing a node to label connection. Select and drag a label to move them to different locations.
+			</li>
+			<li>
+				Also note that the label style depends on the current zoom. Zooming closer to the label reveals an edit label button that, when clicked starts label text editing.
+			</li>
+			<li>
+				Selecting an edge changes its color and the traditional selection indicator is not rendered.
+			</li>
+			<li>
+				Save the graph to GraphML and take a look at the GraphML - the styles are automatically serialized to Xaml and can be read back in just as easily.
+
+			</li>
+          </ul>
+        </div>
+      </aside>
+
+      <!--
+      The GraphControl
+      -->
+      <div data-type="Panel" data-layout-region="center" id="center">
+        <div data-type="GraphControl" data-name="graphControl" id="graphControl"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../../lib/yfiles/es5-shim.js"></script>
+  <script src="../../lib/yfiles/lang.js"></script>
+
+  <script src="demo/yfiles/graph/simplecustomstyle/MySimpleArrow.js"></script>
+  <script src="demo/yfiles/graph/simplecustomstyle/MySimpleEdgeStyle.js"></script>
+  <script src="demo/yfiles/graph/simplecustomstyle/MySimpleLabelStyle.js"></script>
+  <script src="demo/yfiles/graph/simplecustomstyle/MySimpleNodeStyle.js"></script>
+  <script src="demo/yfiles/graph/simplecustomstyle/MySimplePortStyle.js"></script>
+  <script src="demo/yfiles/graph/simplecustomstyle/SimpleCustomStyleDemo.js"></script>
+
+  <script src="../resources/license.js"></script>
+  <script>
+    var yfiles = yfiles ? yfiles : {};
+    yfiles.baseUrl = "../../lib/";
+  </script>
+<!--<script src="../demo.yfiles.framework/yfiles-demo-framework.js" ></script>-->
+<script src="../../lib/yfiles/complete.js"></script>
+<script src="../demo.yfiles.framework/yfiles.demo.js" ></script>
+  <script>
+    yfiles.ready([], function() {
+      yfiles.demo.Application.start(new demo.yfiles.graph.simplecustomstyle.SimpleCustomStyleDemo(), 'app', { backend: 'yfiles', loaderId: 'loader' });
+    });
+  </script>
+</body>
+</html>

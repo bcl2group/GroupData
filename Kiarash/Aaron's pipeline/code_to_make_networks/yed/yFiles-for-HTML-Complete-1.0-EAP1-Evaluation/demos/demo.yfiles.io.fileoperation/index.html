@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<!-- ////////////////////////////////////////////////////////////////////////
+     //
+     // This file is part of yFiles for HTML 1.0-EAP1.
+     // 
+     // yWorks proprietary/confidential. Use is subject to license terms.
+     //
+     // Redistribution of this file or of an unauthorized byte-code version
+     // of this file is strictly forbidden.
+     //
+     // Copyright (c) 2012 by yWorks GmbH, Vor dem Kreuzberg 28, 
+     // 72070 Tuebingen, Germany. All rights reserved.
+     // 
+     ////////////////////////////////////////////////////////////////////////-->
+
+<head>
+  <title>File Operation Demo [yFiles for HTML]</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="../resources/style/graphclient.css"/>
+  <link rel="stylesheet" href="../resources/style/yfiles-app-framework.css"/>
+</head>
+<body>
+  <div id="loader">
+    <div id="circularG">
+      <div id="circularG_1" class="circularG"></div>
+      <div id="circularG_2" class="circularG"></div>
+      <div id="circularG_3" class="circularG"></div>
+      <div id="circularG_4" class="circularG"></div>
+      <div id="circularG_5" class="circularG"></div>
+      <div id="circularG_6" class="circularG"></div>
+      <div id="circularG_7" class="circularG"></div>
+      <div id="circularG_8" class="circularG"></div>
+    </div>
+    <p>Loading... please wait.</p>
+  </div>
+  <div id="app" data-type="application">
+
+    <div data-type="BorderLayout" class="container" data-layout-arrangement="headline">
+      <div data-type="Panel" data-layout-region="top" id="top" data-splitter="false">
+        <div data-type="ToolBar" data-name="toolbar">
+
+          <button data-command="New" title="New" data-icon="yIconNew"></button>
+
+          <span data-type="Separator"></span>
+
+          <button data-command="OpenViaFileReader" data-name="openFileReaderButton" data-icon="yIconOpen"
+              title="Open via FileReader API">FileReader</button>
+          <button data-command="OpenViaFileSystemObject" data-name="openFileSystemObjectButton" data-icon="yIconOpen"
+              title="Open via FileSystemObject API (IE)">FileSystemObject</button>
+          <button data-command="OpenViaServer" data-name="openServerButton" data-icon="yIconOpen"
+              title="Open via Server">Server</button>
+
+          <span data-type="Separator"></span>
+
+          <button data-command="SaveViaServer" data-name="saveServerButton" data-icon="yIconSave"
+              title="Save via Server">Server</button>
+          <button data-command="SaveViaConsole" data-name="saveConsoleButton" data-icon="yIconSave"
+              title="Save to Console">Console</button>
+        </div>
+      </div>
+
+
+      <!--
+      The sidebar for the overview and description text
+      -->
+      <aside data-type="BorderLayout" class="sidebar left" data-layout-region="left" id="left">
+        <div data-type="CollapsiblePane" data-header="Overview" data-collapse="top" data-layout-region="top"
+            id="overviewContainer" data-splitter="false">
+          <div data-type="GraphOverviewControl" data-name="overviewControl" id="overviewControl"></div>
+        </div>
+
+        <div data-type="CollapsiblePane" data-layout-region="center" data-header="Description">
+          <div id="descriptionContent">
+
+            <p>
+              Shows various ways to open from and save to a GraphML file.
+            </p>
+
+            <h2>Things to Try</h2>
+
+            <ul>
+              <li>Open a GraphML file</li>
+              <li>Create a graph in the canvas and save it to GraphML</li>
+            </ul>
+
+            <p>
+              Commands which depend on a feature not supported by the current browser are disabled.
+            </p>
+
+            <h2>Open</h2>
+
+            <p>
+              All open commands show a file chooser dialog. This is done using a hidden file input HTML element.
+            </p>
+
+            <h4>FileReader API</h4>
+
+            <p>
+              Open a file using the <a href="http://caniuse.com/#search=filereader">FileReader API</a> of HTML 5.
+            </p>
+
+            <h4>FileSystem Object</h4>
+
+            <p>
+              Open a file using the <a href="http://msdn.microsoft.com/en-us/library/z9ty6h50%28v=vs.85%29.aspx">FileSystem
+              Object</a> of Internet Explorer.
+            </p>
+
+            <h4>Via Server</h4>
+
+            <p>
+              Open a file via a dedicated server. This submits a form containing the file content to the server which
+              returns an HTML document with this content. To keep this demo open in the current window, the response is
+              targeted to an invisible iframe. An exemplary server is part of yFiles for HTML.
+            </p>
+
+            <h2>Save</h2>
+
+            <h4>Via Server</h4>
+
+            <p>
+              Save to a file via a dedicated server. This submits the GraphML content to the server which responds with
+              a download URL for the respective file. The handling of the download then depends on the user's browser
+              settings. An exemplary server is part of yFiles for HTML.
+            </p>
+
+            <h4>To Console</h4>
+
+            <p>
+              Save the GraphML content to the browser's console.
+            </p>
+          </div>
+        </div>
+      </aside>
+
+      <!--
+      The GraphControl
+      -->
+      <div data-type="Panel" data-layout-region="center" id="center">
+        <div data-type="GraphControl" data-name="graphControl" id="graphControl" data-layout-region="center"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../../lib/yfiles/es5-shim.js"></script>
+  <script src="../../lib/yfiles/lang.js"></script>
+
+  <script src="demo/yfiles/io/fileoperations/FileOperationDemo.js"></script>
+  <script src="demo/yfiles/io/fileoperations/FileOperation.js"></script>
+  <script src="demo/yfiles/io/fileoperations/FileEventArgs.js"></script>
+  <script src="demo/yfiles/io/fileoperations/OpenOperation.js"></script>
+  <script src="demo/yfiles/io/fileoperations/OpenViaReaderOperation.js"></script>
+  <script src="demo/yfiles/io/fileoperations/OpenViaFileSystemObjectOperation.js"></script>
+  <script src="demo/yfiles/io/fileoperations/OpenViaServerOperation.js"></script>
+  <script src="demo/yfiles/io/fileoperations/SaveOperation.js"></script>
+  <script src="demo/yfiles/io/fileoperations/SaveViaConsoleOperation.js"></script>
+  <script src="demo/yfiles/io/fileoperations/SaveViaServerOperation.js"></script>
+
+  <script src="../resources/license.js"></script>
+  <script>
+    var yfiles = yfiles ? yfiles : {};
+    yfiles.baseUrl = "../../lib/";
+  </script>
+<!--<script src="../demo.yfiles.framework/yfiles-demo-framework.js" ></script>-->
+<script src="../../lib/yfiles/complete.js"></script>
+<script src="../demo.yfiles.framework/yfiles.demo.js" ></script>
+  <script>
+
+    yfiles.ready([], function() {
+      yfiles.demo.Application.start(
+          new demo.yfiles.io.fileoperations.FileOperationDemo(),
+          'app', { backend: 'yfiles', loaderId: 'loader' });
+    });
+  </script>
+</body>
+</html>

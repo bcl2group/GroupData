@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<!-- ////////////////////////////////////////////////////////////////////////
+     //
+     // This file is part of yFiles for HTML 1.0-EAP1.
+     // 
+     // yWorks proprietary/confidential. Use is subject to license terms.
+     //
+     // Redistribution of this file or of an unauthorized byte-code version
+     // of this file is strictly forbidden.
+     //
+     // Copyright (c) 2012 by yWorks GmbH, Vor dem Kreuzberg 28, 
+     // 72070 Tuebingen, Germany. All rights reserved.
+     // 
+     ////////////////////////////////////////////////////////////////////////-->
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="../resources/style/graphclient.css"/>
+	<link rel="stylesheet" href="../resources/style/yfiles-app-framework.css"/>
+
+</head>
+<body>
+	<div id="loader">
+		<div id="circularG">
+			<div id="circularG_1" class="circularG"></div>
+			<div id="circularG_2" class="circularG"></div>
+			<div id="circularG_3" class="circularG"></div>
+			<div id="circularG_4" class="circularG"></div>
+			<div id="circularG_5" class="circularG"></div>
+			<div id="circularG_6" class="circularG"></div>
+			<div id="circularG_7" class="circularG"></div>
+			<div id="circularG_8" class="circularG"></div>
+		</div>
+		<p>Loading... please wait.</p>
+	</div>
+  <div id="app" data-type="application">
+    <div data-type="BorderLayout" class="container" data-layout-arrangement="headline">
+      <div data-type="Panel" data-layout-region="top" id="top" data-splitter="false">
+        <div data-type="ToolBar" data-name="toolbar">
+          <button data-command="ZoomIn" title="Zoom In" data-icon="yIconZoomIn"></button>
+          <button data-command="ZoomOriginal" title="Zoom to original size" data-icon="yIconZoomOriginal"></button>
+          <button data-command="ZoomOut" title="Zoom Out" data-icon="yIconZoomOut"></button>
+          <button data-command="FitContent" title="Fit Content" data-icon="yIconZoomFit"></button>
+
+          <span data-type="Separator"></span>
+
+          <form>
+            <select data-type="ComboBox" data-command="SelectLayout" data-name="layoutChooserBox"
+                    title="Choose a Layout"></select>
+          </form>
+        </div>
+      </div>
+
+      <!--
+        The sidebar for the description
+      -->
+      <aside data-type="Panel" class="sidebar left" data-collapse="none" data-layout-region="left">
+        <div data-type="CollapsiblePane" data-header="Description" data-collapse="top">
+          <p>This demo shows how to create collapse/expand functionality for trees with the help of the <em>FilteredGraphWrapper</em>
+            class for filtering subtrees, and the <em>TreeLayouter</em> class for the actual layout.</p>
+
+          <h2>Things to Try</h2>
+
+          <ul>
+            <li>
+              Click a node with a +/- button to expand or collapse its subtree. Note that there are also leaf nodes
+              which
+              cannot be expanded further.
+            </li>
+            <li>
+              Select an automatic layout style from the dropdown in the toolbar. Choosing a new
+              style, or expanding and collapsing nodes, triggers a refresh of the layout.
+            </li>
+            <li>
+              Use the zoom and "Fit Content" buttons in the toolbar to focus on local areas or to view the
+              complete graph.
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <!--
+      The GraphControl
+      -->
+      <div data-type="Panel" data-layout-region="center" id="center">
+        <div data-type="GraphControl" data-name="graphControl" id="graphControl"></div>
+      </div>
+    </div>
+  </div>
+
+<svg version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" 
+	id="template_svg" height="300" style="display: none">
+	<g id="InnerNodeStyleTemplate">
+		<defs>
+			<linearGradient id="innerGradient_checked" x1="0%" y1="0%" x2="0%" y2="100%">
+				<stop offset="0%" style="stop-color:rgb(255,204,0);stop-opacity:1" />
+				<stop offset="100%" style="stop-color:rgb(255,153,0);stop-opacity:1" />
+			</linearGradient>
+			<linearGradient id="innerGradient_unchecked" x1="0%" y1="0%" x2="0%" y2="100%">
+				<stop offset="0%" style="stop-color:rgb(204,255,255);stop-opacity:1" />
+				<stop offset="100%" style="stop-color:rgb(153,204,255);stop-opacity:1" />
+			</linearGradient>
+			<g transform="translate(21 6)" id="expand_icon">
+				<path d="M5.5,0.5 L10.5,0.5 L10.5,5.5 L15.5,5.5 L15.5,10.5 L10.5,10.5 L10.5,15.5 L5.5,15.5 L5.5,10.5 L0.5,10.5 L0.5,5.5 L5.5,5.5 Z" transform="translate(1 1)" fill="#CCCCCC" stroke="none"></path>
+				<path d="M5,0 L13,0 L13,5 L18,5 L18,13 L13,13 L13,18 L5,18 L5,13 L0,13 L0,5 L5,5 Z" fill="none" stroke="#FFFFFF"></path>
+			</g>
+			<g transform="translate(21 6)" id="collapse_icon">
+				<path d="M10.5,5.5 L15.5,5.5 L15.5,10.5 L10.5,10.5 L5.5,10.5 L0.5,10.5 L0.5,5.5 L5.5,5.5 Z" transform="translate(1 1)" fill="#CCCCCC" stroke="none"></path>
+				<path d="M13,5 L18,5 L18,13 L13,13 L5,13 L0,13 L0,5 L5,5 Z" fill="none" stroke="#FFFFFF"></path>
+			</g>
+		</defs>
+	    <rect stroke="#A9A9A9" stroke-thickness="2" fill="none" rx="5" ry="5" width="60" height=30></rect>
+		<rect stroke="#FFFFFF" stroke-thickness="1" fill="{TemplateBinding styleTag, Converter=collapsedemo.backgroundconverter}" rx="4" ry="4" width="58" height=28 transform="translate(1 1)"/></rect>
+		<use data-content="{TemplateBinding styleTag, Converter=collapsedemo.iconconverter}"></use>
+	</g>
+	<g id="LeafNodeStyleTemplate">
+		<defs>
+			<linearGradient id="leafGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+				<stop offset="0%" style="stop-color:rgb(204,255,153);stop-opacity:1" />
+				<stop offset="100%" style="stop-color:rgb(153,204,51);stop-opacity:1" />
+			</linearGradient>
+		</defs>
+	    <rect stroke="#A9A9A9" stroke-thickness="2" fill="none" rx="5" ry="5" width="60" height=30></rect>
+		<rect stroke="#FFFFFF" stroke-thickness="1" fill="url(#leafGradient)" rx="4" ry="4" width="58" height=28 transform="translate(1 1)"/></rect>
+	</g>
+  </svg>
+
+<script src="../../lib/yfiles/es5-shim.js"></script>
+<script src="../../lib/yfiles/lang.js"></script>
+<script src="demo/yfiles/graph/collapse/BackgroundConverter.js"></script>
+<script src="demo/yfiles/graph/collapse/IconConverter.js"></script>
+<script src="demo/yfiles/graph/collapse/GraphCollapseDemo.js"></script>
+<script src="../resources/license.js"></script>
+<script>
+  var yfiles = yfiles ? yfiles : {};
+  yfiles.baseUrl = "../../lib/";
+</script>
+<!--<script src="../demo.yfiles.framework/yfiles-demo-framework.js" ></script>-->
+<script src="../../lib/yfiles/complete.js"></script>
+<script src="../demo.yfiles.framework/yfiles.demo.js" ></script>
+<script>
+
+yfiles.ready([], function() {
+  yfiles.demo.Application.start(
+      new demo.yfiles.graph.collapse.GraphCollapseDemo(),
+      'app',
+      { backend: 'yfiles', loaderId: 'loader' });
+});
+</script>
+</body>
+</html>

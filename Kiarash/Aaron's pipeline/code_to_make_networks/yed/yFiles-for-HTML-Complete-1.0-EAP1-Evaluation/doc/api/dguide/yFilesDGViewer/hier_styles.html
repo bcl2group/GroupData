@@ -1,0 +1,157 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   
+      <title>Visual Representation of Graph Elements</title>
+      <link rel="stylesheet" href="ystyle.css" type="text/css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.65.1">
+      <link rel="home" href="index.html" title="yFiles for HTML Developer's Guide: UI Components">
+      <link rel="up" href="view_hierarchy.html" title="Chapter&nbsp;5.&nbsp;Graph Hierarchies">
+      <link rel="previous" href="hier_mvc_model.html" title="Managing Graph Hierarchies">
+      <link rel="next" href="hier_mvc_view.html" title="View Implementations">
+      <link rel="stylesheet" href="jsdt/toc.css" type="text/css"><script type="text/javascript" src="jsdt/jquery.min.js"></script><script type="text/javascript" src="jsdt/toc.js"></script><link type="text/css" rel="stylesheet" href="jssh/SyntaxHighlighter.css"><script type="text/javascript" src="jssh/shCore.js"></script><script type="text/javascript" src="jssh/shBrushJScript.js"></script><script type="text/javascript" src="jssh/shBrushCSharp.js"></script><script type="text/javascript" src="jssh/shBrushXml.js"></script><script type="text/javascript" src="jssh/shBrushCss.js"></script><script type="text/javascript">
+  function sh() {
+
+    dp.SyntaxHighlighter.HighlightAll('programlisting', false, false, false, null, false);
+  }
+  </script></head>
+   <body onload="sh()" bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <div class="navheader">
+         <table width="100%" summary="Navigation header">
+            <tr>
+               <th colspan="3" align="center">Visual Representation of Graph Elements</th>
+            </tr>
+            <tr>
+               <td width="20%" align="left"><a accesskey="p" href="hier_mvc_model.html">Prev</a>&nbsp;
+               </td>
+               <th width="60%" align="center">Chapter&nbsp;5.&nbsp;Graph Hierarchies</th>
+               <td width="20%" align="right">&nbsp;<a accesskey="n" href="hier_mvc_view.html">Next</a></td>
+            </tr>
+         </table>
+         <div class="navline"></div>
+         <div style="display:none"><img src="figures/navbg.jpg" alt=""><img src="figures/navline.jpg" alt=""></div>
+      </div>
+      <div class="section" lang="en">
+         <div class="titlepage">
+            <div>
+               <div>
+                  <h2 class="title" style="clear: both"><a name="hier_styles"></a>Visual Representation of Graph Elements
+                  </h2>
+               </div>
+            </div>
+            <div></div>
+         </div><a class="indexterm" name="d0e13625"></a><a class="indexterm" name="d0e13632"></a><a class="indexterm" name="d0e13639"></a><a class="indexterm" name="d0e13644"></a><p>
+            The visual representation of group nodes in a folding-enabled graph typically 
+            provides some kind of handle to enable a user to interactively toggle a group 
+            node's collapse/expand state.
+            
+         </p>
+         <p>
+            Class 
+            <a href="../../html/T_yworks_yfiles_ui_drawing_CollapsibleNodeStyleDecorator.htm" title="Link to API documentation">CollapsibleNodeStyleDecorator<sup xmlns="http://www.w3.org/1999/xhtml" xmlns:fo="http://www.w3.org/1999/XSL/Format"><img src="figures/icon_api.gif" align="bottom" border="0"></img></sup></a> 
+            is a special INodeStyle implementation that allows to decorate arbitrary node 
+            styles such that they support an additional collapse/expand handle. 
+            By default, this handle is rendered as a plus ("+") sign when in collapsed 
+            state, and a minus ("-") sign when in expanded state.
+            
+         </p>
+         <p>
+            <a href="hier_styles.html#ex_CollapsibleNodeStyleDecorator" title="Example&nbsp;5.7.&nbsp;Setting the default group node style in the master graph">Example&nbsp;5.7, &#8220;Setting the default group node style in the master graph&#8221;</a> presents the setup for a 
+            group node style using this decorator.
+            
+         </p>
+         <div class="example"><a name="ex_CollapsibleNodeStyleDecorator"></a><p class="title"><b>Example&nbsp;5.7.&nbsp;Setting the default group node style in the master graph</b></p><pre class="programlisting csharp">
+
+// 'fm' is of type yWorks.yFiles.UI.Model.FoldingManager.
+
+this.$fm$0.masterGroupedGraph.groupNodeDefaults.style = new yworks.yfiles.ui.drawing.CollapsibleNodeStyleDecorator.WithStyle(new yworks.yfiles.ui.drawing.PanelNodeStyle.PanelNodeStyle(system.windows.media.Colors.lightSkyBlue));
+
+</pre></div>
+         <div class="important" style="margin-left: 0.5in; margin-right: 0.5in;">
+            <h3 class="title">Important</h3>
+            <p>
+               In order to get the additional collapse/expand handle for the expanded group 
+               nodes in a managed view, CollapsibleNodeStyleDecorator needs to be set for the 
+               original (expanded) group nodes in the master graph already. 
+               This is due to the FoldingManager's scheme for populating managed views where 
+               graph elements from the master graph are copied over using the original 
+               element's style.
+               
+            </p>
+         </div>
+         <p>
+            <a href="hier_styles.html#fig_expanded_collapsed_group_node" title="Figure&nbsp;5.10.&nbsp;Group node representation using CollapsibleNodeStyleDecorator">Figure&nbsp;5.10, &#8220;Group node representation using CollapsibleNodeStyleDecorator&#8221;</a> shows the resulting group 
+            node representation for an expanded empty group node and a collapsed group node 
+            side by side. 
+            
+            The collapse/expand state is indicated in the upper left corner of the group 
+            nodes: 
+            the plus sign for the collapsed state means that there is more to see (there is 
+            hidden content).
+            
+         </p>
+         <div class="figure"><a name="fig_expanded_collapsed_group_node"></a><p class="title"><b>Figure&nbsp;5.10.&nbsp;Group node representation using CollapsibleNodeStyleDecorator</b></p>
+            <div class="informaltable">
+               <center>
+                  <table border="0">
+                     <colgroup>
+                        <col width="100%">
+                     </colgroup>
+                     <tbody>
+                        <tr>
+                           <td>
+                              <div class="mediaobject" align="center"><img src="figures/expanded_collapsed_group_node_wpf.jpg" align="middle" alt="Group node representation using CollapsibleNodeStyleDecorator."></div>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </center>
+            </div>
+         </div>
+         <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+            <h3 class="title">Note</h3>
+            <p>
+               The visual representations for a group node's collapsed state and expanded 
+               state do not need to be identical. 
+               Initially, however, the style that is used to render a collapsed group node in 
+               a managed view is the style of the original (expanded) group node from the 
+               master graph. 
+               
+            </p>
+            <p>
+               This is the default behavior when using 
+               <a href="../../html/T_yworks_yfiles_ui_model_DefaultDummyNodeConverter.htm" title="Link to API documentation">DefaultDummyNodeConverter<sup xmlns="http://www.w3.org/1999/xhtml" xmlns:fo="http://www.w3.org/1999/XSL/Format"><img src="figures/icon_api.gif" align="bottom" border="0"></img></sup></a> as 
+               the dummy node converter with the FoldingManager. 
+               See also <a href="hier_mvc_model.html#cls_FoldingManager" title="Class FoldingManager">the section called &#8220;Class FoldingManager&#8221;</a>.
+               
+            </p>
+         </div>
+      </div>
+      <table class="copyright" border="0" cellpadding="0" cellspacing="0" width="100%">
+         <tbody>
+            <tr>
+               <td align="right">
+                  <p class="copyright">Copyright &copy;2012, yWorks GmbH. All rights reserved.</p>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <div class="navfooter">
+         <div class="navline2"></div>
+         <div style="display:none"><img src="figures/navline2.jpg" alt=""><img src="figures/navbg2.jpg" alt=""></div>
+         <table width="100%" summary="Navigation footer">
+            <tr>
+               <td width="40%" align="left"><a accesskey="p" href="hier_mvc_model.html">Prev</a>&nbsp;
+               </td>
+               <td width="20%" align="center"><a accesskey="u" href="view_hierarchy.html">Up</a></td>
+               <td width="40%" align="right">&nbsp;<a accesskey="n" href="hier_mvc_view.html">Next</a></td>
+            </tr>
+            <tr>
+               <td width="40%" align="left" valign="top">Managing Graph Hierarchies&nbsp;</td>
+               <td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td>
+               <td width="40%" align="right" valign="top">&nbsp;View Implementations</td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

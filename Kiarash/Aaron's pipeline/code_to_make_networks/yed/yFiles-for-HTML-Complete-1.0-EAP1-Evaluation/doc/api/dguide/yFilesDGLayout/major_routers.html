@@ -1,0 +1,183 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   
+      <title>Edge Routing Algorithms</title>
+      <link rel="stylesheet" href="ystyle.css" type="text/css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.65.1">
+      <link rel="home" href="index.html" title="yFiles for HTML Developer's Guide: Analysis and Layout">
+      <link rel="up" href="layout.html" title="Chapter&nbsp;5.&nbsp;Automatic Graph Layout">
+      <link rel="previous" href="partial_layout.html" title="Partial Layout">
+      <link rel="next" href="organic_edge_router.html" title="Organic Edge Routing">
+      <link rel="stylesheet" href="jsdt/toc.css" type="text/css"><script type="text/javascript" src="jsdt/jquery.min.js"></script><script type="text/javascript" src="jsdt/toc.js"></script><link type="text/css" rel="stylesheet" href="jssh/SyntaxHighlighter.css"><script type="text/javascript" src="jssh/shCore.js"></script><script type="text/javascript" src="jssh/shBrushJScript.js"></script><script type="text/javascript" src="jssh/shBrushCSharp.js"></script><script type="text/javascript" src="jssh/shBrushXml.js"></script><script type="text/javascript" src="jssh/shBrushCss.js"></script><script type="text/javascript">
+  function sh() {
+
+    dp.SyntaxHighlighter.HighlightAll('programlisting', false, false, false, null, false);
+  }
+  </script></head>
+   <body onload="sh()" bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+      <div class="navheader">
+         <table width="100%" summary="Navigation header">
+            <tr>
+               <th colspan="3" align="center">Edge Routing Algorithms</th>
+            </tr>
+            <tr>
+               <td width="20%" align="left"><a accesskey="p" href="partial_layout.html">Prev</a>&nbsp;
+               </td>
+               <th width="60%" align="center">Chapter&nbsp;5.&nbsp;Automatic Graph Layout</th>
+               <td width="20%" align="right">&nbsp;<a accesskey="n" href="organic_edge_router.html">Next</a></td>
+            </tr>
+         </table>
+         <div class="navline"></div>
+         <div style="display:none"><img src="figures/navbg.jpg" alt=""><img src="figures/navline.jpg" alt=""></div>
+      </div>
+      <div class="section" lang="en">
+         <div class="titlepage">
+            <div>
+               <div>
+                  <h2 class="title" style="clear: both"><a name="major_routers"></a>Edge Routing Algorithms
+                  </h2>
+               </div>
+            </div>
+            <div></div>
+         </div>
+         <p>
+            All edge routing algorithms provided by yFiles implement interface 
+            <a href="../../html/T_yworks_yfiles_layout_ILayoutStage.htm" title="Link to API documentation">ILayoutStage<sup xmlns="http://www.w3.org/1999/xhtml" xmlns:fo="http://www.w3.org/1999/XSL/Format"><img src="figures/icon_api.gif" align="bottom" border="0"></img></sup></a>. 
+            ILayoutStage makes it easy to use an edge routing algorithm as a 
+            postprocessing step to any of the major layout algorithms, for example.
+            
+         </p>
+         <p>
+            yFiles supports different edge routing styles: 
+            
+         </p>
+         <div class="itemizedlist">
+            <ul type="disc">
+               <li><a href="major_routers.html#ov_organic_router" title="Organic Routing">Organic Routing</a></li>
+               <li><a href="major_routers.html#ov_orthogonal_router" title="Orthogonal Routing">Orthogonal Routing</a></li>
+            </ul>
+         </div>
+         <p>
+            
+         </p>
+         <div class="section" lang="en">
+            <div class="titlepage">
+               <div>
+                  <div>
+                     <h3 class="title"><a name="ov_organic_router"></a>Organic Routing
+                     </h3>
+                  </div>
+               </div>
+               <div></div>
+            </div>
+            <p>
+               Organic edge routing is described in <a href="organic_edge_router.html" title="Organic Edge Routing">the section called &#8220;Organic Edge Routing&#8221;</a>. 
+               
+            </p>
+            <div class="figure"><a name="fig_ov_organic_router"></a><p class="title"><b>Figure&nbsp;5.71.&nbsp;Sample organic edge routings</b></p>
+               <div class="informaltable">
+                  <table border="0">
+                     <colgroup>
+                        <col width="59%">
+                        <col width="41%">
+                     </colgroup>
+                     <tbody valign="top">
+                        <tr>
+                           <td>
+                              <div class="mediaobject" align="center"><img src="figures/organic-star-routing1.jpg" align="middle" alt="Organic Edge Router"></div>
+                           </td>
+                           <td>
+                              <div class="mediaobject" align="center"><img src="figures/organic-routing1.jpg" align="middle" alt="Organic Edge Router"></div>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+            <p>
+               This style is encapsulated in class 
+               <a href="../../html/T_yworks_yfiles_layout_router_OrganicEdgeRouter.htm" title="Link to API documentation">OrganicEdgeRouter<sup xmlns="http://www.w3.org/1999/xhtml" xmlns:fo="http://www.w3.org/1999/XSL/Format"><img src="figures/icon_api.gif" align="bottom" border="0"></img></sup></a>. 
+               
+            </p>
+         </div>
+         <div class="section" lang="en">
+            <div class="titlepage">
+               <div>
+                  <div>
+                     <h3 class="title"><a name="ov_orthogonal_router"></a>Orthogonal Routing
+                     </h3>
+                  </div>
+               </div>
+               <div></div>
+            </div>
+            <p>
+               Orthogonal edge routing is described in 
+               <a href="orthogonal_edge_router.html" title="Orthogonal Edge Routing">the section called &#8220;Orthogonal Edge Routing&#8221;</a> and 
+               <a href="channel_edge_router.html" title="Channel Edge Routing">the section called &#8220;Channel Edge Routing&#8221;</a>.
+               A specialized edge routing algorithm that generates bus-style representations by
+               bundling edges of complete (sub)graphs can be found in <a href="orthogonal_bus_router.html" title="Orthogonal Bus-style Edge Routing">the section called &#8220;Orthogonal Bus-style Edge Routing&#8221;</a>.
+               
+            </p>
+            <div class="figure"><a name="fig_ov_orthogonal_router"></a><p class="title"><b>Figure&nbsp;5.72.&nbsp;Sample orthogonal edge routings</b></p>
+               <div class="informaltable">
+                  <table border="0">
+                     <colgroup>
+                        <col width="33%">
+                        <col width="33%">
+                        <col width="34%">
+                     </colgroup>
+                     <tbody valign="middle">
+                        <tr>
+                           <td>
+                              <div class="mediaobject" align="center"><img src="figures/orthogonal-routing1.gif" align="middle" alt="Orthogonal Edge Router"></div>
+                           </td>
+                           <td>
+                              <div class="mediaobject" align="center"><img src="figures/cer_maze_3a.gif" align="middle" alt="Channel Edge Router"></div>
+                           </td>
+                           <td>
+                              <div class="mediaobject" align="center"><img src="figures/bus-routing-v3.gif" align="middle" alt="Bus Router"></div>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+            <p>
+               This style is encapsulated in classes 
+               <a href="../../html/T_yworks_yfiles_layout_router_OrthogonalEdgeRouter.htm" title="Link to API documentation">OrthogonalEdgeRouter<sup xmlns="http://www.w3.org/1999/xhtml" xmlns:fo="http://www.w3.org/1999/XSL/Format"><img src="figures/icon_api.gif" align="bottom" border="0"></img></sup></a> and 
+               <a href="../../html/T_yworks_yfiles_layout_router_ChannelEdgeRouter.htm" title="Link to API documentation">ChannelEdgeRouter<sup xmlns="http://www.w3.org/1999/xhtml" xmlns:fo="http://www.w3.org/1999/XSL/Format"><img src="figures/icon_api.gif" align="bottom" border="0"></img></sup></a>.
+               Class <a href="../../html/T_yworks_yfiles_layout_router_BusRouter.htm" title="Link to API documentation">BusRouter<sup xmlns="http://www.w3.org/1999/xhtml" xmlns:fo="http://www.w3.org/1999/XSL/Format"><img src="figures/icon_api.gif" align="bottom" border="0"></img></sup></a> encapsulates the
+               bus-routing functionality.
+               
+            </p>
+         </div>
+      </div>
+      <table class="copyright" border="0" cellpadding="0" cellspacing="0" width="100%">
+         <tbody>
+            <tr>
+               <td align="right">
+                  <p class="copyright">Copyright &copy;2004-2012, yWorks GmbH. All rights reserved.</p>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <div class="navfooter">
+         <div class="navline2"></div>
+         <div style="display:none"><img src="figures/navline2.jpg" alt=""><img src="figures/navbg2.jpg" alt=""></div>
+         <table width="100%" summary="Navigation footer">
+            <tr>
+               <td width="40%" align="left"><a accesskey="p" href="partial_layout.html">Prev</a>&nbsp;
+               </td>
+               <td width="20%" align="center"><a accesskey="u" href="layout.html">Up</a></td>
+               <td width="40%" align="right">&nbsp;<a accesskey="n" href="organic_edge_router.html">Next</a></td>
+            </tr>
+            <tr>
+               <td width="40%" align="left" valign="top">Partial Layout&nbsp;</td>
+               <td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td>
+               <td width="40%" align="right" valign="top">&nbsp;Organic Edge Routing</td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>
