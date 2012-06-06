@@ -22,7 +22,10 @@ here you need to put username/password. ask us for that.
 
 ALTERNATIVELY:
 
-if you have your own github account that you prefer to use, you can add yourself as collaborator in bcl2group (you need the password to do this) and then clone it using the same address but when you are pushing stuff to the git, you need to enter your own git user/pass. This is actually nicer since we can see who has changed which code and what... 
+if you have your own github account that you prefer to use, you can add yourself as collaborator in bcl2group 
+(you need the password to do this) and then clone it using the same address but when you are pushing stuff 
+to the git, you need to enter your own git user/pass. This is actually nicer since we can see who has changed
+which code and what... 
 
 for noobs (like the rest was not for them :p) : 
 
