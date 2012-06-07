@@ -1,0 +1,160 @@
+disease ---> HIV
+experiment ---> GDS1726
+type ---> single
+closed the readers
+about to evaluate model
+Warning: discretizing data set
+evaluated model
+test instances:
+11
+total instances:
+28
+
+Bayes Network Classifier
+Using ADTree
+#attributes=91 #classindex=90
+Network structure (nodes followed by parents)
+AQR(2): class 
+PTK2_binarized(2): class 
+HNRPDL_binarized(2): class 
+CADM1_binarized(2): class 
+KCNC4_binarized(2): class 
+CRABP2_binarized(2): class 
+DLX4_binarized(2): class 
+INHBB_binarized(2): class 
+C4ORF10_binarized(2): class 
+ST8SIA1_binarized(2): class 
+GRM5_binarized(2): class 
+CD6_binarized(2): class 
+C4B_binarized(2): class 
+CLINT1_binarized(2): class 
+HSD17B8_binarized(2): class 
+W28732_binarized(2): class 
+EPB41_binarized(2): class 
+TULP2_binarized(2): class 
+PPP3CC_binarized(2): class 
+DBI_binarized(2): class 
+CACNA2D1_binarized(2): class 
+FOXO3_binarized(2): class 
+AHCYL1_binarized(2): class 
+TCF20_binarized(2): class 
+CD2BP2_binarized(2): class 
+TRIM31_binarized(2): class 
+SYT5_binarized(2): class 
+CLDN3_binarized(2): class 
+BMX_binarized(2): class 
+TMED9_binarized(2): class 
+MYC_binarized(2): class 
+ABTB2_binarized(2): class 
+RGS19_binarized(2): class 
+CYP2A6_binarized(2): class 
+EIF2S3_binarized(2): class 
+DAB2_binarized(2): class 
+FGF18_binarized(2): class 
+CRYBA1_binarized(2): class 
+MYO10_binarized(2): class 
+GH2_binarized(2): class 
+ADCY1_binarized(2): class 
+PLA2G15_binarized(2): class 
+IL1B_binarized(2): class 
+LSM6_binarized(2): class 
+UGT8_binarized(2): class 
+ZFP37_binarized(2): class 
+SH3BP2_binarized(2): class 
+AF023203_binarized(2): class 
+MAP3K7_binarized(2): class 
+CXCR5_binarized(2): class 
+PRKCD_binarized(2): class 
+ELANE_binarized(2): class 
+KDM5A_binarized(2): class 
+CCL21_binarized(2): class 
+CDKN2A_binarized(2): class 
+GJC1_binarized(2): class 
+MS4A2_binarized(2): class 
+PKD2_binarized(2): class 
+MMACHC_binarized(2): class 
+AL049390_binarized(2): class 
+FOXN3_binarized(2): class 
+SOX2_binarized(2): class 
+EZR_binarized(2): class 
+THBS3_binarized(2): class 
+FLII_binarized(2): class 
+TMF1_binarized(2): class 
+PKP4_binarized(2): class 
+CACNG3_binarized(2): class 
+GALNS_binarized(2): class 
+AMELX_binarized(2): class 
+RHOA_binarized(2): class 
+ROD1_binarized(2): class 
+SNED1_binarized(2): class 
+RNF113A_binarized(2): class 
+CELSR1_binarized(2): class 
+HIST1H2BM_binarized(2): class 
+ATP8A1_binarized(2): class 
+CEACAM1_binarized(2): class 
+HIBCH_binarized(2): class 
+IFI44L_binarized(2): class 
+LOC100131825_binarized(2): class 
+HEBP2_binarized(2): class 
+LOC100132832_binarized(2): class 
+NTNG1_binarized(2): class 
+MYL12A_binarized(2): class 
+C15ORF39_binarized(2): class 
+EPAS1_binarized(2): class 
+RBCK1_binarized(2): class 
+MNX1_binarized(2): class 
+MST1R_binarized(2): class 
+class(2): 
+LogScore Bayes: -802.8576640179816
+LogScore BDeu: -957.468703729952
+LogScore MDL: -1027.0591323966714
+LogScore ENTROPY: -770.6533247595878
+LogScore AIC: -951.6533247595883
+
+
+Time taken to build model: 0.66 seconds
+Time taken to test model on training data: 0.01 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances          17              100      %
+Incorrectly Classified Instances         0                0      %
+Kappa statistic                          1     
+Mean absolute error                      0     
+Root mean squared error                  0     
+Relative absolute error                  0      %
+Root relative squared error              0      %
+Total Number of Instances               17     
+
+
+=== Confusion Matrix ===
+
+ a b   <-- classified as
+ 9 0 | a = Control
+ 0 8 | b = Infected
+
+
+=== Error on test data ===
+
+Correctly Classified Instances           7               63.6364 %
+Incorrectly Classified Instances         4               36.3636 %
+Kappa statistic                          0.2414
+Mean absolute error                      0.3742
+Root mean squared error                  0.604 
+Relative absolute error                 73.0941 %
+Root relative squared error            117.8444 %
+Total Number of Instances               11     
+
+
+=== Confusion Matrix ===
+
+ a b   <-- classified as
+ 2 1 | a = Control
+ 3 5 | b = Infected
+
+Weighted area under ROC: 
+NaN
+True negative (control): 
+0.0
+True positive: 
+0.0

@@ -1,0 +1,90 @@
+@relation 'infection-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.GainRatioAttributeEval-Sweka.attributeSelection.Ranker -T -1.7976931348623157E308 -N 80-weka.filters.unsupervised.attribute.NumericToBinary'
+
+@attribute EGR3 numeric
+@attribute RNF19B_binarized {0,1}
+@attribute AF117899_binarized {0,1}
+@attribute PBX2_binarized {0,1}
+@attribute BNC1_binarized {0,1}
+@attribute NDST2_binarized {0,1}
+@attribute CD97_binarized {0,1}
+@attribute RPL39L_binarized {0,1}
+@attribute NPAS3_binarized {0,1}
+@attribute ATG7_binarized {0,1}
+@attribute MYT1_binarized {0,1}
+@attribute XPC_binarized {0,1}
+@attribute GPR44_binarized {0,1}
+@attribute F11_binarized {0,1}
+@attribute ABP1_binarized {0,1}
+@attribute MMP19_binarized {0,1}
+@attribute MED16_binarized {0,1}
+@attribute KIT_binarized {0,1}
+@attribute LZTS1_binarized {0,1}
+@attribute CD38_binarized {0,1}
+@attribute SPAST_binarized {0,1}
+@attribute ZWINT_binarized {0,1}
+@attribute FANCA_binarized {0,1}
+@attribute ORM2_binarized {0,1}
+@attribute ALB_binarized {0,1}
+@attribute KCNAB2_binarized {0,1}
+@attribute SSTR3_binarized {0,1}
+@attribute IFNGR2_binarized {0,1}
+@attribute RRN3P1_binarized {0,1}
+@attribute TRIM3_binarized {0,1}
+@attribute ZNF33B_binarized {0,1}
+@attribute IL11RA_binarized {0,1}
+@attribute SPAG11B_binarized {0,1}
+@attribute PRR5-ARHGAP8_binarized {0,1}
+@attribute HBA2_binarized {0,1}
+@attribute ITPA_binarized {0,1}
+@attribute HSPH1_binarized {0,1}
+@attribute SIRT4_binarized {0,1}
+@attribute TTC39A_binarized {0,1}
+@attribute KPNB1_binarized {0,1}
+@attribute SNAPC5_binarized {0,1}
+@attribute SPTAN1_binarized {0,1}
+@attribute SLC6A20_binarized {0,1}
+@attribute KRT75_binarized {0,1}
+@attribute LOC100127972_binarized {0,1}
+@attribute CDH5_binarized {0,1}
+@attribute COL3A1_binarized {0,1}
+@attribute ANKRD6_binarized {0,1}
+@attribute GNAO1_binarized {0,1}
+@attribute ATOH1_binarized {0,1}
+@attribute RNASEH2A_binarized {0,1}
+@attribute SNX15_binarized {0,1}
+@attribute CELSR1_binarized {0,1}
+@attribute ZNF593_binarized {0,1}
+@attribute SP140L_binarized {0,1}
+@attribute MAT1A_binarized {0,1}
+@attribute ESRP2_binarized {0,1}
+@attribute TGFA_binarized {0,1}
+@attribute GFRA1_binarized {0,1}
+@attribute SEC14L3_binarized {0,1}
+@attribute HOXD3_binarized {0,1}
+@attribute SIGLEC7_binarized {0,1}
+@attribute PTGS2_binarized {0,1}
+@attribute FKBP1B_binarized {0,1}
+@attribute NBL1_binarized {0,1}
+@attribute ADCYAP1R1_binarized {0,1}
+@attribute C6ORF26_binarized {0,1}
+@attribute AA741028_binarized {0,1}
+@attribute BC004917_binarized {0,1}
+@attribute TYMS_binarized {0,1}
+@attribute CEACAM1_binarized {0,1}
+@attribute PERP_binarized {0,1}
+@attribute MRPS14_binarized {0,1}
+@attribute VTN_binarized {0,1}
+@attribute AK1_binarized {0,1}
+@attribute Z21967_binarized {0,1}
+@attribute MCF2L_binarized {0,1}
+@attribute USP2_binarized {0,1}
+@attribute ETV6_binarized {0,1}
+@attribute SPATA6_binarized {0,1}
+@attribute class {Control,Infected}
+
+@data
+0,0,0,0,0,0,0,1,0,1,0,1,0,1,0,1,0,0,0,1,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,0,0,0,1,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,Control
+0,0,0,0,0,0,0,1,0,1,0,1,0,1,0,1,0,0,0,1,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,0,0,0,1,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,Control
+1,1,1,1,1,1,1,0,1,0,1,0,1,0,1,0,1,1,1,0,1,1,0,0,1,1,1,1,1,1,0,0,1,1,1,1,0,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,0,1,1,1,0,1,1,0,1,1,1,0,0,1,1,1,1,1,0,1,1,1,1,1,1,0,1,Infected
+1,1,1,1,1,1,1,0,1,0,1,0,1,0,1,0,1,1,1,0,1,1,0,0,1,1,1,1,1,1,0,0,1,1,1,1,0,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,0,1,1,1,0,1,1,0,1,1,1,0,0,1,1,1,1,1,0,1,1,1,1,1,1,0,1,Infected
+1,1,1,1,1,1,1,0,1,0,1,0,1,0,1,0,1,1,1,0,1,1,0,0,1,1,1,1,1,1,0,0,1,1,1,1,0,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,0,1,1,1,0,1,1,0,1,1,1,0,0,1,1,1,1,1,0,1,1,1,1,1,1,0,1,Infected

@@ -1,0 +1,140 @@
+disease ---> Breast_Neoplasm
+experiment ---> GDS3716
+type ---> single
+closed the readers
+about to evaluate model
+Warning: discretizing data set
+evaluated model
+test instances:
+29
+total instances:
+42
+
+Bayes Network Classifier
+Using ADTree
+#attributes=71 #classindex=70
+Network structure (nodes followed by parents)
+NRBP1(2): class 
+APOBEC3G_binarized(2): class 
+NDRG1_binarized(2): class 
+GATA2_binarized(2): class 
+TRIM44_binarized(2): class 
+TMUB2_binarized(2): class 
+SCARA3_binarized(2): class 
+SRM_binarized(2): class 
+SLC9A6_binarized(2): class 
+HMG20B_binarized(2): class 
+ZBTB40_binarized(2): class 
+CDV3_binarized(2): class 
+UBXN4_binarized(2): class 
+ANGPT2_binarized(2): class 
+FARP1_binarized(2): class 
+ARHGAP32_binarized(2): class 
+PRDX2_binarized(2): class 
+GFER_binarized(2): class 
+BMP7_binarized(2): class 
+PPP2R1A_binarized(2): class 
+FTSJ2_binarized(2): class 
+MRPL39_binarized(2): class 
+DDX17_binarized(2): class 
+UBE2V1P2_binarized(2): class 
+AV763520_binarized(2): class 
+RHOBTB2_binarized(2): class 
+USP14_binarized(2): class 
+GRIK5_binarized(2): class 
+MASP2_binarized(2): class 
+CDK5R1_binarized(2): class 
+ICAM5_binarized(2): class 
+ZNHIT1_binarized(2): class 
+SP3_binarized(2): class 
+AHDC1_binarized(2): class 
+ARFIP1_binarized(2): class 
+VAMP8_binarized(2): class 
+RCN3_binarized(2): class 
+GPC1_binarized(2): class 
+SDF2L1_binarized(2): class 
+C21ORF45_binarized(2): class 
+DDX39_binarized(2): class 
+PAX1_binarized(2): class 
+SAFB2_binarized(2): class 
+MTHFR_binarized(2): class 
+FBXO41_binarized(2): class 
+PHC2_binarized(2): class 
+BMP2_binarized(2): class 
+POGK_binarized(2): class 
+GMEB2_binarized(2): class 
+CLDN1_binarized(2): class 
+CYCSP52_binarized(2): class 
+KAT2A_binarized(2): class 
+C19ORF10_binarized(2): class 
+PNPLA6_binarized(2): class 
+FSTL3_binarized(2): class 
+CREBBP_binarized(2): class 
+THRAP3_binarized(2): class 
+NPDC1_binarized(2): class 
+TRIM27_binarized(2): class 
+TKT_binarized(2): class 
+TEAD4_binarized(2): class 
+XPNPEP1_binarized(2): class 
+CCND1_binarized(2): class 
+ULK2_binarized(2): class 
+TLK1_binarized(2): class 
+EPS8L2_binarized(2): class 
+LILRA6_binarized(2): class 
+P2RX5_binarized(2): class 
+ST8SIA3_binarized(2): class 
+PCNA_binarized(2): class 
+class(2): 
+LogScore Bayes: -440.2425811140356
+LogScore BDeu: -560.4956120011221
+LogScore MDL: -615.5222744158417
+LogScore ENTROPY: -434.6933447148038
+LogScore AIC: -575.6933447148034
+
+
+Time taken to build model: 0.14 seconds
+Time taken to test model on training data: 0.01 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances          13              100      %
+Incorrectly Classified Instances         0                0      %
+Kappa statistic                          1     
+Mean absolute error                      0     
+Root mean squared error                  0     
+Relative absolute error                  0      %
+Root relative squared error              0      %
+Total Number of Instances               13     
+
+
+=== Confusion Matrix ===
+
+ a b   <-- classified as
+ 8 0 | a = Control
+ 0 5 | b = Infected
+
+
+=== Error on test data ===
+
+Correctly Classified Instances          20               68.9655 %
+Incorrectly Classified Instances         9               31.0345 %
+Kappa statistic                          0.368 
+Mean absolute error                      0.3109
+Root mean squared error                  0.5412
+Relative absolute error                 63.4908 %
+Root relative squared error            108.3185 %
+Total Number of Instances               29     
+
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+ 12  4 |  a = Control
+  5  8 |  b = Infected
+
+Weighted area under ROC: 
+NaN
+True negative (control): 
+0.0
+True positive: 
+0.0

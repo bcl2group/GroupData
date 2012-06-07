@@ -1,0 +1,37 @@
+@relation 'infection-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.GainRatioAttributeEval-Sweka.attributeSelection.Ranker -T -1.7976931348623157E308 -N 10-weka.filters.unsupervised.attribute.NumericToBinary'
+
+@attribute CD101 numeric
+@attribute MRPL42_binarized {0,1}
+@attribute TBC1D2B_binarized {0,1}
+@attribute ODAM_binarized {0,1}
+@attribute LDB2_binarized {0,1}
+@attribute C1ORF38_binarized {0,1}
+@attribute KCNK3_binarized {0,1}
+@attribute MDH2_binarized {0,1}
+@attribute WFS1_binarized {0,1}
+@attribute AK1_binarized {0,1}
+@attribute class {Control,Infected}
+
+@data
+1,1,1,1,1,1,1,1,0,1,Control
+1,1,1,1,1,1,1,1,0,1,Control
+1,1,1,1,1,1,1,1,0,1,Control
+1,1,1,1,1,1,1,1,0,1,Control
+1,1,1,1,1,1,1,1,0,1,Control
+1,1,1,1,1,1,1,1,0,1,Control
+1,1,1,1,1,1,1,1,0,1,Control
+1,1,1,1,0,1,1,1,0,1,Control
+1,1,1,1,1,1,0,1,0,1,Control
+1,1,1,1,1,1,1,1,0,1,Control
+1,1,1,1,1,1,1,1,0,1,Control
+0,0,0,0,0,0,0,0,1,0,Infected
+0,0,0,0,0,1,0,1,1,1,Infected
+0,0,0,0,0,0,0,0,1,0,Infected
+0,0,0,0,0,0,0,0,1,0,Infected
+0,0,0,0,0,0,0,0,1,0,Infected
+0,0,0,0,0,0,0,0,1,0,Infected
+0,0,0,0,0,0,0,0,0,0,Infected
+0,0,0,0,0,0,0,0,1,0,Infected
+0,0,0,0,0,0,0,0,1,0,Infected
+0,0,0,0,0,0,0,0,1,0,Infected
+0,0,0,0,0,0,0,0,1,0,Infected

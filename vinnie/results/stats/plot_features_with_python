@@ -1,0 +1,126 @@
+import csv
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+from matplotlib import cm
+from matplotlib.ticker import LinearLocator, FormatStrFormatter 
+
+print "about to open file"
+#data = csv.reader(open('integration_singlenet_features.csv'))
+data = csv.reader(open('Endometriosis_results_threshold_test_50.csv'))
+#new_data = csv.reader(open('features_vs_avg_acc.csv'), 'w')
+
+print "opened file"
+
+feature_list = [str(x) for x in range(100,400,100)]
+single_feature_value_dict = {}
+multi_feature_value_dict = {}
+
+test_species = 'HS'
+test_disease = 'Adenocarcinoma'
+test_disease_list = ['Aneurysm']
+test_threshold = '20'
+row_counter = 0
+
+#csv_file = open('integration_singlenet_results_'+test_threshold+'_allsamples.csv', 'w')
+#writer = csv.writer(csv_file)
+
+print "about to go into data"
+                        
+for row in data:
+   # print "row ---> " + str(row)
+    if row_counter != 0:
+        disease = row[0]
+        integration = row[1]
+        threshold = row[3]
+        features = row[4]
+        accuracy = row[5]
+        #species = row[9]
+
+        if integration == 'single' and threshold == test_threshold:# and disease in test_disease_list:# and features in feature_list:
+            print "feature ---> " + str(features)
+            if features not in single_feature_value_dict.keys():
+                single_feature_value_dict[features] = []
+            single_feature_value_dict[features].append(float(accuracy))
+        elif integration == 'multi' and threshold == test_threshold:# and disease in test_disease_list:# and features in feature_list:
+            if features not in multi_feature_value_dict.keys():
+                multi_feature_value_dict[features] = []
+            multi_feature_value_dict[features].append(float(accuracy))
+    row_counter += 1
+
+print "went through data"
+
+single_avg_feature_dict = {}
+multi_avg_feature_dict = {}
+diff_avg_feature_dict = {}
+single_avg_list = []
+multi_avg_list = []
+diff_avg_list = []
+
+features = feature_list #single_feature_value_dict.keys()
+features.sort()
+
+print "features ---> " + str(features)
+
+#writer.writerow(['features', 'single accuracy', 'multi accuracy'])
+for feature in features:
+    
+    print "feature in features ---> " + str(feature)
+
+    
+    single_accuracy_list = single_feature_value_dict[feature]
+    single_avg = float(sum(single_accuracy_list))/float(len(single_accuracy_list))
+    single_avg_feature_dict[feature] = single_avg
+    single_avg_list.append(single_avg)
+
+    multi_accuracy_list = multi_feature_value_dict[feature]
+    multi_avg = float(sum(multi_accuracy_list))/float(len(multi_accuracy_list))
+    multi_avg_feature_dict[feature] = multi_avg
+    multi_avg_list.append(multi_avg)
+
+    diff_avg = multi_avg - single_avg
+    diff_avg_feature_dict[feature] = diff_avg
+    diff_avg_list.append(diff_avg)
+
+#    for i in range(len(single_accuracy_list)):
+#        if i < len(multi_accuracy_list):
+#            writer.writerow([feature, single_accuracy_list[i], multi_accuracy_list[i]])
+
+#    writer.writerow([feature, single_avg, multi_avg])
+print "single avg list len ---> " + str(len(single_avg_list))
+print "single avg list ---> " + str(single_avg_list)
+print "about to plot"
+#csv_file.close()
+
+
+x = np.arange(100,400,100)
+y_single = single_avg_list
+fig = plt.figure()
+ax_single = fig.add_subplot(111)
+ax_single.plot(x,y_single, 'b-')
+
+ax_multi = ax_single.twiny()
+y_multi = multi_avg_list
+ax_multi.plot(x,y_multi, 'r-')
+
+#x = np.arange(10,100,10)
+ax_diff = ax_single.twiny()
+ax_diff = fig.add_subplot(111)
+y_diff = diff_avg_list
+ax_diff.plot(x,y_diff, 'g-')
+
+##fig = plt.figure()
+##ax_fig = fig.gca(projection='3d')
+##X = np.arange(10,100,10)
+##Y = np.arange(100,1000,100)
+##X, Y = np.meshgrid(X, Y)
+##Z = diff_avg_list
+##surf = ax_fig.plot_surface(X, Y, Z, rstride=1, cstride=1, cmap=cm.jet,
+##                           linewidth=0, antialiased=False)
+##ax_fig.set_zlim(-100, 100)
+##
+##ax_fig.zaxis.set_major_locator(LinearLocator(10))
+##ax_fig.zaxis.set_major_formatter(FormatStrFormatter('%.02f'))
+##
+##fig.colorbar(surf, shrink=0.5, aspect=5)
+plt.show()

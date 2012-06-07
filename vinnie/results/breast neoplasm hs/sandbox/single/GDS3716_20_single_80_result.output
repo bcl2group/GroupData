@@ -1,0 +1,150 @@
+disease ---> Breast_Neoplasm
+experiment ---> GDS3716
+type ---> single
+closed the readers
+about to evaluate model
+Warning: discretizing data set
+evaluated model
+test instances:
+33
+total instances:
+42
+
+Bayes Network Classifier
+Using ADTree
+#attributes=81 #classindex=80
+Network structure (nodes followed by parents)
+SRM(2): class 
+ARAP2_binarized(2): class 
+BRD3_binarized(2): class 
+FAH_binarized(2): class 
+NOP16_binarized(2): class 
+ARFIP1_binarized(2): class 
+BTF3_binarized(2): class 
+SDF2L1_binarized(2): class 
+BMP2_binarized(2): class 
+PRDX2_binarized(2): class 
+TPST2_binarized(2): class 
+BDH1_binarized(2): class 
+CHMP7_binarized(2): class 
+GAMT_binarized(2): class 
+AK024995_binarized(2): class 
+NPDC1_binarized(2): class 
+PDIA6_binarized(2): class 
+TLK1_binarized(2): class 
+RERE_binarized(2): class 
+CDC42BPA_binarized(2): class 
+POGK_binarized(2): class 
+DIAPH1_binarized(2): class 
+PIN1_binarized(2): class 
+PERP_binarized(2): class 
+SNRPB_binarized(2): class 
+CYR61_binarized(2): class 
+PFKFB3_binarized(2): class 
+SP3_binarized(2): class 
+ITM2B_binarized(2): class 
+VAMP8_binarized(2): class 
+CXCL10_binarized(2): class 
+KIF25_binarized(2): class 
+GRIK5_binarized(2): class 
+PTRH2_binarized(2): class 
+ZNHIT1_binarized(2): class 
+CCND1_binarized(2): class 
+BAZ1B_binarized(2): class 
+PDS5B_binarized(2): class 
+DAZAP2_binarized(2): class 
+SHB_binarized(2): class 
+DVL2_binarized(2): class 
+GEMIN4_binarized(2): class 
+LDB1_binarized(2): class 
+TKT_binarized(2): class 
+SMG6_binarized(2): class 
+PPP2R1A_binarized(2): class 
+NGF_binarized(2): class 
+GMPPA_binarized(2): class 
+CCL3L3_binarized(2): class 
+AL080072_binarized(2): class 
+ELMO2_binarized(2): class 
+PSMD6_binarized(2): class 
+ERAP1_binarized(2): class 
+CLDN1_binarized(2): class 
+COX7C_binarized(2): class 
+COMMD9_binarized(2): class 
+CASP7_binarized(2): class 
+TEAD4_binarized(2): class 
+PLA2G6_binarized(2): class 
+CTNS_binarized(2): class 
+SLC25A16_binarized(2): class 
+SLC30A9_binarized(2): class 
+CDK2AP2_binarized(2): class 
+SNRPA1_binarized(2): class 
+PNPLA6_binarized(2): class 
+THRAP3_binarized(2): class 
+GLUD1_binarized(2): class 
+C9ORF114_binarized(2): class 
+DDX39_binarized(2): class 
+NR4A3_binarized(2): class 
+CDC42_binarized(2): class 
+HIST2H2BE_binarized(2): class 
+ENOX2_binarized(2): class 
+USP5_binarized(2): class 
+SLC9A6_binarized(2): class 
+TRIM27_binarized(2): class 
+EIF5_binarized(2): class 
+B3GAT3_binarized(2): class 
+TGFBR2_binarized(2): class 
+PHC2_binarized(2): class 
+class(2): 
+LogScore Bayes: -285.4510637962477
+LogScore BDeu: -422.88309909577623
+LogScore MDL: -490.4765777623842
+LogScore ENTROPY: -313.59999928681884
+LogScore AIC: -474.5999992868188
+
+
+Time taken to build model: 0.2 seconds
+Time taken to test model on training data: 0.01 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances           9              100      %
+Incorrectly Classified Instances         0                0      %
+Kappa statistic                          1     
+Mean absolute error                      0     
+Root mean squared error                  0     
+Relative absolute error                  0      %
+Root relative squared error              0      %
+Total Number of Instances                9     
+
+
+=== Confusion Matrix ===
+
+ a b   <-- classified as
+ 7 0 | a = Control
+ 0 2 | b = Infected
+
+
+=== Error on test data ===
+
+Correctly Classified Instances          20               60.6061 %
+Incorrectly Classified Instances        13               39.3939 %
+Kappa statistic                          0.1921
+Mean absolute error                      0.3933
+Root mean squared error                  0.6262
+Relative absolute error                 79.7592 %
+Root relative squared error            115.3432 %
+Total Number of Instances               33     
+
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+ 17  0 |  a = Control
+ 13  3 |  b = Infected
+
+Weighted area under ROC: 
+NaN
+True negative (control): 
+0.0
+True positive: 
+0.0

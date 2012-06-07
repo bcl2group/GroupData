@@ -1,0 +1,81 @@
+import csv
+import numpy as np
+import matplotlib.pyplot as plt
+
+data = csv.reader(open('integration_singlenet_real.csv'))
+
+feature_list = [x for x in range(10,100,10)]
+single_feature_value_dict = {}
+
+multi_feature_value_dict = {}
+
+test_features = '60'
+
+row_counter = 0
+for row in data:
+
+    if row_counter != 0:
+        integration = row[1]
+        threshold = row[3]
+        features = row[4]
+        accuracy = row[5]
+        num_train = row[7]
+        species = row[9]
+
+        if integration == 'single' and features == test_features and species == 'HS':
+            if num_train not in single_feature_value_dict.keys():
+                single_feature_value_dict[num_train] = []
+            single_feature_value_dict[num_train].append(float(accuracy))
+        elif integration == 'multi' and features == test_features and species == 'HS':
+            if num_train not in multi_feature_value_dict.keys():
+                multi_feature_value_dict[num_train] = []
+            multi_feature_value_dict[num_train].append(float(accuracy))
+    row_counter += 1
+    
+single_avg_feature_dict = {}
+multi_avg_feature_dict = {}
+single_avg_list = []
+multi_avg_list = []
+
+features_single = single_feature_value_dict.keys()
+features_multi = multi_feature_value_dict.keys()
+
+features_single.sort()
+features_multi.sort()
+#features.sort()
+
+#print "features ---> " + str(features)
+
+#x_list = features
+
+for feature in features_single:
+    single_accuracy_list = single_feature_value_dict[feature]
+    single_avg = float(sum(single_accuracy_list))/float(len(single_accuracy_list))
+    single_avg_feature_dict[feature] = single_avg
+    single_avg_list.append(single_avg)
+
+for feature in features_multi:
+    multi_accuracy_list = multi_feature_value_dict[feature]
+    multi_avg = float(sum(multi_accuracy_list))/float(len(multi_accuracy_list))
+    multi_avg_feature_dict[feature] = multi_avg
+    multi_avg_list.append(multi_avg)
+
+
+#x = np.arange(10,100,10)
+x = features_single
+y_single = single_avg_list
+fig = plt.figure()
+ax_single = fig.add_subplot(111)
+ax_single.plot(x,y_single, 'b.')
+
+ax_multi = ax_single.twiny()
+x_multi = features_multi
+y_multi = multi_avg_list
+ax_multi.plot(x_multi,y_multi, 'r.')
+
+#x = np.arange(10,100,10)
+#ax_diff = ax_single.twiny()
+#ax_diff = fig.add_subplot(111)
+#y_diff = diff_avg_list
+#ax_diff.plot(x,y_diff, 'g-')
+plt.show()

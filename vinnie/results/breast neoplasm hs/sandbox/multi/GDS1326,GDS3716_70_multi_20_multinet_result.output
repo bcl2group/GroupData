@@ -1,0 +1,123 @@
+disease ---> Breast_Neoplasm
+experiment ---> GDS1326,GDS3716
+type ---> multi
+closed the readers
+about to evaluate model
+evaluated model
+test instances:
+3
+total instances:
+54
+
+=== Structure for class 'Control' ===
+Bayes Network Classifier
+not using ADTree
+#attributes=21 #classindex=20
+Network structure (nodes followed by parents)
+GSDMD_binarized(2): FNDC3A_binarized 
+FNDC3A_binarized(2): OR1F2P_binarized 
+PAX4_binarized(2): MUT_binarized 
+C2ORF34_binarized(2): GSDMD_binarized 
+MUT_binarized(2): PFKL_binarized 
+OR1F2P_binarized(2): PFKL_binarized 
+ZFP36L1_binarized(2): RNF103_binarized 
+TMEM48_binarized(2): ENOSF1_binarized 
+C6ORF26_binarized(2): TMEM48_binarized 
+ESRP2_binarized(2): CEP68_binarized 
+PFKL_binarized(2): SEMA3F_binarized 
+RNF103_binarized(2): TMEM48_binarized 
+CEP68_binarized(2): 
+ZNF335_binarized(2): CEP68_binarized 
+APOE_binarized(2): FNDC3A_binarized 
+SEMA3F_binarized(2): CEP68_binarized 
+TCN2_binarized(2): ENOSF1_binarized 
+ENOSF1_binarized(2): MUT_binarized 
+GOLGA1_binarized(2): ENOSF1_binarized 
+FCGR2C_binarized(2): GSDMD_binarized 
+class(2): 
+LogScore Bayes: -246.39247682562757
+LogScore BDeu: -279.03258520926556
+LogScore MDL: -306.08856425816936
+LogScore ENTROPY: -238.74264765844003
+LogScore AIC: -278.7426476584401
+
+=== Structure for class 'Infected' ===
+Bayes Network Classifier
+not using ADTree
+#attributes=21 #classindex=20
+Network structure (nodes followed by parents)
+GSDMD_binarized(2): SEMA3F_binarized 
+FNDC3A_binarized(2): GSDMD_binarized 
+PAX4_binarized(2): GSDMD_binarized 
+C2ORF34_binarized(2): RNF103_binarized 
+MUT_binarized(2): GSDMD_binarized 
+OR1F2P_binarized(2): 
+ZFP36L1_binarized(2): GSDMD_binarized 
+TMEM48_binarized(2): SEMA3F_binarized 
+C6ORF26_binarized(2): TMEM48_binarized 
+ESRP2_binarized(2): GOLGA1_binarized 
+PFKL_binarized(2): OR1F2P_binarized 
+RNF103_binarized(2): ENOSF1_binarized 
+CEP68_binarized(2): OR1F2P_binarized 
+ZNF335_binarized(2): CEP68_binarized 
+APOE_binarized(2): ENOSF1_binarized 
+SEMA3F_binarized(2): PFKL_binarized 
+TCN2_binarized(2): GOLGA1_binarized 
+ENOSF1_binarized(2): PFKL_binarized 
+GOLGA1_binarized(2): ENOSF1_binarized 
+FCGR2C_binarized(2): GSDMD_binarized 
+class(2): 
+LogScore Bayes: -170.5875802537076
+LogScore BDeu: -203.22768863734566
+LogScore MDL: -230.1810980163817
+LogScore ENTROPY: -168.36024894921542
+LogScore AIC: -208.3602489492154
+
+=== Overall Scores ===
+LogScore Bayes: -454.0453198330496
+LogScore BDeu: -519.3255366003256
+LogScore MDL: -573.8066412312137
+LogScore ENTROPY: -442.6739627479559
+LogScore AIC: -523.6739627479559
+
+
+Time taken to build model: 0.08 seconds
+Time taken to test model on training data: 0.09 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances          46               90.1961 %
+Incorrectly Classified Instances         5                9.8039 %
+Kappa statistic                          0.8034
+Mean absolute error                      0.1302
+Root mean squared error                  0.2569
+Relative absolute error                 26.5169 %
+Root relative squared error             51.879  %
+Total Number of Instances               51     
+
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+ 25  4 |  a = Control
+  1 21 |  b = Infected
+
+
+=== Error on test data ===
+
+Correctly Classified Instances           1               33.3333 %
+Incorrectly Classified Instances         2               66.6667 %
+Kappa statistic                          0     
+Mean absolute error                      0.5966
+Root mean squared error                  0.6911
+Relative absolute error                114.2816 %
+Root relative squared error            131.4632 %
+Total Number of Instances                3     
+
+
+=== Confusion Matrix ===
+
+ a b   <-- classified as
+ 1 0 | a = Control
+ 2 0 | b = Infected
+

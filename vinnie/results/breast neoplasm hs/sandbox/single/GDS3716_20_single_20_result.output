@@ -1,0 +1,90 @@
+disease ---> Breast_Neoplasm
+experiment ---> GDS3716
+type ---> single
+closed the readers
+about to evaluate model
+Warning: discretizing data set
+evaluated model
+test instances:
+33
+total instances:
+42
+
+Bayes Network Classifier
+Using ADTree
+#attributes=21 #classindex=20
+Network structure (nodes followed by parents)
+SRM(2): class 
+ARAP2_binarized(2): class 
+BRD3_binarized(2): class 
+FAH_binarized(2): class 
+NOP16_binarized(2): class 
+ARFIP1_binarized(2): class 
+BTF3_binarized(2): class 
+SDF2L1_binarized(2): class 
+BMP2_binarized(2): class 
+PRDX2_binarized(2): class 
+TPST2_binarized(2): class 
+BDH1_binarized(2): class 
+CHMP7_binarized(2): class 
+GAMT_binarized(2): class 
+AK024995_binarized(2): class 
+NPDC1_binarized(2): class 
+PDIA6_binarized(2): class 
+TLK1_binarized(2): class 
+RERE_binarized(2): class 
+CDC42BPA_binarized(2): class 
+class(2): 
+LogScore Bayes: -66.89484726157433
+LogScore BDeu: -101.25285608645657
+LogScore MDL: -121.6566144423207
+LogScore ENTROPY: -76.61351060692814
+LogScore AIC: -117.61351060692823
+
+
+Time taken to build model: 0.21 seconds
+Time taken to test model on training data: 0 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances           9              100      %
+Incorrectly Classified Instances         0                0      %
+Kappa statistic                          1     
+Mean absolute error                      0     
+Root mean squared error                  0     
+Relative absolute error                  0      %
+Root relative squared error              0      %
+Total Number of Instances                9     
+
+
+=== Confusion Matrix ===
+
+ a b   <-- classified as
+ 7 0 | a = Control
+ 0 2 | b = Infected
+
+
+=== Error on test data ===
+
+Correctly Classified Instances          18               54.5455 %
+Incorrectly Classified Instances        15               45.4545 %
+Kappa statistic                          0.0678
+Mean absolute error                      0.4481
+Root mean squared error                  0.6651
+Relative absolute error                 90.863  %
+Root relative squared error            122.4979 %
+Total Number of Instances               33     
+
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+ 16  1 |  a = Control
+ 14  2 |  b = Infected
+
+Weighted area under ROC: 
+NaN
+True negative (control): 
+0.0
+True positive: 
+0.0

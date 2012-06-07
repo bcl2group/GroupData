@@ -1,0 +1,80 @@
+disease ---> Breast_Neoplasm
+experiment ---> GDS1326
+type ---> single
+closed the readers
+about to evaluate model
+Warning: discretizing data set
+evaluated model
+test instances:
+6
+total instances:
+12
+
+Bayes Network Classifier
+Using ADTree
+#attributes=11 #classindex=10
+Network structure (nodes followed by parents)
+GAD1(2): class 
+MCCC2_binarized(2): class 
+HMOX1_binarized(2): class 
+NBL1_binarized(2): class 
+EXOSC9_binarized(2): class 
+TBRG4_binarized(2): class 
+ZNF593_binarized(2): class 
+DEPDC1_binarized(2): class 
+CAPN9_binarized(2): class 
+LTBP1_binarized(2): class 
+class(2): 
+LogScore Bayes: -28.585050089278973
+LogScore BDeu: -45.764054501720054
+LogScore MDL: -53.80711759132913
+LogScore ENTROPY: -34.99364316443457
+LogScore AIC: -55.99364316443455
+
+
+Time taken to build model: 0.07 seconds
+Time taken to test model on training data: 0.09 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances           6              100      %
+Incorrectly Classified Instances         0                0      %
+Kappa statistic                          1     
+Mean absolute error                      0     
+Root mean squared error                  0     
+Relative absolute error                  0      %
+Root relative squared error              0      %
+Total Number of Instances                6     
+
+
+=== Confusion Matrix ===
+
+ a b   <-- classified as
+ 3 0 | a = Control
+ 0 3 | b = Infected
+
+
+=== Error on test data ===
+
+Correctly Classified Instances           4               66.6667 %
+Incorrectly Classified Instances         2               33.3333 %
+Kappa statistic                          0.3333
+Mean absolute error                      0.3367
+Root mean squared error                  0.4935
+Relative absolute error                 67.3336 %
+Root relative squared error             98.6982 %
+Total Number of Instances                6     
+
+
+=== Confusion Matrix ===
+
+ a b   <-- classified as
+ 3 0 | a = Control
+ 2 1 | b = Infected
+
+Weighted area under ROC: 
+NaN
+True negative (control): 
+0.0
+True positive: 
+0.0

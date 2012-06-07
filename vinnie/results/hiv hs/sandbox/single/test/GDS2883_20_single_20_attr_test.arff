@@ -1,0 +1,29 @@
+@relation 'infection-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.GainRatioAttributeEval-Sweka.attributeSelection.Ranker -T -1.7976931348623157E308 -N 20-weka.filters.unsupervised.attribute.NumericToBinary'
+
+@attribute BF223181 numeric
+@attribute AW152437_binarized {0,1}
+@attribute AI027479_binarized {0,1}
+@attribute SIX1_binarized {0,1}
+@attribute GALNTL1_binarized {0,1}
+@attribute C9ORF9_binarized {0,1}
+@attribute HEATR7B1_binarized {0,1}
+@attribute AA026388_binarized {0,1}
+@attribute KDM6B_binarized {0,1}
+@attribute FAM100A_binarized {0,1}
+@attribute FCGR2B_binarized {0,1}
+@attribute SMPDL3A_binarized {0,1}
+@attribute AI042373_binarized {0,1}
+@attribute CARD8_binarized {0,1}
+@attribute FGF1_binarized {0,1}
+@attribute PSMD4_binarized {0,1}
+@attribute EPM2A_binarized {0,1}
+@attribute R16907_binarized {0,1}
+@attribute TFB2M_binarized {0,1}
+@attribute LOC280665_binarized {0,1}
+@attribute class {Control,Infected}
+
+@data
+0,0,1,1,1,0,1,0,0,1,0,0,0,1,0,0,1,0,0,0,Control
+1,0,1,0,1,0,1,0,0,1,0,0,0,1,0,0,1,0,0,0,Control
+1,0,0,0,0,1,0,0,1,1,1,1,0,0,0,1,1,1,1,0,Infected
+1,1,0,0,0,1,1,1,0,1,1,0,1,0,1,1,1,1,1,0,Infected

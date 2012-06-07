@@ -1,0 +1,150 @@
+disease ---> Breast_Neoplasm
+experiment ---> GDS1326,GDS3716
+type ---> multi
+closed the readers
+about to evaluate model
+Warning: discretizing data set
+evaluated model
+test instances:
+1
+total instances:
+54
+
+Bayes Network Classifier
+Using ADTree
+#attributes=81 #classindex=80
+Network structure (nodes followed by parents)
+GSDMD(2): class 
+FNDC3A_binarized(2): class 
+C2ORF34_binarized(2): class 
+SLC7A8_binarized(2): class 
+BAZ1B_binarized(2): class 
+MUT_binarized(2): class 
+ZFP36L1_binarized(2): class 
+PAX4_binarized(2): class 
+OR1F2P_binarized(2): class 
+TMEM48_binarized(2): class 
+C6ORF26_binarized(2): class 
+SIDT2_binarized(2): class 
+PFKL_binarized(2): class 
+RNF103_binarized(2): class 
+CEP68_binarized(2): class 
+ZNF335_binarized(2): class 
+APOE_binarized(2): class 
+GOLGA1_binarized(2): class 
+ENOSF1_binarized(2): class 
+STX6_binarized(2): class 
+L3MBTL_binarized(2): class 
+TCIRG1_binarized(2): class 
+CTTN_binarized(2): class 
+FARP1_binarized(2): class 
+SYDE1_binarized(2): class 
+ST3GAL2_binarized(2): class 
+SFI1_binarized(2): class 
+KIR3DX1_binarized(2): class 
+MIA3_binarized(2): class 
+SMARCA1_binarized(2): class 
+VPS13D_binarized(2): class 
+FCGR2C_binarized(2): class 
+TPSB2_binarized(2): class 
+CDC20_binarized(2): class 
+BRD7P3_binarized(2): class 
+NCDN_binarized(2): class 
+MCFD2_binarized(2): class 
+FRY_binarized(2): class 
+ICAM3_binarized(2): class 
+SIPA1L3_binarized(2): class 
+INTS3_binarized(2): class 
+CYHR1_binarized(2): class 
+IGL@_binarized(2): class 
+RABEP2_binarized(2): class 
+GPR3_binarized(2): class 
+BCKDHA_binarized(2): class 
+MAP3K12_binarized(2): class 
+AGXT_binarized(2): class 
+WDR55_binarized(2): class 
+MUM1_binarized(2): class 
+ARF3_binarized(2): class 
+DNPEP_binarized(2): class 
+RUFY3_binarized(2): class 
+SEZ6L_binarized(2): class 
+HEY2_binarized(2): class 
+CPNE7_binarized(2): class 
+COMT_binarized(2): class 
+IHH_binarized(2): class 
+RGS5_binarized(2): class 
+TTF2_binarized(2): class 
+PHF3_binarized(2): class 
+PARD6B_binarized(2): class 
+ZNF267_binarized(2): class 
+SDC3_binarized(2): class 
+ISG20_binarized(2): class 
+DOPEY1_binarized(2): class 
+PERP_binarized(2): class 
+ANXA9_binarized(2): class 
+APITD1_binarized(2): class 
+PAR5_binarized(2): class 
+INO80B_binarized(2): class 
+NSDHL_binarized(2): class 
+DCLRE1C_binarized(2): class 
+KCNJ5_binarized(2): class 
+UBE2D3_binarized(2): class 
+TDRD3_binarized(2): class 
+DYRK1A_binarized(2): class 
+OR51E2_binarized(2): class 
+SLCO2B1_binarized(2): class 
+C17ORF86_binarized(2): class 
+class(2): 
+LogScore Bayes: -1545.741086281335
+LogScore BDeu: -1683.1731215808654
+LogScore MDL: -1799.3493842878017
+LogScore ENTROPY: -1479.7408852468577
+LogScore AIC: -1640.7408852468575
+
+
+Time taken to build model: 0.17 seconds
+Time taken to test model on training data: 0.01 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances          42               79.2453 %
+Incorrectly Classified Instances        11               20.7547 %
+Kappa statistic                          0.592 
+Mean absolute error                      0.217 
+Root mean squared error                  0.4438
+Relative absolute error                 44.1416 %
+Root relative squared error             89.5466 %
+Total Number of Instances               53     
+
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+ 21  9 |  a = Control
+  2 21 |  b = Infected
+
+
+=== Error on test data ===
+
+Correctly Classified Instances           1              100      %
+Incorrectly Classified Instances         0                0      %
+Kappa statistic                          1     
+Mean absolute error                      0.0001
+Root mean squared error                  0.0001
+Relative absolute error                  0.0105 %
+Root relative squared error              0.0105 %
+Total Number of Instances                1     
+
+
+=== Confusion Matrix ===
+
+ a b   <-- classified as
+ 0 0 | a = Control
+ 0 1 | b = Infected
+
+Weighted area under ROC: 
+NaN
+True negative (control): 
+0.0
+True positive: 
+0.0

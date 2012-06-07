@@ -1,0 +1,143 @@
+disease ---> Breast_Neoplasm
+experiment ---> GDS1326,GDS3716
+type ---> multi
+closed the readers
+about to evaluate model
+evaluated model
+test instances:
+2
+total instances:
+54
+
+=== Structure for class 'Control' ===
+Bayes Network Classifier
+not using ADTree
+#attributes=31 #classindex=30
+Network structure (nodes followed by parents)
+GSDMD_binarized(2): FNDC3A_binarized 
+FNDC3A_binarized(2): OR1F2P_binarized 
+C2ORF34_binarized(2): GSDMD_binarized 
+BAZ1B_binarized(2): GSDMD_binarized 
+MUT_binarized(2): ENOSF1_binarized 
+ZFP36L1_binarized(2): ST3GAL2_binarized 
+SIDT2_binarized(2): GOLGA1_binarized 
+OR1F2P_binarized(2): PFKL_binarized 
+C6ORF26_binarized(2): ENOSF1_binarized 
+TMEM48_binarized(2): C6ORF26_binarized 
+PFKL_binarized(2): MUT_binarized 
+PAX4_binarized(2): MUT_binarized 
+CEP68_binarized(2): 
+ZNF335_binarized(2): CEP68_binarized 
+GOLGA1_binarized(2): ENOSF1_binarized 
+SEMA3F_binarized(2): CEP68_binarized 
+APOE_binarized(2): FNDC3A_binarized 
+RNF103_binarized(2): C6ORF26_binarized 
+ENOSF1_binarized(2): ST3GAL2_binarized 
+L3MBTL_binarized(2): GSDMD_binarized 
+TCIRG1_binarized(2): SEMA3F_binarized 
+CTTN_binarized(2): ST3GAL2_binarized 
+FARP1_binarized(2): TCIRG1_binarized 
+SYDE1_binarized(2): GSDMD_binarized 
+STX6_binarized(2): GSDMD_binarized 
+SFI1_binarized(2): SEMA3F_binarized 
+ST3GAL2_binarized(2): CEP68_binarized 
+MIA3_binarized(2): GSDMD_binarized 
+TPSB2_binarized(2): SEMA3F_binarized 
+SMARCA1_binarized(2): GSDMD_binarized 
+class(2): 
+LogScore Bayes: -289.16926699920117
+LogScore BDeu: -338.98837979527997
+LogScore MDL: -387.3775942901659
+LogScore ENTROPY: -286.35871939057176
+LogScore AIC: -346.35871939057193
+
+=== Structure for class 'Infected' ===
+Bayes Network Classifier
+not using ADTree
+#attributes=31 #classindex=30
+Network structure (nodes followed by parents)
+GSDMD_binarized(2): SEMA3F_binarized 
+FNDC3A_binarized(2): GSDMD_binarized 
+C2ORF34_binarized(2): BAZ1B_binarized 
+BAZ1B_binarized(2): FARP1_binarized 
+MUT_binarized(2): GSDMD_binarized 
+ZFP36L1_binarized(2): GSDMD_binarized 
+SIDT2_binarized(2): BAZ1B_binarized 
+OR1F2P_binarized(2): PAX4_binarized 
+C6ORF26_binarized(2): CTTN_binarized 
+TMEM48_binarized(2): C6ORF26_binarized 
+PFKL_binarized(2): ENOSF1_binarized 
+PAX4_binarized(2): BAZ1B_binarized 
+CEP68_binarized(2): OR1F2P_binarized 
+ZNF335_binarized(2): CEP68_binarized 
+GOLGA1_binarized(2): ENOSF1_binarized 
+SEMA3F_binarized(2): FARP1_binarized 
+APOE_binarized(2): ST3GAL2_binarized 
+RNF103_binarized(2): OR1F2P_binarized 
+ENOSF1_binarized(2): RNF103_binarized 
+L3MBTL_binarized(2): APOE_binarized 
+TCIRG1_binarized(2): FARP1_binarized 
+CTTN_binarized(2): FARP1_binarized 
+FARP1_binarized(2): SFI1_binarized 
+SYDE1_binarized(2): GSDMD_binarized 
+STX6_binarized(2): CEP68_binarized 
+SFI1_binarized(2): 
+ST3GAL2_binarized(2): GOLGA1_binarized 
+MIA3_binarized(2): GSDMD_binarized 
+TPSB2_binarized(2): GOLGA1_binarized 
+SMARCA1_binarized(2): GSDMD_binarized 
+class(2): 
+LogScore Bayes: -241.47303751209736
+LogScore BDeu: -291.2921503081764
+LogScore MDL: -332.9144960089558
+LogScore ENTROPY: -238.84966953108108
+LogScore AIC: -298.8496695310811
+
+=== Overall Scores ===
+LogScore Bayes: -568.545295674384
+LogScore BDeu: -668.1835212665418
+LogScore MDL: -758.6641609109469
+LogScore ENTROPY: -561.6048376741874
+LogScore AIC: -682.6048376741875
+
+
+Time taken to build model: 0.09 seconds
+Time taken to test model on training data: 0.04 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances          49               94.2308 %
+Incorrectly Classified Instances         3                5.7692 %
+Kappa statistic                          0.8825
+Mean absolute error                      0.1012
+Root mean squared error                  0.2202
+Relative absolute error                 20.4957 %
+Root relative squared error             44.3383 %
+Total Number of Instances               52     
+
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+ 28  1 |  a = Control
+  2 21 |  b = Infected
+
+
+=== Error on test data ===
+
+Correctly Classified Instances           1               50      %
+Incorrectly Classified Instances         1               50      %
+Kappa statistic                          0     
+Mean absolute error                      0.5676
+Root mean squared error                  0.6985
+Relative absolute error                113.5258 %
+Root relative squared error            138.8458 %
+Total Number of Instances                2     
+
+
+=== Confusion Matrix ===
+
+ a b   <-- classified as
+ 1 0 | a = Control
+ 1 0 | b = Infected
+

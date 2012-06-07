@@ -1,0 +1,21 @@
+@relation 'infection-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.GainRatioAttributeEval-Sweka.attributeSelection.Ranker -T -1.7976931348623157E308 -N 10-weka.filters.unsupervised.attribute.NumericToBinary'
+
+@attribute LRIT1 numeric
+@attribute FNTA_binarized {0,1}
+@attribute C4ORF10_binarized {0,1}
+@attribute TUG1_binarized {0,1}
+@attribute DLX4_binarized {0,1}
+@attribute PKP1_binarized {0,1}
+@attribute CHKA_binarized {0,1}
+@attribute INHBB_binarized {0,1}
+@attribute P4HB_binarized {0,1}
+@attribute AMELX_binarized {0,1}
+@attribute class {Control,Infected}
+
+@data
+0,0,1,0,1,0,0,1,1,1,Control
+0,0,1,0,1,0,0,1,1,1,Control
+0,0,1,0,1,0,0,1,1,1,Control
+0,0,1,0,1,0,0,1,1,1,Control
+0,0,1,0,1,0,0,1,1,1,Control
+1,1,0,1,0,1,1,0,0,0,Infected

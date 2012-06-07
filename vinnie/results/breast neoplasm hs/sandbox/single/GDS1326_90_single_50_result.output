@@ -1,0 +1,120 @@
+disease ---> Breast_Neoplasm
+experiment ---> GDS1326
+type ---> single
+closed the readers
+about to evaluate model
+Warning: discretizing data set
+evaluated model
+test instances:
+1
+total instances:
+12
+
+Bayes Network Classifier
+Using ADTree
+#attributes=51 #classindex=50
+Network structure (nodes followed by parents)
+TTC39A(2): class 
+USP2_binarized(2): class 
+DEPDC1_binarized(2): class 
+NPAS3_binarized(2): class 
+SPATA6_binarized(2): class 
+RNF19B_binarized(2): class 
+NDST2_binarized(2): class 
+SIGLEC7_binarized(2): class 
+SEC14L3_binarized(2): class 
+HSPA6_binarized(2): class 
+Z21967_binarized(2): class 
+SNAPC5_binarized(2): class 
+SP140L_binarized(2): class 
+RRN3P1_binarized(2): class 
+NXT2_binarized(2): class 
+IL11RA_binarized(2): class 
+RPL39L_binarized(2): class 
+MAT1A_binarized(2): class 
+MCCC2_binarized(2): class 
+GJA8_binarized(2): class 
+GNAO1_binarized(2): class 
+NBL1_binarized(2): class 
+SLC7A4_binarized(2): class 
+FKBP1B_binarized(2): class 
+AK1_binarized(2): class 
+TGFA_binarized(2): class 
+HOXD3_binarized(2): class 
+CD38_binarized(2): class 
+HBA2_binarized(2): class 
+ZWINT_binarized(2): class 
+C17ORF86_binarized(2): class 
+F11_binarized(2): class 
+ZNF593_binarized(2): class 
+TUBB1_binarized(2): class 
+LRP6_binarized(2): class 
+XPC_binarized(2): class 
+TP53AIP1_binarized(2): class 
+RAD54L_binarized(2): class 
+MTO1_binarized(2): class 
+DOPEY2_binarized(2): class 
+AMHR2_binarized(2): class 
+RHOD_binarized(2): class 
+PRKAR2A_binarized(2): class 
+TRIP11_binarized(2): class 
+ZNF434_binarized(2): class 
+TMEM48_binarized(2): class 
+C10ORF116_binarized(2): class 
+PIN1L_binarized(2): class 
+GRIA4_binarized(2): class 
+LOC100133862_binarized(2): class 
+class(2): 
+LogScore Bayes: -290.2256073720115
+LogScore BDeu: -376.1206294342167
+LogScore MDL: -411.6433484151713
+LogScore ENTROPY: -290.549637138853
+LogScore AIC: -391.5496371388533
+
+
+Time taken to build model: 0.36 seconds
+Time taken to test model on training data: 0.08 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances          11              100      %
+Incorrectly Classified Instances         0                0      %
+Kappa statistic                          1     
+Mean absolute error                      0     
+Root mean squared error                  0     
+Relative absolute error                  0      %
+Root relative squared error              0      %
+Total Number of Instances               11     
+
+
+=== Confusion Matrix ===
+
+ a b   <-- classified as
+ 5 0 | a = Control
+ 0 6 | b = Infected
+
+
+=== Error on test data ===
+
+Correctly Classified Instances           1              100      %
+Incorrectly Classified Instances         0                0      %
+Kappa statistic                          1     
+Mean absolute error                      0     
+Root mean squared error                  0     
+Relative absolute error                  0      %
+Root relative squared error              0      %
+Total Number of Instances                1     
+
+
+=== Confusion Matrix ===
+
+ a b   <-- classified as
+ 1 0 | a = Control
+ 0 0 | b = Infected
+
+Weighted area under ROC: 
+NaN
+True negative (control): 
+0.0
+True positive: 
+0.0

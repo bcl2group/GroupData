@@ -1,0 +1,183 @@
+disease ---> Breast_Neoplasm
+experiment ---> GDS1326,GDS3716
+type ---> multi
+closed the readers
+about to evaluate model
+evaluated model
+test instances:
+2
+total instances:
+54
+
+=== Structure for class 'Control' ===
+Bayes Network Classifier
+not using ADTree
+#attributes=51 #classindex=50
+Network structure (nodes followed by parents)
+GSDMD_binarized(2): FNDC3A_binarized 
+FNDC3A_binarized(2): MAP3K12_binarized 
+C2ORF34_binarized(2): GSDMD_binarized 
+BAZ1B_binarized(2): GSDMD_binarized 
+MUT_binarized(2): ENOSF1_binarized 
+ZFP36L1_binarized(2): ST3GAL2_binarized 
+SIDT2_binarized(2): RABEP2_binarized 
+OR1F2P_binarized(2): PFKL_binarized 
+C6ORF26_binarized(2): ENOSF1_binarized 
+TMEM48_binarized(2): C6ORF26_binarized 
+PFKL_binarized(2): MUT_binarized 
+PAX4_binarized(2): MUT_binarized 
+CEP68_binarized(2): 
+ZNF335_binarized(2): CEP68_binarized 
+GOLGA1_binarized(2): ENOSF1_binarized 
+SEMA3F_binarized(2): TCIRG1_binarized 
+APOE_binarized(2): FNDC3A_binarized 
+RNF103_binarized(2): C6ORF26_binarized 
+ENOSF1_binarized(2): ST3GAL2_binarized 
+L3MBTL_binarized(2): GSDMD_binarized 
+TCIRG1_binarized(2): RABEP2_binarized 
+CTTN_binarized(2): ST3GAL2_binarized 
+FARP1_binarized(2): TCIRG1_binarized 
+SYDE1_binarized(2): GSDMD_binarized 
+STX6_binarized(2): GSDMD_binarized 
+SFI1_binarized(2): SEMA3F_binarized 
+ST3GAL2_binarized(2): CEP68_binarized 
+MIA3_binarized(2): GSDMD_binarized 
+TPSB2_binarized(2): SEMA3F_binarized 
+SMARCA1_binarized(2): GSDMD_binarized 
+VPS13D_binarized(2): GSDMD_binarized 
+BRD7P3_binarized(2): ZFP36L1_binarized 
+FCGR2C_binarized(2): GSDMD_binarized 
+CDC20_binarized(2): GSDMD_binarized 
+KIR3DX1_binarized(2): GSDMD_binarized 
+NCDN_binarized(2): RABEP2_binarized 
+ICAM3_binarized(2): GSDMD_binarized 
+MAP3K12_binarized(2): SEMA3F_binarized 
+FRY_binarized(2): TCIRG1_binarized 
+CYHR1_binarized(2): GSDMD_binarized 
+MCFD2_binarized(2): GSDMD_binarized 
+INTS3_binarized(2): PPP5C_binarized 
+GPR3_binarized(2): GSDMD_binarized 
+PPP5C_binarized(2): SEMA3F_binarized 
+RABEP2_binarized(2): PFKL_binarized 
+WDR55_binarized(2): TCIRG1_binarized 
+BCKDHA_binarized(2): SEMA3F_binarized 
+IGL@_binarized(2): MUT_binarized 
+AGXT_binarized(2): SEMA3F_binarized 
+DNPEP_binarized(2): GSDMD_binarized 
+class(2): 
+LogScore Bayes: -392.76980952700455
+LogScore BDeu: -476.9469311479655
+LogScore MDL: -566.6504121708755
+LogScore ENTROPY: -398.28562067155224
+LogScore AIC: -498.28562067155235
+
+=== Structure for class 'Infected' ===
+Bayes Network Classifier
+not using ADTree
+#attributes=51 #classindex=50
+Network structure (nodes followed by parents)
+GSDMD_binarized(2): NCDN_binarized 
+FNDC3A_binarized(2): GSDMD_binarized 
+C2ORF34_binarized(2): MAP3K12_binarized 
+BAZ1B_binarized(2): SIDT2_binarized 
+MUT_binarized(2): GSDMD_binarized 
+ZFP36L1_binarized(2): GSDMD_binarized 
+SIDT2_binarized(2): RABEP2_binarized 
+OR1F2P_binarized(2): RNF103_binarized 
+C6ORF26_binarized(2): AGXT_binarized 
+TMEM48_binarized(2): C6ORF26_binarized 
+PFKL_binarized(2): ENOSF1_binarized 
+PAX4_binarized(2): BAZ1B_binarized 
+CEP68_binarized(2): OR1F2P_binarized 
+ZNF335_binarized(2): CEP68_binarized 
+GOLGA1_binarized(2): ST3GAL2_binarized 
+SEMA3F_binarized(2): FARP1_binarized 
+APOE_binarized(2): ST3GAL2_binarized 
+RNF103_binarized(2): ENOSF1_binarized 
+ENOSF1_binarized(2): GOLGA1_binarized 
+L3MBTL_binarized(2): APOE_binarized 
+TCIRG1_binarized(2): FARP1_binarized 
+CTTN_binarized(2): MAP3K12_binarized 
+FARP1_binarized(2): SFI1_binarized 
+SYDE1_binarized(2): GSDMD_binarized 
+STX6_binarized(2): VPS13D_binarized 
+SFI1_binarized(2): 
+ST3GAL2_binarized(2): NCDN_binarized 
+MIA3_binarized(2): GSDMD_binarized 
+TPSB2_binarized(2): GOLGA1_binarized 
+SMARCA1_binarized(2): GSDMD_binarized 
+VPS13D_binarized(2): CEP68_binarized 
+BRD7P3_binarized(2): BAZ1B_binarized 
+FCGR2C_binarized(2): GSDMD_binarized 
+CDC20_binarized(2): GSDMD_binarized 
+KIR3DX1_binarized(2): GSDMD_binarized 
+NCDN_binarized(2): SEMA3F_binarized 
+ICAM3_binarized(2): GSDMD_binarized 
+MAP3K12_binarized(2): FARP1_binarized 
+FRY_binarized(2): TCIRG1_binarized 
+CYHR1_binarized(2): GSDMD_binarized 
+MCFD2_binarized(2): GSDMD_binarized 
+INTS3_binarized(2): GSDMD_binarized 
+GPR3_binarized(2): GSDMD_binarized 
+PPP5C_binarized(2): PAX4_binarized 
+RABEP2_binarized(2): SEMA3F_binarized 
+WDR55_binarized(2): FARP1_binarized 
+BCKDHA_binarized(2): FARP1_binarized 
+IGL@_binarized(2): PFKL_binarized 
+AGXT_binarized(2): OR1F2P_binarized 
+DNPEP_binarized(2): GSDMD_binarized 
+class(2): 
+LogScore Bayes: -351.4190607965577
+LogScore BDeu: -435.59618241751957
+LogScore MDL: -510.5690466161208
+LogScore ENTROPY: -353.79433581966293
+LogScore AIC: -453.79433581966305
+
+=== Overall Scores ===
+LogScore Bayes: -782.0918614866476
+LogScore BDeu: -950.4461047285705
+LogScore MDL: -1115.5915293988214
+LogScore ENTROPY: -788.4764052437497
+LogScore AIC: -989.4764052437498
+
+
+Time taken to build model: 0.19 seconds
+Time taken to test model on training data: 0.07 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances          48               92.3077 %
+Incorrectly Classified Instances         4                7.6923 %
+Kappa statistic                          0.8427
+Mean absolute error                      0.0754
+Root mean squared error                  0.2012
+Relative absolute error                 15.2806 %
+Root relative squared error             40.5135 %
+Total Number of Instances               52     
+
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+ 28  1 |  a = Control
+  3 20 |  b = Infected
+
+
+=== Error on test data ===
+
+Correctly Classified Instances           1               50      %
+Incorrectly Classified Instances         1               50      %
+Kappa statistic                          0     
+Mean absolute error                      0.5576
+Root mean squared error                  0.7117
+Relative absolute error                111.5203 %
+Root relative squared error            141.478  %
+Total Number of Instances                2     
+
+
+=== Confusion Matrix ===
+
+ a b   <-- classified as
+ 1 0 | a = Control
+ 1 0 | b = Infected
+
