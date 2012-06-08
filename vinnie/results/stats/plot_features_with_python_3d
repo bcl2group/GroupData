@@ -1,0 +1,174 @@
+import csv
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+from matplotlib import cm
+from matplotlib.ticker import LinearLocator, FormatStrFormatter 
+
+print "about to open file"
+data = csv.reader(open('integration_singlenet_features.csv'))
+#data = csv.reader(open('Acne_Vulgaris_results_threshold_test_50.csv'))
+#new_data = csv.reader(open('features_vs_avg_acc.csv'), 'w')
+
+print "opened file"
+
+feature_list = [x for x in range(100,1000,100)]
+single_feature_value_dict = {}
+multi_feature_value_dict = {}
+
+test_species = 'HS'
+test_disease = 'Adenocarcinoma'
+test_disease_list = ['Adenocarcinoma', 'HIV', 'Glaucoma', 'Aneurysm', 'Endometriosis', 'Infertility']
+test_threshold = '10'
+row_counter = 0
+
+#csv_file = open('integration_singlenet_results__raw_allsamples.csv', 'w')
+csv_file = open('integration_singlenet_results_train_instances_allsamples.csv', 'w')
+writer = csv.writer(csv_file)
+#writer.writerow(['features', 'threshold' 'type', 'accuracy'])
+writer.writerow(['features', 'train instances', 'type', 'accuracy'])
+print "about to go into data"
+                        
+for row in data:
+#   # print "row ---> " + str(row)
+    if row_counter != 0:
+        disease = row[0]
+        integration = row[1]
+        threshold = row[3]
+        features = row[4]
+        accuracy = row[5]
+        #species = row[9]
+        train_instances = float(row[6])
+        test_instances = row[7]
+        total_instances = row[8]
+#        relative_add = 
+
+        if integration == 'single':
+            if features not in single_feature_value_dict.keys():
+                single_feature_value_dict[features] = {}
+            threshold_list = single_feature_value_dict[features].keys()
+            if threshold not in threshold_list:
+                single_feature_value_dict[features][threshold] = []
+            if train_instances not in threshold_list:
+                single_feature_value_dict[features][train_instances] = []
+            single_feature_value_dict[features][threshold].append(float(accuracy))
+            single_feature_value_dict[features][train_instances].append(float(accuracy))
+
+        elif integration == 'multi':
+            if features not in multi_feature_value_dict.keys():
+                multi_feature_value_dict[features] = {}
+            threshold_list = multi_feature_value_dict[features].keys()
+            if threshold not in threshold_list:
+                multi_feature_value_dict[features][threshold] = []
+            if train_instances not in threshold_list:
+                multi_feature_value_dict[features][train_instances] = []
+            multi_feature_value_dict[features][threshold].append(float(accuracy))
+            multi_feature_value_dict[features][train_instances].append(float(accuracy))
+
+            
+    row_counter += 1
+    
+#print "single dict ---> " + str(single_feature_value_dict)
+#print "multi dict ---> " + str(multi_feature_value_dict)
+
+for feature in single_feature_value_dict:
+    #for threshold in single_feature_value_dict[feature]:
+    for metric in single_feature_value_dict[feature]:
+            if type(metric) is float:
+                my_list = single_feature_value_dict[feature][metric]
+                for item in my_list:
+                    writer.writerow([feature, metric, 'single', item])
+
+for feature in multi_feature_value_dict:
+#    for threshold in multi_feature_value_dict[feature]:
+    for metric in multi_feature_value_dict[feature]:
+        if type(metric) is float:
+            my_list = multi_feature_value_dict[feature][metric]
+            for item in my_list:
+                writer.writerow([feature, metric, 'multi', item])
+            
+print "went through data"
+
+single_avg_feature_dict = {}
+multi_avg_feature_dict = {}
+diff_avg_feature_dict = {}
+single_avg_list = []
+multi_avg_list = []
+diff_avg_list = []
+
+features = single_feature_value_dict.keys()
+features.sort()
+
+thresholds = [x for x in range(10,100,10)]
+
+print "features ---> " + str(features)
+print "thresholds (test) ---> " + str(single_feature_value_dict[features[0]])
+
+#writer.writerow(['features', 'single accuracy', 'multi accuracy'])
+#for feature in features:
+#    single_avg_feature_dict[feature] = {}
+##    multi_avg_feature_dict[feature] = {}
+##    diff_avg_feature_dict[feature] = {}
+##    for threshold in thresholds:
+##        threshold = str(threshold)
+##        print "feature in features ---> " + str(feature)
+##
+##
+##        print "test ---> " + str(single_feature_value_dict[feature])
+##        single_accuracy_list = single_feature_value_dict[feature][threshold]
+##        single_avg = float(sum(single_accuracy_list))/float(len(single_accuracy_list))
+##
+##        single_avg_feature_dict[feature][threshold] = single_avg
+##        single_avg_list.append(single_avg)
+##
+##        multi_accuracy_list = multi_feature_value_dict[feature][threshold]
+##        multi_avg = float(sum(multi_accuracy_list))/float(len(multi_accuracy_list))
+##        multi_avg_feature_dict[feature][threshold] = multi_avg
+##        multi_avg_list.append(multi_avg)
+##
+##        diff_avg = multi_avg - single_avg
+##        diff_avg_feature_dict[feature][threshold] = diff_avg
+##        diff_avg_list.append(diff_avg)
+##
+##    #    for i in range(len(single_accuracy_list)):
+##    #        if i < len(multi_accuracy_list):
+##    #            writer.writerow([feature, single_accuracy_list[i], multi_accuracy_list[i]])
+##
+##        writer.writerow([feature,threshold,single_avg, multi_avg, diff_avg])
+
+print "about to plot"
+csv_file.close()
+
+##x = np.arange(100,1000,100)
+##y_single = single_avg_list
+##fig = plt.figure()
+##ax_single = fig.add_subplot(111)
+##ax_single.plot(x,y_single, 'b-')
+##
+##ax_multi = ax_single.twiny()
+##y_multi = multi_avg_list
+##ax_multi.plot(x,y_multi, 'r-')
+##
+###x = np.arange(10,100,10)
+##ax_diff = ax_single.twiny()
+##ax_diff = fig.add_subplot(111)
+##y_diff = diff_avg_list
+##ax_diff.plot(x,y_diff, 'g-')
+
+print "diff avg list ---> " + str(diff_avg_list)
+print "lenght of diff avg list ---> " + str(len(diff_avg_list))
+fig = plt.figure()
+ax_fig = fig.gca(projection='3d')
+X = np.arange(10,900,10)
+Y = np.arange(100,1100,100)
+X, Y = np.meshgrid(X, Y)
+Z = diff_avg_list[:-1]
+surf = ax_fig.plot_surface(X, Y, Z, rstride=1, cstride=1, cmap=cm.jet,
+                           linewidth=0, antialiased=False)
+#ax_fig.set_zlim(-100, 100)
+
+ax_fig.zaxis.set_major_locator(LinearLocator(10))
+ax_fig.zaxis.set_major_formatter(FormatStrFormatter('%.02f'))
+
+fig.colorbar(surf, shrink=0.5, aspect=5)
+plt.show()

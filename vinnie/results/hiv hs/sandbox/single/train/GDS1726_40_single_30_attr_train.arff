@@ -1,0 +1,47 @@
+@relation 'infection-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.GainRatioAttributeEval-Sweka.attributeSelection.Ranker -T -1.7976931348623157E308 -N 30-weka.filters.unsupervised.attribute.NumericToBinary'
+
+@attribute Z29572 numeric
+@attribute CYTH1_binarized {0,1}
+@attribute ZFP37_binarized {0,1}
+@attribute CLINT1_binarized {0,1}
+@attribute C1ORF68_binarized {0,1}
+@attribute MYC_binarized {0,1}
+@attribute CRYBA1_binarized {0,1}
+@attribute AQR_binarized {0,1}
+@attribute LOC728412_binarized {0,1}
+@attribute NTNG1_binarized {0,1}
+@attribute CDKN2A_binarized {0,1}
+@attribute CXCR5_binarized {0,1}
+@attribute ABTB2_binarized {0,1}
+@attribute EPAS1_binarized {0,1}
+@attribute HSD11B1_binarized {0,1}
+@attribute LSM6_binarized {0,1}
+@attribute MAP3K7_binarized {0,1}
+@attribute SCN4A_binarized {0,1}
+@attribute SMC1A_binarized {0,1}
+@attribute FSCN2_binarized {0,1}
+@attribute NKTR_binarized {0,1}
+@attribute SGMS1_binarized {0,1}
+@attribute TMEM123_binarized {0,1}
+@attribute RGS19_binarized {0,1}
+@attribute EIF3J_binarized {0,1}
+@attribute TMED9_binarized {0,1}
+@attribute ME1_binarized {0,1}
+@attribute VAMP3_binarized {0,1}
+@attribute RSU1_binarized {0,1}
+@attribute KCNA6_binarized {0,1}
+@attribute class {Control,Infected}
+
+@data
+1,0,1,1,1,1,0,0,1,0,1,0,1,1,1,0,0,0,1,0,0,0,0,0,0,1,0,0,0,1,Control
+0,1,1,1,1,1,0,0,1,1,0,0,0,1,0,1,1,1,0,1,0,1,0,0,0,0,0,1,1,1,Control
+1,1,0,0,1,0,0,0,0,0,1,1,0,0,1,0,0,1,0,0,1,0,1,1,1,0,1,1,0,0,Control
+1,1,1,1,0,1,0,0,0,1,0,1,1,0,0,1,1,0,1,1,1,1,1,1,1,1,1,0,1,0,Control
+0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,1,0,0,1,1,0,0,0,Infected
+0,0,0,0,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,1,0,1,0,0,1,1,0,0,0,Infected
+0,0,0,0,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,1,0,1,0,0,1,1,0,0,0,Infected
+0,0,0,0,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,1,0,1,0,0,1,1,0,0,0,Infected
+0,0,0,0,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,1,0,1,0,0,1,1,0,0,0,Infected
+0,0,0,0,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,1,0,1,0,0,1,1,0,0,0,Infected
+0,0,0,0,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,1,0,1,0,0,1,1,0,0,0,Infected
+0,0,0,0,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,1,0,1,0,0,1,1,0,0,0,Infected

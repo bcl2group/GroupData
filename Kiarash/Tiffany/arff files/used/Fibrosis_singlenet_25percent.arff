@@ -1,0 +1,63 @@
+% Title: HIV, All Species Singlenet
+% Creator: Neena Parikh
+%
+@RELATION infection
+
+@ATTRIBUTE class {Control,Infected}
+@ATTRIBUTE SSB NUMERIC
+
+@DATA
+Control,7.215
+Control,6.927
+Infected,7.068
+Infected,6.656
+Control,5.0245
+Control,5.0445
+Control,4.8855
+Control,4.7035
+Control,5.1275
+Control,4.8075
+Infected,4.7765
+Infected,4.8855
+Infected,5.0605
+Control,7.0335
+Control,6.6645
+Control,7.0175
+Control,6.9115
+Control,6.6885
+Control,6.9555
+Control,5.8055
+Control,6.9515
+Control,7.0245
+Infected,6.9245
+Infected,6.9605
+Infected,7.3065
+Infected,6.9975
+Infected,6.8375
+Infected,7.1365
+Infected,7.3025
+Infected,7.1435
+Infected,7.2965
+Infected,6.4825
+Infected,7.2585
+Infected,7.4805
+Control,23.8474999999999
+Control,26.1525000000001
+Control,9.85250000000008
+Control,30.6525000000001
+Control,73.7525000000001
+Infected,96.5474999999999
+Infected,38.8474999999999
+Infected,56.8474999999999
+Infected,24.9474999999999
+Infected,81.0525000000001
+Control,155.152
+Control,104.384
+Control,33.898
+Control,59.7610000000001
+Control,11.176
+Infected,1532.396
+Infected,1291.836
+Infected,1091.356
+Infected,197.864
+Infected,25.1709999999999

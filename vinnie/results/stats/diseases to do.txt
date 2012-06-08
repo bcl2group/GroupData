@@ -1,0 +1,32 @@
+carcinoma R
+carcinoma squamous cell R
+aneurysm R
+endometriosis R
+lung neoplasm R
+Lymphoma R
+
+to run R:
+glaucoma R
+infertility R
+melanoma (multi) R
+mitochondrial disease R
+muscular dystrophy (multi)
+neoplasm
+
+lots of features (done):
+aneurysm - transferred -done
+dermatitis - transferred -processing
+diabetes - 
+lymphoma - transferred (not done yet)
+Adenocarcinoma 
+Carcinoma
+melanoma
+adenoma - transferred, running
+endometriosis (still running)
+infertility (still running)
+carcinoma renal cell - transferred, processing
+
+
+to do: 
+leukemia (no features in 10% - try 50%)
+mitochondrial_disease? (already has 1000+ features)

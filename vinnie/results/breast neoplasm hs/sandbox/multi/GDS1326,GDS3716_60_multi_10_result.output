@@ -1,0 +1,80 @@
+disease ---> Breast_Neoplasm
+experiment ---> GDS1326,GDS3716
+type ---> multi
+closed the readers
+about to evaluate model
+Warning: discretizing data set
+evaluated model
+test instances:
+4
+total instances:
+54
+
+Bayes Network Classifier
+Using ADTree
+#attributes=11 #classindex=10
+Network structure (nodes followed by parents)
+FNDC3A(2): class 
+GSDMD_binarized(2): class 
+C2ORF34_binarized(2): class 
+MUT_binarized(2): class 
+BAZ1B_binarized(2): class 
+ZFP36L1_binarized(2): class 
+ABCB6_binarized(2): class 
+RUSC1_binarized(2): class 
+SLC7A8_binarized(2): class 
+SEMA3F_binarized(2): class 
+class(2): 
+LogScore Bayes: -213.86806647617925
+LogScore BDeu: -231.04707088862034
+LogScore MDL: -245.80928725669062
+LogScore ENTROPY: -204.73304569969508
+LogScore AIC: -225.73304569969503
+
+
+Time taken to build model: 0.09 seconds
+Time taken to test model on training data: 0.01 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances          38               76      %
+Incorrectly Classified Instances        12               24      %
+Kappa statistic                          0.5074
+Mean absolute error                      0.2191
+Root mean squared error                  0.3627
+Relative absolute error                 44.0861 %
+Root relative squared error             72.768  %
+Total Number of Instances               50     
+
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+ 24  3 |  a = Control
+  9 14 |  b = Infected
+
+
+=== Error on test data ===
+
+Correctly Classified Instances           1               25      %
+Incorrectly Classified Instances         3               75      %
+Kappa statistic                          0     
+Mean absolute error                      0.6908
+Root mean squared error                  0.7981
+Relative absolute error                143.683  %
+Root relative squared error            165.6119 %
+Total Number of Instances                4     
+
+
+=== Confusion Matrix ===
+
+ a b   <-- classified as
+ 0 3 | a = Control
+ 0 1 | b = Infected
+
+Weighted area under ROC: 
+NaN
+True negative (control): 
+0.0
+True positive: 
+0.0

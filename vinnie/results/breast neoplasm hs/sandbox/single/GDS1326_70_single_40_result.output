@@ -1,0 +1,110 @@
+disease ---> Breast_Neoplasm
+experiment ---> GDS1326
+type ---> single
+closed the readers
+about to evaluate model
+Warning: discretizing data set
+evaluated model
+test instances:
+3
+total instances:
+12
+
+Bayes Network Classifier
+Using ADTree
+#attributes=41 #classindex=40
+Network structure (nodes followed by parents)
+RRN3P1(2): class 
+TTC39A_binarized(2): class 
+NPAS3_binarized(2): class 
+SPATA6_binarized(2): class 
+DEPDC1_binarized(2): class 
+EFNB1_binarized(2): class 
+C17ORF86_binarized(2): class 
+PHF20_binarized(2): class 
+TBRG4_binarized(2): class 
+KLF10_binarized(2): class 
+SLC7A4_binarized(2): class 
+FAM105A_binarized(2): class 
+ZWINT_binarized(2): class 
+DUOX1_binarized(2): class 
+BTNL8_binarized(2): class 
+F11_binarized(2): class 
+CD38_binarized(2): class 
+HOXD3_binarized(2): class 
+TGFA_binarized(2): class 
+SNAPC5_binarized(2): class 
+SP140L_binarized(2): class 
+SLC38A6_binarized(2): class 
+SLCO3A1_binarized(2): class 
+RNF19B_binarized(2): class 
+TMEM231_binarized(2): class 
+ETV6_binarized(2): class 
+MCCC2_binarized(2): class 
+NXT2_binarized(2): class 
+USP2_binarized(2): class 
+HSPA6_binarized(2): class 
+AF035278_binarized(2): class 
+IGKC_binarized(2): class 
+CD207_binarized(2): class 
+PRDM12_binarized(2): class 
+AK025152_binarized(2): class 
+DLG1_binarized(2): class 
+ALB_binarized(2): class 
+HELLS_binarized(2): class 
+KCNAB2_binarized(2): class 
+UCHL5_binarized(2): class 
+class(2): 
+LogScore Bayes: -189.92290017538264
+LogScore BDeu: -258.63891782514685
+LogScore MDL: -285.11958124103796
+LogScore ENTROPY: -196.13198585892118
+LogScore AIC: -277.1319858589212
+
+
+Time taken to build model: 0.22 seconds
+Time taken to test model on training data: 0.01 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances           9              100      %
+Incorrectly Classified Instances         0                0      %
+Kappa statistic                          1     
+Mean absolute error                      0     
+Root mean squared error                  0     
+Relative absolute error                  0      %
+Root relative squared error              0      %
+Total Number of Instances                9     
+
+
+=== Confusion Matrix ===
+
+ a b   <-- classified as
+ 5 0 | a = Control
+ 0 4 | b = Infected
+
+
+=== Error on test data ===
+
+Correctly Classified Instances           2               66.6667 %
+Incorrectly Classified Instances         1               33.3333 %
+Kappa statistic                          0.4   
+Mean absolute error                      0.3301
+Root mean squared error                  0.5716
+Relative absolute error                 64.0759 %
+Root relative squared error            110.5755 %
+Total Number of Instances                3     
+
+
+=== Confusion Matrix ===
+
+ a b   <-- classified as
+ 1 0 | a = Control
+ 1 1 | b = Infected
+
+Weighted area under ROC: 
+NaN
+True negative (control): 
+0.0
+True positive: 
+0.0

@@ -1,0 +1,34 @@
+you don't need your own github account. 
+
+you need to install Git Bash. (choose your OS on this page: https://help.github.com/articles/set-up-git and do as it says.)
+
+then you need to clone this repository to your computer. you might decide to use SSH but for simplicity here we use HTTPS. 
+
+go to Bash and navigate to where you want the codes to be on your computer. then type:
+git clone https://github.com/bcl2group/GroupData
+
+
+now you should have a folder called GroupData. Prefarably make a separate folder with your name and put your data or modify data. 
+
+regularly, when you change or add codes, do this : 
+
+git add . -A
+git commit -m "a message containing what change you made"
+git push
+
+here you need to put username/password. ask us for that.
+
+
+
+ALTERNATIVELY:
+
+if you have your own github account that you prefer to use, you can add yourself as collaborator in bcl2group 
+(you need the password to do this) and then clone it using the same address but when you are pushing stuff 
+to the git, you need to enter your own git user/pass. This is actually nicer since we can see who has changed
+which code and what... 
+
+for noobs (like the rest was not for them :p) : 
+
+to add yourself as collaborator go to github.com and log in as bcl2group and *add colaborator*
+
+ 

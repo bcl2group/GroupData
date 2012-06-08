@@ -1,0 +1,223 @@
+disease ---> Breast_Neoplasm
+experiment ---> GDS1326,GDS3716
+type ---> multi
+closed the readers
+about to evaluate model
+evaluated model
+test instances:
+4
+total instances:
+54
+
+=== Structure for class 'Control' ===
+Bayes Network Classifier
+not using ADTree
+#attributes=71 #classindex=70
+Network structure (nodes followed by parents)
+FNDC3A_binarized(2): APOE_binarized 
+GSDMD_binarized(2): FNDC3A_binarized 
+C2ORF34_binarized(2): FNDC3A_binarized 
+MUT_binarized(2): ENOSF1_binarized 
+BAZ1B_binarized(2): FNDC3A_binarized 
+ZFP36L1_binarized(2): KCNF1_binarized 
+ABCB6_binarized(2): FNDC3A_binarized 
+RUSC1_binarized(2): FNDC3A_binarized 
+SLC7A8_binarized(2): FNDC3A_binarized 
+SEMA3F_binarized(2): RABEP2_binarized 
+TMEM48_binarized(2): ENOSF1_binarized 
+C6ORF26_binarized(2): TMEM48_binarized 
+PFKL_binarized(2): MUT_binarized 
+GOLGA1_binarized(2): ENOSF1_binarized 
+SIDT2_binarized(2): RABEP2_binarized 
+OR1F2P_binarized(2): TNFAIP3_binarized 
+CEP68_binarized(2): 
+ZNF335_binarized(2): CEP68_binarized 
+APOE_binarized(2): TNFAIP3_binarized 
+RABEP2_binarized(2): SEZ6L_binarized 
+ESRP2_binarized(2): SIDT2_binarized 
+ENOSF1_binarized(2): ST3GAL2_binarized 
+PAX4_binarized(2): MUT_binarized 
+ST3GAL2_binarized(2): CEP68_binarized 
+ZNF701_binarized(2): SEMA3F_binarized 
+KCNF1_binarized(2): ENOSF1_binarized 
+TNFAIP3_binarized(2): ENOSF1_binarized 
+NCDN_binarized(2): RABEP2_binarized 
+BRD7P3_binarized(2): ZFP36L1_binarized 
+STX6_binarized(2): FNDC3A_binarized 
+SFI1_binarized(2): SEMA3F_binarized 
+FCGR2C_binarized(2): FNDC3A_binarized 
+CTTN_binarized(2): ST3GAL2_binarized 
+MCFD2_binarized(2): FNDC3A_binarized 
+KIR3DX1_binarized(2): FNDC3A_binarized 
+VPS13D_binarized(2): FNDC3A_binarized 
+TPSB2_binarized(2): SEMA3F_binarized 
+AGXT_binarized(2): SEMA3F_binarized 
+MIA3_binarized(2): FNDC3A_binarized 
+CDC20_binarized(2): FNDC3A_binarized 
+MAP3K12_binarized(2): SEMA3F_binarized 
+SMARCA1_binarized(2): FNDC3A_binarized 
+ICAM3_binarized(2): FNDC3A_binarized 
+FRY_binarized(2): SEMA3F_binarized 
+PHF3_binarized(2): GOLGA1_binarized 
+CPNE7_binarized(2): FNDC3A_binarized 
+RGS5_binarized(2): FNDC3A_binarized 
+PARD6B_binarized(2): MAP3K12_binarized 
+IGL@_binarized(2): MUT_binarized 
+GPR3_binarized(2): FNDC3A_binarized 
+SIPA1L3_binarized(2): FNDC3A_binarized 
+IHH_binarized(2): FNDC3A_binarized 
+BCKDHA_binarized(2): SEMA3F_binarized 
+COMT_binarized(2): KCNF1_binarized 
+SEZ6L_binarized(2): PFKL_binarized 
+MUM1_binarized(2): PFKL_binarized 
+SYDE1_binarized(2): FNDC3A_binarized 
+HEY2_binarized(2): SEZ6L_binarized 
+RUFY3_binarized(2): FNDC3A_binarized 
+ARF3_binarized(2): FNDC3A_binarized 
+CYHR1_binarized(2): FNDC3A_binarized 
+TTF2_binarized(2): PAX4_binarized 
+INTS3_binarized(2): FNDC3A_binarized 
+WDR55_binarized(2): SEMA3F_binarized 
+DNPEP_binarized(2): FNDC3A_binarized 
+DCLRE1C_binarized(2): FNDC3A_binarized 
+UBE2D3_binarized(2): FNDC3A_binarized 
+NSDHL_binarized(2): TTF2_binarized 
+ZNF267_binarized(2): SEMA3F_binarized 
+SDC3_binarized(2): SEMA3F_binarized 
+class(2): 
+LogScore Bayes: -527.6079360489119
+LogScore BDeu: -646.1430664947559
+LogScore MDL: -761.3152944543851
+LogScore ENTROPY: -530.6067138340811
+LogScore AIC: -670.606713834081
+
+=== Structure for class 'Infected' ===
+Bayes Network Classifier
+not using ADTree
+#attributes=71 #classindex=70
+Network structure (nodes followed by parents)
+FNDC3A_binarized(2): GSDMD_binarized 
+GSDMD_binarized(2): NCDN_binarized 
+C2ORF34_binarized(2): RUSC1_binarized 
+MUT_binarized(2): FNDC3A_binarized 
+BAZ1B_binarized(2): RUSC1_binarized 
+ZFP36L1_binarized(2): FNDC3A_binarized 
+ABCB6_binarized(2): SFI1_binarized 
+RUSC1_binarized(2): SFI1_binarized 
+SLC7A8_binarized(2): ZNF267_binarized 
+SEMA3F_binarized(2): RABEP2_binarized 
+TMEM48_binarized(2): AGXT_binarized 
+C6ORF26_binarized(2): TMEM48_binarized 
+PFKL_binarized(2): ENOSF1_binarized 
+GOLGA1_binarized(2): COMT_binarized 
+SIDT2_binarized(2): RABEP2_binarized 
+OR1F2P_binarized(2): RABEP2_binarized 
+CEP68_binarized(2): OR1F2P_binarized 
+ZNF335_binarized(2): CEP68_binarized 
+APOE_binarized(2): ST3GAL2_binarized 
+RABEP2_binarized(2): ZNF267_binarized 
+ESRP2_binarized(2): ENOSF1_binarized 
+ENOSF1_binarized(2): GOLGA1_binarized 
+PAX4_binarized(2): ABCB6_binarized 
+ST3GAL2_binarized(2): GOLGA1_binarized 
+ZNF701_binarized(2): PARD6B_binarized 
+KCNF1_binarized(2): GOLGA1_binarized 
+TNFAIP3_binarized(2): GOLGA1_binarized 
+NCDN_binarized(2): ST3GAL2_binarized 
+BRD7P3_binarized(2): RUSC1_binarized 
+STX6_binarized(2): VPS13D_binarized 
+SFI1_binarized(2): MAP3K12_binarized 
+FCGR2C_binarized(2): FNDC3A_binarized 
+CTTN_binarized(2): ZNF701_binarized 
+MCFD2_binarized(2): FNDC3A_binarized 
+KIR3DX1_binarized(2): FNDC3A_binarized 
+VPS13D_binarized(2): CEP68_binarized 
+TPSB2_binarized(2): GOLGA1_binarized 
+AGXT_binarized(2): OR1F2P_binarized 
+MIA3_binarized(2): FNDC3A_binarized 
+CDC20_binarized(2): FNDC3A_binarized 
+MAP3K12_binarized(2): SEZ6L_binarized 
+SMARCA1_binarized(2): FNDC3A_binarized 
+ICAM3_binarized(2): FNDC3A_binarized 
+FRY_binarized(2): SFI1_binarized 
+PHF3_binarized(2): FNDC3A_binarized 
+CPNE7_binarized(2): FNDC3A_binarized 
+RGS5_binarized(2): FNDC3A_binarized 
+PARD6B_binarized(2): ZNF267_binarized 
+IGL@_binarized(2): MUM1_binarized 
+GPR3_binarized(2): FNDC3A_binarized 
+SIPA1L3_binarized(2): FNDC3A_binarized 
+IHH_binarized(2): FNDC3A_binarized 
+BCKDHA_binarized(2): SFI1_binarized 
+COMT_binarized(2): MAP3K12_binarized 
+SEZ6L_binarized(2): 
+MUM1_binarized(2): PFKL_binarized 
+SYDE1_binarized(2): FNDC3A_binarized 
+HEY2_binarized(2): SEZ6L_binarized 
+RUFY3_binarized(2): FNDC3A_binarized 
+ARF3_binarized(2): FNDC3A_binarized 
+CYHR1_binarized(2): FNDC3A_binarized 
+TTF2_binarized(2): VPS13D_binarized 
+INTS3_binarized(2): ABCB6_binarized 
+WDR55_binarized(2): SFI1_binarized 
+DNPEP_binarized(2): FNDC3A_binarized 
+DCLRE1C_binarized(2): FNDC3A_binarized 
+UBE2D3_binarized(2): FNDC3A_binarized 
+NSDHL_binarized(2): FNDC3A_binarized 
+ZNF267_binarized(2): SFI1_binarized 
+SDC3_binarized(2): SFI1_binarized 
+class(2): 
+LogScore Bayes: -446.229720617491
+LogScore BDeu: -564.7648510633348
+LogScore MDL: -680.0744733979744
+LogScore ENTROPY: -460.58987828293436
+LogScore AIC: -600.5898782829339
+
+=== Overall Scores ===
+LogScore Bayes: -1010.5216685701297
+LogScore BDeu: -1247.5919294618175
+LogScore MDL: -1478.539261598492
+LogScore ENTROPY: -1026.390074360434
+LogScore AIC: -1307.3900743604336
+
+
+Time taken to build model: 0.18 seconds
+Time taken to test model on training data: 0.03 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances          48               96      %
+Incorrectly Classified Instances         2                4      %
+Kappa statistic                          0.9195
+Mean absolute error                      0.0373
+Root mean squared error                  0.1231
+Relative absolute error                  7.5083 %
+Root relative squared error             24.707  %
+Total Number of Instances               50     
+
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+ 26  1 |  a = Control
+  1 22 |  b = Infected
+
+
+=== Error on test data ===
+
+Correctly Classified Instances           1               25      %
+Incorrectly Classified Instances         3               75      %
+Kappa statistic                         -0.5   
+Mean absolute error                      0.645 
+Root mean squared error                  0.7593
+Relative absolute error                134.1646 %
+Root relative squared error            157.5577 %
+Total Number of Instances                4     
+
+
+=== Confusion Matrix ===
+
+ a b   <-- classified as
+ 1 2 | a = Control
+ 1 0 | b = Infected
+

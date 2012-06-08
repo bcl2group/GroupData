@@ -1,0 +1,91 @@
+Knime: http://www.knime.org/knime-desktop
+Highly recommended: Yed Yfiles API (for html):
+http://www.yworks.com/en/products_yfileshtml_about.html
+
+
+All are free to install:
+Knime.org along with weka and r add-ons:
+
+http://www.knime.org/knime-desktop
+
+We can get it to automatically run a workflow and save nice
+
+reports for you automatically (and nicer graphs/pics compared to Weka)...
+
+These extensions may be useful too:
+
+http://www.knime.org/downloads/extensions
+
+(e.g. the weka and R)
+
+Some of these might be useful with time as well:
+
+http://tech.knime.org/community
+
+If workflow example not loading (error), it can mean that one of the
+extensions is not installed...
+
+---------
+
+Good starting points:
+
+These workflow examples are in the publicserver_workflows zip file
+(http://www.knime.org/knime_downloads/publicserver/publicserver_workflows.zip).
+ If you put together the various items from examples below, I think
+you will be almost done with the pipeline that you need...
+
+Good workflow for comparing different machine learning models and
+plotting best scoring one:Load this example into Knime:
+050002_CreditScoring
+
+http://www.knime.org/knime-applications/credit-scoring
+
+Good workflow for clustering: Load this example into Knime: 050002_CreditScoring
+
+http://knime.com/knime-applications/churn-analysis
+
+High-throughput screening example may be useful (on knime site:
+http://www.knime.org/virtual-high-throughput-screening)
+
+
+How to do feature selection/elimination:
+
+See this example under publicserver_workflows:
+002004_Feature-Elimination_with_NaiveBayes
+
+Cross validation:
+
+See this example under publicserver_workflows: 002003_Cross-Validation_with_SVM
+
+To implement cross validation: Would need to add feature selection
+(they call it feature elimination) inside the CV loop so that it
+doesn't see whole data
+
+To create reports:010002_reportingExample
+
+or
+
+010005_KNIME_UGM_Example_SoccerDataWithR
+
+Others:
+
+http://knime.com/examples
+
+-----------
+
+Automation- see answer to this question in the FAQ:
+
+Is there any way to run KNIME in batch mode, i.e. only on command line
+and without the graphical user interface?
+
+http://tech.knime.org/faq
+
+Memory issues- see answer to this question in the FAQ:
+
+How can I increase the Java Heap Space for KNIME?
+
+http://tech.knime.org/faq
+
+Memory issues in yed (unlikely, but just in case):
+
+http://yed.yworks.com/support/qa/52/how-can-i-prevent-out-of-memory-errors-in-yed

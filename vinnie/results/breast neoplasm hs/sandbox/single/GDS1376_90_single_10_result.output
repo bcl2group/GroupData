@@ -1,0 +1,9 @@
+disease ---> Breast_Neoplasm
+experiment ---> GDS1376
+type ---> single
+Exception in thread "main" java.io.FileNotFoundException: /scratch/vinnie/GEOPipelineFiles_ubuntu/results/Breast_Neoplasm_binarize/GDS1376/train/single/90/HS_Breast_Neoplasm_GDS1376_single_90_train.arff (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:137)
+	at java.io.FileInputStream.<init>(FileInputStream.java:96)
+	at java.io.FileReader.<init>(FileReader.java:58)
+	at attribute_selector_ranker.main(attribute_selector_ranker.java:78)

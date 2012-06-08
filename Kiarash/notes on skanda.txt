@@ -1,0 +1,34 @@
+If so, an easy way to do this SNP annotation for small sets of SNPs
+is: first, run the executable WGAViewer/WGAViewer.jar in the Dropbox I
+just shared with you. Click on Tools/Annotate A List of SNPs. Use an
+input text file that contains the list of SNPs you want to analyze
+(one SNP ID per line), the file renamed so that its extension is *.wr.
+Set the gene and exon limits as desired (if different from default
+values), and then annotate. Save the output spreadsheet - this can now
+be used as input to the pipeline program previously described. Notice
+that the spreadsheet lists each SNP, and in another column, the gene
+that the SNP's closest to, which is the gene its mapped to. This
+property of the output spreadsheet will be used in the previously
+described pipeline program....if for any reason, you have greater than
+a million SNPs (which take an enormous amount of time with standard
+computing resources) I'll speed up my integration of WGAViewer's SNP
+annotation into the pipeline so that you can easily run the entire
+package on Safar/another large resource server. Please let me know if
+you have any comments questions.
+
+If you are interested in the onto mapping of genes to pathway, see the
+pathway data-sets mentioned in the pipeline description (e.g.
+kegg-v3.0.gmt).
+
+Enrichment of specific genes can be done easily using the GUI of WEKA.
+I'm sure you have the WEKA java archive (weka.jar or weka-src.jar),
+but I've included it in the Dropbox in case for any reason you don't.
+Executing the Java program, select Explorer, open your .arff training
+data, select the appropriate genes or SNP (feature) you want to enrich
+using the checkboxes in the box below, and develop an appropriate
+classifier using the selected learning method. Enrich the gene, by
+observing the level of association with the training data's tested
+phenotype - an observation measured via the model's AUROC.
+
+For the predictive pathway-based analysis, use the directions I sent
+before. I've put the relevant GitHub directory into the DropBox.

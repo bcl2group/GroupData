@@ -1,0 +1,125 @@
+@relation 'infection-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.GainRatioAttributeEval-Sweka.attributeSelection.Ranker -T -1.7976931348623157E308 -N 10-weka.filters.unsupervised.attribute.NumericToBinary'
+
+@attribute GTSE1 numeric
+@attribute TGFBR3_binarized {0,1}
+@attribute ROR1_binarized {0,1}
+@attribute CHEK1_binarized {0,1}
+@attribute SRD5A1_binarized {0,1}
+@attribute KIF23_binarized {0,1}
+@attribute AURKB_binarized {0,1}
+@attribute TTK_binarized {0,1}
+@attribute TCEAL2_binarized {0,1}
+@attribute TK1_binarized {0,1}
+@attribute class {Control,Infected}
+
+@data
+0,0,0,0,0,0,0,0,1,0,Control
+0,0,0,0,0,0,0,0,1,0,Control
+0,1,0,0,1,1,0,1,1,0,Control
+0,0,0,0,0,0,0,0,1,0,Control
+0,0,0,0,0,0,0,0,1,0,Control
+0,0,0,0,0,0,0,0,1,0,Control
+0,0,0,0,0,0,0,0,1,0,Control
+0,0,0,0,0,0,0,1,1,0,Control
+0,0,0,0,0,0,0,1,1,0,Control
+0,0,0,0,0,0,0,0,1,0,Control
+0,0,0,0,0,0,0,0,1,0,Control
+0,0,1,1,1,0,0,1,1,0,Control
+0,0,0,0,0,0,0,1,1,0,Control
+0,0,0,0,0,0,0,0,1,0,Control
+0,0,0,0,0,0,0,0,1,0,Control
+0,0,0,0,1,0,0,1,1,0,Control
+0,0,0,0,0,0,0,0,1,0,Control
+0,0,0,0,0,0,0,0,1,0,Control
+0,0,0,0,0,0,0,0,1,0,Control
+0,0,0,0,0,0,0,1,1,0,Control
+0,0,0,0,1,0,0,0,1,0,Control
+0,0,0,0,0,0,0,0,1,0,Control
+0,0,0,0,1,0,0,1,1,0,Control
+0,0,0,0,1,0,0,1,1,0,Control
+0,0,0,0,0,0,0,0,1,0,Control
+0,0,0,0,0,0,0,0,1,0,Control
+0,0,0,0,1,0,0,0,0,0,Control
+0,0,0,0,1,0,0,0,1,0,Control
+0,0,1,1,0,0,0,1,0,0,Infected
+0,1,1,1,1,0,0,1,0,0,Infected
+1,1,1,1,1,1,0,1,0,0,Infected
+1,1,1,1,1,1,0,1,0,1,Infected
+1,1,1,1,1,0,1,1,0,0,Infected
+1,1,1,1,1,1,1,1,0,1,Infected
+1,1,1,1,1,0,1,1,0,0,Infected
+1,1,1,1,1,1,1,1,0,1,Infected
+1,1,1,1,1,1,1,1,0,1,Infected
+1,1,1,1,1,0,1,1,0,0,Infected
+1,1,1,1,1,1,1,1,0,0,Infected
+1,1,1,1,1,0,0,1,0,0,Infected
+0,0,0,0,1,0,0,1,1,0,Infected
+1,1,1,1,1,1,0,1,0,1,Infected
+1,1,1,1,1,1,1,1,0,1,Infected
+1,1,1,1,1,1,1,1,0,1,Infected
+1,1,1,1,1,1,1,1,0,0,Infected
+1,1,1,1,1,1,1,1,0,1,Infected
+1,1,1,1,1,1,1,1,0,1,Infected
+1,0,1,1,1,1,0,1,0,0,Infected
+0,1,1,1,1,1,1,1,0,0,Infected
+1,1,1,1,1,1,1,1,0,1,Infected
+1,1,1,1,1,1,0,1,0,1,Infected
+1,1,1,1,1,1,1,1,0,1,Infected
+1,1,1,1,1,1,1,1,0,1,Infected
+1,1,1,1,1,1,1,1,0,1,Infected
+0,0,0,0,0,0,0,0,0,0,Control
+0,0,0,0,0,0,0,0,0,0,Control
+0,0,0,0,0,0,0,0,0,0,Infected
+0,0,0,0,0,0,0,0,0,0,Infected
+1,1,1,1,1,1,1,1,1,1,Control
+1,1,1,1,1,1,1,1,1,1,Control
+1,1,1,1,1,1,1,1,1,1,Control
+1,1,1,1,1,1,1,1,1,1,Control
+1,1,1,1,1,1,1,1,1,1,Control
+1,1,1,1,1,1,1,1,1,1,Control
+1,1,1,1,1,1,1,1,1,1,Control
+1,1,1,1,1,1,1,1,1,1,Control
+1,1,1,1,1,1,1,1,1,1,Control
+1,1,1,1,1,1,1,1,1,1,Control
+1,1,1,1,1,1,1,1,1,1,Control
+1,0,1,1,1,1,1,1,1,1,Control
+1,1,1,1,1,1,1,1,1,1,Infected
+1,1,1,1,1,1,1,1,1,1,Infected
+1,1,1,1,1,1,1,1,1,1,Infected
+1,1,1,1,1,1,1,1,1,1,Infected
+1,1,1,1,1,1,1,1,1,1,Infected
+1,1,1,1,1,1,1,1,1,1,Infected
+1,1,1,1,1,1,1,1,1,1,Infected
+1,1,0,1,1,1,1,1,1,1,Infected
+1,1,1,1,1,1,1,1,1,1,Infected
+1,1,1,1,1,1,1,1,1,1,Infected
+1,1,1,1,1,1,1,1,1,1,Infected
+1,1,1,1,1,1,1,1,1,1,Infected
+1,1,1,1,1,1,1,1,1,1,Control
+1,1,1,1,1,1,1,1,1,1,Control
+0,1,1,1,1,1,1,1,1,1,Control
+1,1,1,1,1,1,1,1,1,1,Infected
+1,1,1,1,1,1,1,1,1,1,Infected
+1,1,0,0,1,1,1,1,1,1,Infected
+1,1,1,1,1,1,1,0,1,0,Infected
+1,1,1,1,1,1,1,1,1,1,Infected
+1,1,1,0,1,1,1,0,1,1,Infected
+1,1,0,0,1,1,1,1,1,1,Infected
+1,1,1,1,1,1,1,1,1,1,Infected
+1,1,1,1,1,1,1,1,1,1,Infected
+1,1,1,1,1,1,1,1,1,1,Infected
+1,1,1,1,1,1,1,1,1,1,Infected
+1,1,1,1,1,1,1,1,1,0,Infected
+1,0,1,1,1,1,1,1,1,1,Infected
+1,0,1,1,1,1,1,0,1,1,Infected
+1,1,1,1,1,1,1,0,1,1,Infected
+1,1,1,1,1,1,1,1,1,1,Infected
+1,1,0,0,1,1,1,1,1,0,Infected
+1,1,0,0,0,1,1,1,1,1,Infected
+1,1,1,1,1,1,1,1,1,1,Infected
+0,1,1,1,1,1,1,1,1,1,Infected
+1,1,1,1,1,1,1,1,1,1,Infected
+1,1,1,1,1,1,1,0,1,1,Infected
+1,1,1,1,1,1,1,1,1,1,Infected
+1,1,1,1,1,1,1,1,1,1,Infected
+1,1,1,1,1,1,1,1,1,1,Infected

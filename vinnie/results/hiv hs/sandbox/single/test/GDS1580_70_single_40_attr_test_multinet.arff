@@ -1,0 +1,47 @@
+@relation 'infection-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.GainRatioAttributeEval-Sweka.attributeSelection.Ranker -T -1.7976931348623157E308 -N 40-weka.filters.unsupervised.attribute.NumericToBinary'
+
+@attribute CUL7_binarized {0,1}
+@attribute VMA21_binarized {0,1}
+@attribute AK055514_binarized {0,1}
+@attribute RASEF_binarized {0,1}
+@attribute AK024135_binarized {0,1}
+@attribute PIAS4_binarized {0,1}
+@attribute TSC2_binarized {0,1}
+@attribute BC018499_binarized {0,1}
+@attribute FAM149B1_binarized {0,1}
+@attribute NAB1_binarized {0,1}
+@attribute FAM81A_binarized {0,1}
+@attribute AF308291_binarized {0,1}
+@attribute CD320_binarized {0,1}
+@attribute FAM63A_binarized {0,1}
+@attribute C1ORF59_binarized {0,1}
+@attribute AW271106_binarized {0,1}
+@attribute HECW1_binarized {0,1}
+@attribute FUT4_binarized {0,1}
+@attribute PPP1R3D_binarized {0,1}
+@attribute YPEL4_binarized {0,1}
+@attribute THSD4_binarized {0,1}
+@attribute LGR5_binarized {0,1}
+@attribute PLA2G7_binarized {0,1}
+@attribute DLEU2L_binarized {0,1}
+@attribute HEMK1_binarized {0,1}
+@attribute PDSS2_binarized {0,1}
+@attribute ZNF561_binarized {0,1}
+@attribute BC016673_binarized {0,1}
+@attribute AK024568_binarized {0,1}
+@attribute ERBB3_binarized {0,1}
+@attribute AW082148_binarized {0,1}
+@attribute ECEL1_binarized {0,1}
+@attribute AI761658_binarized {0,1}
+@attribute U43604_binarized {0,1}
+@attribute TRNAU1AP_binarized {0,1}
+@attribute DIDO1_binarized {0,1}
+@attribute PTPN22_binarized {0,1}
+@attribute TFDP2_binarized {0,1}
+@attribute ST6GALNAC3_binarized {0,1}
+@attribute EFTUD1_binarized {0,1}
+@attribute class {Control,Infected}
+
+@data
+0,0,0,0,0,0,1,0,0,0,1,0,0,0,1,1,0,0,0,0,1,1,0,1,0,0,0,1,0,0,0,1,0,1,0,0,0,0,1,1,Infected
+0,0,0,0,0,0,0,0,0,0,1,0,1,0,1,0,0,0,0,0,0,0,0,1,1,0,0,1,0,0,0,1,1,1,1,0,0,1,0,1,Infected

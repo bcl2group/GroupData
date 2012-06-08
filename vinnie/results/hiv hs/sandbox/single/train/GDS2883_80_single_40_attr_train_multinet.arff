@@ -1,0 +1,50 @@
+@relation 'infection-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.GainRatioAttributeEval-Sweka.attributeSelection.Ranker -T -1.7976931348623157E308 -N 40-weka.filters.unsupervised.attribute.NumericToBinary'
+
+@attribute SLC38A10_binarized {0,1}
+@attribute IGHE_binarized {0,1}
+@attribute ZNF41_binarized {0,1}
+@attribute KCNRG_binarized {0,1}
+@attribute SIRPG_binarized {0,1}
+@attribute C20ORF24_binarized {0,1}
+@attribute CCBP2_binarized {0,1}
+@attribute NFKB2_binarized {0,1}
+@attribute IL7R_binarized {0,1}
+@attribute AU152753_binarized {0,1}
+@attribute AUP1_binarized {0,1}
+@attribute ADAMTS6_binarized {0,1}
+@attribute GNL3L_binarized {0,1}
+@attribute C14ORF135_binarized {0,1}
+@attribute GPR18_binarized {0,1}
+@attribute MET_binarized {0,1}
+@attribute LOC283483_binarized {0,1}
+@attribute GCNT4_binarized {0,1}
+@attribute CNGB1_binarized {0,1}
+@attribute AGPHD1_binarized {0,1}
+@attribute PTPRE_binarized {0,1}
+@attribute BCAS1_binarized {0,1}
+@attribute CARS_binarized {0,1}
+@attribute FGD3_binarized {0,1}
+@attribute ZDHHC6_binarized {0,1}
+@attribute HMMR_binarized {0,1}
+@attribute LOC338758_binarized {0,1}
+@attribute RTKN_binarized {0,1}
+@attribute PSMD4_binarized {0,1}
+@attribute CARD8_binarized {0,1}
+@attribute CSTA_binarized {0,1}
+@attribute AW072559_binarized {0,1}
+@attribute KIAA1598_binarized {0,1}
+@attribute HOXA13_binarized {0,1}
+@attribute ATP9A_binarized {0,1}
+@attribute B4GALT1_binarized {0,1}
+@attribute SMARCD3_binarized {0,1}
+@attribute AI806982_binarized {0,1}
+@attribute MAPK12_binarized {0,1}
+@attribute SYTL1_binarized {0,1}
+@attribute class {Control,Infected}
+
+@data
+0,1,1,0,1,0,1,0,1,0,1,1,1,1,1,1,0,0,1,1,1,0,0,0,0,1,0,0,0,1,0,0,0,0,1,1,0,0,1,1,Control
+0,1,1,0,1,0,1,0,1,0,1,1,1,1,1,1,0,0,1,1,1,0,0,0,0,1,0,0,0,1,0,0,0,0,1,1,0,0,1,1,Control
+0,1,1,0,1,0,1,0,1,0,1,1,1,1,1,1,0,0,1,1,1,0,0,0,0,1,0,0,0,1,0,0,0,0,1,1,0,0,1,1,Control
+1,0,0,1,0,1,0,1,0,1,0,0,0,0,0,0,1,1,0,0,0,1,1,1,1,0,1,1,1,0,1,1,1,1,0,0,1,1,0,0,Infected
+1,0,0,1,0,1,0,1,0,1,0,0,0,0,0,0,1,1,0,0,0,1,1,1,1,0,1,1,1,0,1,1,1,1,0,0,1,1,0,0,Infected
