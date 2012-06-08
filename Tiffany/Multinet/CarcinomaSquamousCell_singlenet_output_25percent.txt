@@ -1,0 +1,90 @@
+Multinet
+=== Structure for class 'Control' ===
+Bayes Network Classifier
+not using ADTree
+#attributes=22 #classindex=0
+Network structure (nodes followed by parents)
+class(2): 
+TPM1(50): OBSL1 
+PAK2(50): CAMSAP1 
+MMP11(50): CAMSAP1 
+MYO10(50): CD44 
+RHEB(50): CALM3 
+OBSL1(50): 
+CAMSAP1(50): COL11A1 
+MLLT4(50): CD44 
+CALM3(50): CAMSAP1 
+N4BP2L1(50): MYO10 
+COL11A1(50): HIST1H2BC 
+FLT1(50): MMP11 
+RPS14(50): COL11A1 
+WWC1(50): MEG3 
+MBP(50): TPM1 
+GSN(50): TPM1 
+HIST1H2BC(50): MBP 
+SIPA1L3(50): FLT1 
+DCAF7(50): TPM1 
+CD44(50): CAMSAP1 
+MEG3(50): GSN 
+LogScore Bayes: -1917.946324745369
+LogScore BDeu: -415595.5935765562
+LogScore MDL: -189456.95205705025
+LogScore ENTROPY: -99608.10268571952
+LogScore AIC: -148658.10268571935
+
+=== Structure for class 'Infected' ===
+Bayes Network Classifier
+not using ADTree
+#attributes=22 #classindex=0
+Network structure (nodes followed by parents)
+class(2): 
+TPM1(50): MBP 
+PAK2(50): CD44 
+MMP11(50): PAK2 
+MYO10(50): PAK2 
+RHEB(50): CALM3 
+OBSL1(50): MYO10 
+CAMSAP1(50): MMP11 
+MLLT4(50): MMP11 
+CALM3(50): MYO10 
+N4BP2L1(50): MBP 
+COL11A1(50): MMP11 
+FLT1(50): MMP11 
+RPS14(50): CALM3 
+WWC1(50): TPM1 
+MBP(50): HIST1H2BC 
+GSN(50): MBP 
+HIST1H2BC(50): MYO10 
+SIPA1L3(50): RPS14 
+DCAF7(50): MBP 
+CD44(50): 
+MEG3(50): GSN 
+LogScore Bayes: -2273.67914090683
+LogScore BDeu: -415951.32639271766
+LogScore MDL: -196373.7675800115
+LogScore ENTROPY: -99945.74393744615
+LogScore AIC: -148995.74393744607
+
+=== Overall Scores ===
+LogScore Bayes: -4255.684831934098
+LogScore BDeu: -831610.9793355558
+LogScore MDL: -385895.2524173546
+LogScore ENTROPY: -199616.1294986234
+LogScore AIC: -297717.12949862314
+
+
+Correctly Classified Instances          58               64.4444 %
+Incorrectly Classified Instances        32               35.5556 %
+Kappa statistic                          0.2195
+Mean absolute error                      0.4437
+Root mean squared error                  0.4944
+Relative absolute error                 90.2569 %
+Root relative squared error             99.7209 %
+Total Number of Instances               90     
+Weighted area under ROC: 0.5465057817998994
+0.0784313725490196
+0.717948717948718
+0.0
+0.0
+0.0
+0.0
