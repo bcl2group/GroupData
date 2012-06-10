@@ -12,6 +12,8 @@ now you should have a folder called GroupData. Prefarably make a separate folder
 
 regularly, when you change or add codes, do this : 
 
+
+git pull   (  <-- you might want to do this more frequently so you have the latest code. and make sure to do it just before pushing too.)
 git add . -A
 git commit -m "a message containing what change you made"
 git push
