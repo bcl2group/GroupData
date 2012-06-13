@@ -1,0 +1,34 @@
+% Title: HIV, All Species
+% Creator: Neena Parikh
+%
+@RELATION infection
+
+@ATTRIBUTE class {Control,GDS3591,GDS3284,GDS3118}
+
+@DATA
+Control
+Control
+GDS3591
+GDS3591
+Control
+Control
+Control
+Control
+Control
+Control
+Control
+Control
+Control
+GDS3284
+GDS3284
+GDS3284
+GDS3284
+GDS3284
+GDS3284
+GDS3284
+GDS3284
+GDS3284
+Control
+Control
+GDS3118
+GDS3118

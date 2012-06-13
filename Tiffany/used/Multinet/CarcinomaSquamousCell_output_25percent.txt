@@ -1,0 +1,255 @@
+Multinet
+=== Structure for class 'Control' ===
+Bayes Network Classifier
+not using ADTree
+#attributes=22 #classindex=0
+Network structure (nodes followed by parents)
+class(7): 
+TPM1(50): OBSL1 
+PAK2(50): CAMSAP1 
+MMP11(50): CAMSAP1 
+MYO10(50): CD44 
+RHEB(50): CALM3 
+OBSL1(50): 
+CAMSAP1(50): COL11A1 
+MLLT4(50): CD44 
+CALM3(50): CAMSAP1 
+N4BP2L1(50): MYO10 
+COL11A1(50): HIST1H2BC 
+FLT1(50): MMP11 
+RPS14(50): COL11A1 
+WWC1(50): MEG3 
+MBP(50): TPM1 
+GSN(50): TPM1 
+HIST1H2BC(50): MBP 
+SIPA1L3(50): FLT1 
+DCAF7(50): TPM1 
+CD44(50): CAMSAP1 
+MEG3(50): GSN 
+LogScore Bayes: -1926.0136613527934
+LogScore BDeu: -415614.00951706665
+LogScore MDL: -189479.64257417945
+LogScore ENTROPY: -99621.6342987334
+LogScore AIC: -148676.63429873323
+
+=== Structure for class 'GDS2958' ===
+Bayes Network Classifier
+not using ADTree
+#attributes=22 #classindex=0
+Network structure (nodes followed by parents)
+class(7): 
+TPM1(50): MMP11 
+PAK2(50): TPM1 
+MMP11(50): 
+MYO10(50): CALM3 
+RHEB(50): TPM1 
+OBSL1(50): TPM1 
+CAMSAP1(50): TPM1 
+MLLT4(50): TPM1 
+CALM3(50): TPM1 
+N4BP2L1(50): TPM1 
+COL11A1(50): TPM1 
+FLT1(50): TPM1 
+RPS14(50): TPM1 
+WWC1(50): TPM1 
+MBP(50): TPM1 
+GSN(50): TPM1 
+HIST1H2BC(50): TPM1 
+SIPA1L3(50): TPM1 
+DCAF7(50): TPM1 
+CD44(50): TPM1 
+MEG3(50): TPM1 
+LogScore Bayes: -497.8139218114528
+LogScore BDeu: -414185.8097775258
+LogScore MDL: -142270.68105885127
+LogScore ENTROPY: -98323.30067736054
+LogScore AIC: -147378.30067736036
+
+=== Structure for class 'GDS2520' ===
+Bayes Network Classifier
+not using ADTree
+#attributes=22 #classindex=0
+Network structure (nodes followed by parents)
+class(7): 
+TPM1(50): 
+PAK2(50): DCAF7 
+MMP11(50): DCAF7 
+MYO10(50): DCAF7 
+RHEB(50): DCAF7 
+OBSL1(50): DCAF7 
+CAMSAP1(50): DCAF7 
+MLLT4(50): MYO10 
+CALM3(50): TPM1 
+N4BP2L1(50): DCAF7 
+COL11A1(50): DCAF7 
+FLT1(50): DCAF7 
+RPS14(50): DCAF7 
+WWC1(50): TPM1 
+MBP(50): DCAF7 
+GSN(50): DCAF7 
+HIST1H2BC(50): DCAF7 
+SIPA1L3(50): DCAF7 
+DCAF7(50): TPM1 
+CD44(50): DCAF7 
+MEG3(50): DCAF7 
+LogScore Bayes: -779.5029613284405
+LogScore BDeu: -414467.49881704286
+LogScore MDL: -174449.24573406012
+LogScore ENTROPY: -98633.70195931237
+LogScore AIC: -147688.70195931234
+
+=== Structure for class 'GDS2088' ===
+Bayes Network Classifier
+not using ADTree
+#attributes=22 #classindex=0
+Network structure (nodes followed by parents)
+class(7): 
+TPM1(50): PAK2 
+PAK2(50): 
+MMP11(50): PAK2 
+MYO10(50): PAK2 
+RHEB(50): PAK2 
+OBSL1(50): PAK2 
+CAMSAP1(50): CALM3 
+MLLT4(50): PAK2 
+CALM3(50): PAK2 
+N4BP2L1(50): PAK2 
+COL11A1(50): PAK2 
+FLT1(50): PAK2 
+RPS14(50): PAK2 
+WWC1(50): PAK2 
+MBP(50): PAK2 
+GSN(50): TPM1 
+HIST1H2BC(50): PAK2 
+SIPA1L3(50): PAK2 
+DCAF7(50): PAK2 
+CD44(50): TPM1 
+MEG3(50): PAK2 
+LogScore Bayes: -247.228436167798
+LogScore BDeu: -413935.2242918823
+LogScore MDL: -125059.37834955163
+LogScore ENTROPY: -98113.1654392454
+LogScore AIC: -147168.1654392453
+
+=== Structure for class 'GDS2087' ===
+Bayes Network Classifier
+not using ADTree
+#attributes=22 #classindex=0
+Network structure (nodes followed by parents)
+class(7): 
+TPM1(50): 
+PAK2(50): TPM1 
+MMP11(50): TPM1 
+MYO10(50): TPM1 
+RHEB(50): TPM1 
+OBSL1(50): TPM1 
+CAMSAP1(50): TPM1 
+MLLT4(50): TPM1 
+CALM3(50): TPM1 
+N4BP2L1(50): TPM1 
+COL11A1(50): TPM1 
+FLT1(50): TPM1 
+RPS14(50): TPM1 
+WWC1(50): TPM1 
+MBP(50): TPM1 
+GSN(50): TPM1 
+HIST1H2BC(50): TPM1 
+SIPA1L3(50): TPM1 
+DCAF7(50): TPM1 
+CD44(50): TPM1 
+MEG3(50): TPM1 
+LogScore Bayes: -167.38870937884775
+LogScore BDeu: -413855.3845650934
+LogScore MDL: -115046.66789307288
+LogScore ENTROPY: -98045.50042188943
+LogScore AIC: -147100.5004218893
+
+=== Structure for class 'GDS2086' ===
+Bayes Network Classifier
+not using ADTree
+#attributes=22 #classindex=0
+Network structure (nodes followed by parents)
+class(7): 
+TPM1(50): PAK2 
+PAK2(50): 
+MMP11(50): TPM1 
+MYO10(50): PAK2 
+RHEB(50): TPM1 
+OBSL1(50): PAK2 
+CAMSAP1(50): TPM1 
+MLLT4(50): TPM1 
+CALM3(50): TPM1 
+N4BP2L1(50): PAK2 
+COL11A1(50): TPM1 
+FLT1(50): TPM1 
+RPS14(50): PAK2 
+WWC1(50): PAK2 
+MBP(50): TPM1 
+GSN(50): TPM1 
+HIST1H2BC(50): TPM1 
+SIPA1L3(50): PAK2 
+DCAF7(50): TPM1 
+CD44(50): TPM1 
+MEG3(50): PAK2 
+LogScore Bayes: -154.6760104726689
+LogScore BDeu: -413842.6718661872
+LogScore MDL: -115038.3964504123
+LogScore ENTROPY: -98037.22897922885
+LogScore AIC: -147092.22897922876
+
+=== Structure for class 'GDS1584' ===
+Bayes Network Classifier
+not using ADTree
+#attributes=22 #classindex=0
+Network structure (nodes followed by parents)
+class(7): 
+TPM1(50): 
+PAK2(50): TPM1 
+MMP11(50): TPM1 
+MYO10(50): TPM1 
+RHEB(50): TPM1 
+OBSL1(50): TPM1 
+CAMSAP1(50): TPM1 
+MLLT4(50): TPM1 
+CALM3(50): TPM1 
+N4BP2L1(50): TPM1 
+COL11A1(50): TPM1 
+FLT1(50): TPM1 
+RPS14(50): TPM1 
+WWC1(50): TPM1 
+MBP(50): TPM1 
+GSN(50): TPM1 
+HIST1H2BC(50): TPM1 
+SIPA1L3(50): TPM1 
+DCAF7(50): TPM1 
+CD44(50): TPM1 
+MEG3(50): TPM1 
+LogScore Bayes: -571.3956589696036
+LogScore BDeu: -414259.39151468436
+LogScore MDL: -166445.6259969072
+LogScore ENTROPY: -98440.95611216998
+LogScore AIC: -147495.95611216995
+
+=== Overall Scores ===
+LogScore Bayes: -4487.847774739378
+LogScore BDeu: -2900314.1673686435
+LogScore MDL: -1027944.780624858
+LogScore ENTROPY: -689357.1310267521
+LogScore AIC: -1032748.1310267511
+
+
+Correctly Classified Instances          53               58.8889 %
+Incorrectly Classified Instances        37               41.1111 %
+Kappa statistic                          0.4189
+Mean absolute error                      0.112 
+Root mean squared error                  0.3199
+Relative absolute error                 53.9177 %
+Root relative squared error             99.858  %
+Total Number of Instances               90     
+Weighted area under ROC: 0.7833291762297848
+0.39215686274509803
+0.03571428571428571
+0.04411764705882353
+0.034482758620689655
+0.022727272727272728
+0.022727272727272728
