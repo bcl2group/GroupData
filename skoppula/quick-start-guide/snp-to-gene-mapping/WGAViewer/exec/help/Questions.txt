@@ -1,0 +1,26 @@
+Following the questions that we were eager to answer after the statistical analyses of a WGA project, we have conceived, designed and executed this software.  We hope it could also be helpful to our colleague's efforts to solve similar problems.  These questions included:
+
+o	What are the top hits and their P values?   
+o	Are these top hits located in or near any gene?  
+o	If they are located in a gene, what type of SNPs are they?  Are they of known function? 
+o	If they are not non-synonymous coding SNPs, nor located in a known splice site,  how far are they from the closest exon?
+o	If unfortunately they are not in a known gene, how far are they from the closest known gene?
+o	What exactly is the genic context for each hit?  What are the surrounding genes? 
+o	Is there any evidence for evolutionary conservation/ selection of the surrounding region? 
+o	What are the P values of the surrounding SNPs? 
+o	What is the LD context among these SNPs?  
+o	How far does the LD extend for each hit?  Does this LD extension cover other genes?
+o	Are there (perhaps ungenotyped) proxies for the associated SNP that are in a more interesting genomic context? 
+o	Do these hits or their proxies show any association with available functional data, for example, gene expression levels? 
+o	After all, is there a way to conveniently annotate these hits in an automatic and batch manner? Is there a way to automatic filter their proxies by their function?
+
+o	There are many candidate gene studies published on the same or related phenotypes.  What are the P values for SNPs in and around these associated genes in our WGA project?  Can we replicate previous findings?
+o	Can we replicate previous associations of particular SNPs?
+o	If the previously -associated SNPs have not been included in our WGA project, are there any correlated proxies or tags for these candidate SNPs?  What are their P values?
+
+o	Is there evidence of population stratification effects?
+
+o	We have association data for replication cohorts.  There are also cohorts with related but not identical phenotypes.  Is there a way to compare them easily?  
+o	We have genome-wide HWE test results. We have effect size, effect direction, etc.  Is there a way to list them alongside our association findings? 
+
+o	I don't have a WGA set.  But I want to annotate a SNP in such a way too.  I also want to test LD among a list of SNPs. I want to test SNP-gene expression associations.  Are there any convenient bioinformatic tools that WGAViewer can offer?

@@ -1,0 +1,46 @@
+WGAViewer is a free software tool that is designed to provide a user-friendly interface to automatically annotate, visualize, and help interpret the full set of p values indicating evidence of association resulting from a Whole Genome Association (WGA) study.  The full set of resulting p values (however calculated) will be referred to here as the WGA results.  WGAViewer is a program developed in JAVA language.
+
+The current version offers six classes of annotation:
+
+1)	Chromosome view of WGA results allowing
+(1)	Region  selection; zoom in/out; search for gene/SNP; etc.;
+(2)	Support for multiple databases enabling cross check for evidence;
+(3)	Top hits sorting with individual SNP annotation;
+
+
+2)	Genic annotation of WGA results with explicit reference to:
+(1)	Alignment using the latest Genome build version;
+(2)	Gene/transcripts structure and related information (Hubbard et al. 2007);
+(3)	Linkage disequilibrium context(The International HapMap Consortium.  2005);
+(4)	Evidence of selection (Voight et al. 2006);
+(5)	Hyperlink for other available information for genes, transcripts, exons, and SNPs.
+
+3)	 Annotation for SNPs:
+In addition to genic annotation in the surrounding region, this annotation also includes:
+(1)	Indication of LD score for all genotyped and non-genotyped HapMap SNPs in specified region(The International HapMap Consortium.  2005);
+(2)	Test and plot of association with specified gene expression, using the GENEVAR data (Stranger et al. 2005; Stranger et al. 2007);
+(3)	Other available SNP-related information, such as ancestral allele, function (synonymous, non-synonymous, splice-site, etc) (Hubbard et al. 2007).
+These annotations could be either performed on certain selected SNPs individually, or on a set of SNPs with high ranks (top hits) automatically.
+
+4)   Gene/SNP finding:
+      These functions offer a convenient way to locate and annotate candidate genes/genes of specific interest in a WGA project, and align with the physical coordinates from the latest genome build.  This annotation also enables an easy search for specific SNPs and/or their LD proxies if they are not present in a WGA project.  These functions make an easy and reliable comparison with existing reports. 
+
+5)   Concurrent evidence from multiple databases:
+This software allows the user to load multiple databases simultaneously, with one of them as the "core" database to be considered.  The supporting databases could include replication studies, projects with related phenotypes, other publicly available projects, even studies with different marker sets or different phenotypes. These datasets can then be listed and plotted alongside the core database as concurrent evidence.  
+
+6)   Supporting/QC databases:
+Supporting information, for example, HWE p values, effect size, effect direction, QC scores, or other user-customized data, can be loaded and listed alongside the main result set to assist the interpretation of the findings.
+
+In addition to these annotations, WGAViewer also provides a convenient platform to directly access and annotate result sets from WGA and other association studies hosted in and released from Duke Institute for Genome Sciences and Policy, through the Mart for IGSP Data from Association Studies (MIDAS).
+
+Furthermore, WGAViewer also offers several classes of useful annotation tools without requirement of a WGA or other association result sets.  These include:
+
+(1) Test for association of SNP genotype with gene expression 
+(2) SNP Annotation 
+(3) SNP Linkage Disequilibrium testing
+
+
+
+WGAViewer is supported by the Center for HIV-AIDS Vaccine Immunology (CHAVI, http://www.chavi.org/) and the Duke Institute for Genome Sciences & Policy (IGSP, http://www.genome.duke.edu/).
+
+Comments, suggestions, and bug reports are welcome.   For these purposes please send an email to the author: d.ge@duke.edu 

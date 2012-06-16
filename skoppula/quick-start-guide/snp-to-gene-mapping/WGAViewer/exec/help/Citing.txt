@@ -1,0 +1,3 @@
+Citing this software
+
+Ge, D. & Goldstein, D.B. WGAViewer: Package of Post Association Genomic Annotation. 1.10 edn (Durham, NC, 2007). 

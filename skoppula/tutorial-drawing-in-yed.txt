@@ -1,0 +1,26 @@
+-------------------------------------------------------------------------------------
+This is a brief instructive document how to draw networks in yED. 
+Written by Amin Zollanvari with revisions by Skanda Koppula.
+
+If you need clarification, notice any errors, or encounter any problems, 
+please feel free to contact Skanda (skoppula@andover.edu). 
+I would be more than happy to include improvements or additions. Enjoy!
+Last Revision: June 9, 2012
+-------------------------------------------------------------------------------------
+
+Create a two column spreadsheet in which the first column contains the parents and 
+the second column contains the children (see below). Open yED, choose your spreadsheet,
+ and then [on the window that will be open] "adopt" the data range, and again "adopt" 
+ the first column as source and second as target.
+
+The Excel sheet looks something like this:
+
+	alcohol induced liver 	xanthine synthesis
+	alcohol induced liver 	melanosome localization
+	alcohol induced liver 	xylan metabolism
+	alcohol induced liver 	flavonoid phytoalexin anabolism
+	alcoholism	alcohol induced liver disorder
+	alcoholism	siderophore anabolism, peptide biosynthesis
+
+Other projects that I started are already taken by other students like Vinnie, 
+Tiffany, etc. so you can ask them where the programs are.

@@ -1,0 +1,8 @@
+Point and view  
+
+To view the detailed information of each individual SNP line, simply move the mouse.  The line pointed at will be highlighted in red and an information panel shows up.  To freeze and save the information panel click the left,button - this can be closed later by clicking the "X" button located in the upper-right corner.  The resolution in this panel is limited to up to 3600 lines.
+
+Improving resolution
+
+Click on one chromosome label to have a better resolution.  The "Status" label shows the current resolution, which represents the percentage of the lowest P values that could be shown.   For example, if the resolution is 10%, the lowest one P value in every 10 adjacent SNPs will be displayed on the plot.  One may determine the "region" range to zoom in the display and eventually have a 100% resolution, showing all the SNPs in the specified region.  When the "region" specification yields no records, for example, the ending location is set to 0 or smaller than the starting one, the whole chromosome will be plotted.  The "point and view" feature is available in this panel too.  
+Click on "Annotate" button to annotate this chromosomal region.

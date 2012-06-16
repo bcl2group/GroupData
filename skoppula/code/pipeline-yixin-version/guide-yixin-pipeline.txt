@@ -1,0 +1,55 @@
+-------------------------------------------------------------------------------------
+This document is a brief manual on how to perform predictive pathway analysis - 
+that is, our implementation of it - the Pipeline program. This document references 
+code that can be found in this directory and on BCL's GitHub under GroupData/Skanda.
+The pipeline and documentation was maintained by Yixin Zhu.
+
+If you need clarification, notice any errors, or encounter any problems, 
+please feel free to contact Skanda (skoppula@andover.edu). 
+I would be more than happy if you have improvements or additions. Enjoy!
+Last Revision: June 15, 2012
+-------------------------------------------------------------------------------------
+1. You can learn how to use our pipeline by running the pipeline with 
+	the --help parameter. All other parameters will be ignored if you use this:
+	
+		java -jar pipeline.jar --help
+		
+2. The --fast parameter is a simple way to convert .raw to .arff, especially good for
+	large files. However, it will only do the following changes:
+	
+        Replace "NA" to "?"
+        Replace " " to ",", like a csv file
+        Generate the @attribute part(only all the SNPs, SEX and PHENOTYPE), but 
+			the value are all {0, 1, 2}
+        Generate the @relation part based on parameter
+        Generate the @data part.
+	
+	If you use this parameter: 
+		The --src, --des, and --name parameters are ALWAYS NECESSARY:
+			--srcR or --srcA specifies the path of the .raw/.arff file
+			--des specifies the path of the .arff file. If file exists, the program
+				will ask whether to overwrite it; if the file didn't exist but the
+				directory existed, it will automatically create new file; if neither
+				the file or directory exists, it will give the error. In the mean 
+				time, when the program doesn't use the fast method(--fast), it will
+				also create a file with same name as --des specified but end with
+				.temp, which is the temp file only record all the instances with the
+				necessary SNPs .list file requires.
+			--name(necessary for raw file) gives the relation name for the .arff file.
+				The name can be separated by blank.
+			--list(necessary for arff file) gives the .list file path.
+				The names of the SNPs in this file don't need to be the same 
+				order as .raw file.
+
+3. --test replaces all the{0, 1}, {0, 2} and {1, 2} in SNPs with {0, 1, 2}
+4. You can find two sample input files in:
+		/code/pipeline-yixin-version/testForRaw.list
+	and
+		/code/pipeline-yixin-version/testForRaw.raw
+		
+	For example, you can run the pipeline with these parameters via:
+		java -jar pipeline.jar --srcR testForRaw.raw --des outForRaw.arff --list testForRaw.list --name MajorDepression --test
+		
+	The corresponding output of this can be found in:
+		/code/pipeline-yixin-version/sample-output.txt
+		

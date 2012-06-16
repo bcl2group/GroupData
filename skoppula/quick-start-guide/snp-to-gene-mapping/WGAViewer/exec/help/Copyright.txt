@@ -1,0 +1,3 @@
+WGAViewer may be used freely for research or non-commercial purposes.  Source code is available upon request.  If you wish to incorporate parts of this program into other freeware whose distribution conditions are different, please write to the authors for permission.  For use in a commercial environment, please communicate with Dongliang Ge and David Goldstein.  The authors reserve the copyright of this software. 
+
+WGAViewer is free software released under GNU General Public License, v2 (see COPYING.txt).

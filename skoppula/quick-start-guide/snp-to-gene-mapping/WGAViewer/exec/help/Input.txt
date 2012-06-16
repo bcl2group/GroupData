@@ -1,0 +1,41 @@
+WGAViewer directly loads text-based datasets (.wr file) and can also save the annotation work session to a reloadable binary project file (.wga file).  WGAViewer can make .wr file from different types of text-based data sets, including output from PLINK (Purcell et al. 2007).
+
+1.  Text -based datasets (.wr)
+
+To make text-based input file for WGAViewer, click on menu "File->Open external data file ->  make input file for WGAViewer".
+
+WGAViewer also directly supports the outputs  from PLINK (Purcell et al. 2007). To open PLINK output, click on menu   "File->Open external data file->Open PLINK output". 
+
+These processes will generate and save a ".wr" input file for WGAViewer.  This file will be automatically loaded after the generation. Click "File -> Open WGA result set" to reload the generated ".wr" file at a later time.
+
+The external data set to be loaded should be separated by either space or tab key.  It should have one row of header line indicating each column name, and at least one column for SNP and one column for P values.  Every data row should have the same number of columns with the header row, otherwise the program will show an error message.  A standard MAP file (or PLINK BIM file) is also required. A MAP file has no header line, and has four columns: chromosome, SNP, genetic distance (could be 0 and will not be used), and physical chromosomal location (could be from older genome build and will be annotated later) (see the example below).
+
+********************
+2 rs10495761 0 28147606
+2 rs10495766 0 28783336
+2 rs10495767 0 29198843
+********************
+
+Mitochondrial SNPs should be marked as "M" in the "Chromosome" column; SNPs on chromosome X or Y must be marked as either "X" or "Y", respectively.   The acceptable "Chromosome" values are either integers 1-22, or string "X", "Y"/"XY", or "M".  The case does not matter.  It is necessary that each SNP has a map location in a positive integer.  Any SNP that has a "Map" value other than a positive integer, for example, "NA" or "-9", will be skipped. 
+
+In some types of WGA output, for example, logistic or linear regression outputs from PLINK, one SNP could have more than one row of results.  That is, each covariate will have one row of result marked with SNP name too. 
+
+ 
+In the example shown below a filter of "ADD" needs to be specified to only include selected genetic effects.  WGAViewer will also try to roughly check the duplication of marker in the dataset.  If a SNP apparently appears twice while no filter is specified, the program will show an error message.
+
+********************
+CHR          SNP       TEST    NMISS    BETA         STAT            P 
+   0   MitoC182T        ADD       851      -0.18          -0.8233       0.4106
+   0   MitoC182T       COV1      851      -0.3226      -4.058         5.403e-05
+   0   MitoC182T       COV2      851      0.00942     3.168          0.001588
+********************
+ 
+
+2.  Binary datasets or saved work session (.wga)
+
+WGAViewer can save the annotation work session into binary file, namely, the .wga file.
+
+To load a binary dataset or saved work session (.wga file), click "File -> Open saved work".
+To save a work session any time during the annotation, click "File -> Save work".
+
+For detailed information and examples, see documentation included in the package.

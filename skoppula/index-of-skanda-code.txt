@@ -1,0 +1,77 @@
+-------------------------------------------------------------------------------------
+This document is a brief listing of the miscellaneous programs I created to do
+little jobs here and there for my project. This document references code that 
+can be found in this directory and on BCL's GitHub under GroupData/Skanda.
+The code listed here can be found under GroupData/Skanda/code
+
+If you are looking for the program for predictive pathway analysis (the pipeline),
+please refer to the files and README in:
+	/quick-start-guide/predictive-pathway-analysis/
+	/code/pipeline-yixin-version
+There are two versions of the pipeline in this repository:
+	The Pipeline [Amin/Yixin]
+	The Pipeline [Amin/James/Skanda]
+
+If you need clarification, notice any errors, or encounter any problems, 
+please feel free to contact Skanda (skoppula@andover.edu). 
+I would be more than happy to include improvements or additions. Enjoy!
+Last Revision: June 14, 2012
+-------------------------------------------------------------------------------------
+Note that most programs must be compiled and executed by the user, because the input 
+directories/names were hardcoded into the source. I originally intended for these
+programs to be just tools for me. Time permitting, I'll generalize the use of the 
+programs. That means, to use these programs in your project now, you'll need to 
+change the value of some of the variables (named something along the lines of 
+"inputfile") to suite your project's specifications.
+-------------------------------------------------------------------------------------
+
+CommonPathwayFinder.java
+	Used to determine the pathways(a set of feature lists) in common, between to an 
+	arbitrary number of set of textfiles. These textfiles are generally pipeline output 
+	files, each of which is a listing of the significant pathways, each pathway's
+	p-value and its AUROC. This is used to identify reproducible/robust pathways. The 
+	program outputs those pathways in common between the pipeline's results of 
+	significant pathways (the results after analyzing two or more data sets)
+
+DataPartition.java
+	The program was initially used to split and distribute the SNPs a large list of SNPs
+	to an input, n, number of textfiles. This enables a method of 'manual parellization'
+	- each smaller list can be processed on a different machine to create a SNP
+	to gene mapping. This would result in n gene-snp mapping files, which
+	we combine using the small executable found
+		\code\annotated-results-programs\merge-data.bat.
+
+	Please note when using this tool to remerge, if you have a descriptor
+	header row for each mapping file, it will be included multiple times
+	in the merged file. Delete the descriptor header row on each spreadsheet.
+	
+	DataPartition is one of the handful of programs I 'generalized'.
+	You can run the jar file found at
+		\code\annotated-results-programs\DataPartition.jar
+	with parameters of the SNP list directory and num files.
+
+FileWritingPerfomanceTest.java
+	Used to optimize other IO intensive programs in the project. The program was a small
+	test for my own knowledge, used to compare the time-performance of the common
+	file writing methods in Java.
+
+Format_SNP_List.java
+	Converts the list of features preceding data in an .CSV file to a list of 
+	features in a seperate text file in the .wr format. This text file is commonly used
+	later in analysis in WGAViewer.
+
+OntologySizeCount.java
+	Determines the distribution of pathway size (measured by number of genes/SNPs), 
+	given a database listing of pathways - for example, the listing:
+		\data\c2.cp.kegg.v3.0.symbols.gmt
+	resulted in the distribution found here:
+		\code\size-of-ontologies-results.txt
+	Outputs results to console.
+
+ReducingDataset.java
+	Takes in training/testing data, and given a number of features and number of patients,
+	it reduces the data to contain those number of features for those number of patients.
+
+SelectFromCompleteDataSet.java
+	Reads the first labels of the "n" features from the training data text file, 
+	then outputs just those labels into a seperate text file.

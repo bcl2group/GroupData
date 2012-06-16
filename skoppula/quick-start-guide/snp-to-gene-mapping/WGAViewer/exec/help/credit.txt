@@ -1,0 +1,14 @@
+Credits and sources of supports
+
+WGAViewer has mainly been developed by Drs. Dongliang Ge and David Goldstein in Duke IGSP.  Some colleagues have also participated in the development, including:
+
+Drs. Kunlin Zhang & Amalio Telenti a; Olivier Martin b
+comparative genetics module, quality control module.
+a Institute of Microbiology at the University of Lausanne, Switzerland.           
+b Swiss Institute of Bioinformatics, Lausanne, Switzerland
+
+The authors would thank Dr. Mike E. Weale from University College London for help in the population stratification module.  
+
+The authors also thank Darin London, Robert J. Wagner, and Mark R DeLong from Duke Institute for Genome Sciences & Policy for their work on setting up the Mart for IGSP Data from Association Studies (MIDAS).  WGAViewer uses the query engine provided by the Biomart Data Integration System (http://www.biomart.org/).  The MIDAS data are also accessible from the MIDAS BioMart instance at http://midas.genome.duke.edu/biomart/martview.
+
+This project is supported by the Center for HIV-AIDS Vaccine Immunology (CHAVI, http://www.chavi.org/) and the Duke Institute for Genome Sciences & Policy (IGSP, http://www.genome.duke.edu/).

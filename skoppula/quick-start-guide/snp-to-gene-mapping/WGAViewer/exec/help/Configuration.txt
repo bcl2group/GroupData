@@ -1,0 +1,6 @@
+Several display/usage parameters can be set in a "Configuration" panel. These parameters include:
+
+Internet: proxy name and port;
+Display:  threshold for highlighting a SNP; Y axis scale; 
+Data source: default data folder;
+Annotation: LD criterion for considering as high association; HapMap population used to calculate LD.

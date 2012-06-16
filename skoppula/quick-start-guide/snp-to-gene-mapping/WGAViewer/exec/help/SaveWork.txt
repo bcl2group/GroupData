@@ -1,0 +1,5 @@
+All the data sets, figures, and interactive features during a work session can be saved to a binary ".wga" file.  To do this, click "File -> Save work".  To open the saved work session file, click "File->Open saved work".  If you annotate further after loading a saved work session, you need to save the further work to another work session file and load them separately.
+
+If you load your work session file, you don't need to load the text data set file (.wr) separately.
+
+If you only load your work session file to view and perform no further annotation, the program does not need the internet connection to do so.

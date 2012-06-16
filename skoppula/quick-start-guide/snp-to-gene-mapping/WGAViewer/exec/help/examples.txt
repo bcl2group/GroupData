@@ -1,0 +1,7 @@
+To illustrate this software, we use our recently completed study on host control of HIV-1 viral load during the asymptomatic set point period (Fellay et al. 2007) as an example (CHAVI_SETPOINT_SCIENCE).  All the illustrations in this documentation are based on this example. 
+
+To load this example, click on menu "File->Open an example dataset". Two types of datasets are released with this package. One is the pre-annotation dataset (.wr file, text-based) and the other is the post-annotation dataset (.wga file, binary). This real dataset is based on the Illumina HumanHap 550K SNP chip.
+
+For demonstrating the usage of multiple databases discussed later in this user guide, we also include a simulated dataset (Illumina_HumanHap300_sim.wr) in this software package.  This is a simulated set based on Illumina HumanHap 300K.
+
+For detailed information see Documentation.

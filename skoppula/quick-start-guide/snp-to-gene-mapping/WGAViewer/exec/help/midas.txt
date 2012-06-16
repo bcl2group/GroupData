@@ -1,0 +1,3 @@
+WGAViewer offers an easy way to access the data for WGA or other association studies hosted by and released from Duke Institute for Genome Sciences & Policy.  To access the Mart for IGSP Data from Association Studies (MIDAS), click on menu "Database->Released database->MIDAS online".    Simply click on button "Download" to download these datasets.  The datasets is fully compatible with WGAViewer and will be automatically loaded after the download.  Annotations discussed in this user's guide can then be performed.
+
+WGAViewer and MIDAS use the query engine provided by the Biomart Data Integration System (http://www.biomart.org/).  All the downloads are free of charge.

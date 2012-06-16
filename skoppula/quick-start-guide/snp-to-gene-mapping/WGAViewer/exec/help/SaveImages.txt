@@ -1,0 +1,1 @@
+All the images displayed in the program can be saved to a ".PNG", "BMP", "JPG", or "EPS" image file.  Try "File-> Save image".

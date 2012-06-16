@@ -1,0 +1,84 @@
+-------------------------------------------------------------------------------------
+This document is a brief instruction on how to convert between data types:
+	Binary [PLINK] files --> .RAW files --> .CSV files --> .ARFF files
+							 .RAW files --> .ARFF files
+This document references data that can be found in this directory,on BCL's GitHub
+under GroupData/Skanda, and on Safar under /scratch/James/Random.
+This was writtten by James Thomas and Yixin Zhu, revised by Skanda Koppula
+
+If you need clarification, notice any errors, or encounter any problems, 
+please feel free to contact Skanda (skoppula@andover.edu). 
+I would be more than happy to include improvements or additions. Enjoy!
+Last Revision: June 15, 2012
+-------------------------------------------------------------------------------------
+CONVERT FROM BINARY FILESET TO .RAW IN PLINK
+
+plink --bfile [name of binary fileset without extensions, e.g. merge]
+	--recodeA --out [desired name of raw file, e.g. merge-raw]
+
+-------------------------------------------------------------------------------------
+CONVERT FROM .RAW TO .CSV
+
+After you have the raw file, you can run the code below to generate a
+CSV. Make sure you include the jar file I sent you in
+your classpath. Also, change the filepaths at the top of the code as
+needed (e.g. if you download those files from /scratch/James/Random
+to your local machine or some other supercomputer and run the code there).
+
+You also need to change the lines
+	BufferedReader br = new BufferedReader(new FileReader(path + "snp.snplist"));
+and
+	ProduceCSVGeneric.writeEffEnd(path + "merge-raw.raw", path +
+		"merge.csv", env, setTitles, bins, snps);
+
+to point to the appropriate files (snp.snplist should just be a list
+of all SNPs in the data file). merge-raw.raw should be changed to the
+name of the raw file to be converted and merge.csv should be changed
+to the desired name of the csv output.
+
+	String path = "/scratch/James/Random/";
+	String numeric = "/scratch/James/Random/envdiscnogen.txt";
+	String envOne = "/scratch/James/Random/phs000092.v1.pht000116.v1." +
+		"p1.c2.AlcoholDepAdd_Data.ARC.txt";
+	String envTwo = "/scratch/James/Random/phs000092.v1.pht000116.v1." +
+		"p1.c1.AlcoholDepAdd_Data.HR.txt";
+	List<String> titles = new ArrayList<String>();
+	Map<String, List<String>> env = new HashMap<String, List<String>>();
+	Map<String, Boolean> storage = new HashMap<String, Boolean>();
+	EnvUtils.readNumeric(storage, numeric); //which variables are continuous and which are discrete
+	for (String var : storage.keySet())
+		titles.add(var); //all the demographic variables to include in csv
+	Map<String, List<Integer>> bins = new HashMap<String,
+		List<Integer>>();
+	EnvUtils.getBins(bins, storage, envOne, envTwo); //bins for discretization of continuous variables
+	DataUtils.readEnv(envOne, env, null, titles); //read demographic variables from the text files
+	DataUtils.readEnv(envTwo, env, null, titles);
+	Set<String> snps = new HashSet<String>();
+	BufferedReader br = new BufferedReader(new FileReader(path + "snp.snplist"));
+	String line = null;
+	while ((line = br.readLine()) != null){
+		snps.add(line); //read all the SNPs to include in the csv
+	}
+	br.close();
+	Set<String> setTitles = new HashSet<String>();
+	setTitles.addAll(titles); //adding titles to Set so they can be passed to writeEffEnd()
+	ProduceCSVGeneric.writeEffEnd(path + "merge-raw.raw",
+		path + "merge.csv", env, setTitles, bins, snps);
+
+Note: The files referenced in the code are still in /scratch/James/Random, 
+so take a look there if you want to get an idea of what they look like.
+-------------------------------------------------------------------------------------
+CONVERT FROM .CSV TO .ARFF
+
+Use WEKAUtils.convert() or:
+
+	java -classpath Myweka.jar -Xmx..g  weka.core.converters.CSVLoader  file.sc > file.arff
+	
+You should use the function WEKAUtils.convert([path to csv], [desired path to arff])
+ in my library to convert from csv to arff.
+--------------------------------------------------------------------------------------
+CONVERT FROM .RAW to .ARFF
+
+Run the Yixin pipeline as per the guide found in:
+	/code/pipeline-yixin-version/guide-yixin-pipeline.txt
+	

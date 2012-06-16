@@ -1,0 +1,22 @@
+suppressErrors = y
+isSNPData = y
+calculateFisher = n
+envVariables = y
+numEnvVariables = 2
+multithreading = y
+iterations = 500
+snpToGenes = /scratch/koppula/data/snp-annotations-cogasync.csv
+distanceIndex = 9
+geneIndex = 8
+delim = ,
+extendedAnnotation = y 
+conceptToGenesList = datasets/c2.cp.kegg.v3.0.symbols.gmt	KEGG\n\
+datasets/c5.bp.v3.0.symbols.gmt	GO
+lowerThreshold = 5
+upperThreshold = 1000
+trainFull = /scratch/koppula/data/coga-sync.arff
+classifier = NaiveBayes
+alpha = 0.01,0.05,0.1,0.25,0.4,0.5
+corrections = all
+outputDir = output/
+savePValuesFileName = output/

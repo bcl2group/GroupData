@@ -1,0 +1,7 @@
+WGAViewer offers an easy graphical way to inspect the population stratification effects by comparing the distribution of observed P values with expected distribution through a Q-Q plot.  WGAViewer also calculates a lambda value for quantifying the population stratification effects assuming a 2 df chi distribution of the -2log(e)P measures (Clayton et al. 2005) (Weale 2007).   
+
+To perform this function, click on menu "Tools->Q-Q plot". This will active a dialog for plotting parameters. One has the option to plot percentage line and lifting line to help inspect the P value distribution.  
+
+Another usage of this plot is to easily inspect how the top hit P values depart from the random distribution, in addition to any statistical method used for correcting multiple testing.   
+
+For detailed information and examples, see documentation included in the package.

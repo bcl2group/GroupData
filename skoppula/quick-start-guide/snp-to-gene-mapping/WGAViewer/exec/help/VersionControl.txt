@@ -1,0 +1,1 @@
+For each session of annotation, WGAViewer will automatically check the latest version of genome build, HapMap release, etc and align the database loaded with the latest genome build.  The version of the databases used will be displayed in the upper right table in Genic Annotation (Gene context panel).  No manual setup is necessary.

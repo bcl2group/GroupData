@@ -1,0 +1,11 @@
+After the statistical analyses of a WGA project, usually the first important question that most researchers could not wait to have an answer is: what are the top hits and their P values?   After this they may be even more eager to know, are these top hits located in or close to any gene?  If they are located in some gene, then what type of SNPs are they?  Are they functionally relevant? --- if they are not non-synonymous coding, not splice changing, then how far are they from the closest exon?  If unfortunately they are not in a known gene, how far are they from the closest known gene then?
+
+To address these immediate questions, WGAViewer offers two steps of annotation for top hits: 
+
+1. Fast first-round annotation
+
+2. Comprehensive annotation
+
+The interactive annotation results will be shown in several tabbed panels.
+
+For detailed information, see the documentation included in the package.

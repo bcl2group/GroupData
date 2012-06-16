@@ -1,0 +1,2 @@
+The PLINK dataset has one memeber of each duplicate pair removed, resulting it a unique set of samples.
+The duplicate can be found in the non-PLINK genotype matrix one dir below this.

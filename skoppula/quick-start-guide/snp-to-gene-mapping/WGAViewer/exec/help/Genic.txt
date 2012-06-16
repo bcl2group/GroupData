@@ -1,0 +1,7 @@
+Click on "Annotate" button to annotate a chromosomal region.
+
+Genic annotation.
+
+The left window shows the p value distribution in this region, aligned with selection score, transcripts structure, and LD context.  The upper right table shows the information for this annotated region, for example, the start/end location, and the version of the databases used. Point the mouse to each SNP p value line, transcript illustration, or LD matrix cell to view the detailed information in the lower right table.  For example, for transcripts a description of function, biological type, and gene ontology terms will be shown; for SNPs, the location, allele, ancestral allele, and function (synonymous, non-synonymous, alternative splicing, etc) will be shown. Hyperlinks in blue are clickable and will launch the internet browser for the related information.
+
+For detailed information see Documentation.

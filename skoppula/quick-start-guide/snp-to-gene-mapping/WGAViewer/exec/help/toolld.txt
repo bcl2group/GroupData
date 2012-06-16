@@ -1,0 +1,7 @@
+This function is a very convenient tool for performing linkage disequilibrium tests for a list of SNPs, using HapMap data (The International HapMap Consortium.  2005).  
+
+The main utility of this tool is that the user does not need to know the detailed information about the SNPs for LD tests. For example, it is not necessary to have information on which chromosomes, in what HapMap populations (all HapMap populations will be tested), etc.  All the information required is a simple list of SNPs.  Sometimes this is very useful and convenient, especially when one has a long list of SNPs of interest (for example, top hits from a WGA project) and it would be tedious to group these SNPs into different chromosomes, to download the related HapMap genotype data, and to calculate LD one by one.
+
+To use this tool, click on menu "Tools->Linkage Disequilibrium test". Two types of inputs are supported: (1) A text file simply listing the SNPs; or (2) Direct typing in two SNPs to check.  One has also the option to filter the results based on chromosome, HapMap population, or certain SNPs.  Click on the "Show" button to view the filtered results.
+
+For details and examples see Decumentation.

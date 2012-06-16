@@ -1,0 +1,7 @@
+In addition to the annotation based on available data from public databases, many other interesting and important questions could be raised.  For example, what are the Hardy-Weinberg Equilibrium (HWE) results for the top hits?  What are the effect sizes, effect directions, etc, for these SNPs of most interest? 
+ 
+WGAViewer offers a convenient interface to allow the user to load many kinds of customized supporting/QC data to list alongside the SNP lists of interest, in addition to the annotation from public databases.  We illustrate this function using our pre-annotation example set “CHAVI_SETPOINT_SCIENCE.wr” as the core dataset.  Click on menu “File -> Open supporting/QC file”. Select a database that the supporting file is associated with, which is CHAVI_SETPOINT_SCIENCE in this case.  Click on button “Support/QC file” to locate the text file containing the supporting/QC dataset.  And then select the column for the SNP, and the columns to be included as supporting/QC information.  Multiple-column selection is allowed.  Click on the “OK” button if the data is successfully loaded.  
+After the inclusion of supporting/QC files, the annotation for top hits (Documentation, chapter 3.3) will automatically include columns for such information.  For example, click on menu “Tools->Top hits” and annotate the top hits as discussed in chapter 3.3, the annotation results will be with a column for supporting information alongside each SNP. 
+
+For details see Documentation.
+

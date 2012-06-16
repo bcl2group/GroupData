@@ -1,0 +1,5 @@
+Load text data file (.wr) by clicking "File -> Open WGA result set";
+
+Or Load binary work session by clicking "File -> Open saved work";
+
+Or load released database by clicking "Database -> released database".

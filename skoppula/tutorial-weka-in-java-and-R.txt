@@ -1,0 +1,99 @@
+-------------------------------------------------------------------------------------
+This is a brief tutorial on how to implement WEKA in Java and R.
+Written by Amin Zollanvari with revisions by Skanda Koppula.
+
+If you need clarification, notice any errors, or encounter any problems, 
+please feel free to contact Skanda (skoppula@andover.edu). 
+I would be more than happy to include improvements or additions. Enjoy!
+Last Revision: June 14, 2012
+-------------------------------------------------------------------------------------
+
+You can use WEKA very easily in your Java code. Here is a sample program that I wrote
+ to do demonstrate how. You can look at this program and use other functions easily!
+ [This program is an example how to import TAN in your programs and then use it to design a
+ classifier, validate it through cross validation, and test it on test data]
+
+	import java.io.BufferedReader;
+	import java.io.BufferedWriter;
+	import java.io.FileReader;
+	import java.io.FileWriter;
+	import java.util.Random;
+	import weka.classifiers.Classifier;
+	import weka.classifiers.Evaluation;
+	import weka.classifiers.bayes.BayesNet;
+	import weka.classifiers.bayes.net.estimate.SimpleEstimator;
+	import weka.classifiers.bayes.net.search.local.TAN;
+	import weka.core.Instances;
+	import java.io.File;
+	import java.util.ArrayList;
+	import weka.filters.Filter;
+	public class Weka_classifier_use {
+
+	/**
+	 * @author Amin Zollanvari
+	 */
+
+		private static void appendLineToFile (String lineToWrite, String fileName) throws Exception{
+			   BufferedWriter out = new BufferedWriter(new FileWriter(fileName,true));
+			   out.append(lineToWrite);
+			   out.close();
+	   }
+	   private static void writeLineToFile (String lineToWrite, String fileName) throws Exception{
+			   File file = new File(fileName);
+			   file.createNewFile();
+			   BufferedWriter out = new BufferedWriter(new FileWriter(fileName,false));
+			   out.write(lineToWrite);
+			   out.close();
+	   }
+	   
+	   public static void main(String[] args) {
+			Instances learn; 
+			Instances hold;  
+			String learnPath = "/home/...PathTo/training.arff";
+			String holdPath = "/home/...PathTo/test.arff";
+			String resultsPath = "/home/...PathTo/Results.csv";
+		   try{
+		   writeLineToFile("CVROC, TESTROC, \n", resultsPath);
+		   }
+		   catch (Exception ex) {System.out.println(ex.toString());}   
+		 
+			try {
+				learn = new Instances(new BufferedReader(new FileReader(learnPath))); learn.setClassIndex(learn.numAttributes() - 1);
+				hold = new Instances(new BufferedReader(new FileReader(holdPath))); hold.setClassIndex(hold.numAttributes() - 1);
+			} catch (Exception ex) {
+				System.out.println(ex.toString()); return; 
+			}
+			System.out.println("Starting");     
+			Classifier xBN = new BayesNet();
+			TAN xTAN = new TAN();
+			SimpleEstimator xSE = new SimpleEstimator();
+			xSE.setAlpha(5);
+			((BayesNet) xBN).setSearchAlgorithm(xTAN);
+			((BayesNet) xBN).setEstimator(xSE);
+			try {
+			   Evaluation evalCV = new Evaluation(learn);
+			   Evaluation evalValid = new Evaluation(learn);
+			   Classifier cpyCls_cv = Classifier.makeCopy(xBN);
+			   Classifier cpyCls_valid = Classifier.makeCopy(xBN);
+			   evalCV.crossValidateModel(cpyCls_cv, learn, 10, new Random(1));
+			   cpyCls_valid.buildClassifier(learn);
+			   evalValid.evaluateModel(cpyCls_valid, hold);
+			   StringBuilder sb_res = new StringBuilder();
+			   sb_res.append(evalCV.weightedAreaUnderROC());
+			   sb_res.append(", ");
+			   sb_res.append(evalValid.weightedAreaUnderROC());
+			   sb_res.append("\n");   
+			   appendLineToFile(sb_res.toString(), resultsPath);
+		   
+			} catch (Exception ex) {
+			   System.out.println(ex.toString());
+			}    
+		System.out.println("Finished");
+	   }
+	}
+
+You can also use WEKA code in R. For that, read the R-WEKA package-help which clearly 
+explains things. To see that in action, take a look at code I wrote in R at 
+	gil@safar:/scratch/Yixin/Amin$.
+You are permitted to view the code there, to see how to use WEKA in R, the main idea behind the
+code - the methodology - cannot be distributed until we publish it. 

@@ -1,0 +1,11 @@
+Click on SNP p value line and then click on the small "annotate" menu that appears, or directly select a SNP in the space above the lower right table to trigger the annotation for an individual SNP.
+
+Configure the annotation parameters for the SNP annotation.  These parameters include the breadth of the surrounding region, which HapMap population will be used to calculate LD, and which gene expression level with which to test association.    
+
+Select "None" for LD test span and fill in start and end position if you would like to test a region with a specific start and end point.  
+
+In a typical result window for SNP annotation, the left window shows the LD extension, selection score, transcripts information and association test with specified gene 5,6.  The upper right table shows the information for the annotated SNP, while the lower right table shows the relative information when the mouse is pointed to a SNP or a transcript. Hyperlinks in blue are clickable and will launch the internet browser for the related information.
+
+Again you may click on SNP LD line to trigger SNP annotation in this window.
+
+Another way to annotate an individual SNP without even loading the WGA dataset is to click menu "Tool-> annotate a SNP".  This will trigger the annotation for a SNP but of course won't provide p values in the annotation result.

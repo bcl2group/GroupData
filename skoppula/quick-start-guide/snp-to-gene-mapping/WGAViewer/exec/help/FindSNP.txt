@@ -1,0 +1,3 @@
+Very similar to the questions we asked when finding a gene, it would be also very interesting to know what are the association results for functional SNPs of specific interests, or candidate SNPs previously reported.  Furthermore, if such SNPs are not present in the WGA dataset, it would then be important to know whether there are LD proxies for these SNPs, and what are their P values.  
+
+For detailed information and examples, see documentation included in the package.

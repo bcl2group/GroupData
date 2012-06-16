@@ -1,0 +1,47 @@
+C:\Downloads\Project\Datamining\Test>java -jar pipeline.jar --srcR testForRaw.raw --des outForRaw.arff --list testForRaw.list --na
+me MajorDepression --test
+Your command is intented to do with following parameters:
+        srcr:   testForRaw.raw: file check OK!
+        des:    outForRaw.arff: file check OK!
+        list:   testForRaw.list:        file check OK!
+        name:   MajorDepression
+        test:   true
+necessary file check:
+necessary file check finished!
+******************************************
+***********command check result***********
+******************************************
+command check success!
+
+
+******************************************
+***start processing data with raw method**
+******************************************
+¡ï¡ï¡ïget sex, phenotype and SNPs index¡ï¡ï¡ï
+1 threads are created
+Finished! Memory Usage: 15 Mb, Total SNPs: 0
+size of snp index:494
+size of snp name494
+total time: 0 s
+¡ï¡ï¡ïget SNPs from .list file¡ï¡ï¡ï
+SNP search No. 0, Memory Usage: 15 Mb, Total SNPs: 494
+Finished!Memory Usage: 15 Mb, Total SNPs: 494
+total time: 0 s
+¡ï¡ï¡ïsave data into .arff file¡ï¡ï¡ï
+start save arff file
+Total Memory: 15 Mb
+save instances and store value for header
+Total Memory: 15 Mb
+write headers
+Total Memory: 15 Mb
+Total Memory: 15 Mb
+file size: 0.00 MB
+total block count: 1
+*****************
+start processing block No.0
+total time: 0 s
+Retry: Delete outForRaw.arff.temp fail!
+Delete outForRaw.arff.temp success!
+total time: 0 s
+
+C:\Downloads\Project\Datamining\Test>

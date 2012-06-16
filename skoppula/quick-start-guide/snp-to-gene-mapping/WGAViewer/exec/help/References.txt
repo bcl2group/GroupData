@@ -1,0 +1,34 @@
+---References
+
+Clayton DG, Walker NM, Smyth DJ, Pask R, Cooper JD, Maier LM, Smink LJ, Lam AC, Ovington NR, Stevens HE, Nutland S, Howson JM, Faham M, Moorhead M, Jones HB, Falkowski M, Hardenbol P, Willis TD, Todd JA (2005) Population structure, differential bias and genomic control in a large-scale, case-control association study. Nat Genet 37:1243-1246
+
+Fellay J, Shianna KV, Ge D, Colombo S, Ledergerber B, Weale M, Zhang K, et al. (2007) A whole-genome association study of major determinants for host control of HIV-1. Science 317:944-947
+Hubbard TJ, Aken BL, Beal K, Ballester B, Caccamo M, Chen Y, Clarke L, et al. (2007) Ensembl 2007. Nucleic Acids Res 35:D610-617
+
+Price AL, Patterson NJ, Plenge RM, Weinblatt ME, Shadick NA, Reich D (2006) Principal components analysis corrects for stratification in genome-wide association studies. Nat Genet 38:904-909
+
+Purcell S, Neale B, Todd-Brown K, Thomas L, Ferreira MAR, Bender D, Maller J, Sklar P, de Bakker PIW, Daly MJ, Sham PC (2007) PLINK: a toolset for whole-genome association and population-based linkage analysis. Am J Hum Genet 81
+
+Stranger BE, Forrest MS, Clark AG, Minichiello MJ, Deutsch S, Lyle R, Hunt S, Kahl B, Antonarakis SE, Tavare S, Deloukas P, Dermitzakis ET (2005) Genome-wide associations of gene expression variation in humans. PLoS Genet 1:e78
+
+Stranger BE, Forrest MS, Dunning M, Ingle CE, Beazley C, Thorne N, Redon R, Bird CP, de Grassi A, Lee C, Tyler-Smith C, Carter N, Scherer SW, Tavare S, Deloukas P, Hurles ME, Dermitzakis ET (2007) Relative impact of nucleotide and copy number variation on gene expression phenotypes. Science 315:848-853
+
+Telenti A, Goldstein DB (2006) Genomics meets HIV-1. Nat Rev Microbiol 4:865-873
+The International HapMap Consortium.  (2005) A haplotype map of the human genome. Nature 437:1299-1320
+
+Voight BF, Kudaravalli S, Wen X, Pritchard JK (2006) A map of recent positive selection in the human genome. PLoS Biol 4:e72
+
+Weale M (2007) Personal communications. 
+
+
+---Online databases and resources used in this program:
+
+Ensembl : http://www.ensembl.org 
+HapMap: http://www.hapmap.org 
+Haploview: http://www.broad.mit.edu/mpg/haploview/
+GENEVAR (GENe Expression VARiation): http://www.sanger.ac.uk/humgen/genevar/
+Selection score: http://hg-wen.uchicago.edu/selection/haplotter.htm
+dbSNP : http://www.ncbi.nlm.nih.gov/SNP/
+UCSC Genome Bioinformatics Site: http://genome.ucsc.edu/
+Clustal W software (1.83) multiple sequence alignments: http://www.ebi.ac.uk/clustalw/ 
+BioMart: http://www.biomart.org/

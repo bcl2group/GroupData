@@ -1,0 +1,5 @@
+WGAViewer offers a convenient tool to easily test association between SNP genotypes and gene expression data quantified in immortalized B-lymphocytes, using database from Sanger Institute GENEVAR project (Stranger et al. 2005; Stranger et al. 2007) and HapMap project (The International HapMap Consortium.  2005). 
+
+To do this, click on menu "Tools->GENEVAR: test for genotype-expression association" and this will activate a dialog for inputs.  Two types of inputs are supported: (1) directly typing in SNP rs# and gene symbol; or (2) selecting a text file containing the SNP-gene pairs between which association will be tested, for example.
+
+One has to specify a folder to output the results.  Then click on button "Perform test".    Click on tab "Stats" in the result window for a sheet for statistics, or click on tab "Graph" for graphs. If multiple SNP-gene pairs were inputted (from an input file), one has the option to select to view the graphs on which gene and which SNP from two drop-down menus.

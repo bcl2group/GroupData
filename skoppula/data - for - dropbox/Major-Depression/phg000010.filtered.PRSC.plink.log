@@ -1,0 +1,47 @@
+
+@----------------------------------------------------------@
+|        PLINK!       |     v1.07      |   10/Aug/2009     |
+|----------------------------------------------------------|
+|  (C) 2009 Shaun Purcell, GNU General Public License, v2  |
+|----------------------------------------------------------|
+|  For documentation, citation & bug-report instructions:  |
+|        http://pngu.mgh.harvard.edu/purcell/plink/        |
+@----------------------------------------------------------@
+
+Skipping web check... [ --noweb ] 
+Writing this text to log file [ /scratchtb/amde/24311/GAIN/MajorDepression/phs000020v2/p1d/filtered/phg000010.filtered.PRSC.plink.log ]
+Analysis started: Tue Mar 13 07:05:31 2012
+
+Options in effect:
+	--bfile /scratchtb/amde/24311/GAIN/MajorDepression/phs000020v2/p1d/filtered/phg000010.filtered.PRSC.plink
+	--recode
+	--out /scratchtb/amde/24311/GAIN/MajorDepression/phs000020v2/p1d/filtered/phg000010.filtered.PRSC.plink
+	--noweb
+
+** For gPLINK compatibility, do not use '.' in --out **
+Reading map (extended format) from [ /scratchtb/amde/24311/GAIN/MajorDepression/phs000020v2/p1d/filtered/phg000010.filtered.PRSC.plink.bim ] 
+438129 markers to be included from [ /scratchtb/amde/24311/GAIN/MajorDepression/phs000020v2/p1d/filtered/phg000010.filtered.PRSC.plink.bim ]
+Reading pedigree information from [ /scratchtb/amde/24311/GAIN/MajorDepression/phs000020v2/p1d/filtered/phg000010.filtered.PRSC.plink.fam ] 
+3669 individuals read from [ /scratchtb/amde/24311/GAIN/MajorDepression/phs000020v2/p1d/filtered/phg000010.filtered.PRSC.plink.fam ] 
+3554 individuals with nonmissing phenotypes
+Assuming a disease phenotype (1=unaff, 2=aff, 0=miss)
+Missing phenotype value is also -9
+1754 cases, 1800 controls and 115 missing
+1269 males, 2400 females, and 0 of unspecified sex
+Reading genotype bitfile from [ /scratchtb/amde/24311/GAIN/MajorDepression/phs000020v2/p1d/filtered/phg000010.filtered.PRSC.plink.bed ] 
+Detected that binary PED file is v1.00 SNP-major mode
+Before frequency and genotyping pruning, there are 438129 SNPs
+3632 founders and 37 non-founders found
+2 heterozygous haploid genotypes; set to missing
+Writing list of heterozygous haploid genotypes to [ /scratchtb/amde/24311/GAIN/MajorDepression/phs000020v2/p1d/filtered/phg000010.filtered.PRSC.plink.hh ]
+Total genotyping rate in remaining individuals is 0.991806
+0 SNPs failed missingness test ( GENO > 1 )
+0 SNPs failed frequency test ( MAF < 0 )
+After frequency and genotyping pruning, there are 438129 SNPs
+After filtering, 1754 cases, 1800 controls and 115 missing
+After filtering, 1269 males, 2400 females, and 0 of unspecified sex
+Writing recoded ped file to [ /scratchtb/amde/24311/GAIN/MajorDepression/phs000020v2/p1d/filtered/phg000010.filtered.PRSC.plink.ped ] 
+Writing new map file to [ /scratchtb/amde/24311/GAIN/MajorDepression/phs000020v2/p1d/filtered/phg000010.filtered.PRSC.plink.map ] 
+
+Analysis finished: Tue Mar 13 07:26:09 2012
+

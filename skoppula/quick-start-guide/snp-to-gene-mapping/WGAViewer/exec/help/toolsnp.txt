@@ -1,0 +1,5 @@
+This tool has been included for when the user wants to look into specific SNPs without a WGA result set.  The function of this tool is very similar to the SNP annotation procedures in WGAViewer, except that no WGA results (P values) are involved.
+
+To do this, click on menu "Tools -> Annotate a SNP".  Fill up the consequent input dialogs, for example, as in Figure 48, to annotate SNP rs9264942, with an up- and down-stream span of 100kbp, and a genotype-expression association test with gene HLA-C.  This will result in a typical SNP annotation as discussed in this user guide (section 3.3.2.c, Figure 21), however with no WGA results involved.
+
+For details see Documentation.

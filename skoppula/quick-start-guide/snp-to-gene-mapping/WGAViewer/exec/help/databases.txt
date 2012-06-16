@@ -1,0 +1,20 @@
+This function suite has been designed to easily compare between multiple databases.    These databases can be replication cohorts, cohorts with the same phenotype but different SNP set, cohorts with related phenotypes, or the same cohort with different phenotypes.  The aim of this function is to easily obtain concurrent or supporting evidences.
+
+Each database to be loaded has to be first transformed into WGAViewer .wr file as discussed in section "data input".  Click on menu "Database -> Database manager". And then load the simulated dataset from folder "./examples" by clicking "Add a reference dataset" button in the interface of database manager. 
+
+
+One has the option to add or remove specific reference databases to list alongside with the core database. One also has the option to edit the description for each database. 
+
+---Multiple databases plotting
+
+Once reference database(s) is successfully loaded, click on menu "Database->Database plotter" to plot the multiple databases.  Zoom in or zoom out by moving and clicking the mouse, or through a navigation bar located on the top of the window.  With appropriate resolution (for example, when number of SNPs in this region is less than 500 so the annotation won't take too long) click on the button "Annotate" to annotate this region. 
+
+Different from the gene view panel for a single database, this result view plots the P values for reference database(s) too. In addition to this, for each SNP that is highlighted, the P values in core database and in reference databases (if available) will both be listed in dynamic data sheet. 
+
+--- Searching for concurrent evidence
+
+WGAViewer offers a function that search for all SNPs that show concurrent association signals at a specified level in core and all reference databases.  To do this, click on menu "Database -> Database cross reference" and a dialog for searching parameters will present itself.   The most important parameter here should be the P value level that will be used as a cutoff for including into the report.  Only SNPs with P values equal to or lower than the cutoff in all core and reference databases will be included in the consequent report. The report will be sorted by the P values in the core dataset.  One also has an option to specify a brief annotation on a subset (or all) of the cross-referenced SNPs, for example, annotating the top 100 (sorted by core dataset P values). 
+
+The columns in the result window from left to right are: SNP name, chromosome, SNP type, the closest gene, the distance to the closest gene, distance to the closest exon, P values in the core dataset, and P values in the reference dataset.  The SNP name is clickable and will launch an annotation for the surrounding chromosome region.
+
+For details see Documentation.

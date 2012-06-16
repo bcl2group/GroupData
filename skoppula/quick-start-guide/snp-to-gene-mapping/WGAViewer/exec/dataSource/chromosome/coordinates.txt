@@ -1,0 +1,7 @@
+chromosome region:
+leftstart: 108
+rightend: 828
+topstart: 11
+boxheight: 52
+bottom:64
+horizontallength: 720

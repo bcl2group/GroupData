@@ -1,0 +1,156 @@
+-------------------------------------------------------------------------------------
+This document is a brief listing of the used in my project. This document references
+wdata that can be found in this directory and on BCL's GitHub under GroupData/Skanda.
+
+This document now includes documentation on data that Amin recently acquired 
+from dBGAP. Also, part of this data repository may be missing when hosted on DropBox
+and GitHub because of space limitations. To get complete data refer to the original 
+sources found in the text below (email skoppula@andover.edu if not specified).
+
+If you need clarification, notice any errors, or encounter any problems, 
+please feel free to contact Skanda (skoppula@andover.edu). 
+I would be more than happy to include improvements or additions. Enjoy!
+Last Revision: June 8, 2012
+-------------------------------------------------------------------------------------
+Note from Amin: All data for projects that use GEO data is in:
+	gil@mendel:/scratch/ftp.ncbi.nih.gov/pub/geo/DATA
+-------------------------------------------------------------------------------------
+ALCOHOLISM
+	/data/Alcoholism/COGA
+		/data/Alcoholism/COGA/coga-snp-partition-files
+			The set of SNP lists used in WGAViewer to generate the SNP to gene mapping
+		/data/Alcoholism/COGA/coga005-reduced.arff
+			A subset of the full COGA data, used for program testing
+		/data/Alcoholism/COGA/coga-superreduced.arff
+			An even smaller subset of the full COGA data, used for program testing
+		/data/Alcoholism/COGA/coga-sync-complete-SNPlist.csv
+			The complete list of features for the COGA data (in COGA's case, the list 
+			of SNPs). File is one line and SNPs are comma seperated.
+		/data/Alcoholism/COGA/coga-sync-complete-SNPlist.wr
+			The complete list of features for the COGA data (in COGA's case, the list 
+			of SNPs). File is many line and SNPs are line seperated.
+		/data/Alcoholism/COGA/distributed...
+			Folder containing a set of text files; each text file contains a unique 
+			list of SNPs that together, comprise of the list of SNPs in the COGA
+			and COGEND datasets
+		
+	/data/Alcoholism/COGEND
+		/data/Alcoholism/COGEND/cogend-snp-partition-files
+			The set of SNP lists used in WGAViewer to generate the SNP to gene mapping			
+	
+	/data/Alcoholism/pathway-to-snp-mapping
+		A text file listing the relevant SNPs in corresponding to the genes in each
+		pathway
+		
+	/data/Alcoholism/snp-to-gene-mapping
+		A 1:1 SNP to gene mapping for each feature (SNPs) in the COGA dataset
+	
+	You can find other COGA/COGEND data on CSAIL's Safar maching under*:
+			/scratch/koppula/data
+		and
+			/scratch/James/Random
+			
+I just posted a jar with all of the code into /scratch/James/all-files
+on the safar machine. The relevant directories in the jar file are
+"alcohol" and "run." The PLINK file that we began with (including
+samples from all three datasets and the full set of close to 1 million
+SNPs) and the two files with environmental variables (phs...) are also
+in that directory.
+-------------------------------------------------------------------------------------
+LUNG ADENOCARCINOMA
+	/data/Lung-Cancer/Boston
+		/data/Lung-Cancer/Boston/Lung_Boston_collapsed_symbols.arff
+			A lung cancer data from a Boston lab
+		
+		/data/Lung-Cancer/Boston/lung-boston-superreduced.arff
+			A reduced (subset) of the aforementioned data
+		
+		/data/Lung-Cancer/Boston/lung-boston-reduced-circadian.arff
+			A super-reduced version of Lung_Boston_collapsed_symbols.arff with 
+			6 features. Not sure why this is named circadian - circadian pattern genes?
+		
+	/data/Lung-Cancer/Michigan
+		/data/Lung-Cancer/Michigan/Lung_Michigan_collapsed_symbols.arff
+			A lung cancer data from a Michigan lab
+			
+	/data/Lung-Cancer/broad.mit.edu_LUAD.Genome_Wide_SNP_6.Level_3.84.2001.0
+		Miscellaneous data that was found on TCGA, which we thought might be useful
+		
+	You can find other LUNG ADENOCARCINOMA data on Safar under:
+			/scratch/koppula/data
+-------------------------------------------------------------------------------------
+ALZHEIMERS
+	/data/Alzheimers/alzheimers-partial-dbgap-data
+		/data/Alzheimers/alzheimers-partial-dbgap-data/adjusted-phenotype.fam
+			[PLINK-related] FAM file with data from dBGAP. Phenotypic information
+			IS encoded in the data in this file.
+		
+		/data/Alzheimers/alzheimers-partial-dbgap-data/phs000168.LOAD610K_Phenotypes.GRU.txt
+			Data from 3007 samples.
+			The phenotypic information can be found here was used to fill in the
+			aforementioned FAM file.
+			
+		/data/Alzheimers/alzheimers-partial-dbgap-data/command.sh
+			This script was used to transfer the phenotypic information from the 
+			the 5th column of phs000168.LOAD610K_Phenotypes.GRU.txt to
+			adjusted-phenotype.fam. Amin notes that this might need to be used for 
+			the data of other diseases.
+			
+		/data/Alzheimers/alzheimers-partial-dbgap-data/test.sh
+			General version of the aforementioned script
+			
+		Note: Data should contain about 3007 samples, of which 2692 samples should be
+				labeled as 'white' (i.e. coded as '1' in the 'Race' column)
+-------------------------------------------------------------------------------------			
+ADHD
+	/data/ADHD/
+		/data/ADHD/ADHD_PLINK_unique_samples.***
+			Transposed and binary PLINK ADHD datafiles
+		
+		/data/ADHD/README.dups
+			Please read note.
+		
+		/data/ADHD/amin-from-ldat-safar-ADHD.zip
+			A compressed folder of original Safar folder (see note)
+		
+	Note: Data taken from Safar from /scratch/ldat/adhd/v2/genotype_calls/PLINK
+			The transposed .tped file could not be decompressed due to size
+			limitations. As indicated by the README, the data's duplicate pair 
+			be found on Safar in the aforementioned directory.
+-------------------------------------------------------------------------------------			
+SCHIZOPHRENIA
+	/data/Schizophrenia
+		/data/Schizophrenia/pgh000013-mendel/...
+			Folder has datafiles containing PLINK-formatted Schizophrenia data
+			This first datafile folder was taken from Mendel(first Schizophrenia study?):
+				/scratchtb/amde/dat/phg000013.Schizophrenia.genotype-calls.Affymetrix6.v1.p1.c1.GRU.filtered.matrixfmt.genotype.update1
+				
+		/data/Schizophrenia/pgh000013-mendel/...
+			Folder has datafiles containing PLINK-formatted Schizophrenia data
+			The second datafile folder was taken from Safar (second Schizophrenia study?): 
+				/scratch/azsch/schGR/phg000014.Schizophrenia.genotype-calls.Affymetrix6.v1.p1.c1.GRU.filtered.matrixfmt.genotype
+		  Data should contain about 1904 samples
+	
+	Note: Information on the study(s) can be found at:
+			http://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs000021.v3.p2
+-------------------------------------------------------------------------------------		
+MAJOR DEPRESSION
+	/data/Major-Depression
+		/data/Major-Depression/major-depression-mendel.zip
+			Folder from Mendel from:
+				/scratchtb/amde/24311/GAIN/MajorDepression/phs000020v2/p1d/filtered
+			containing Major Depression Data in PLINK format
+			
+		/data/Major-Depression/phg0...
+			Datafiles from the aforementioned source
+		  Should contain about 3669 samples
+-------------------------------------------------------------------------------------			
+/data/pathway-libraries
+	/data/pathway-libraries/c2.cp.kegg.v3.0.symbols.gmt
+		A list of pathways (and the genes they contain) from the KEGG dataset, version 3.0
+	/data/pathway-libraries/c2.symbols.gmt
+		A list of pathways (and the genes they contain) from a Broad Institute curated dataset, 2006
+	/data/pathway-libraries/c5.bp.v3.0.symbols.gmt
+		A list of pathways (and the genes they contain) from the GO dataset, version 3.0
+	/data/pathway-libraries/...
+	...other pathways from unknown sources....
