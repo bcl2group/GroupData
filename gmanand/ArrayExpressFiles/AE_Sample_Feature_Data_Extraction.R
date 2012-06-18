@@ -17,6 +17,10 @@ feature_count=c(feature_count,length(featureNames(ArrayExpress(ads.count.year[i,
 }
 ads.count.year[,4]=feature_count
 names(ads.count.year[,4])<-c("feature_count")
+
+#Access platforms at <http://www.ebi.ac.uk/arrayexpress/arrays/browse.html?directsub=on/>
+#Pair up arrays with experiments
+#Access array txt file, extract number of features
 ##################################################################################
 
 ads.count.year[,4]=rep(0,5894)
