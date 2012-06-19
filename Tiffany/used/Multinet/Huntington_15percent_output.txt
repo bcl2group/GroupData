@@ -1,0 +1,164 @@
+Multinet
+=== Structure for class 'Control' ===
+Bayes Network Classifier
+not using ADTree
+#attributes=17 #classindex=0
+Network structure (nodes followed by parents)
+class(5): 
+RALA(50): IMMT 
+CBX5(50): WT1 
+CALM3(50): WT1 
+SCT(50): WT1 
+GLG1(50): NFIB 
+NFIB(50): CBX5 
+CDKN1A(50): CALM3 
+GLUL(50): WT1 
+WT1(50): 
+MAPK8IP1(50): WT1 
+SRPRB(50): NFIB 
+TPM1(50): WT1 
+IVD(50): WT1 
+IMMT(50): WT1 
+MAP3K8(50): WT1 
+LMNB1(50): CALM3 
+LogScore Bayes: -1122.3655554391019
+LogScore BDeu: -311440.94584857946
+LogScore MDL: -135090.28312267538
+LogScore ENTROPY: -74441.94103289823
+LogScore AIC: -111244.9410328971
+
+=== Structure for class 'GDS1236' ===
+Bayes Network Classifier
+not using ADTree
+#attributes=17 #classindex=0
+Network structure (nodes followed by parents)
+class(5): 
+RALA(50): CBX5 
+CBX5(50): 
+CALM3(50): CBX5 
+SCT(50): NFIB 
+GLG1(50): NFIB 
+NFIB(50): CBX5 
+CDKN1A(50): CBX5 
+GLUL(50): NFIB 
+WT1(50): CBX5 
+MAPK8IP1(50): NFIB 
+SRPRB(50): NFIB 
+TPM1(50): CBX5 
+IVD(50): CBX5 
+IMMT(50): CBX5 
+MAP3K8(50): NFIB 
+LMNB1(50): NFIB 
+LogScore Bayes: -254.09549034845872
+LogScore BDeu: -310572.67578348896
+LogScore MDL: -99175.30345858852
+LogScore ENTROPY: -73665.40777244193
+LogScore AIC: -110468.40777244057
+
+=== Structure for class 'GDS2887' ===
+Bayes Network Classifier
+not using ADTree
+#attributes=17 #classindex=0
+Network structure (nodes followed by parents)
+class(5): 
+RALA(50): GLG1 
+CBX5(50): CALM3 
+CALM3(50): RALA 
+SCT(50): CALM3 
+GLG1(50): 
+NFIB(50): RALA 
+CDKN1A(50): CALM3 
+GLUL(50): RALA 
+WT1(50): RALA 
+MAPK8IP1(50): RALA 
+SRPRB(50): CALM3 
+TPM1(50): CALM3 
+IVD(50): CALM3 
+IMMT(50): CALM3 
+MAP3K8(50): RALA 
+LMNB1(50): RALA 
+LogScore Bayes: -375.69016692077713
+LogScore BDeu: -310694.2704600612
+LogScore MDL: -119526.9546779145
+LogScore ENTROPY: -73800.94496184227
+LogScore AIC: -110603.94496184078
+
+=== Structure for class 'GDS3515' ===
+Bayes Network Classifier
+not using ADTree
+#attributes=17 #classindex=0
+Network structure (nodes followed by parents)
+class(5): 
+RALA(50): 
+CBX5(50): RALA 
+CALM3(50): RALA 
+SCT(50): RALA 
+GLG1(50): RALA 
+NFIB(50): RALA 
+CDKN1A(50): RALA 
+GLUL(50): RALA 
+WT1(50): RALA 
+MAPK8IP1(50): RALA 
+SRPRB(50): RALA 
+TPM1(50): RALA 
+IVD(50): RALA 
+IMMT(50): RALA 
+MAP3K8(50): RALA 
+LMNB1(50): RALA 
+LogScore Bayes: -240.70734461045618
+LogScore BDeu: -310559.2876377511
+LogScore MDL: -106642.19866214837
+LogScore ENTROPY: -73671.1367891497
+LogScore AIC: -110474.13678914824
+
+=== Structure for class 'GDS717' ===
+Bayes Network Classifier
+not using ADTree
+#attributes=17 #classindex=0
+Network structure (nodes followed by parents)
+class(5): 
+RALA(50): SCT 
+CBX5(50): SCT 
+CALM3(50): SCT 
+SCT(50): 
+GLG1(50): SCT 
+NFIB(50): SCT 
+CDKN1A(50): SCT 
+GLUL(50): SCT 
+WT1(50): SCT 
+MAPK8IP1(50): SCT 
+SRPRB(50): RALA 
+TPM1(50): SCT 
+IVD(50): SCT 
+IMMT(50): SCT 
+MAP3K8(50): IMMT 
+LMNB1(50): RALA 
+LogScore Bayes: -376.05128149044225
+LogScore BDeu: -310694.63157463085
+LogScore MDL: -106739.74575545959
+LogScore ENTROPY: -73768.68388246077
+LogScore AIC: -110571.68388245949
+
+=== Overall Scores ===
+LogScore Bayes: -2450.440911440762
+LogScore BDeu: -1554048.385554411
+LogScore MDL: -567261.664477888
+LogScore ENTROPY: -369427.27857352403
+LogScore AIC: -553446.2785735173
+
+
+Correctly Classified Instances          34               61.8182 %
+Incorrectly Classified Instances        21               38.1818 %
+Kappa statistic                          0.4175
+Mean absolute error                      0.1535
+Root mean squared error                  0.362 
+Relative absolute error                 55.0956 %
+Root relative squared error             97.4209 %
+Total Number of Instances               55     
+Weighted area under ROC: 0.7500204944557104
+0.4642857142857143
+0.0
+0.11627906976744186
+0.04081632653061224
+0.02040816326530612
+0.0
