@@ -146,6 +146,8 @@ esetList <- list()
 # Iterate through all of the IDs
 for (id in vectorIDs) {
 	print(id)
+
+	## this starts downloading the files
 	download_dir = "/scratch/vinnie/GEOPipelineFiles_ubuntu/tmp"
 #	gds <- getGEO(id)
 	print("download file dest")
