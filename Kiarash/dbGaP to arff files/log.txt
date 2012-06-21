@@ -1,0 +1,73 @@
+C:\Downloads\Project\Datamining\Test>java -jar pipeline.jar --help
+help:
+
+1. --help. this parameter means you want to know how to use our jar file. If you use this parameter, all the others will be ignore
+d.
+2. --fast(only applied to raw file). this parameter means you want a simple way to convert .raw to .arff. In this way, it will be
+very fast especially you're processing a very large file. However, it will only do the following changes:
+        2.1 replace "NA" to "?"
+        2.2 replace " " to ",", like a csv file
+        2.3 generate the @attribute part(only all the SNPs, SEX and PHENOTYPE), but the value are all {0, 1, 2}
+        2.4 generate the @relation part based on parameter
+        2.5 generate the @data part.
+If you use this parameter and not use --help, --src, --des and --name are needed and necessary. --cov and --list will be ignored -
+-fast can add an extra parameter to specify the "block size" for mapped buffered byte. If you don't specify it or the value is imp
+roper(above 500MB or less than 5MB), the default value is 30Mb.
+3. --srcR/--srcA(necessary forever). this parameter means the .raw/.arff file path.
+4. --des(necessary forever). this parameter means the .arff file path. If file existed, the program will ask whether to overwrite
+it; if the file didn't exist but the directory existed, it will automatically create new file; if neither the file or directory ex
+isted, it will give the error. In the mean time, when the program doesn't use the fast method(--fast), it will also create a file
+with same name as --des specified but end with .temp, which is the temp file only record all the instances with the necessary SNPs
+ .list file requires.
+5. --name(necessary for raw file). this parameter gives the relation name for the .arff file. The name can be separated by blank.
+6. --list(necessary for arff file). this parameter gives the .list file path. The names of the SNPs in this file don't need to be
+the same order as .raw file.
+7. --test. replace all the{0, 1}, {0, 2} and {1, 2} in SNPs with {0, 1, 2}
+
+C:\Downloads\Project\Datamining\Test>java -jar pipeline.jar --srcR testForRaw.raw --des outForRaw.arff --list testForRaw.list --na
+me MajorDepression --test
+Your command is intented to do with following parameters:
+        srcr:   testForRaw.raw: file check OK!
+        des:    outForRaw.arff: file check OK!
+        list:   testForRaw.list:        file check OK!
+        name:   MajorDepression
+        test:   true
+necessary file check:
+necessary file check finished!
+******************************************
+***********command check result***********
+******************************************
+command check success!
+
+
+******************************************
+***start processing data with raw method**
+******************************************
+¡ï¡ï¡ïget sex, phenotype and SNPs index¡ï¡ï¡ï
+1 threads are created
+Finished! Memory Usage: 15 Mb, Total SNPs: 0
+size of snp index:494
+size of snp name494
+total time: 0 s
+¡ï¡ï¡ïget SNPs from .list file¡ï¡ï¡ï
+SNP search No. 0, Memory Usage: 15 Mb, Total SNPs: 494
+Finished!Memory Usage: 15 Mb, Total SNPs: 494
+total time: 0 s
+¡ï¡ï¡ïsave data into .arff file¡ï¡ï¡ï
+start save arff file
+Total Memory: 15 Mb
+save instances and store value for header
+Total Memory: 15 Mb
+write headers
+Total Memory: 15 Mb
+Total Memory: 15 Mb
+file size: 0.00 MB
+total block count: 1
+*****************
+start processing block No.0
+total time: 0 s
+Retry: Delete outForRaw.arff.temp fail!
+Delete outForRaw.arff.temp success!
+total time: 0 s
+
+C:\Downloads\Project\Datamining\Test>

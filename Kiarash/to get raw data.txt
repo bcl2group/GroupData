@@ -1,0 +1,8 @@
+I contacted Skanda; he knows how to get them. There are documentations to fill out and Gil sent me what paper-work they filled out before.
+
+
+for GEO data, I figured this much so far.
+
+ftp://ftp.ncbi.nlm.nih.gov/pub/geo/README.TXT   you need to choose one of those. forget the 4 mg file. 
+
+you probably can't download it with browser. there is good info here  ftp://ftp.ncbi.nlm.nih.gov/pub/README.ftp
