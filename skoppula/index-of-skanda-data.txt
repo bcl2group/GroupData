@@ -1,11 +1,11 @@
 -------------------------------------------------------------------------------------
 This document is a brief listing of the used in my project. This document references
-wdata that can be found in this directory and on BCL's GitHub under GroupData/Skanda.
+data that can be found in this directory and on BCL's GitHub under GroupData/Skanda.
 
 This document now includes documentation on data that Amin recently acquired 
 from dBGAP. Also, part of this data repository may be missing when hosted on DropBox
-and GitHub because of space limitations. To get complete data refer to the original 
-sources found in the text below (email skoppula@andover.edu if not specified).
+because of space limitations. To get complete data refer to the original sources
+found in the text below.
 
 If you need clarification, notice any errors, or encounter any problems, 
 please feel free to contact Skanda (skoppula@andover.edu). 

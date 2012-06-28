@@ -1,0 +1,31 @@
+You don't need your own github account.
+
+1. Install Git Bash. (choose your OS on this page: https://help.github.com/articles/set-up-git and do as it says)
+
+2. Clone this repository to your computer (you might decide to use SSH but for simplicity here we use HTTPS). That is,
+    go to Bash and navigate to where you want the code to be on your computer. Type:
+      git clone https://github.com/bcl2group/GroupData
+
+3. Now you should have a folder called GroupData. You should make a separate folder with your name
+    and put your [modified] data.s
+
+4. Do this regularly, when you change or add code:
+
+      git pull
+        NOTE: You might want to do this more frequently so you have the repository's latest code
+        NOTE: Make sure to do it just before pushing too!
+      git add . -A
+      git commit -m "a message containing what change you made"
+      git push
+
+Type the lab's username or password, or your own (see below). Ask us for that.
+
+ALTERNATIVELY:
+
+If you have your own github account that you prefer to use, you can add yourself as collaborator in bcl2group
+(you need the password to do this). Then clone the repository using its address. When you are pushing stuff
+to Git, however, you can to enter your own Git user/pass. This is actually nicer since we can see who has changed
+which code and what...
+
+To add yourself as collaborator go to github.com and log in as bcl2group and *add colaborator*
+(look around a bit!...you'll find it)

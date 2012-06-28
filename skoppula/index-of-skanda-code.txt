@@ -62,7 +62,8 @@ Format_SNP_List.java
 
 OntologySizeCount.java
 	Determines the distribution of pathway size (measured by number of genes/SNPs), 
-	given a database listing of pathways - for example, the listing:
+	given a database listing of pathways. This is useful to determine the size of
+	the parameters - for example, the listing:
 		\data\c2.cp.kegg.v3.0.symbols.gmt
 	resulted in the distribution found here:
 		\code\size-of-ontologies-results.txt
