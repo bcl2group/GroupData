@@ -1,1 +1,0 @@
-copy *.csv cogend-snp-annotations.csv
