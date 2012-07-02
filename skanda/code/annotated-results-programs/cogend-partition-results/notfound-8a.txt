@@ -1,0 +1,27 @@
+Annotation project is created:  C:\home\personal\skanda\MITPrimes\project\cogend-snp-partitions\snp-partition-8a-30000.wr.wga.
+Reading SNPs to be annotated: snp-partition-8a-30000.wr.
+30000 SNPs to be annotated.
+SNP rs3177095 was not found.
+SNP rs4545733 was not found.
+SNP rs1124119 was not found.
+SNP rs3177427 was not found.
+SNP rs11160043 was not found.
+SNP rs17129551 was not found.
+SNP rs1140848 was not found.
+SNP rs12591365 was not found.
+SNP rs17561800 was not found.
+SNP rs4402510 was not found.
+SNP rs2871771 was not found.
+SNP rs3751637 was not found.
+SNP rs1685119 was not found.
+SNP rs17719808 was not found.
+SNP rs11855807 was not found.
+SNP rs7177445 was not found.
+SNP rs4390539 was not found.
+SNP rs28757190 was not found.
+SNP rs1043150 was not found.
+SNP rs3858895 was not found.
+SNP rs7162473 was not found.
+SNP rs8025316 was not found.
+SNP rs11574491 was not found.
+Brief annotation is done for file: snp-partition-8a-30000.wr.
