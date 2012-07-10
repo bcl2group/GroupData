@@ -1,0 +1,9 @@
+@relation ./data/geneList1.txt
+
+@attribute APOE numeric
+@attribute NOMNOM numeric
+@attribute OMNOM numeric
+@attribute OMNOMNOM numeric
+@attribute AGER numeric
+
+@data

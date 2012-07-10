@@ -1,0 +1,9 @@
+@relation ./data/geneList2.txt
+
+@attribute WT1 numeric
+@attribute HEHAW numeric
+@attribute TEHE numeric
+@attribute TEHEHEH numeric
+@attribute REGL numeric
+
+@data
