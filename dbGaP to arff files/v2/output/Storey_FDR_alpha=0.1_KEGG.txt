@@ -1,1 +1,0 @@
-Concept	AUROC	#SNPs	Genes	SNPs	#Significant runs	Significance values

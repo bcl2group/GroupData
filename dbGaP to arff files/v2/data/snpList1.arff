@@ -1,9 +1,0 @@
-@relation data/snpList1.txt
-
-@attribute rs11240767 {0N,1N}
-@attribute rs3131972 {0N,1N}
-@attribute rs3131969 {0N,1N}
-@attribute rs12562034 {0N,1N}
-@attribute rs12124819 {0N,1N}
-
-@data
