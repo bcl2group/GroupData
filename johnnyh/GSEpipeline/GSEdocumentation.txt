@@ -1,0 +1,28 @@
+Note that the pipeline for handling GSEs requires much more manual twiddling than the original GDS pipeline.
+
+To begin processing a GSE, open GSEtest.r and enter the desired GSE id at the top.
+Then run GSEtest.r, which will create a _pheno.csv and a _geno.csv file in your current directory.
+Note that both GSEtest.r and GSEpipeline.r will create a /DAT directory under your current directory where backup files
+will be created and data files can be placed if the ncbi ftp server is offline. If the ncbi ftp server is offline,
+use Aspera connect to download the correct _series_matrix.txt.gz files and place them in the /DAT directory.
+
+The created _pheno.csv file contains a description of each of the GSM samples - locate a column that specifies whether
+the sample is a control or non-control. As long as the script can later automatically distinguish samples by searching for the words
+"control", "normal", etc. in this column, it is acceptable.
+
+The created _geno.csv file contains a description of each of the probes - locate a column that specifies a gene symbol
+or probe id for each probe.
+
+Once the desired GSE ids and their corresponding phenotype and genotype columns are chosen, open GSEpipeline.r and enter
+the GSE ids as a list of strings at the top into "vIDs".
+Below the GSE ids, enter a mapping between each GSE id and its columns into "pcTags" and "gcTags"
+Follow the format that is already given. Case matters.
+
+The pipeline is currently set up to log2 transform the gene expression values. If this is not desired or if the GSE data
+has already been log2 transformed, enter the IDs that should be ignored into "alreadyLog2"
+
+Other options in the GSEpipeline.r script that can be controlled are:
+percentTopGenes: controls the percent of the top differentially expressed genes to include
+useTargetGenes: if this is TRUE, then an intersection will be taken between the common genes and "targetGenes"
+expName: specifies titles of the output files
+displayPValues: controls whether p-values should be outputted
