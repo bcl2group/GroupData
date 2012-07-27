@@ -7,6 +7,7 @@ public class CompareNet_JH {
 	public static final String outName = "_compout.txt";
 	
 	public static HashMap<String, Counter> ans = null;
+	public static HashMap<String, Counter> cur = null;
 	
 	public static void main(String[] args) throws Exception {
 		BufferedReader reader = new BufferedReader(new FileReader(fileListName));
@@ -18,7 +19,17 @@ public class CompareNet_JH {
 			if (s == null) break;
 			s = s.trim();
 			if (s.isEmpty()) break;
-			go(s);
+			String[] strs = s.split("[-]");
+			cur = null;
+			go(strs[0].trim());
+			if (strs.length > 1) {
+				go(strs[1].trim());
+			}
+			if (ans == null) {
+				ans = cur;
+			} else {
+				merge(ans, cur);
+			}
 		}
 		TreeMap<Counter, ArrayList<String> > sorted = new TreeMap<Counter, ArrayList<String> >();
 		for (Map.Entry<String, Counter> e : ans.entrySet()) {
@@ -27,6 +38,7 @@ public class CompareNet_JH {
 			sorted.get(e.getValue()).add(e.getKey());
 		}
 		for (Map.Entry<Counter, ArrayList<String> > e : sorted.entrySet()) {
+			if (Math.abs(e.getKey().comb.sum()) < 0.1) continue;
 			for (String v : e.getValue()) {
 				if (e.getKey().comb.prop() >= 0.5) {
 					out.println(v + " " + e.getKey());
@@ -63,10 +75,10 @@ public class CompareNet_JH {
 			}
 			hm.put(pref, new Counter(1, e));
 		}
-		if (ans == null) {
-			ans = hm;
+		if (cur == null) {
+			cur = hm;
 		} else {
-				merge(ans, hm);
+			sub(cur, hm);
 		}
 	}
 	public static void merge(HashMap<String, Counter> res, HashMap<String, Counter> a) {
@@ -77,6 +89,13 @@ public class CompareNet_JH {
 			} else {
 				res.get(k).add(e.getValue());
 			}
+		}
+	}
+	public static void sub(HashMap<String, Counter> res, HashMap<String, Counter> a) {
+		for (Map.Entry<String, Counter> e : a.entrySet()) {
+			String k = e.getKey();
+			if (res.get(k) == null) continue;
+			res.get(k).sub(e.getValue());
 		}
 	}
 }
@@ -91,6 +110,9 @@ class Counter implements Comparable<Counter> {
 	void add(Counter oth) {
 		num += oth.num;
 		comb = comb.add(oth.comb);
+	}
+	void sub(Counter oth) {
+		comb = comb.sub(oth.comb);
 	}
 	public int compareTo(Counter oth) {
 		if (num != oth.num) return num < oth.num ? -1 : 1;

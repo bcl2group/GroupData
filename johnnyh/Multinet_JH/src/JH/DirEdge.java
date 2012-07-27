@@ -26,6 +26,10 @@ public class DirEdge implements Comparable<DirEdge> {
 		return new DirEdge(va + oth.va, vb + oth.vb);
 	}
 	
+	public DirEdge sub(DirEdge oth) {
+		return new DirEdge(va - oth.va, vb - oth.vb);
+	}
+	
 	public DirEdge adda(double a) {
 		return new DirEdge(va + a, vb);
 	}

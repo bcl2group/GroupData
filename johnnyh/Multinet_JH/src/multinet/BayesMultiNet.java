@@ -71,41 +71,41 @@ import weka.filters.unsupervised.instance.RemoveWithValues;
  * Machine Learning. 29(2-3):131-163.
  * <p/>
  * <!-- globalinfo-end -->
- *
+ * 
  * <!-- options-start --> Valid list of options:
  * <p/ >
- *
+ * 
  * <pre>
  * -C &lt;num&gt;
  *  Choose index of class label whose structure will be displayed in Weka
  *  GUI (defaults to 0).
  * </pre>
- *
+ * 
  * <pre>
  * -A &lt;num&gt;
  *  Initial count (alpha), defaults to 0.5.
  * </pre>
- *
+ * 
  * <pre>
  * -S [BAYES|BDeu|MDL|ENTROPY|AIC]
  *  Score type (BAYES, BDeu, MDL, ENTROPY and AIC)
  * </pre>
- *
+ * 
  * <!-- options-end -->
- *
+ * 
  * @author Kent Huynh (khuynh@mit.edu)
  */
 public class BayesMultiNet extends Classifier implements
-WeightedInstancesHandler, Drawable, AdditionalMeasureProducer {
+		WeightedInstancesHandler, Drawable, AdditionalMeasureProducer {
 	/**
 	 * Serializable ID corresponding to this version.
 	 */
 	private static final long serialVersionUID = -3627939878682572986L;
-	
+
 	private static final int binLo = 8, binHi = 15;
-	
+
 	public static final Random rand = new Random(1);
-	
+
 	/**
 	 * The dataset header for the purposes of printing out a semi-intelligible
 	 * model
@@ -128,7 +128,11 @@ WeightedInstancesHandler, Drawable, AdditionalMeasureProducer {
 	/**
 	 * Estimators associated with each structure.
 	 */
-	MultinetSimpleEstimator[] m_Estimators;
+	public MultinetSimpleEstimator[] m_Estimators;
+	/**
+	 * Scores associated with each structure
+	 */
+	public LocalScoreSearchAlgorithm[] m_Scorers;
 	// /**
 	// * Estimator associated with the class attribute.
 	// */
@@ -155,18 +159,18 @@ WeightedInstancesHandler, Drawable, AdditionalMeasureProducer {
 
 	/**
 	 * This will return a string describing the classifier.
-	 *
+	 * 
 	 * @return The string.
 	 */
 	public String globalInfo() {
 		return "Bayes classifier using the K2 algorithm of Chow and Liu (1968)"
-		+ " with a multinet approach (constructing separate"
-		+ " structures for each class).";
+				+ " with a multinet approach (constructing separate"
+				+ " structures for each class).";
 	} // globalInfo
 
 	/**
 	 * Returns an enumeration describing the available options
-	 *
+	 * 
 	 * @return an enumeration of all the available options
 	 */
 	public Enumeration listOptions() {
@@ -174,30 +178,31 @@ WeightedInstancesHandler, Drawable, AdditionalMeasureProducer {
 
 		newVector.addElement(new Option(
 				"Initial count (alpha), defaults to 0.5.", "A", 1, "-A <num>"));
-		newVector.addElement(new Option(
-				"\tChoose class label index whose structure is displayed graphically (defaults to first).",
-				"C", 1, "-C <index>"));
+		newVector
+				.addElement(new Option(
+						"\tChoose class label index whose structure is displayed graphically (defaults to first).",
+						"C", 1, "-C <index>"));
 		newVector.addElement(new Option(
 				"\tScore type (BAYES, BDeu, MDL, ENTROPY and AIC)", "S", 1,
-		"-S [BAYES|BDeu|MDL|ENTROPY|AIC]"));
+				"-S [BAYES|BDeu|MDL|ENTROPY|AIC]"));
 		return newVector.elements();
 	} // listOptions
 
 	/**
 	 * Parses a given list of options.
 	 * <p>
-	 *
+	 * 
 	 * <!-- options-start --> Valid list of options:
 	 * <p/ >
-	 *
+	 * 
 	 * <pre>
 	 * -C &lt;num&gt;
 	 *  Choose index of class label whose structure will be displayed in Weka
 	 *  GUI (defaults to 0).
 	 * </pre>
-	 *
+	 * 
 	 * <!-- options-end -->
-	 *
+	 * 
 	 * @param options
 	 *            the list of options as an array of strings
 	 * @throws Exception
@@ -248,7 +253,7 @@ WeightedInstancesHandler, Drawable, AdditionalMeasureProducer {
 
 	/**
 	 * Gets the current settings of the classifier.
-	 *
+	 * 
 	 * @return an array of strings suitable for passing to setOptions
 	 */
 	public String[] getOptions() {
@@ -268,24 +273,24 @@ WeightedInstancesHandler, Drawable, AdditionalMeasureProducer {
 
 		case (Scoreable.BAYES):
 			options.add("BAYES");
-		break;
+			break;
 
 		case (Scoreable.BDeu):
 			options.add("BDeu");
-		break;
+			break;
 
 		case (Scoreable.MDL):
 			options.add("MDL");
-		break;
+			break;
 
 		case (Scoreable.ENTROPY):
 			options.add("ENTROPY");
 
-		break;
+			break;
 
 		case (Scoreable.AIC):
 			options.add("AIC");
-		break;
+			break;
 		}
 
 		return options.toArray(new String[options.size()]);
@@ -293,7 +298,7 @@ WeightedInstancesHandler, Drawable, AdditionalMeasureProducer {
 
 	/**
 	 * Returns default capabilities of the classifier.
-	 *
+	 * 
 	 * @return the capabilities of this classifier
 	 */
 	public Capabilities getCapabilities() {
@@ -317,7 +322,7 @@ WeightedInstancesHandler, Drawable, AdditionalMeasureProducer {
 
 	/**
 	 * Generates the classifier.
-	 *
+	 * 
 	 * @param instances
 	 *            set of instances serving as training data
 	 * @throws Exception
@@ -330,13 +335,14 @@ WeightedInstancesHandler, Drawable, AdditionalMeasureProducer {
 		instances = normalizeDataSet(instances);
 
 		// copy instances to local field
-		//		m_Instances = new Instances(instances);
+		// m_Instances = new Instances(instances);
 		m_Instances = instances;
 
 		// initialize arrays
 		int numClasses = m_Instances.classAttribute().numValues();
 		m_Structures = new BayesNet[numClasses];
 		m_cInstances = new Instances[numClasses];
+		m_Scorers = new LocalScoreSearchAlgorithm[numClasses];
 		initializeEstimators(numClasses);
 
 		for (int iClass = 0; iClass < numClasses; iClass++) {
@@ -344,11 +350,11 @@ WeightedInstancesHandler, Drawable, AdditionalMeasureProducer {
 			RemoveWithValues rmvFilter = new RemoveWithValues();
 			rmvFilter.setAttributeIndex("" + (m_Instances.classIndex() + 1));
 			rmvFilter.setInvertSelection(true);
-			rmvFilter.setNominalIndicesArr(new int[]{iClass});
+			rmvFilter.setNominalIndicesArr(new int[] { iClass });
 			rmvFilter.setInputFormat(m_Instances);
-			//			m_cInstances[iClass] = new Instances(m_Instances);
-			//			m_cInstances[iClass] = Filter.useFilter(m_cInstances[iClass],
-			//					rmvFilter);
+			// m_cInstances[iClass] = new Instances(m_Instances);
+			// m_cInstances[iClass] = Filter.useFilter(m_cInstances[iClass],
+			// rmvFilter);
 			m_cInstances[iClass] = Filter.useFilter(m_Instances, rmvFilter);
 
 			// generate tree structure for this class label, based on Chow and
@@ -356,13 +362,16 @@ WeightedInstancesHandler, Drawable, AdditionalMeasureProducer {
 			MultiNet search = new MultiNet();
 			search.setScoreType(new SelectedTag(m_nScoreType,
 					LocalScoreSearchAlgorithm.TAGS_SCORE_TYPE));
-			//            m_Estimators[iClass] = new MultiNetSimpleEstimator();
+			// m_Estimators[iClass] = new MultiNetSimpleEstimator();
 			m_Structures[iClass] = new BayesNet();
 
-			//            m_Estimators[iClass].setAlpha(m_fAlpha);
+			// m_Estimators[iClass].setAlpha(m_fAlpha);
 			((BayesNet) m_Structures[iClass]).setSearchAlgorithm(search);
-			((BayesNet) m_Structures[iClass]).setEstimator(m_Estimators[iClass]);
+			((BayesNet) m_Structures[iClass])
+					.setEstimator(m_Estimators[iClass]);
 			m_Structures[iClass].buildClassifier(m_cInstances[iClass]);
+
+			m_Scorers[iClass] = search;
 
 			// update probability of this class label
 			// Enumeration enumInsts =
@@ -403,7 +412,7 @@ WeightedInstancesHandler, Drawable, AdditionalMeasureProducer {
 	 * Returns a description of the classifier. For the multinet K2 classifier,
 	 * this returns a list of structures prefaced by the corresponding class
 	 * labels.
-	 *
+	 * 
 	 * @return a description of the classifier as a string.
 	 */
 	public String toString() {
@@ -428,7 +437,7 @@ WeightedInstancesHandler, Drawable, AdditionalMeasureProducer {
 	/**
 	 * Calculates the class membership probabilities for the given test
 	 * instance.
-	 *
+	 * 
 	 * @param instance
 	 *            the instance to be classified
 	 * @return predicted class probability distribution
@@ -444,11 +453,15 @@ WeightedInstancesHandler, Drawable, AdditionalMeasureProducer {
 		double[] logfProbs = new double[numClasses]; // log of corresponding
 		// values in fProb
 		for (int iClass = 0; iClass < instance.numClasses(); iClass++) {
-			//            logfProbs[iClass] = Math.log(m_Estimators[iClass].distributionForInstance(
-			//                    m_Structures[iClass], instance)[0])
-			//                    + Math.log(m_cEstimator.distributionForInstance(instance)[iClass]);
-			logfProbs[iClass] = m_Estimators[iClass].logDist(m_Structures[iClass], instance)
-			+ Math.log(m_cEstimator.distributionForInstance(instance)[iClass]);
+			// logfProbs[iClass] =
+			// Math.log(m_Estimators[iClass].distributionForInstance(
+			// m_Structures[iClass], instance)[0])
+			// +
+			// Math.log(m_cEstimator.distributionForInstance(instance)[iClass]);
+			logfProbs[iClass] = m_Estimators[iClass].logDist(
+					m_Structures[iClass], instance)
+					+ Math
+							.log(m_cEstimator.distributionForInstance(instance)[iClass]);
 		}
 
 		// Find maximum probability (to facilitate normalization)
@@ -469,20 +482,20 @@ WeightedInstancesHandler, Drawable, AdditionalMeasureProducer {
 		return fProbs;
 	} // distributionForInstance
 
-//	/**
-//	 * Main method for testing this class.
-//	 *
-//	 * @param argv
-//	 *            the options
-//	 */
-//	public static void main(String[] argv) {
-//		runClassifier(new BayesMultiNet(), argv);
-//	} // main
+	// /**
+	// * Main method for testing this class.
+	// *
+	// * @param argv
+	// * the options
+	// */
+	// public static void main(String[] argv) {
+	// runClassifier(new BayesMultiNet(), argv);
+	// } // main
 
 	/**
 	 * Ensure that all variables are nominal and that there are no missing
 	 * values
-	 *
+	 * 
 	 * @param instances
 	 *            data set to check and quantize and/or fill in missing values
 	 * @return filtered instances
@@ -517,15 +530,17 @@ WeightedInstancesHandler, Drawable, AdditionalMeasureProducer {
 
 		if (bHasNonNominal) {
 			int binNum = binLo + rand.nextInt(binHi - binLo);
-			System.out.println("***Discretizing data set - " + binNum + " bins***");
+			System.out.println("***Discretizing data set - " + binNum
+					+ " bins***");
 			m_DiscretizeFilter = new Discretize();
-			((Discretize)m_DiscretizeFilter).setBins(binNum);
+			((Discretize) m_DiscretizeFilter).setBins(binNum);
 			m_DiscretizeFilter.setInputFormat(instances);
 			instances = Filter.useFilter(instances, m_DiscretizeFilter);
 		}
 
 		if (bHasMissingValues) {
-			System.err.println("Warning: filling in missing values in data set");
+			System.err
+					.println("Warning: filling in missing values in data set");
 			m_MissingValuesFilter = new ReplaceMissingValues();
 			m_MissingValuesFilter.setInputFormat(instances);
 			instances = Filter.useFilter(instances, m_MissingValuesFilter);
@@ -536,7 +551,7 @@ WeightedInstancesHandler, Drawable, AdditionalMeasureProducer {
 	/**
 	 * ensure that all variables are nominal and that there are no missing
 	 * values
-	 *
+	 * 
 	 * @param instance
 	 *            instance to check and quantize and/or fill in missing values
 	 * @return filtered instance
@@ -554,12 +569,13 @@ WeightedInstancesHandler, Drawable, AdditionalMeasureProducer {
 			instance = m_MissingValuesFilter.output();
 		} else {
 			// is there a missing value in this instance?
-					// this can happen when there is no missing value in the training
+			// this can happen when there is no missing value in the training
 			// set
 			for (int iAttribute = 0; iAttribute < m_Instances.numAttributes(); iAttribute++) {
 				if (iAttribute != instance.classIndex()
 						&& instance.isMissing(iAttribute)) {
-					System.err.println("Warning: Found missing value in test set, filling in values.");
+					System.err
+							.println("Warning: Found missing value in test set, filling in values.");
 					m_MissingValuesFilter = new ReplaceMissingValues();
 					m_MissingValuesFilter.setInputFormat(m_Instances);
 					Filter.useFilter(m_Instances, m_MissingValuesFilter);
@@ -577,7 +593,7 @@ WeightedInstancesHandler, Drawable, AdditionalMeasureProducer {
 	 * Returns an enumeration of the measure names. Additional measures must
 	 * follow the naming convention of starting with "measure", eg. double
 	 * measureBlah()
-	 *
+	 * 
 	 * @return an enumeration of the measure names
 	 */
 	@Override
@@ -593,7 +609,7 @@ WeightedInstancesHandler, Drawable, AdditionalMeasureProducer {
 
 	/**
 	 * Returns the value of the named measure
-	 *
+	 * 
 	 * @param measureName
 	 *            the name of the measure to query for its value
 	 * @return the value of the named measure
@@ -663,7 +679,7 @@ WeightedInstancesHandler, Drawable, AdditionalMeasureProducer {
 
 	/**
 	 * Returns the type of graph this classifier represents.
-	 *
+	 * 
 	 * @return Drawable.BayesNet
 	 */
 	@Override
@@ -675,7 +691,7 @@ WeightedInstancesHandler, Drawable, AdditionalMeasureProducer {
 	 * Returns a graph representation of this classifier. This method outputs
 	 * the structure associated with the class label given by the
 	 * <code>-C</code> option.
-	 *
+	 * 
 	 * @return a String representing the graph in XML BIF 0.3 format.
 	 */
 	@Override
@@ -685,7 +701,7 @@ WeightedInstancesHandler, Drawable, AdditionalMeasureProducer {
 
 	/**
 	 * Sets the alpha value (weight of prior probability).
-	 *
+	 * 
 	 * @param alpha
 	 *            the alpha value
 	 */
@@ -695,7 +711,7 @@ WeightedInstancesHandler, Drawable, AdditionalMeasureProducer {
 
 	/**
 	 * Returns the alpha value (weight of prior probability).
-	 *
+	 * 
 	 * @return the alpha value
 	 */
 	public double getAlpha() {
@@ -704,7 +720,7 @@ WeightedInstancesHandler, Drawable, AdditionalMeasureProducer {
 
 	/**
 	 * Returns a String to describe the <code>-A</code> option.
-	 *
+	 * 
 	 * @return the aforementioned String.
 	 */
 	public String alphaTipText() {
@@ -714,7 +730,7 @@ WeightedInstancesHandler, Drawable, AdditionalMeasureProducer {
 	/**
 	 * Sets the index of the class label whose structure should be displayed in
 	 * the Weka GUI.
-	 *
+	 * 
 	 * @param cDisplay
 	 *            the index of the class label to be displayed
 	 */
@@ -725,7 +741,7 @@ WeightedInstancesHandler, Drawable, AdditionalMeasureProducer {
 	/**
 	 * Returns the index of the class label whose structure should be displayed
 	 * in the Weka GUI.
-	 *
+	 * 
 	 * @return the index of the class label to be displayed
 	 */
 	public int getDisplayIndex() {
@@ -734,7 +750,7 @@ WeightedInstancesHandler, Drawable, AdditionalMeasureProducer {
 
 	/**
 	 * Returns a String to describe the <code>-C</code> option.
-	 *
+	 * 
 	 * @return the aforementioned String.
 	 */
 	public String displayIndexTipText() {
@@ -743,7 +759,7 @@ WeightedInstancesHandler, Drawable, AdditionalMeasureProducer {
 
 	/**
 	 * set quality measure to be used in searching for networks.
-	 *
+	 * 
 	 * @param newScoreType
 	 *            the new score type
 	 */
@@ -755,7 +771,7 @@ WeightedInstancesHandler, Drawable, AdditionalMeasureProducer {
 
 	/**
 	 * get quality measure to be used in searching for networks.
-	 *
+	 * 
 	 * @return quality measure
 	 */
 	public SelectedTag getScoreType() {
@@ -768,84 +784,85 @@ WeightedInstancesHandler, Drawable, AdditionalMeasureProducer {
 	 */
 	public String scoreTypeTipText() {
 		return "The score type determines the measure used to judge the quality of a"
-		+ " network structure. It can be one of Bayes, BDeu, Minimum Description Length (MDL),"
-		+ " Akaike Information Criterion (AIC), and Entropy.";
+				+ " network structure. It can be one of Bayes, BDeu, Minimum Description Length (MDL),"
+				+ " Akaike Information Criterion (AIC), and Entropy.";
 	}
 
 	/**
 	 * Extension of {@link SimpleEstimator} which can handle the multinet
 	 * approach of BayesMultiNet.
 	 */
-	//    class MultiNetSimpleEstimator extends SimpleEstimator {
+	// class MultiNetSimpleEstimator extends SimpleEstimator {
 	//
-	//        /** for serialization */
-	//        static final long serialVersionUID = 5874941612331806172L;
+	// /** for serialization */
+	// static final long serialVersionUID = 5874941612331806172L;
 	//
-	//        /**
-	//         * Returns a string describing this object
-	//         *
-	//         * @return a description of the classifier suitable for displaying in
-	//         *         the explorer/experimenter gui
-	//         */
-	//        public String globalInfo() {
-	//            return "MultiNetSimpleEstimator is used for estimating the "
-	//                    + "conditional probability tables of a multinet Bayes "
-	//                    + "network once the structure has been learned. Estimates "
-	//                    + "probabilities directly from data.";
-	//        }
+	// /**
+	// * Returns a string describing this object
+	// *
+	// * @return a description of the classifier suitable for displaying in
+	// * the explorer/experimenter gui
+	// */
+	// public String globalInfo() {
+	// return "MultiNetSimpleEstimator is used for estimating the "
+	// + "conditional probability tables of a multinet Bayes "
+	// + "network once the structure has been learned. Estimates "
+	// + "probabilities directly from data.";
+	// }
 	//
-	//        /**
-	//         * Calculates the class membership probabilities for the given test
-	//         * instance. For this particular implementation, a single probability is
-	//         * returned, since the MultiNetSimpleEstimator is associated with a
-	//         * single class label.
-	//         *
-	//         * @param bayesNet
-	//         *            the bayes net to use
-	//         * @param instance
-	//         *            the instance to be classified
-	//         * @return predicted class probability distribution
-	//         * @throws Exception
-	//         *             if there is a problem generating the prediction
-	//         */
-	//        public double[] distributionForInstance(BayesNet bayesNet,
-	//                Instance instance) throws Exception {
+	// /**
+	// * Calculates the class membership probabilities for the given test
+	// * instance. For this particular implementation, a single probability is
+	// * returned, since the MultiNetSimpleEstimator is associated with a
+	// * single class label.
+	// *
+	// * @param bayesNet
+	// * the bayes net to use
+	// * @param instance
+	// * the instance to be classified
+	// * @return predicted class probability distribution
+	// * @throws Exception
+	// * if there is a problem generating the prediction
+	// */
+	// public double[] distributionForInstance(BayesNet bayesNet,
+	// Instance instance) throws Exception {
 	//
-	//            double logfP = logDist(bayesNet, instance);
+	// double logfP = logDist(bayesNet, instance);
 	//
-	//            return new double[]{Math.exp(logfP)};
-	//        }
+	// return new double[]{Math.exp(logfP)};
+	// }
 	//
-	//        private double logDist(BayesNet bayesNet, Instance instance) {
-	//            double logfP = 0;
-	//            Instances instances = bayesNet.m_Instances;
-	//            for (int iAttribute = 0; iAttribute < instances.numAttributes(); iAttribute++) {
-	//                if (iAttribute == instances.classIndex()) {
-	//                    // ignore class index, since this estimator is associated
-	//                    // with a single class label
-	//                    continue;
-	//                }
-	//                double iCPT = 0;
+	// private double logDist(BayesNet bayesNet, Instance instance) {
+	// double logfP = 0;
+	// Instances instances = bayesNet.m_Instances;
+	// for (int iAttribute = 0; iAttribute < instances.numAttributes();
+	// iAttribute++) {
+	// if (iAttribute == instances.classIndex()) {
+	// // ignore class index, since this estimator is associated
+	// // with a single class label
+	// continue;
+	// }
+	// double iCPT = 0;
 	//
-	//                for (int iParent = 0; iParent < bayesNet.getParentSet(
-	//                        iAttribute).getNrOfParents(); iParent++) {
-	//                    int nParent = bayesNet.getParentSet(iAttribute).getParent(
-	//                            iParent);
+	// for (int iParent = 0; iParent < bayesNet.getParentSet(
+	// iAttribute).getNrOfParents(); iParent++) {
+	// int nParent = bayesNet.getParentSet(iAttribute).getParent(
+	// iParent);
 	//
-	//                    iCPT = iCPT * instances.attribute(nParent).numValues()
-	//                            + instance.value(nParent);
-	//                }
+	// iCPT = iCPT * instances.attribute(nParent).numValues()
+	// + instance.value(nParent);
+	// }
 	//
-	//                logfP += Math.log(bayesNet.m_Distributions[iAttribute][(int) iCPT].getProbability(instance.value(iAttribute)));
-	//            }
-	//            return logfP;
-	//        }
-	//    } // MultiNetSimpleEstimator
-
+	// logfP += Math.log(bayesNet.m_Distributions[iAttribute][(int)
+	// iCPT].getProbability(instance.value(iAttribute)));
+	// }
+	// return logfP;
+	// }
+	// } // MultiNetSimpleEstimator
 	/**
 	 * Extension of {@link K2} which can handle the multinet approach of
-	 * BayesMultiNet. This is necessary because the provided K2
-	 * implementation automatically links the class node to every other node.
+	 * BayesMultiNet. This is necessary because the provided K2 implementation
+	 * automatically links the class node to every other node.
 	 */
 	class MultiNet extends K2 {
 
@@ -857,7 +874,7 @@ WeightedInstancesHandler, Drawable, AdditionalMeasureProducer {
 		/**
 		 * buildStructure determines the network structure/graph of the network
 		 * using the maximimum weight spanning tree algorithm of Chow and Liu
-		 *
+		 * 
 		 * @param bayesNet
 		 *            the network
 		 * @param instances
@@ -866,9 +883,9 @@ WeightedInstancesHandler, Drawable, AdditionalMeasureProducer {
 		 *             if something goes wrong
 		 */
 		public void buildStructure(BayesNet bayesNet, Instances instances)
-		throws Exception {
+				throws Exception {
 			setMaxNrOfParents(2);
-			
+
 			super.buildStructure(bayesNet, instances);
 
 			// remove class attribute from every parent set

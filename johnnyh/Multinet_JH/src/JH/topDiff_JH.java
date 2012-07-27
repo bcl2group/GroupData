@@ -37,7 +37,7 @@ public class topDiff_JH {
 				tot = inter(tot, ret);
 			}
 		}
-		System.out.println(tot.size() + " common genes found");
+		System.out.print(tot.size() + " common genes found:");
 		int[] arr = toArray(tot);
 		ArrayList<String> arrNames = new ArrayList<String>();
 		for (int a : arr) {
@@ -45,7 +45,7 @@ public class topDiff_JH {
 		}
 		Collections.sort(arrNames);
 		for (String s : arrNames) {
-			System.out.print(s + " ");
+			System.out.print(" " + s);
 		}
 		System.out.println();
 		return getFilter(data, arr);

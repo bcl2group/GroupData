@@ -453,9 +453,10 @@ print("**Normalizing all IREs**")
 
 # Find the median across all gene expressions across all samples in each IRE
 print("**Finding medians for each experiment**")
-medianList <- rep(NA, 1)
-m = 1 # Index in medianList	
+medianList <- list()
+sdList <- list()
 
+m = 1 # Index of listOfIREs
 for (ire in listOfIREs) {
 	print("Finding median for:")
 	id <- names(listOfIREs)[m]
@@ -470,6 +471,7 @@ for (ire in listOfIREs) {
 	print(paste("Median: ", med))
 	
 	stddev <- sd(collapsedMat)
+	sdList[[id]] <- stddev
 	print(paste("Stddev: ", stddev))
 	
 	m = m + 1
@@ -480,7 +482,7 @@ print("**Normalizing IREs**")
 
 normalizedIREs <- listOfIREs
 
-p = 1 # Index of listOfIREs / medianList
+p = 1 # Index of listOfIREs
 for (ire in listOfIREs) {
 	normIRE <- ire
 	id <- names(listOfIREs)[p]
@@ -488,9 +490,10 @@ for (ire in listOfIREs) {
 	print("Currently modifying:")
 	print(id)
 	
-	ireMed <- medianList[[id]]
+	med <- medianList[[id]]
+	stddev <- sdList[[id]]
 	
-	normIRE[,2:length(normIRE)] <- normIRE[,2:length(normIRE)] - ireMed
+	normIRE[,2:length(normIRE)] <- (normIRE[,2:length(normIRE)] - med) / stddev
 	
 	normalizedIREs[[id]] <- normIRE
 	p = p + 1

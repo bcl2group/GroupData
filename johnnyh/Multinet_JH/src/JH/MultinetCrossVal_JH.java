@@ -35,11 +35,11 @@ import weka.classifiers.bayes.net.estimate.*;
 import weka.classifiers.bayes.net.search.local.*;
 
 public class MultinetCrossVal_JH {
-	public static final String fileName = "test";
+	public static final String fileName = "all_mentn_100percent";
 	public static final Random rand = new Random(1);
 	public static final double bagProp = 0.80;
-	public static final int iterNum = 1;
-	public static final double threshVal = 0.005;
+	public static final int iterNum = 1000;
+	public static final double threshVal = 0.05;
 
 	public static void main(String args[]) throws Exception {
 		go(fileName);
@@ -96,7 +96,9 @@ public class MultinetCrossVal_JH {
 
 				BayesNet cur = tbayes.m_Structures[iClass];
 				int n = cur.getNrOfNodes();
-
+				
+				LocalScoreSearchAlgorithm score = tbayes.m_Scorers[iClass];
+				
 				for (int i = 0; i < n; i++) {
 					if (cur.getNodeName(i).equals("class")) continue;
 
@@ -105,22 +107,27 @@ public class MultinetCrossVal_JH {
 
 					if (m == 0) continue;
 					
-					int binNum = ps.getCardinalityOfParents();
-					ArrayList<Double> probs = new ArrayList<Double>();
-					for (int j = 0; j < binNum; j++) {
-						for (int k = 0; k < binNum; k++) {
-							probs.add(cur.getProbability(i, j, k));
-						}
-					}
-					double influence = Util.variance(probs);
-					if (influence < 1e-10) {
-						continue;
-					}
+//					int binNum = ps.getCardinalityOfParents();
+//					ArrayList<Double> probs = new ArrayList<Double>();
+//					for (int j = 0; j < binNum; j++) {
+//						for (int k = 0; k < binNum; k++) {
+//							probs.add(cur.getProbability(i, j, k));
+//						}
+//					}
+//					double influence = Util.variance(probs);
+//					if (influence < 1e-10) {
+//						continue;
+//					}
+					
+					double oriScore = score.calcNodeScore(i);
 					
 					for (int j = 0; j < m; j++) {
 						int p = ps.getParent(j);
 						if (cur.getNodeName(p).equals("class")) continue;
 
+						double newScore = score.calcScoreWithMissingParent(i, p);
+						double influence = oriScore - newScore;
+						
 						String sa = cur.getNodeName(p);
 						String sb = cur.getNodeName(i);
 						String edge;

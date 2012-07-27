@@ -48,7 +48,7 @@ public class BMNTCCMultiNetSimpleEstimator extends MultinetSimpleEstimator {
         public String globalInfo() {
             return "BMNTCCMultiNetSimpleEstimator is used for estimating the "
                     + "conditional probability tables of a multinet Bayes "
-                    + "network with feature differeentiation once the structure has been learned. Estimates "
+                    + "network with feature differentiation once the structure has been learned. Estimates "
                     + "probabilities directly from data.";
         }
 
