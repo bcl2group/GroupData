@@ -29,12 +29,8 @@ package multinet;
  *
  * return eval.weightedAreaUnderROC();	// AUROC for the given testing and training data
  */
-import java.util.Arrays;
-import java.util.Enumeration;
-import java.util.Random;
-import java.util.Vector;
+import java.util.*;
 
-import JH.MultinetPropCrossVal_JH;
 import weka.classifiers.bayes.*;
 import weka.classifiers.Classifier;
 import weka.classifiers.bayes.BayesNet;
@@ -43,7 +39,7 @@ import weka.classifiers.bayes.net.estimate.DiscreteEstimatorBayes;
 import weka.classifiers.bayes.net.estimate.SimpleEstimator;
 import weka.classifiers.bayes.net.search.local.LocalScoreSearchAlgorithm;
 import weka.classifiers.bayes.net.search.local.Scoreable;
-import weka.classifiers.bayes.net.search.local.K2;
+import weka.classifiers.bayes.net.search.local.TAN;
 import weka.core.AdditionalMeasureProducer;
 import weka.core.Attribute;
 import weka.core.Capabilities;
@@ -62,7 +58,7 @@ import weka.filters.unsupervised.attribute.ReplaceMissingValues;
 import weka.filters.unsupervised.instance.RemoveWithValues;
 
 /**
- * <!-- globalinfo-start --> Multinet implementation of the K2 Bayesian
+ * <!-- globalinfo-start --> Multinet implementation of the TAN Bayesian
  * classifier, as initially described by Chow and Liu (1968). Much of this
  * implementation is taken from weka.classifiers.bayes.BayesNet.java. <br/>
  * For more information see:<br/>
@@ -102,9 +98,9 @@ public class BayesMultiNet extends Classifier implements
 	 */
 	private static final long serialVersionUID = -3627939878682572986L;
 
-	private static final int binLo = 8, binHi = 15;
+	private static final int binLo = 4, binHi = 11;
 
-	public static final Random rand = new Random(1);
+	public static final Random rand = new Random(System.currentTimeMillis());
 
 	/**
 	 * The dataset header for the purposes of printing out a semi-intelligible
@@ -116,7 +112,7 @@ public class BayesMultiNet extends Classifier implements
 	 */
 	Instances[] m_cInstances;
 	/** filter used to quantize continuous variables, if any **/
-	protected Discretize m_DiscretizeFilter = null;
+	protected Discretize[] m_DiscretizeFilter = null;
 	/** attribute index of a non-nominal attribute */
 	int m_nNonDiscreteAttribute = -1;
 	/** filter used to fill in missing values, if any **/
@@ -163,7 +159,7 @@ public class BayesMultiNet extends Classifier implements
 	 * @return The string.
 	 */
 	public String globalInfo() {
-		return "Bayes classifier using the K2 algorithm of Chow and Liu (1968)"
+		return "Bayes classifier using the TAN algorithm of Chow and Liu (1968)"
 				+ " with a multinet approach (constructing separate"
 				+ " structures for each class).";
 	} // globalInfo
@@ -370,7 +366,6 @@ public class BayesMultiNet extends Classifier implements
 			((BayesNet) m_Structures[iClass])
 					.setEstimator(m_Estimators[iClass]);
 			m_Structures[iClass].buildClassifier(m_cInstances[iClass]);
-
 			m_Scorers[iClass] = search;
 
 			// update probability of this class label
@@ -409,7 +404,7 @@ public class BayesMultiNet extends Classifier implements
 	}
 
 	/**
-	 * Returns a description of the classifier. For the multinet K2 classifier,
+	 * Returns a description of the classifier. For the multinet TAN classifier,
 	 * this returns a list of structures prefaced by the corresponding class
 	 * labels.
 	 * 
@@ -529,13 +524,31 @@ public class BayesMultiNet extends Classifier implements
 		}
 
 		if (bHasNonNominal) {
-			int binNum = binLo + rand.nextInt(binHi - binLo);
-			System.out.println("***Discretizing data set - " + binNum
-					+ " bins***");
-			m_DiscretizeFilter = new Discretize();
-			((Discretize) m_DiscretizeFilter).setBins(binNum);
-			m_DiscretizeFilter.setInputFormat(instances);
-			instances = Filter.useFilter(instances, m_DiscretizeFilter);
+			System.out.print("***Discretizing data set -");
+			ArrayList<Integer> indices[] = new ArrayList[binHi];
+			for (int i = binLo; i < binHi; i++) {
+				indices[i] = new ArrayList<Integer>();
+			}
+			int m = instances.numAttributes();
+			for (int i = 1; i < m; i++) {
+				int tNum = binLo + rand.nextInt(binHi - binLo);
+				indices[tNum].add(i);
+			}
+			m_DiscretizeFilter = new Discretize[binHi];
+			for (int i = binLo; i < binHi; i++) {
+				m_DiscretizeFilter[i] = new Discretize();
+				int[] arr = new int[indices[i].size()];
+				for (int j = 0; j < arr.length; j++) {
+					arr[j] = indices[i].get(j);
+				}
+				System.out.print(" " + arr.length);
+				m_DiscretizeFilter[i].setAttributeIndicesArray(arr);
+				m_DiscretizeFilter[i].setBins(i);
+				m_DiscretizeFilter[i].setDesiredWeightOfInstancesPerInterval(-1);
+				m_DiscretizeFilter[i].setInputFormat(instances);
+				instances = Filter.useFilter(instances, m_DiscretizeFilter[i]);
+			}
+			System.out.println("***");
 		}
 
 		if (bHasMissingValues) {
@@ -561,8 +574,10 @@ public class BayesMultiNet extends Classifier implements
 	protected Instance normalizeInstance(Instance instance) throws Exception {
 		if ((m_DiscretizeFilter != null)
 				&& (instance.attribute(m_nNonDiscreteAttribute).type() != Attribute.NOMINAL)) {
-			m_DiscretizeFilter.input(instance);
-			instance = m_DiscretizeFilter.output();
+			for (int i = binLo; i < binHi; i++) {
+				m_DiscretizeFilter[i].input(instance);
+				instance = m_DiscretizeFilter[i].output();
+			}
 		}
 		if (m_MissingValuesFilter != null) {
 			m_MissingValuesFilter.input(instance);
@@ -860,11 +875,11 @@ public class BayesMultiNet extends Classifier implements
 	// }
 	// } // MultiNetSimpleEstimator
 	/**
-	 * Extension of {@link K2} which can handle the multinet approach of
-	 * BayesMultiNet. This is necessary because the provided K2 implementation
+	 * Extension of {@link TAN} which can handle the multinet approach of
+	 * BayesMultiNet. This is necessary because the provided TAN implementation
 	 * automatically links the class node to every other node.
 	 */
-	class MultiNet extends K2 {
+	class MultiNet extends TAN {
 
 		/**
 		 * Version ID for serializing.
@@ -884,8 +899,6 @@ public class BayesMultiNet extends Classifier implements
 		 */
 		public void buildStructure(BayesNet bayesNet, Instances instances)
 				throws Exception {
-			setMaxNrOfParents(2);
-
 			super.buildStructure(bayesNet, instances);
 
 			// remove class attribute from every parent set

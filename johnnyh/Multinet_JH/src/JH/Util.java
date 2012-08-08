@@ -1,6 +1,7 @@
 package JH;
 
-import java.util.ArrayList;
+import java.io.*;
+import java.util.*;
 
 public class Util {
 	public static double mean(ArrayList<Double> list) {

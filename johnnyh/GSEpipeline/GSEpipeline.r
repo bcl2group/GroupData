@@ -278,8 +278,12 @@ for (id in vIDs) {
 	}
 	
 	expList[[id]] <- rep(NA, 1)
+	filt <- rep(NA, 1)
+	
+	filt[1] <- TRUE
 	
 	# Go through each sample and find which are control vs. noncontrol
+	p <- 1
 	for (i in 1:nrow(pheno)) {
 		tag <- tolower(pheno[[phenoTag]][i]) # Find the classification of the sample in the pc column
 		gsm <- gsms[i]
@@ -291,6 +295,7 @@ for (id in vIDs) {
 				break
 			}
 		}
+		filt[i + 1] <- !forbid
 		if (forbid) next
 		
 		found <- FALSE
@@ -306,20 +311,22 @@ for (id in vIDs) {
 		}
 		
 		if (found) {
-			expList[[id]][i] <- "CONTROL"
+			expList[[id]][p] <- "CONTROL"
 			
 			controlList[cl] <- gsm
 			cl = cl + 1
 			
 		} else {
-			expList[[id]][i] <- "EXPERIMENTAL"
+			expList[[id]][p] <- "EXPERIMENTAL"
 			
 			nonControlList[ncl] <- gsm
 			ncl = ncl + 1
 			
 			experimentTagList[[gsm]] <- phenoTag
 		}
+		p <- p + 1
 	}
+	datList[[id]] <- datList[[id]][,filt]
 }
 
 print("Control samples:")
@@ -466,6 +473,9 @@ for (ire in listOfIREs) {
 	nonNAindexes <- which(!is.na(mat))
 	collapsedMat <- as.numeric(mat[nonNAindexes])
 	
+	mea <- mean(collapsedMat)
+	print(paste("Mean: ", mea))
+	
 	med <- median(collapsedMat)
 	medianList[[id]] <- med
 	print(paste("Median: ", med))
@@ -508,8 +518,8 @@ print("**Getting expression data from each experiment and creating weka files**"
 
 # Create new files for weka
 
-print("**Writing headers**")
 
+print("**Writing headers**")
 # allexperiments_singlenet.txt
 
 # write("% Title: TEST Singlenet", file=filenameSinglenet)
@@ -531,7 +541,7 @@ print("**Writing headers**")
 
 # allexperiments.txt
 
-write("% Title: TEST Multinet", file=filename)
+write(paste("% Title:", expName), file=filename)
 write("% Creator: Johnny Ho", file=filename, append=TRUE)
 write(paste("%", vIDs), file = filename, append = TRUE)
 write(paste("%", Sys.time()), file=filename, append=TRUE)

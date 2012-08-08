@@ -3,7 +3,8 @@ package JH;
 import java.text.DecimalFormat;
 
 public class DirEdge implements Comparable<DirEdge> {
-	public static final DecimalFormat form = new DecimalFormat("#.#####");
+	public static final DecimalFormat form = new DecimalFormat("#.000000");
+	public static final DecimalFormat formperc = new DecimalFormat("#.0000");
 	
 	double va, vb;
 	
@@ -22,12 +23,16 @@ public class DirEdge implements Comparable<DirEdge> {
 		vb = _vb;
 	}
 	
-	public DirEdge add(DirEdge oth) {
-		return new DirEdge(va + oth.va, vb + oth.vb);
+	public double merge(double a, double b) {
+		return Math.min(a, b);
+	}
+	
+	public DirEdge merge(DirEdge oth) {
+		return new DirEdge(merge(va, oth.va), merge(vb, oth.vb));
 	}
 	
 	public DirEdge sub(DirEdge oth) {
-		return new DirEdge(va - oth.va, vb - oth.vb);
+		return new DirEdge(Math.max(0, va - oth.va), Math.max(0, vb - oth.vb));
 	}
 	
 	public DirEdge adda(double a) {
@@ -51,13 +56,13 @@ public class DirEdge implements Comparable<DirEdge> {
 	}
 	
 	public String toString() {
-		return form.format(sum()) + " " + form.format(prop());
+		return form.format(sum()) + " " + formperc.format(prop());
 	}
 
 	public int compareTo(DirEdge oth) {
 		double a = sum();
 		double b = oth.sum();
-		if (a != b) return a < b ? -1 : 1;
+		if (a != b) return a < b ? 1 : -1;
 		return 0;
 	}
 }

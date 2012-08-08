@@ -44,9 +44,9 @@ public class topDiff_JH {
 			arrNames.add(data.attribute(a).name());
 		}
 		Collections.sort(arrNames);
-		for (String s : arrNames) {
-			System.out.print(" " + s);
-		}
+//		for (String s : arrNames) {
+//			System.out.print(" " + s);
+//		}
 		System.out.println();
 		return getFilter(data, arr);
 	}

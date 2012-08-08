@@ -6,7 +6,7 @@ import multinet.*;
 
 public class BayesMultiNet_filtered extends BayesMultiNet {
 	Filter filter;
-	public static final int topn = 3000;
+	public static final int topn = 3100;
 
 	public void buildClassifier(Instances instances) throws Exception {
 		filter = topDiff_JH.runTopDiff(instances, topn);

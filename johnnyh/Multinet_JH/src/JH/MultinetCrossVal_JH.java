@@ -21,6 +21,7 @@ import weka.filters.unsupervised.attribute.NominalToString;
 import weka.filters.unsupervised.attribute.StringToNominal;
 
 import java.io.*;
+
 import multinet.*;
 import weka.classifiers.Evaluation;
 
@@ -35,22 +36,17 @@ import weka.classifiers.bayes.net.estimate.*;
 import weka.classifiers.bayes.net.search.local.*;
 
 public class MultinetCrossVal_JH {
-	public static final String fileName = "all_mentn_100percent";
-	public static final Random rand = new Random(1);
-	public static final double bagProp = 0.80;
-	public static final int iterNum = 1000;
-	public static final double threshVal = 0.05;
+	public static final String fileName = "ment";
+	public static final Random rand = new Random(System.currentTimeMillis());
+	public static final double bagProp = 0.8;
+	public static final int iterNum = 1;
+	public static final double thresh = 0.001;
 
 	public static void main(String args[]) throws Exception {
 		go(fileName);
 	}
 
-	// change to either build a simple Bayesian network or Bayesian multinet
 	public static void go(String name) throws Exception {
-		/*
-		 * run buildBayes to build simple Bayesian classifier run buildMultinet
-		 * to build Multinet classifier
-		 */
 		System.out.println("starting " + name);
 		buildBayes(name);
 
@@ -61,18 +57,23 @@ public class MultinetCrossVal_JH {
 	public static void buildBayes(String name) throws Exception {
 
 		/* read in ARFF */
-		BufferedReader reader = new BufferedReader(new FileReader(name + ".txt"));
+		BufferedReader reader = new BufferedReader(
+				new FileReader(name + ".txt"));
 		Instances data = new Instances(reader);
-		reader.close();
+		reader.close();	
 		data.setClassIndex(0);
 
 		data = spliceControl(data);
 
 		int numClass = data.numClasses();
 
-		HashMap<String, DirEdge> hms[] = new HashMap[numClass];
+		HashMap<String, DirEdge> edges[] = new HashMap[numClass];
 		for (int iClass = 0; iClass < numClass; iClass++) {
-			hms[iClass] = new HashMap<String, DirEdge>();
+			edges[iClass] = new HashMap<String, DirEdge>();
+		}
+		HashMap<String, DirEdge> weighted[] = new HashMap[numClass];
+		for (int iClass = 0; iClass < numClass; iClass++) {
+			weighted[iClass] = new HashMap<String, DirEdge>();
 		}
 
 		HashMap<String, Integer> freq = new HashMap<String, Integer>();
@@ -81,7 +82,9 @@ public class MultinetCrossVal_JH {
 			System.out.println("iteration #" + it);
 
 			BayesMultiNet_filtered tbayes = new BayesMultiNet_filtered();
-			tbayes.buildClassifier(getSubInstances(data, (int)Math.ceil(data.numInstances() * bagProp)));
+			tbayes.buildClassifier(getSubInstances(data, (int) Math.ceil(data
+					.numInstances()
+					* bagProp)));
 
 			{
 				Instances filtered = tbayes.m_Instances;
@@ -92,52 +95,81 @@ public class MultinetCrossVal_JH {
 			}
 
 			for (int iClass = 0; iClass < numClass; iClass++) {
-//				System.out.println("class " + data.classAttribute().value(iClass));
+				// System.out.println("class " +
+				// data.classAttribute().value(iClass));
 
 				BayesNet cur = tbayes.m_Structures[iClass];
 				int n = cur.getNrOfNodes();
-				
+
 				LocalScoreSearchAlgorithm score = tbayes.m_Scorers[iClass];
-				
+				double totScore = -score.logScore(-1);
+
 				for (int i = 0; i < n; i++) {
-					if (cur.getNodeName(i).equals("class")) continue;
+					if (cur.getNodeName(i).equals("class"))
+						continue;
 
 					ParentSet ps = cur.getParentSet(i);
 					int m = ps.getNrOfParents();
 
-					if (m == 0) continue;
-					
-//					int binNum = ps.getCardinalityOfParents();
-//					ArrayList<Double> probs = new ArrayList<Double>();
-//					for (int j = 0; j < binNum; j++) {
-//						for (int k = 0; k < binNum; k++) {
-//							probs.add(cur.getProbability(i, j, k));
-//						}
-//					}
-//					double influence = Util.variance(probs);
-//					if (influence < 1e-10) {
-//						continue;
-//					}
-					
+					if (m == 0)
+						continue;
+
+					// int binNum = ps.getCardinalityOfParents();
+					// ArrayList<Double> probs = new ArrayList<Double>();
+					// for (int j = 0; j < binNum; j++) {
+					// for (int k = 0; k < binNum; k++) {
+					// probs.add(cur.getProbability(i, j, k));
+					// }
+					// }
+					// double influence = Util.variance(probs);
+					// if (influence < 1e-10) {
+					// continue;
+					// }
+
 					double oriScore = score.calcNodeScore(i);
-					
+
 					for (int j = 0; j < m; j++) {
 						int p = ps.getParent(j);
-						if (cur.getNodeName(p).equals("class")) continue;
+						if (cur.getNodeName(p).equals("class"))
+							continue;
 
-						double newScore = score.calcScoreWithMissingParent(i, p);
-						double influence = oriScore - newScore;
-						
+						double newScore = score
+								.calcScoreWithMissingParent(i, p);
+						double influence = (oriScore - newScore) / totScore;
+
 						String sa = cur.getNodeName(p);
 						String sb = cur.getNodeName(i);
 						String edge;
 						if (sa.compareTo(sb) < 0) {
 							edge = sa + " " + sb;
-							inca(hms[iClass], edge, influence);
+							inca(edges[iClass], edge, 1);
+							inca(weighted[iClass], edge, influence);
 						} else {
 							edge = sb + " " + sa;
-							incb(hms[iClass], edge, influence);
+							incb(edges[iClass], edge, 1);
+							incb(weighted[iClass], edge, influence);
 						}
+					}
+				}
+			}
+
+			if (it % 50 == 0) {
+				System.out.println("***Writing individual files***");
+
+				for (int iClass = 0; iClass < numClass; iClass++) {
+					{
+						FileWriter output = new FileWriter(name + "_"
+								+ data.classAttribute().value(iClass) + ".txt");
+						write(output, edges[iClass]);
+						output.close();
+					}
+
+					{
+						FileWriter output = new FileWriter(name + "_"
+								+ data.classAttribute().value(iClass)
+								+ "_w.txt");
+						write(output, weighted[iClass]);
+						output.close();
 					}
 				}
 			}
@@ -146,33 +178,19 @@ public class MultinetCrossVal_JH {
 		System.out.println("***Writing individual files***");
 
 		for (int iClass = 0; iClass < numClass; iClass++) {
-			HashMap<String, DirEdge> curhm = hms[iClass];
-			TreeMap<DirEdge, ArrayList<String> > sorted = new TreeMap<DirEdge, ArrayList<String> >();
-			for (Map.Entry<String, DirEdge> me : curhm.entrySet()) {
-				String a = me.getKey();
-				DirEdge b = me.getValue();
-				if (sorted.get(b) == null) {
-					sorted.put(b, new ArrayList<String>());
-				}
-				sorted.get(b).add(a);
+			{
+				FileWriter output = new FileWriter(name + "_"
+						+ data.classAttribute().value(iClass) + ".txt");
+				write(output, edges[iClass]);
+				output.close();
 			}
 
-			FileWriter output = new FileWriter(name + "_" + data.classAttribute().value(iClass) + ".txt");
-			for (Map.Entry<DirEdge, ArrayList<String> > se : sorted.entrySet()) {
-				if (se.getKey().sum() < threshVal) continue;
-				for (String s : se.getValue()) {
-					if (se.getKey().prop() >= 0.5) {
-						output.write(s + " " + se.getKey());
-						output.write("\n");
-					} else {
-						String[] rearr = s.split("[ ]");
-						output.write(rearr[1] + " " + rearr[0] + " " + se.getKey().swap());
-						output.write("\n");
-					}
-				}
+			{
+				FileWriter output = new FileWriter(name + "_"
+						+ data.classAttribute().value(iClass) + "_w.txt");
+				write(output, weighted[iClass]);
+				output.close();
 			}
-			output.write("\n");
-			output.close();
 		}
 
 		System.out.println("***Generating statistics***");
@@ -184,7 +202,7 @@ public class MultinetCrossVal_JH {
 		FileWriter totOutput = new FileWriter(name + "_output.txt");
 
 		totOutput.write("Frequencies:\n");
-		TreeMap<Integer, ArrayList<String> > sortedfreq = new TreeMap<Integer, ArrayList<String> >();
+		TreeMap<Integer, ArrayList<String>> sortedfreq = new TreeMap<Integer, ArrayList<String>>();
 		for (Map.Entry<String, Integer> e : freq.entrySet()) {
 			int c = e.getValue();
 			if (sortedfreq.get(c) == null) {
@@ -209,21 +227,52 @@ public class MultinetCrossVal_JH {
 		evaluation.crossValidateModel(bayes2, data, 10, rand);
 		totOutput.write(evaluation.toSummaryString());
 		totOutput.write("Weighted area under ROC: ");
-		totOutput.write(Double.toString(evaluation.weightedAreaUnderROC()));
+		totOutput.write(evaluation.weightedAreaUnderROC() + "");
 		totOutput.write("\n");
-		System.out.println("Weighted area under ROC: " + evaluation.weightedAreaUnderROC());
+		System.out.println("Weighted area under ROC: "
+				+ evaluation.weightedAreaUnderROC());
 
 		totOutput.write("Confusion Matrix: \n");
 		double[][] mat = evaluation.confusionMatrix();
+		int i = 0;
 		for (double[] row : mat) {
 			for (double val : row) {
-				totOutput.write(Double.toString(val));
+				totOutput.write(val + "");
 				totOutput.write(" ");
 			}
+			totOutput.write(evaluation.areaUnderROC(i) + "");
 			totOutput.write("\n");
+			i++;
 		}
 
 		totOutput.close();
+	}
+
+	public static void write(FileWriter out, HashMap<String, DirEdge> hm)
+			throws Exception {
+		TreeMap<DirEdge, ArrayList<String>> sorted = new TreeMap<DirEdge, ArrayList<String>>();
+		for (Map.Entry<String, DirEdge> me : hm.entrySet()) {
+			String a = me.getKey();
+			DirEdge b = me.getValue();
+			if (sorted.get(b) == null) {
+				sorted.put(b, new ArrayList<String>());
+			}
+			sorted.get(b).add(a);
+		}
+		for (Map.Entry<DirEdge, ArrayList<String>> se : sorted.entrySet()) {
+			if (se.getKey().sum() < thresh)
+				continue;
+			for (String s : se.getValue()) {
+				if (se.getKey().prop() >= 0.5) {
+					out.write(s + " " + se.getKey());
+				} else {
+					String[] rearr = s.split("[ ]");
+					out.write(rearr[1] + " " + rearr[0] + " "
+							+ se.getKey().swap());
+				}
+				out.write("\n");
+			}
+		}
 	}
 
 	public static Instances spliceControl(Instances data) throws Exception {
@@ -276,7 +325,7 @@ public class MultinetCrossVal_JH {
 		}
 		hm.put(s, hm.get(s).adda(val));
 	}
-	
+
 	public static void incb(HashMap<String, DirEdge> hm, String s, double val) {
 		if (hm.get(s) == null) {
 			hm.put(s, new DirEdge());

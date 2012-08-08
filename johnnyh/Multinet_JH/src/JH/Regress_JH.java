@@ -2,15 +2,14 @@ package JH;
 import java.io.*;
 import java.util.*;
 
-public class CompareNet_JH {
+public class Regress_JH {
 
-	public static final String fileListName = "_complist.txt";
-	public static final String outName = "_compout.txt";
-	public static final double thresh = 0.001;
-	
-	public static HashMap<String, Counter> ans = null;
+	public static final String fileListName = "_rlist.txt";
+	public static final String outName = "_rout.txt";
+	public static final double thresh = 0;
+
 	public static HashMap<String, Counter> cur = null;
-	
+
 	public static void main(String[] args) throws Exception {
 		BufferedReader reader = new BufferedReader(new FileReader(fileListName));
 		String s;
@@ -23,24 +22,14 @@ public class CompareNet_JH {
 			String[] strs = s.split("[-]");
 			cur = null;
 			go(strs[0].trim());
-			System.out.println(strs[0].trim() + " " + cur.size());
-			if (ans == null) {
-				ans = cur;
-			} else {
-				merge(ans, cur);
-			}
-			if (strs.length > 1) { // subtract second
-				go(strs[1].trim());
-				String pref = strs[0].trim().split("[.]")[0];
-				System.out.println(pref + "_diff.txt" + " " + cur.size());
-				FileWriter out = new FileWriter(pref + "_diff.txt");
-				write(out, cur);
-				out.close();
-			}
+			String pref = strs[0].trim().split("[.]")[0];
+			System.out.println(pref + " " + cur.size());
+			String oth = pref + "_w.txt";
+			go(oth);
+			FileWriter out = new FileWriter(pref + "_r.txt");
+			write(out, cur);
+			out.close();
 		}
-		FileWriter out = new FileWriter(outName);
-		write(out, ans);
-		out.close();
 	}
 	public static void go(String name) throws Exception {
 		BufferedReader br = new BufferedReader(new FileReader(name));
@@ -70,7 +59,8 @@ public class CompareNet_JH {
 		if (cur == null) {
 			cur = hm;
 		} else {
-			sub(cur, hm);
+			div(cur, hm);
+			cur = hm;
 		}
 	}
 	public static void write(FileWriter out, HashMap<String, Counter> hm) throws Exception {
@@ -83,33 +73,23 @@ public class CompareNet_JH {
 		for (Map.Entry<Counter, ArrayList<String> > e : sorted.entrySet()) {
 			if (Math.abs(e.getKey().comb.sum()) < thresh) continue;
 			for (String v : e.getValue()) {
-				Counter c = new Counter(e.getKey());
-				if (c.comb.prop() >= 0.5) {
+				if (e.getKey().comb.prop() >= 0.5) {
 					out.write(v + " " + e.getKey());
 				} else {
-					c.comb = c.comb.swap();
+					e.getKey().comb = e.getKey().comb.swap();
 					String[] rearr = v.split("[ ]");
-					out.write(rearr[1] + " " + rearr[0] + " " + c);
+					out.write(rearr[1] + " " + rearr[0] + " " + e.getKey());
 				}
 				out.write("\n");
 			}
 		}
 	}
-	public static void merge(HashMap<String, Counter> res, HashMap<String, Counter> a) {
-		for (Map.Entry<String, Counter> e : a.entrySet()) {
+	public static void div(HashMap<String, Counter> res, HashMap<String, Counter> a) {
+		for (Map.Entry<String, Counter> e : res.entrySet()) {
 			String k = e.getKey();
-			if (res.get(k) == null) {
-				res.put(k, e.getValue());
-			} else {
-				res.get(k).merge(e.getValue());
-			}
-		}
-	}
-	public static void sub(HashMap<String, Counter> res, HashMap<String, Counter> a) {
-		for (Map.Entry<String, Counter> e : a.entrySet()) {
-			String k = e.getKey();
-			if (res.get(k) == null) continue;
-			res.get(k).sub(e.getValue());
+			if (a.get(k) == null) continue;
+			Counter v = e.getValue();
+			a.get(k).num = (int)Math.round(v.comb.sum());
 		}
 	}
 }
